@@ -1,0 +1,116 @@
+# Generated comment_format rules for Báⁿ-uā-ci̍
+# Copy these rules into the comment_format section of your schema file
+
+comment_format:
+  # Step 1: Add hyphens between syllables for readability
+  - xform/ /-/g
+
+  # Step 2: Convert tone numbers to combining diacritics
+    - xform/([^aaoeiu])(a)([^aoeiu0-9]*)2/$1$2́$3/
+    - xform/([^oaoeiu])(o)([^aoeiu0-9]*)2/$1$2́$3/
+    - xform/([^eaoeiu])(e)([^aoeiu0-9]*)2/$1$2́$3/
+    - xform/([^iaoeiu])(i)([^aoeiu0-9]*)2/$1$2́$3/
+    - xform/([^uaoeiu])(u)([^aoeiu0-9]*)2/$1$2́$3/
+    - xform/([^yaoeiu])(y)([^aoeiu0-9]*)2/$1$2́$3/
+    - xform/([^aoeiu])(au)([^aoeiu0-9]*)2/$1áu$3/
+    - xform/([^aoeiu])(ao)([^aoeiu0-9]*)2/$1áo$3/
+    - xform/([^aoeiu])(ai)([^aoeiu0-9]*)2/$1ái$3/
+    - xform/([^aoeiu])(ia)([^aoeiu0-9]*)2/$1iá$3/
+    - xform/([^aoeiu])(ua)([^aoeiu0-9]*)2/$1uá$3/
+    - xform/([^aoeiu])(oa)([^aoeiu0-9]*)2/$1oá$3/
+    - xform/([^aoeiu])(oi)([^aoeiu0-9]*)2/$1ói$3/
+    - xform/([^aoeiu])(ou)([^aoeiu0-9]*)2/$1óu$3/
+    - xform/([^aoeiu])(oe)([^aoeiu0-9]*)2/$1óe$3/
+    - xform/([^aoeiu])(io)([^aoeiu0-9]*)2/$1ió$3/
+    - xform/([^aoeiu])(uo)([^aoeiu0-9]*)2/$1uó$3/
+    - xform/([^aoeiu])(ei)([^aoeiu0-9]*)2/$1éi$3/
+    - xform/([^aoeiu])(eu)([^aoeiu0-9]*)2/$1éu$3/
+    - xform/([^aoeiu])(ue)([^aoeiu0-9]*)2/$1ué$3/
+    - xform/([^aoeiu])(iu)([^aoeiu0-9]*)2/$1iú$3/
+    - xform/([^aoeiu])(ui)([^aoeiu0-9]*)2/$1úi$3/
+    - xform/([^aoeiu])(aa)([^aoeiu0-9]*)2/$1áa$3/
+    - xform/([^aoeiu])(ee)([^aoeiu0-9]*)2/$1ée$3/
+    - xform/([^aoeiu])(oo)([^aoeiu0-9]*)2/$1óo$3/
+    - xform/([^aaoeiu])(a)([^aoeiu0-9]*)3/$1$2̂$3/
+    - xform/([^oaoeiu])(o)([^aoeiu0-9]*)3/$1$2̂$3/
+    - xform/([^eaoeiu])(e)([^aoeiu0-9]*)3/$1$2̂$3/
+    - xform/([^iaoeiu])(i)([^aoeiu0-9]*)3/$1$2̂$3/
+    - xform/([^uaoeiu])(u)([^aoeiu0-9]*)3/$1$2̂$3/
+    - xform/([^yaoeiu])(y)([^aoeiu0-9]*)3/$1$2̂$3/
+    - xform/([^aoeiu])(au)([^aoeiu0-9]*)3/$1âu$3/
+    - xform/([^aoeiu])(ao)([^aoeiu0-9]*)3/$1âo$3/
+    - xform/([^aoeiu])(ai)([^aoeiu0-9]*)3/$1âi$3/
+    - xform/([^aoeiu])(ia)([^aoeiu0-9]*)3/$1iâ$3/
+    - xform/([^aoeiu])(ua)([^aoeiu0-9]*)3/$1uâ$3/
+    - xform/([^aoeiu])(oa)([^aoeiu0-9]*)3/$1oâ$3/
+    - xform/([^aoeiu])(oi)([^aoeiu0-9]*)3/$1ôi$3/
+    - xform/([^aoeiu])(ou)([^aoeiu0-9]*)3/$1ôu$3/
+    - xform/([^aoeiu])(oe)([^aoeiu0-9]*)3/$1ôe$3/
+    - xform/([^aoeiu])(io)([^aoeiu0-9]*)3/$1iô$3/
+    - xform/([^aoeiu])(uo)([^aoeiu0-9]*)3/$1uô$3/
+    - xform/([^aoeiu])(ei)([^aoeiu0-9]*)3/$1êi$3/
+    - xform/([^aoeiu])(eu)([^aoeiu0-9]*)3/$1êu$3/
+    - xform/([^aoeiu])(ue)([^aoeiu0-9]*)3/$1uê$3/
+    - xform/([^aoeiu])(iu)([^aoeiu0-9]*)3/$1iû$3/
+    - xform/([^aoeiu])(ui)([^aoeiu0-9]*)3/$1ûi$3/
+    - xform/([^aoeiu])(aa)([^aoeiu0-9]*)3/$1âa$3/
+    - xform/([^aoeiu])(ee)([^aoeiu0-9]*)3/$1êe$3/
+    - xform/([^aoeiu])(oo)([^aoeiu0-9]*)3/$1ôo$3/
+    - xform/([^aaoeiu])(a)([^aoeiu0-9]*)4/$1$2̍$3/
+    - xform/([^oaoeiu])(o)([^aoeiu0-9]*)4/$1$2̍$3/
+    - xform/([^eaoeiu])(e)([^aoeiu0-9]*)4/$1$2̍$3/
+    - xform/([^iaoeiu])(i)([^aoeiu0-9]*)4/$1$2̍$3/
+    - xform/([^uaoeiu])(u)([^aoeiu0-9]*)4/$1$2̍$3/
+    - xform/([^yaoeiu])(y)([^aoeiu0-9]*)4/$1$2̍$3/
+    - xform/([^aoeiu])(au)([^aoeiu0-9]*)4/$1a̍u$3/
+    - xform/([^aoeiu])(ao)([^aoeiu0-9]*)4/$1a̍o$3/
+    - xform/([^aoeiu])(ai)([^aoeiu0-9]*)4/$1a̍i$3/
+    - xform/([^aoeiu])(ia)([^aoeiu0-9]*)4/$1ia̍$3/
+    - xform/([^aoeiu])(ua)([^aoeiu0-9]*)4/$1ua̍$3/
+    - xform/([^aoeiu])(oa)([^aoeiu0-9]*)4/$1oa̍$3/
+    - xform/([^aoeiu])(oi)([^aoeiu0-9]*)4/$1o̍i$3/
+    - xform/([^aoeiu])(ou)([^aoeiu0-9]*)4/$1o̍u$3/
+    - xform/([^aoeiu])(oe)([^aoeiu0-9]*)4/$1o̍e$3/
+    - xform/([^aoeiu])(io)([^aoeiu0-9]*)4/$1io̍$3/
+    - xform/([^aoeiu])(uo)([^aoeiu0-9]*)4/$1uo̍$3/
+    - xform/([^aoeiu])(ei)([^aoeiu0-9]*)4/$1e̍i$3/
+    - xform/([^aoeiu])(eu)([^aoeiu0-9]*)4/$1e̍u$3/
+    - xform/([^aoeiu])(ue)([^aoeiu0-9]*)4/$1ue̍$3/
+    - xform/([^aoeiu])(iu)([^aoeiu0-9]*)4/$1iu̍$3/
+    - xform/([^aoeiu])(ui)([^aoeiu0-9]*)4/$1u̍i$3/
+    - xform/([^aoeiu])(aa)([^aoeiu0-9]*)4/$1a̍a$3/
+    - xform/([^aoeiu])(ee)([^aoeiu0-9]*)4/$1e̍e$3/
+    - xform/([^aoeiu])(oo)([^aoeiu0-9]*)4/$1o̍o$3/
+    - xform/([^aaoeiu])(a)([^aoeiu0-9]*)5/$1$2̄$3/
+    - xform/([^oaoeiu])(o)([^aoeiu0-9]*)5/$1$2̄$3/
+    - xform/([^eaoeiu])(e)([^aoeiu0-9]*)5/$1$2̄$3/
+    - xform/([^iaoeiu])(i)([^aoeiu0-9]*)5/$1$2̄$3/
+    - xform/([^uaoeiu])(u)([^aoeiu0-9]*)5/$1$2̄$3/
+    - xform/([^yaoeiu])(y)([^aoeiu0-9]*)5/$1$2̄$3/
+    - xform/([^aoeiu])(au)([^aoeiu0-9]*)5/$1āu$3/
+    - xform/([^aoeiu])(ao)([^aoeiu0-9]*)5/$1āo$3/
+    - xform/([^aoeiu])(ai)([^aoeiu0-9]*)5/$1āi$3/
+    - xform/([^aoeiu])(ia)([^aoeiu0-9]*)5/$1iā$3/
+    - xform/([^aoeiu])(ua)([^aoeiu0-9]*)5/$1uā$3/
+    - xform/([^aoeiu])(oa)([^aoeiu0-9]*)5/$1oā$3/
+    - xform/([^aoeiu])(oi)([^aoeiu0-9]*)5/$1ōi$3/
+    - xform/([^aoeiu])(ou)([^aoeiu0-9]*)5/$1ōu$3/
+    - xform/([^aoeiu])(oe)([^aoeiu0-9]*)5/$1ōe$3/
+    - xform/([^aoeiu])(io)([^aoeiu0-9]*)5/$1iō$3/
+    - xform/([^aoeiu])(uo)([^aoeiu0-9]*)5/$1uō$3/
+    - xform/([^aoeiu])(ei)([^aoeiu0-9]*)5/$1ēi$3/
+    - xform/([^aoeiu])(eu)([^aoeiu0-9]*)5/$1ēu$3/
+    - xform/([^aoeiu])(ue)([^aoeiu0-9]*)5/$1uē$3/
+    - xform/([^aoeiu])(iu)([^aoeiu0-9]*)5/$1iū$3/
+    - xform/([^aoeiu])(ui)([^aoeiu0-9]*)5/$1ūi$3/
+    - xform/([^aoeiu])(aa)([^aoeiu0-9]*)5/$1āa$3/
+    - xform/([^aoeiu])(ee)([^aoeiu0-9]*)5/$1ēe$3/
+    - xform/([^aoeiu])(oo)([^aoeiu0-9]*)5/$1ōo$3/
+
+  # Step 3: Convert special romanizations to Unicode combining characters
+    - xform/a([́̂̍̄]?)a/a̤$1/
+    - xform/e([́̂̍̄]?)e/e̤$1/
+    - xform/o([́̂̍̄]?)o/o̤$1/
+    - xform/([^aoeiu]|^)y([́̂̍̄]?)([^aoeiu]|$)/$1ṳ$2$3/
+    - xform/nn/ⁿ/
+    - xform/[1-8]//

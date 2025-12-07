@@ -1,0 +1,83 @@
+# Generated comment_format rules for Báⁿ-uā-ci̍
+# Copy these rules into the comment_format section of your schema file
+
+comment_format:
+  # Step 1: Add hyphens between syllables for readability
+  - xform/ /-/g
+
+  # Step 2: Convert tone numbers (2-5) to combining diacritics
+  # Apply to the main vowel in each syllable
+  # Vowel priority: a > o > e > i > u > y
+
+  # Tone 2
+  - xform/([^a])a([^a0-9]*)2/$1á$2/
+  - xform/^a([^a0-9]*)2/á$1/
+  - xform/([^ao])o([^aoeiu0-9]*)2/$1ó$2/
+  - xform/^o([^aoeiu0-9]*)2/ó$1/
+  - xform/([^aoe])e([^aoeiu0-9]*)2/$1é$2/
+  - xform/^e([^aoeiu0-9]*)2/é$1/
+  - xform/([^aoei])i([^aoeiu0-9]*)2/$1í$2/
+  - xform/^i([^aoeiu0-9]*)2/í$1/
+  - xform/([^aoeiu])u([^aoeiu0-9]*)2/$1ú$2/
+  - xform/^u([^aoeiu0-9]*)2/ú$1/
+  - xform/([^aoeiuy])y([^aoeiu0-9]*)2/$1ý$2/
+  - xform/^y([^aoeiu0-9]*)2/ý$1/
+
+  # Tone 3
+  - xform/([^a])a([^a0-9]*)3/$1â$2/
+  - xform/^a([^a0-9]*)3/â$1/
+  - xform/([^ao])o([^aoeiu0-9]*)3/$1ô$2/
+  - xform/^o([^aoeiu0-9]*)3/ô$1/
+  - xform/([^aoe])e([^aoeiu0-9]*)3/$1ê$2/
+  - xform/^e([^aoeiu0-9]*)3/ê$1/
+  - xform/([^aoei])i([^aoeiu0-9]*)3/$1î$2/
+  - xform/^i([^aoeiu0-9]*)3/î$1/
+  - xform/([^aoeiu])u([^aoeiu0-9]*)3/$1û$2/
+  - xform/^u([^aoeiu0-9]*)3/û$1/
+  - xform/([^aoeiuy])y([^aoeiu0-9]*)3/$1ŷ$2/
+  - xform/^y([^aoeiu0-9]*)3/ŷ$1/
+
+  # Tone 4
+  - xform/([^a])a([^a0-9]*)4/$1a̍$2/
+  - xform/^a([^a0-9]*)4/a̍$1/
+  - xform/([^ao])o([^aoeiu0-9]*)4/$1o̍$2/
+  - xform/^o([^aoeiu0-9]*)4/o̍$1/
+  - xform/([^aoe])e([^aoeiu0-9]*)4/$1e̍$2/
+  - xform/^e([^aoeiu0-9]*)4/e̍$1/
+  - xform/([^aoei])i([^aoeiu0-9]*)4/$1i̍$2/
+  - xform/^i([^aoeiu0-9]*)4/i̍$1/
+  - xform/([^aoeiu])u([^aoeiu0-9]*)4/$1u̍$2/
+  - xform/^u([^aoeiu0-9]*)4/u̍$1/
+  - xform/([^aoeiuy])y([^aoeiu0-9]*)4/$1y̍$2/
+  - xform/^y([^aoeiu0-9]*)4/y̍$1/
+
+  # Tone 5
+  - xform/([^a])a([^a0-9]*)5/$1ā$2/
+  - xform/^a([^a0-9]*)5/ā$1/
+  - xform/([^ao])o([^aoeiu0-9]*)5/$1ō$2/
+  - xform/^o([^aoeiu0-9]*)5/ō$1/
+  - xform/([^aoe])e([^aoeiu0-9]*)5/$1ē$2/
+  - xform/^e([^aoeiu0-9]*)5/ē$1/
+  - xform/([^aoei])i([^aoeiu0-9]*)5/$1ī$2/
+  - xform/^i([^aoeiu0-9]*)5/ī$1/
+  - xform/([^aoeiu])u([^aoeiu0-9]*)5/$1ū$2/
+  - xform/^u([^aoeiu0-9]*)5/ū$1/
+  - xform/([^aoeiuy])y([^aoeiu0-9]*)5/$1ȳ$2/
+  - xform/^y([^aoeiu0-9]*)5/ȳ$1/
+
+  # Step 3: Convert special romanizations to Unicode combining characters
+  # Must be done AFTER tone marks are applied
+
+  # aa → a̤ (with any tone mark preserved)
+  - xform/a([́̂̍̄]?)a/a̤$1/
+  # ee → e̤
+  - xform/e([́̂̍̄]?)e/e̤$1/
+  # oo → o̤
+  - xform/o([́̂̍̄]?)o/o̤$1/
+  # y → ṳ (standalone or after consonant)
+  - xform/y([́̂̍̄]?)/ṳ$1/
+  # nn → ⁿ
+  - xform/nn/ⁿ/
+
+  # Step 4: Remove remaining tone numbers (1, 7, 8 are unmarked)
+  - xform/[1-8]//g

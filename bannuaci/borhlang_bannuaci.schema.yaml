@@ -1,0 +1,133 @@
+# Rime schema
+# encoding: UTF-8 w/o BOM
+
+schema:
+  schema_id: borhlang_bannuaci
+  name: 興化平話字
+  version: "0.2.0"
+  author:
+    - Siniong
+  description: |
+    興化平話字輸入方案（莆田音）
+    Báⁿ-uā-ci̍ Input Method (Putian Accent)
+
+    基於19世紀末莆田城區口音的羅馬字書寫系統
+    輸出純平話字文本，漢字作為輔助顯示
+  dependencies:
+    - luna_pinyin
+
+switches:
+  - name: ascii_mode
+    reset: 0
+    states: [ 漢字, 字母 ]
+  - name: full_shape
+    states: [ 半角, 全角 ]
+  - name: simplification
+    states: [ 繁體, 简体 ]
+  - name: ascii_punct
+    states: [ 。，, ．， ]
+
+engine:
+  processors:
+    - ascii_composer
+    - recognizer
+    - key_binder
+    - speller
+    - punctuator
+    - selector
+    - navigator
+    - express_editor
+  segmentors:
+    - ascii_segmentor
+    - matcher
+    - abc_segmentor
+    - punct_segmentor
+    - fallback_segmentor
+  translators:
+    - punct_translator
+    - script_translator
+    - reverse_lookup_translator
+  filters:
+    - simplifier
+    - lua_filter@bannuaci_filter  # Lua 過濾器：轉換為平話字
+    - uniquifier
+
+speller:
+  alphabet: zyxwvutsrqponmlkjihgfedcba
+  delimiter: " '"
+  algebra:
+  # --- 聲調按鍵映射 (Tone Key Mapping) ---
+    # 必須放在最前面，優先處理
+    - derive/2$/q/
+    - derive/3$/v/
+    - derive/5$/f/
+    - derive/4$/j/
+    - derive/7$/j/
+
+    # 步驟1：支援無聲調輸入（移除聲調數字）
+    - derive/[1-8]$//
+
+    # 步驟2：簡拼支援（首字母縮寫，保留聲調）
+    - abbrev/^([bpmgkhdtnlcsz]|ng|ch).+([1-8])$/$1$2/
+    # 簡拼無聲調版本
+    - abbrev/^([bpmgkhdtnlcsz]|ng|ch).+$/$1/
+
+    # 步驟3：模糊音支援
+    # ng 韻尾簡化
+    - derive/ang/an/
+    - derive/eng/en/
+    - derive/ing/in/
+    - derive/ong/on/
+    - derive/iang/ian/
+    - derive/iong/ion/
+    - derive/uang/uan/
+
+    # 入聲韻尾模糊
+    - derive/^(.+)h([1-8])$/$1$2/
+    - derive/^(.+)h([1-8])$/$1k$2/
+
+    # ch/c 模糊（某些使用者可能混淆）
+    - derive/^ch/c/
+    - derive/^c([^h])/ch$1/
+
+translator:
+  dictionary: borhlang_bannuaci
+  spelling_hints: 8
+  enable_sentence: true
+  enable_encoder: true
+  enable_user_dict: true
+  preedit_format:
+    # 將使用者輸入的 ASCII 羅馬字轉換為正確的平話字形式顯示
+    # aa → a̤
+    - xform/aa/a̤/
+    # ee → e̤
+    - xform/ee/e̤/
+    # oo → o̤
+    - xform/oo/o̤/
+    # y → ṳ
+    - xform/\by\b/ṳ/
+    # nn → ⁿ
+    - xform/nn/ⁿ/
+
+reverse_lookup:
+  dictionary: luna_pinyin
+  prefix: "`"
+  suffix: "'"
+  tips: 〔漢語拼音反查〕
+  preedit_format:
+    - xform/([nl])v/$1ü/
+    - xform/([nl])ue/$1üe/
+    - xform/([jqxy])v/$1u/
+
+punctuator:
+  import_preset: default
+
+key_binder:
+  import_preset: default
+  bindings:
+    # 可以在這裡添加自定義快捷鍵
+
+recognizer:
+  import_preset: default
+  patterns:
+    reverse_lookup: "`[a-z]*'?$"

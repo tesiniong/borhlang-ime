@@ -1,0 +1,206 @@
+# Rime schema
+# encoding: UTF-8 w/o BOM
+
+schema:
+  schema_id: borhlang_bannuaci_han
+  name: 興化平話字（漢字）
+  version: "0.1.0"
+  author:
+    - Siniong
+  description: |
+    興化平話字輸入方案（莆田音）- 漢字輸出模式
+    Báⁿ-uā-ci̍ Input Method (Putian Accent) - Chinese Character Output
+
+    基於19世紀末莆田城區口音的羅馬字書寫系統
+    輸出漢字，平話字顯示為註釋
+  dependencies:
+    - luna_pinyin
+
+switches:
+  - name: ascii_mode
+    reset: 0
+    states: [ 漢字, 字母 ]
+  - name: full_shape
+    states: [ 半角, 全角 ]
+  - name: simplification
+    states: [ 繁體, 简体 ]
+  - name: ascii_punct
+    states: [ 。，, ．， ]
+
+engine:
+  processors:
+    - ascii_composer
+    - recognizer
+    - key_binder
+    - speller
+    - punctuator
+    - selector
+    - navigator
+    - express_editor
+  segmentors:
+    - ascii_segmentor
+    - matcher
+    - abc_segmentor
+    - punct_segmentor
+    - fallback_segmentor
+  translators:
+    - punct_translator
+    - script_translator
+    - reverse_lookup_translator
+  filters:
+    - simplifier
+    - uniquifier
+
+speller:
+  alphabet: zyxwvutsrqponmlkjihgfedcba
+  delimiter: " '"
+  algebra:
+    # 步驟1：支援無聲調輸入（移除聲調數字）
+    - derive/[1-8]$//
+
+    # 步驟2：簡拼支援（首字母縮寫，保留聲調）
+    - abbrev/^([bpmgkhdtnlcsz]|ng|ch).+([1-8])$/$1$2/
+    # 簡拼無聲調版本
+    - abbrev/^([bpmgkhdtnlcsz]|ng|ch).+$/$1/
+
+    # 步驟3：模糊音支援
+    # ng 韻尾簡化
+    - derive/ang/an/
+    - derive/eng/en/
+    - derive/ing/in/
+    - derive/ong/on/
+    - derive/iang/ian/
+    - derive/iong/ion/
+    - derive/uang/uan/
+
+    # 入聲韻尾模糊
+    - derive/^(.+)h([1-8])$/$1$2/
+    - derive/^(.+)h([1-8])$/$1k$2/
+
+    # ch/c 模糊（某些使用者可能混淆）
+    - derive/^ch/c/
+    - derive/^c([^h])/ch$1/
+
+translator:
+  dictionary: borhlang_bannuaci_han
+  spelling_hints: 8
+  enable_sentence: true
+  enable_encoder: true
+  enable_user_dict: true
+  preedit_format:
+    # 將使用者輸入的 ASCII 羅馬字轉換為正確的平話字形式顯示
+    # aa → a̤
+    - xform/aa/a̤/
+    # ee → e̤
+    - xform/ee/e̤/
+    # oo → o̤
+    - xform/oo/o̤/
+    # y → ṳ
+    - xform/\by\b/ṳ/
+    # nn → ⁿ
+    - xform/nn/ⁿ/
+  comment_format:
+    # 候選詞註釋顯示平話字拼音
+    # 將 ASCII 羅馬字轉換為正確的平話字形式
+    # Step 1: Add hyphens between syllables for readability
+    - xform/ /-/g
+
+    # Step 2: Convert tone numbers (2-5) to combining diacritics
+    # Apply to the main vowel in each syllable
+    # Vowel priority: a > o > e > i > u > y
+
+    # Tone 2
+    - xform/([^a])a([^a0-9]*)2/$1á$2/
+    - xform/^a([^a0-9]*)2/á$1/
+    - xform/([^ao])o([^aoeiu0-9]*)2/$1ó$2/
+    - xform/^o([^aoeiu0-9]*)2/ó$1/
+    - xform/([^aoe])e([^aoeiu0-9]*)2/$1é$2/
+    - xform/^e([^aoeiu0-9]*)2/é$1/
+    - xform/([^aoei])i([^aoeiu0-9]*)2/$1í$2/
+    - xform/^i([^aoeiu0-9]*)2/í$1/
+    - xform/([^aoeiu])u([^aoeiu0-9]*)2/$1ú$2/
+    - xform/^u([^aoeiu0-9]*)2/ú$1/
+    - xform/([^aoeiuy])y([^aoeiu0-9]*)2/$1ý$2/
+    - xform/^y([^aoeiu0-9]*)2/ý$1/
+
+    # Tone 3
+    - xform/([^a])a([^a0-9]*)3/$1â$2/
+    - xform/^a([^a0-9]*)3/â$1/
+    - xform/([^ao])o([^aoeiu0-9]*)3/$1ô$2/
+    - xform/^o([^aoeiu0-9]*)3/ô$1/
+    - xform/([^aoe])e([^aoeiu0-9]*)3/$1ê$2/
+    - xform/^e([^aoeiu0-9]*)3/ê$1/
+    - xform/([^aoei])i([^aoeiu0-9]*)3/$1î$2/
+    - xform/^i([^aoeiu0-9]*)3/î$1/
+    - xform/([^aoeiu])u([^aoeiu0-9]*)3/$1û$2/
+    - xform/^u([^aoeiu0-9]*)3/û$1/
+    - xform/([^aoeiuy])y([^aoeiu0-9]*)3/$1ŷ$2/
+    - xform/^y([^aoeiu0-9]*)3/ŷ$1/
+
+    # Tone 4
+    - xform/([^a])a([^a0-9]*)4/$1a̍$2/
+    - xform/^a([^a0-9]*)4/a̍$1/
+    - xform/([^ao])o([^aoeiu0-9]*)4/$1o̍$2/
+    - xform/^o([^aoeiu0-9]*)4/o̍$1/
+    - xform/([^aoe])e([^aoeiu0-9]*)4/$1e̍$2/
+    - xform/^e([^aoeiu0-9]*)4/e̍$1/
+    - xform/([^aoei])i([^aoeiu0-9]*)4/$1i̍$2/
+    - xform/^i([^aoeiu0-9]*)4/i̍$1/
+    - xform/([^aoeiu])u([^aoeiu0-9]*)4/$1u̍$2/
+    - xform/^u([^aoeiu0-9]*)4/u̍$1/
+    - xform/([^aoeiuy])y([^aoeiu0-9]*)4/$1y̍$2/
+    - xform/^y([^aoeiu0-9]*)4/y̍$1/
+
+    # Tone 5
+    - xform/([^a])a([^a0-9]*)5/$1ā$2/
+    - xform/^a([^a0-9]*)5/ā$1/
+    - xform/([^ao])o([^aoeiu0-9]*)5/$1ō$2/
+    - xform/^o([^aoeiu0-9]*)5/ō$1/
+    - xform/([^aoe])e([^aoeiu0-9]*)5/$1ē$2/
+    - xform/^e([^aoeiu0-9]*)5/ē$1/
+    - xform/([^aoei])i([^aoeiu0-9]*)5/$1ī$2/
+    - xform/^i([^aoeiu0-9]*)5/ī$1/
+    - xform/([^aoeiu])u([^aoeiu0-9]*)5/$1ū$2/
+    - xform/^u([^aoeiu0-9]*)5/ū$1/
+    - xform/([^aoeiuy])y([^aoeiu0-9]*)5/$1ȳ$2/
+    - xform/^y([^aoeiu0-9]*)5/ȳ$1/
+
+    # Step 3: Convert special romanizations to Unicode combining characters
+    # Must be done AFTER tone marks are applied
+
+    # aa → a̤ (with any tone mark preserved)
+    - xform/a([́̂̍̄]?)a/a̤$1/
+    # ee → e̤
+    - xform/e([́̂̍̄]?)e/e̤$1/
+    # oo → o̤
+    - xform/o([́̂̍̄]?)o/o̤$1/
+    # y → ṳ (standalone or after consonant)
+    - xform/y([́̂̍̄]?)/ṳ$1/
+    # nn → ⁿ
+    - xform/nn/ⁿ/
+
+    # Step 4: Remove remaining tone numbers (1, 7, 8 are unmarked)
+    - xform/[1-8]//g
+
+reverse_lookup:
+  dictionary: luna_pinyin
+  prefix: "`"
+  suffix: "'"
+  tips: 〔漢語拼音反查〕
+  preedit_format:
+    - xform/([nl])v/$1ü/
+    - xform/([nl])ue/$1üe/
+    - xform/([jqxy])v/$1u/
+
+punctuator:
+  import_preset: default
+
+key_binder:
+  import_preset: default
+  bindings:
+    # 可以在這裡添加自定義快捷鍵
+
+recognizer:
+  import_preset: default
+  patterns:
+    reverse_lookup: "`[a-z]*'?$"

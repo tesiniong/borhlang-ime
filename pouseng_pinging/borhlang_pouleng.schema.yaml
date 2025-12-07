@@ -1,0 +1,182 @@
+# Rime schema
+# encoding: UTF-8 w/o BOM
+
+schema:
+  schema_id: borhlang_pouleng
+  name: 莆仙話拼音・莆田
+  version: "0.1.0"
+  author:
+    - Siniong
+  description: |
+    莆仙話拼音輸入方案（莆田音）
+    Pouseng Ping'ing Input Method (Putian Accent)
+
+    基於莆田城區口音的現代羅馬字拼音方案
+    支援簡拼、模糊音、變調輸入等功能
+  dependencies:
+    - luna_pinyin
+
+switches:
+  - name: ascii_mode
+    reset: 0
+    states: [ 漢字, 字母 ]
+  - name: full_shape
+    states: [ 半角, 全角 ]
+  - name: simplification
+    states: [ 繁體, 简体 ]
+  - name: ascii_punct
+    states: [ 。，, ．， ]
+
+engine:
+  processors:
+    - ascii_composer
+    - recognizer
+    - key_binder
+    - speller
+    - punctuator
+    - selector
+    - navigator
+    - express_editor
+  segmentors:
+    - ascii_segmentor
+    - matcher
+    - abc_segmentor
+    - punct_segmentor
+    - fallback_segmentor
+  translators:
+    - punct_translator
+    - script_translator
+    - reverse_lookup_translator
+  filters:
+    - simplifier
+    - uniquifier
+
+speller:
+  alphabet: zyxwvutsrqponmlkjihgfedcba
+  delimiter: " '"
+  algebra:
+    # 忽略聲調
+    - xform/^\{?([a-z]+)([0-9]*)\}?$/$1/
+
+    # 簡拼支援（首字母縮寫）
+    - abbrev/^([gkhlnmbpdtzcs]|ng)[aoeiuyr]+(ng|h|k)?$/$1/
+
+    # ========== 模糊音設定 ==========
+
+    # 類普拼式（方便初學者）
+    - derive/y/v/              # 魚 hy → hv
+    - derive/au/ao/            # 豆 dau → dao
+    - derive/ieng/ian/         # 咸 gieng → gian
+    - derive/^ieng/yan/        # 鹽 ieng → yan
+    - derive/ieu/iao/          # 藥 ieu → iao
+    - derive/yorng/iong/       # 傷 hyorng → hiong
+    - derive/^ia/ya/           # 野 ia → ya
+    - derive/^i([^aeuoy])/yi$1/ # 衣 i → yi
+    - derive/^iu/you/          # 游 iu → you
+    - derive/^y([^o])/yu$1/    # 於 y → yu
+    - derive/uang/wan/         # 彎 uang → wan
+    - derive/^ue/wei/          # 丸 ue → wei
+    - derive/^ui/wui/          # 為 ui → wui
+    - derive/^ua/wa/           # 畫 ua → wa
+    - derive/^u([^aei])/wu$1/  # 污 u → wu
+
+    # 簡碼（提高輸入速度）
+    - derive/yor([^n])/yo$1/   # 蟻 hyor → hyo
+    - derive/yor([^n])/io$1/   # 艾 hyor → hio
+    - derive/yorng/yong/       # 強 gyorng → gyong
+    - derive/yorng/ion/        # 廠 cyorng → cion
+    - derive/yorh/yoh/         # 約 yorh → yoh
+    - derive/orh/oq/           # 國 gorh → goq
+    - derive/orng/om/          # 工 gorng → gom
+    - derive/zyor/jo/          # 紙 zyor → jo
+    - derive/zyorng/jong/      # 章 zyorng → jong
+    - derive/zyorng/jon/       # 章 zyorng → jon
+    - derive/ung/ng/           # 囥 kung → kng
+
+    # 鼻音韻尾簡化（可省略 -ng 的 g）
+    - derive/ang/an/
+    - derive/eng/en/
+    - derive/ing/in/
+    - derive/ong/on/
+    - derive/ung/un/
+    - derive/yng/yn/
+    - derive/orng/orn/
+    - derive/oeng/oen/
+    - derive/ieng/ien/
+    - derive/uang/uan/
+    - derive/yorng/yorn/
+
+    # 顎化（z/c/s + i/y → j/q/x + i/u）
+    - derive/zi/ji/            # 字 zi → ji
+    - derive/ci/qi/            # 飼 ci → qi
+    - derive/si/xi/            # 舌 si → xi
+    - derive/zy/ju/            # 煮 zy → ju
+    - derive/cy/qu/            # 鼠 cy → qu
+    - derive/sy/xu/            # 薯 sy → xu
+
+    # 入聲韻尾模糊（h/k 可互換或省略）
+    - derive/^(.+)[hk]$/$1/    # 省略入聲韻尾
+    - derive/^(.+)h$/$1k/      # h → k
+    - derive/^(.+)k$/$1h/      # k → h
+
+    # 容錯（常見拼寫錯誤）
+    - derive/ang/ag/           # ang → ag
+    - derive/eng/eg/           # eng → eg
+    - derive/ing/ig/           # ing → ig
+    - derive/ong/og/           # ong → og
+    - derive/ung/ug/           # ung → ug
+    - derive/ang/am/           # ang → am
+    - derive/eng/em/           # eng → em
+    - derive/ing/im/           # ing → im
+    - derive/ong/om/           # ong → om（與簡碼重複但無妨）
+    - derive/ung/um/           # ung → um
+
+    # 老派/新派音變
+    - derive/ieu/iau/          # 老派音
+    - derive/ieh/iah/          # 老派音
+    - derive/ieng/iang/        # 老派音
+    - derive/o([^ern])/er$1/   # 新派音 o → er
+    - derive/ong/erng/         # 新派音 ong → erng
+    - derive/oh/erh/           # 新派音 oh → erh
+    - derive/ue/uei/           # 新派音 ue → uei
+
+    # 其他方言口音容錯
+    - derive/ue/uai/           # 某些口音 ue → uai
+
+translator:
+  dictionary: borhlang_pouleng
+  spelling_hints: 12
+  enable_sentence: true
+  enable_encoder: true
+  enable_user_dict: true
+  preedit_format:
+    # 顯示輸入時不做轉換（保持原樣）
+  comment_format:
+    # 候選詞註釋顯示聲調
+    - xlit/012345678/⁰¹²³⁴⁵⁶⁷⁸/
+
+reverse_lookup:
+  dictionary: luna_pinyin
+  prefix: "`"
+  suffix: "'"
+  tips: 〔漢語拼音反查〕
+  preedit_format:
+    - xform/([nl])v/$1ü/
+    - xform/([nl])ue/$1üe/
+    - xform/([jqxy])v/$1u/
+  comment_format:
+    # 反查時也顯示莆仙話拼音的聲調
+    - xlit/012345678/⁰¹²³⁴⁵⁶⁷⁸/
+
+punctuator:
+  import_preset: default
+
+key_binder:
+  import_preset: default
+  bindings:
+    # 自定義快捷鍵（如需要可在此添加）
+
+recognizer:
+  import_preset: default
+  patterns:
+    reverse_lookup: "`[a-z]*'?$"

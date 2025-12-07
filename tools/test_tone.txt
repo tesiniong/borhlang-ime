@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "<string>", line 12, in <module>
+UnicodeEncodeError: 'cp950' codec can't encode character '\xfb' in position 2: illegal multibyte sequence
+ด๚ธี gui3:
+  - 
