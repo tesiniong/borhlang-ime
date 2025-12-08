@@ -246,24 +246,36 @@
 borhlang-ime/
 ├── README.md                 # 本檔案
 ├── LICENSE                   # MPL 2.0 授權
+├── build_dicts.bat           # 一鍵更新詞表（Windows）
+├── deploy_to_rime.bat        # 部署到 Rime（Windows）
 ├── bannuaci/                 # 興化平話字方案
-│   ├── borhlang_bannuaci.schema.yaml       # 純平話字輸出
+│   ├── borhlang_bannuaci.schema.yaml       # 純平話字輸出（使用 Lua）
 │   ├── borhlang_bannuaci_han.schema.yaml   # 漢字輸出
-│   ├── borhlang_bannuaci.dict.yaml         # 詞庫（23,000+ 詞條）
-│   ├── conversion_log.txt    # 詞庫轉換日誌
-│   └── README.md             # 興化平話字說明文件
+│   ├── borhlang_bannuaci.dict.yaml         # 詞庫（Lua 格式）
+│   ├── lua/bannuaci_filter.lua             # Lua 智慧過濾器
+│   ├── rime.lua                            # Lua 入口檔案
+│   ├── conversion_log.txt                  # 詞庫轉換日誌
+│   └── README.md                           # 興化平話字說明文件
 ├── pouseng_pinging/          # 莆仙話拼音方案
 │   ├── borhlang_pouleng.schema.yaml        # 莆田話方案
-│   ├── borhlang_pouleng.dict.yaml          # 莆田話詞庫（24,000+ 詞條）
-│   └── README.md             # 莆仙話拼音說明文件
-├── data/                     # 原始資料
-│   ├── cpx-pron-data.lua     # 維基詞典讀音資料
-│   ├── psp_to_buc.py         # 拼音轉換腳本
-│   ├── puxian_initials.json  # 聲母表
-│   └── puxian_rhymes.json    # 韻母表
+│   ├── borhlang_pouleng.dict.yaml          # 莆田話詞庫（25,000+ 詞條，合併版）
+│   └── README.md                           # 莆仙話拼音說明文件
+├── data/                     # 原始資料與中間檔案
+│   ├── cpx-pron-data.lua                   # 維基詞典字音資料
+│   ├── psp_to_buc.py                       # 拼音轉換核心模組
+│   ├── puxian_initials.json                # 聲母表
+│   ├── puxian_rhymes.json                  # 韻母表
+│   ├── vocab_from_wikt.yaml                # 從維基詞典提取的詞彙
+│   └── vocab_from_bible.yaml               # 從聖經提取的詞彙
+├── docs/                     # 文檔與數據源
+│   ├── puxian_phrases_from_wikt.txt        # 維基詞典短語資料
+│   └── hinghua_bible.txt                   # 興化平話字聖經文本
 ├── tools/                    # 開發工具
-│   └── convert_dict.py       # 詞庫轉換工具
-├── docs/                     # 說明文件
+│   ├── build_all_dicts.py                  # 一鍵更新詞表（主腳本）
+│   ├── extract_vocab_from_wikt.py          # 從維基詞典提取詞彙
+│   ├── extract_vocab_from_bible.py         # 從聖經提取詞彙
+│   ├── convert_dict_v3.py                  # 莆拼→平話字轉換
+│   └── generate_pure_bannuaci_dict.py      # 生成 Lua 格式詞庫
 └── hinghwa-ime/              # 參考資料（原 hinghwa-ime 專案）
 ```
 
@@ -276,7 +288,22 @@ borhlang-ime/
 - 🌍 擴充方言：協助開發其他莆仙語方言點的輸入方案
 - 📖 完善文件：改善說明文件、增加使用範例
 
-### 詞庫校對
+### 詞庫校對與更新
+
+本專案詞庫來自多個來源，自動合併：
+
+1. **基礎詞庫** (`pouseng_pinging/borhlang_pouleng.dict.yaml`) - 人工整理
+2. **維基詞典** (`docs/puxian_phrases_from_wikt.txt`) - 短語與詞彙
+3. **聖經文本** (`docs/hinghua_bible.txt`) - 自然語言模式
+
+**更新詞庫流程：**
+
+1. 編輯任一數據源檔案
+2. 執行 `build_dicts.bat`（Windows）或 `python tools/build_all_dicts.py`
+3. 檢查 `bannuaci/conversion_log.txt` 查看轉換警告
+4. 執行 `deploy_to_rime.bat` 部署到 Rime
+
+**人工校對：**
 
 轉換日誌 `bannuaci/conversion_log.txt` 列出了需要人工確認的詞條。如果您發現錯誤，歡迎提交 Pull Request 修正。
 

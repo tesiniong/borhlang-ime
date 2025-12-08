@@ -1,0 +1,13 @@
+驗證調符位置：
+
+✓ sa2 -> sá (調符在 a 上)
+✓ saa2 -> sá̤ (調符在 a̤ 上)
+✗ sia2 -> siá (預期調符在 i 上)
+✓ sioong5 -> siō̤ng (調符在 o̤ 上)
+✓ cheng2 -> chéng (調符在 e 上)
+✗ aauh4 -> a̤u̍h (預期調符在 a̤ 上)
+
+檢查多音節詞：
+
+莆田: po2 cheng2 -> pó-chéng
+上帝: sioong5 daa4 -> siō̤ng-da̤̍

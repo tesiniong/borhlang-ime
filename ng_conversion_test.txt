@@ -1,0 +1,10 @@
+測試 ng 韻母轉換規則：
+
+✓ ng2 -> ng2 -> ng2
+✓ hng5 -> hng5 -> hng5
+✓ cng3 -> zung3 -> cng3
+✓ mng4 -> mung4 -> mng4
+✓ bng1 -> bung1 -> bng1
+✓ png2 -> pung2 -> png2
+
+✅ 所有測試通過！

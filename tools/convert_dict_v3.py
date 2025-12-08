@@ -13,13 +13,14 @@ from pathlib import Path
 from unicodedata import normalize as norm
 from typing import List, Dict, Tuple, Optional, Set
 
-# 導入 psp_to_buc 轉換邏輯
+# 導入轉換模組
 sys.path.append(str(Path(__file__).parent.parent / "data"))
-from psp_to_buc import buc_initials, buc_finals, buc_tones
+from romanization_converter import RomanizationConverter
+from psp_to_buc import buc_finals, buc_tones  # 仍需要用於候選生成
 
 
 class BucRomanizer:
-    """平話字拼式轉換器"""
+    """平話字拼式轉換器（包裝 RomanizationConverter）"""
 
     @staticmethod
     def psp_to_buc_candidates(psp_syllable: str) -> List[str]:
@@ -180,51 +181,13 @@ class BucRomanizer:
     @staticmethod
     def buc_to_romanization(buc_syllable: str) -> str:
         """
-        將平話字音節轉換為拼式
+        將平話字音節轉換為輸入式
 
-        例如：kā → ka5, sâ̤ → saa3, guáⁿ → guann2
+        例如：kā → ka5, sâ̤ → saa3, guáⁿ → guann2, do̤̍h → dooh7
+
+        使用新的 RomanizationConverter
         """
-        # 提取聲調
-        tone_map = {
-            '': '1',      # 無標記 = 第1調
-            '\u0301': '2',  # acute ́
-            '\u0302': '3',  # circumflex ̂
-            '\u030D': '4',  # vertical line ̍
-            '\u0304': '5',  # macron ̄
-        }
-
-        syllable = norm('NFD', buc_syllable)  # 分解組合字元
-
-        # 尋找聲調標記
-        tone = '1'  # 預設第1調
-        for mark, tone_num in tone_map.items():
-            if mark and mark in syllable:
-                tone = tone_num
-                syllable = syllable.replace(mark, '')
-                break
-
-        # 處理入聲（第6、7、8調）
-        if syllable.endswith('h'):
-            if tone == '5':  # macron → 第6調（陰入）
-                tone = '6'
-            elif tone == '4':  # vertical line → 第7調（陽入）
-                tone = '7'
-            elif tone == '1':  # 無標記的 -h = 第6調
-                tone = '6'
-
-        # 檢查是否有第8調標記（某些方言）
-        if tone == '3' and syllable.endswith('h'):
-            tone = '8'
-
-        syllable = norm('NFC', syllable)  # 重新組合
-
-        # 移除星號（維基詞典標記）
-        syllable = syllable.replace('*', '')
-
-        # 轉換特殊字元為 ASCII
-        romanization = BucRomanizer.buc_final_to_romanization(syllable)
-
-        return romanization + tone
+        return RomanizationConverter.buc_to_input(buc_syllable)
 
 
 class LuaDictParser:
@@ -776,8 +739,10 @@ def convert_pouleng_dict(pouleng_file: Path, cpx_file: Path, output_file: Path):
 if __name__ == '__main__':
     base_dir = Path(__file__).parent.parent
 
-    pouleng_file = base_dir / "hinghwa-ime" / "Pouleng" / "Pouleng.dict.yaml"
+    # 使用合併後的莆仙話拼音詞庫（包含維基詞典和聖經詞彙）
+    pouleng_file = base_dir / "pouseng_pinging" / "borhlang_pouleng.dict.yaml"
     cpx_file = base_dir / "data" / "cpx-pron-data.lua"
-    output_file = base_dir / "bannuaci" / "borhlang_bannuaci.dict.yaml"
+    # 輸出為漢字+拼式版本（供 generate_pure_bannuaci_dict.py 使用）
+    output_file = base_dir / "bannuaci" / "borhlang_bannuaci_han.dict.yaml"
 
     convert_pouleng_dict(pouleng_file, cpx_file, output_file)

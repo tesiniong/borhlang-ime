@@ -1,0 +1,4055 @@
+# Rime dictionary
+# encoding: utf-8
+#
+# 從維基詞典提取的莆仙話詞彙
+# Vocabulary extracted from Wiktionary
+#
+# 來源：docs/puxian_phrases_from_wikt.txt
+#
+---
+name: vocab_from_wikt
+version: "0.1.0"
+use_preset_vocabulary: false
+sort: by_weight
+...
+
+䍚瓢	lang4 pieo2	800
+一切	ih6 ceh6	800
+一半	soh7 bua4	800
+一國	ih6 gorh6	800
+一律	ih6 loh7	800
+一月	ih6 guei5	800
+一百	soh7 ba6	800
+一致	ih6 di4	800
+七十	cih6 leh7	800
+万俟	borh7 gi2	800
+丈夫	dah7 bou1	800
+丈姆	dieo5 ng3	800
+三十	sor1 leh7	800
+三國	sang1 ngorh6	800
+三明	sang1 ming2	800
+三牙	sor1 or2	800
+三頓	sor1 loe4	800
+上墓	sieo5 mou4	800
+上天	sieo5 ting1	800
+上帝	syorng5 ne4	800
+上晝	sieo5 lao4	800
+上海	syorng5 ngai3	800
+上班	syorng5 mang1	800
+上課	syorng5 kor4	800
+上逕	sieo5 ia4	800
+下令	ha5 ling5	800
+下南	or5 nang2	800
+下口	or5 ao3	800
+下工	or5 ang1	800
+下手	or5 ciu3	800
+下晝	or5 lao4	800
+下期	or5 i2	800
+下滿	or5 mua3	800
+下營	or5 yor2	800
+下班	ha5 ang1	800
+下腹	or5 ah6	800
+下頦	or5 ai2	800
+下頭	or5 lao2	800
+不堪	boh6 kang1	800
+不明	boh6 ming2	800
+不法	boh6 hah6	800
+不盡	boh6 zing5	800
+不義	boh6 gi5	800
+不記	boh6 gi4	800
+且等	cia3 deng3	800
+世界	se4 ai4	800
+丫頭	a1 lao2	800
+中介	doeng1 gai4	800
+中國	doeng1 ngorh6	800
+中堂	doeng1 dorng2	800
+中央	dor1 ng1	800
+中將	doeng1 zyorng4	800
+中巴	doeng1 ba1	800
+中式	doeng1 sih6	800
+中心	doeng1 ning1	800
+中文	doeng1 mong2	800
+中毒	doeng4 dorh7	800
+中班	doeng1 bang1	800
+中華	doeng1 hua2	800
+中間	doeng1 ngang1	800
+主席	zy3 sih7	800
+主張	zy3 dyorng1	800
+主意	zou3 i4	800
+主播	zy3 bor1	800
+主機	zy3 gi1	800
+主流	zy3 liu2	800
+主義	zy3 i5	800
+主要	zy3 ieo4	800
+主角	zy3 gah6	800
+主題	zy3 de2	800
+乘法	sing2 hah6	800
+九十	gao3 leh7	800
+九龍	giu3 loeng2	800
+乞雨	koh6 hou5	800
+乞食	koh6 siah7	800
+乾坤	goeng2 kong1	800
+乾燥	gang1 sor4	800
+乾糧	gang1 lyorng2	800
+乾脆	gang1 cui4	800
+乾貨	gang1 ho4	800
+亂碼	luang5 ma3	800
+了了	lieo3 lieo3	800
+了事	lieo3 lo5	800
+了結	lieo3 geh6	800
+了解	lieo3 gai3	800
+事實	so5 sih7	800
+事業	so5 gieh7	800
+事蹟	so5 lih6	800
+事體	so5 le3	800
+二十	di5 leh7	800
+互助	hou5 zoe5	800
+五代	gou3 dai5	800
+五保	gou3 bor3	800
+五十	ngou5 leh7	800
+五穀	gou3 gorh6	800
+五車	gou3 gy1	800
+井水	za3 lui3	800
+井盤	za3 ua2	800
+亞洲	a4 liu1	800
+亞當	a4 lorng1	800
+亞鉛	a4 oeng2	800
+交交	gao1 gao1	800
+交代	gao1 lai5	800
+交冬	gao1 lang1	800
+交夏	gao1 a5	800
+交寅	gao1 ing2	800
+交易	gao1 ih7	800
+交春	gao1 long1	800
+交椅	gao1 i3	800
+交流	gao1 liu2	800
+交秋	gao1 liu1	800
+交稅	gao1 suei4	800
+交警	gao1 ging4	800
+交通	gao1 torng1	800
+交際	gao1 ze4	800
+享受	hyorng3 siu5	800
+京劇	ging1 gih7	800
+人客	nang2 nga5	800
+人文	zing2 mong2	800
+人民	zing2 ming2	800
+人生	zing2 neng1	800
+人道	zing2 dor5	800
+今年	ging1 ning2	800
+今旦	ging1 nua4	800
+介紹	gai4 sieo5	800
+介詞	gai4 so2	800
+他國	ta1 gorh6	800
+仙丹	seng1 dang1	800
+仙草	seng1 cor3	800
+仙遊	sing1 niu2	800
+代替	dai5 te4	800
+代理	dai5 li3	800
+代碼	dai5 ma3	800
+代表	dai5 ieo3	800
+代詞	dai5 so2	800
+代誌	dai5 li4	800
+以來	i3 lai2	800
+以及	i3 gih7	800
+以撒	i3 sah6	800
+任務	zing5 mu5	800
+伊朗	i1 lorng3	800
+伓知	ng5 nai1	800
+伓通	ng5 nang1	800
+伙食	huei3 sih7	800
+伯公	ba6 orng1	800
+佈田	bou4 leng2	800
+位置	ui5 li4	800
+位處	ui5 cy4	800
+住店	dou4 le4	800
+住民	zy5 ming2	800
+何如	hor2 zy2	800
+何處	hor2 cy4	800
+何謂	hor2 ui5	800
+佛堂	hoh7 dorng2	800
+佛法	hoh7 hah6	800
+佛祖	hoh7 zou3	800
+佛龕	hoh7 kang1	800
+作協	zorh6 hieh7	800
+作品	zorh6 ping3	800
+作文	zorh6 mong2	800
+作業	zorh6 gieh7	800
+作法	zorh6 hah6	800
+作用	zorh6 oeng5	800
+作者	zorh6 zia3	800
+作賤	zorh6 zeng5	800
+使命	so3 ming5	800
+使徒	so3 lou2	800
+使用	so3 oeng5	800
+使錢	sai3 zing2	800
+來源	lai2 ngoeng2	800
+來蘇	lai2 sou1	800
+依法	i1 hah6	800
+依賴	i1 lai5	800
+便宜	beng2 ngi2	800
+便車	beng5 nia1	800
+促使	coeh6 so3	800
+保安	bo3 ang1	800
+保庇	bou3 i4	800
+保暖	bor3 nuang3	800
+保留	bor3 liu2	800
+保羅	bor3 lor2	800
+保衛	bor3 e5	800
+保護	bor3 ou5	800
+保鏢	bor3 bieo1	800
+保障	bor3 lyorng4	800
+保險	bor3 hieng3	800
+保養	bor3 yorng3	800
+信仰	sing4 ngyorng3	800
+信心	sing4 ning1	800
+信號	sing4 ngo5	800
+修法	siu1 hah6	800
+個人	kor4 ling2	800
+倒反	do4 be3	800
+倒手	do4 liu3	800
+倒水	do4 zui3	800
+倒爿	do4 e2	800
+倒車	do4 lia1	800
+倒面	do4 ming4	800
+候防	hieo5 orng2	800
+借錢	zieo5 zing2	800
+倩工	cia4 ang1	800
+倭賊	o1 ceh7	800
+值班	sih7 bang1	800
+假如	ga3 zy2	800
+假死	gor3 si3	800
+做七	zo4 cih6	800
+做人	zo4 nang2	800
+做官	zo4 ua1	800
+做牙	zo4 gor2	800
+做田	zo4 leng2	800
+做食	zo4 liah7	800
+停止	deng2 zi3	800
+停水	deng2 zui3	800
+停車	deng2 cia1	800
+停電	deng2 deng5	800
+健康	goeng5 korng1	800
+側面	ceh6 ming4	800
+偵查	zing1 ca2	800
+偶然	gieo3 leng2	800
+偷看	tao1 kua4	800
+偷食	tao1 lia7	800
+傘骨	sua3 goh6	800
+傳奇	doeng2 gi2	800
+傳說	doeng2 suei5	800
+傳道	doeng2 nor5	800
+傷勢	syorng1 se4	800
+僑客	gieo2 ke3	800
+僑民	gieo2 ming2	800
+價格	gor4 geh6	800
+價聲	gor4 lia1	800
+價錢	gor4 ling2	800
+儂影	nang2 ng3	800
+億萬	i5 mang5	800
+優勢	iu1 se4	800
+優於	iu1 y2	800
+優良	iu1 lyorng2	800
+優雅	iu1 nga3	800
+允許	yng3 hy3	800
+元宵	ngyng2 nieo1	800
+元寶	eng2 mo3	800
+元旦	ngoeng2 dang4	800
+元素	ngoeng2 sou4	800
+兄嫂	hia1 lo3	800
+兄弟	hia1 li5	800
+充電	coeng1 deng5	800
+先民	seng1 ming2	800
+先生	seng1 na1	800
+先知	seng1 di1	800
+先驗	seng1 ngieng5	800
+光年	gorng1 neng2	800
+光明	gorng1 ming2	800
+光景	gorng1 nging3	800
+光棍	gorng1 ngong4	800
+光纖	gorng1 cieng1	800
+克制	keh6 ze4	800
+克服	keh6 horh7	800
+免費	meng3 hi4	800
+兒童	zi2 lorng2	800
+兔囝	tou4 yor3	800
+入木	dih7 bah7	800
+入耳	dih7 hi5	800
+入腹	dih7 bah6	800
+入閣	zih7 gorh6	800
+內容	duei5 oeng2	800
+內山	li5 nua1	800
+全國	zoeng2 gorh6	800
+全文	zoeng2 mong2	800
+全民	zoeng2 ming2	800
+全球	zoeng2 giu2	800
+全面	zoeng2 meng4	800
+全麻	zoeng2 ma2	800
+兩面	nung5 ming4	800
+八仙	bah6 seng1	800
+八十	beh6 leh7	800
+八百	be6 a6	800
+八音	bah6 ing1	800
+公主	gorng1 ny3	800
+公共	gorng1 goeng5	800
+公司	gorng1 ni1	800
+公園	gorng1 nguei2	800
+公媽	gorng1 ma3	800
+公孫	gorng1 nong1	800
+公家	gorng1 nga1	800
+公民	gorng1 ming2	800
+公社	gorng1 nia5	800
+公親	gorng1 cing1	800
+公路	gorng1 lou5	800
+六十	la7 leh7	800
+六國	loeh7 gorh6	800
+六月	lah7 guei5	800
+六級	lah7 kih6	800
+共和	goeng5 hor2	800
+共鳴	goeng5 ming2	800
+兵器	bing1 ki4	800
+兵戎	bing1 zoeng2	800
+兵權	bing1 goeng2	800
+其餘	gi2 y2	800
+冊包	ca6 ao1	800
+冊封	ceh6 horng1	800
+冊店	ca6 le4	800
+冊庫	ca6 kou4	800
+冊架	ca6 or4	800
+冊櫥	ca6 liu2	800
+冊皮	ca6 puei2	800
+冊箱	ca6 sieo1	800
+冊紙	ca6 lyor3	800
+冊面	ca6 ming4	800
+冊頁	ca6 ieh6	800
+再會	zai4 huei5	800
+再見	zai4 geng4	800
+冠軍	guang4 ngong1	800
+冤仇	oeng1 giu2	800
+冤枉	oeng1 ngorng3	800
+冥想	ming2 syorng3	800
+冬瓜	dang1 ngua1	800
+冬筍	dang1 nong3	800
+冬節	dang1 ne6	800
+冰水	bing1 nui3	800
+冰箱	bing1 sieo1	800
+冰糖	bing1 nung2	800
+凊彩	cing4 cai3	800
+凊水	cing4 nui3	800
+凊汗	cing4 ngua5	800
+凊糜	cing4 ma2	800
+凊飯	cing4 buei5	800
+出丁	coh6 deng1	800
+出世	coh6 si4	800
+出價	coh6 gor4	800
+出喙	coh6 cui4	800
+出國	coh6 gorh6	800
+出山	coh6 sua1	800
+出工	coh6 gang1	800
+出手	coh6 ciu3	800
+出月	coh6 guei7	800
+出正	coh6 zia1	800
+出氣	coh6 ki4	800
+出水	coh6 zui3	800
+出珠	coh6 zou1	800
+出生	coh6 seng1	800
+出疕	coh6 pi3	800
+出痘	coh6 dao5	800
+出神	coh6 sing2	800
+出納	coh6 lah7	800
+出芽	coh6 gor2	800
+出葬	coh6 zorng4	800
+出虹	coh6 korng5	800
+出遊	coh6 iu2	800
+出運	coh6 ong5	800
+出錢	coh6 zing2	800
+出頭	coh6 tao2	800
+出鬼	coh6 gui3	800
+刀喙	do1 cui4	800
+刀囝	do1 yor3	800
+分數	hong1 nou4	800
+切斷	ceh6 doe5	800
+刑法	hing2 hah6	800
+列車	leh7 cia1	800
+初一	coe1 ih6	800
+初中	coe1 doeng1	800
+初戀	coe1 loeng5	800
+刣頭	tai2 tao2	800
+別位	beh7 ui5	800
+別墅	beh7 sy3	800
+別過	beh7 go4	800
+別項	beh7 hang5	800
+利便	li5 eng5	800
+利害	li5 hai5	800
+利未	li5 bi5	800
+利率	li4 loh7	800
+利用	li5 oeng5	800
+利益	li5 ih6	800
+利索	lia5 lorh6	800
+利錁	li4 or3	800
+利錢	li4 ling2	800
+到任	dor4 ling5	800
+刺球	ci4 giu2	800
+刺瓜	ci4 ua1	800
+刺豪	ci4 or2	800
+剃頭	ti6 lao2	800
+前程	zeng2 ding2	800
+前言	zeng2 ngoeng2	800
+前跤	se2 or1	800
+剝奪	borh6 duah7	800
+剪刀	zieng3 no1	800
+剪髮	zieng3 huah6	800
+副詞	hu4 so2	800
+割粙	gua6 liu5	800
+創治	corng4 di5	800
+劇團	gih7 duang2	800
+劇場	gih7 dyorng2	800
+力氣	lih7 ki4	800
+力草	lih7 cao3	800
+力量	lih7 lyorng5	800
+功夫	gang1 ngu1	800
+功德	gorng1 neh6	800
+功能	gorng1 neng2	800
+加侖	ga1 long2	800
+加法	ga1 hah6	800
+助詞	zoe5 so2	800
+動作	dorng5 zorh6	800
+動員	dorng5 ngoeng2	800
+動心	dorng5 ning1	800
+動態	dorng5 tai4	800
+動手	dorng5 niu3	800
+動機	dorng5 gi1	800
+動詞	dorng5 so2	800
+動車	dorng5 nia1	800
+動靜	dorng5 zing5	800
+勘驗	kang1 ngieng5	800
+勞動	lor2 lorng5	800
+勞工	lor5 orng1	800
+勞改	lor2 gai3	800
+勢力	se4 lih7	800
+勼跤	giu1 or1	800
+包圍	bao1 ui2	800
+匈奴	hoeng1 nou2	800
+匍匐	bou2 horh7	800
+化妝	hua4 lorng1	800
+化學	hua4 ah7	800
+化驗	hua4 ngieng5	800
+北京	bah6 ging1	800
+北大	bah6 dai5	800
+北斗	bah6 dieo3	800
+北方	bah6 horng1	800
+北極	bah6 gih7	800
+北洋	bah6 ieo2	800
+北部	bah6 bou5	800
+北高	bah6 gor1	800
+區區	cy1 cy1	800
+區域	ky1 yh7	800
+區長	ky1 lyorng3	800
+十一	seh7 ih6	800
+十七	seh7 cih6	800
+十三	seh7 sor1	800
+十九	seh7 gao3	800
+十二	seh7 di5	800
+十五	seh7 ngou5	800
+十八	seh7 be6	800
+十六	seh7 lah7	800
+十四	seh7 si4	800
+十國	sih7 gorh6	800
+十字	sih7 zo5	800
+千萬	ce1 mang5	800
+半世	bua4 se4	800
+半山	bua4 lua1	800
+半工	bua4 ang1	800
+半日	bua4 lih7	800
+半暝	bua4 ma2	800
+協作	hieh7 zorh6	800
+協力	hieh7 lih7	800
+協助	hieh7 zoe5	800
+協商	hieh7 syorng1	800
+協定	hieh7 deng5	800
+協會	hieh7 huei5	800
+協調	hieh7 dieo2	800
+協議	hieh7 gi3	800
+南京	nang2 nging1	800
+南兄	nang2 mia1	800
+南婆	nang2 mo2	800
+南安	nang2 mua1	800
+南寧	nang2 neng2	800
+南平	nang2 bing2	800
+南方	nang2 ngorng1	800
+南日	nang2 nih7	800
+南昌	nang2 cyorng1	800
+南明	nang2 ming2	800
+南極	nang2 gih7	800
+南洋	nang2 ngieo2	800
+南無	na2 mo2	800
+南門	nang2 muei2	800
+南風	nang2 muei1	800
+印度	ing4 dou5	800
+印象	ing4 syorng5	800
+卵糕	noe5 o1	800
+卵膏	noe5 go1	800
+厚意	hieo5 i4	800
+厝主	cou4 lou3	800
+厝囝	cou4 yor3	800
+厝契	cou4 ke4	800
+厝宅	cou4 la7	800
+厝瓦	cou4 yor5	800
+厝蓋	cou4 gua4	800
+厝裡	cou4 li3	800
+厝角	cou4 gah6	800
+厝邊	cou4 ing1	800
+厝間	cou4 e1	800
+厝頂	cou4 leng3	800
+參賽	cang1 soe4	800
+參軍	cang1 ngong1	800
+及格	gih7 geh6	800
+反動	huang3 norng5	800
+反對	huang3 dui4	800
+反應	huang3 ing4	800
+反映	huang3 ing4	800
+反正	huang3 zing4	800
+取決	cy3 goeh6	800
+受洗	siu5 se3	800
+受領	siu5 nia3	800
+古厝	gou3 lou4	800
+古意	gou3 i4	800
+古田	kou3 leng2	800
+古詩	gou3 si1	800
+可以	kor3 i3	800
+可愛	kor3 ai4	800
+可憐	kor3 leng2	800
+可樂	kor3 lorh7	800
+可能	kor3 neng2	800
+台州	tai1 liu1	800
+史冊	so3 ceh6	800
+史料	so3 lieo5	800
+史書	so3 sy1	800
+史記	so3 gi4	800
+司機	so1 gi1	800
+司法	so1 hah6	800
+吃虧	keh6 kui1	800
+各人	gah6 nang2	800
+各位	gorh6 ui5	800
+各儂	gah6 nang2	800
+各處	gorh6 cy4	800
+合作	hah7 zorh6	800
+合唱	hah7 cieo4	800
+合歡	hah7 huang1	800
+合法	hah7 hah6	800
+合理	hah7 li3	800
+合約	hah7 yorh6	800
+合股	gah7 gou3	800
+合肥	hah7 hi2	800
+合適	hah7 sih6	800
+吉他	gih6 ta1	800
+吉林	gih6 ling2	800
+吉祥	geh6 syorng2	800
+同學	dorng2 ngah7	800
+同安	dang2 ngua1	800
+名姓	mia2 la4	800
+名望	ming2 morng5	800
+名詞	ming2 so2	800
+名譽	ming2 y5	800
+吐奶	tou4 neng1	800
+吐瀉	tou4 lia4	800
+君主	gong1 zy3	800
+君子	gong1 no3	800
+吩咐	hong1 ngu4	800
+吳語	gou2 gy3	800
+吵鬧	cao3 nao3	800
+吸收	kih6 siu1	800
+周年	ziu1 ning2	800
+味素	bi5 lou4	800
+命令	ming5 ling5	800
+和尚	hor2 lyorng5	800
+和約	hor2 yorh6	800
+咒詛	ziu4 zoe3	800
+咒誓	ziu4 lyor5	800
+品德	ping3 deh6	800
+哲學	deh6 hah7	800
+哲理	deh6 li3	800
+唯一	bi2 ih6	800
+唯獨	bi2 dorh7	800
+唱戲	cieo4 i4	800
+唱歌	cieo4 gor1	800
+唱法	cieo4 hah6	800
+唱詩	cieo4 si1	800
+唻唻	lai1 lai1	800
+商業	syorng1 ngieh7	800
+啞口	ou5 ao3	800
+啟蒙	ke3 morng2	800
+啤酒	bi2 liu3	800
+善良	seng5 lyorng2	800
+喙䫌	cui4 e3	800
+喙角	cui4 gah6	800
+嗎哪	ma3 na2	800
+嚨喉	le2 ao2	800
+四十	si4 leh7	800
+四川	so4 loeng1	800
+四方	so4 orng1	800
+四級	si4 kih6	800
+四胡	si4 ou2	800
+四色	so4 seh6	800
+四角	si4 gah6	800
+囝兒	gyor3 li2	800
+囝婿	gyor3 lai4	800
+囝孫	gyor3 long1	800
+回應	huei2 ing4	800
+回歸	huei2 gui1	800
+回音	huei2 ing1	800
+回魂	huei2 orng2	800
+因為	ing1 ngui5	800
+困惑	kong4 heh7	800
+困苦	kong4 kou3	800
+困難	kong4 nang2	800
+國務	gorh6 bu5	800
+國土	gorh6 tou3	800
+國境	gorh6 ging3	800
+國威	gorh6 ui1	800
+國安	gorh6 ang1	800
+國家	gorh6 ga1	800
+國庫	gorh6 kou4	800
+國旗	gorh6 gi2	800
+國曆	gorh6 leh7	800
+國會	gorh6 huei5	800
+國歌	gorh6 gor1	800
+國歡	gorh6 huang1	800
+國民	gorh6 ming2	800
+國法	gorh6 hah6	800
+國王	gorh6 orng2	800
+國立	gorh6 lih7	800
+國籍	gorh6 zih7	800
+國貨	gorh6 ho4	800
+國運	gorh6 ong5	800
+國道	gorh6 dor5	800
+國防	gorh6 horng2	800
+國際	gorh6 ze4	800
+圍困	ui2 kong4	800
+圍牆	ui2 lieo2	800
+園林	oeng2 ling2	800
+園莊	oeng2 zorng1	800
+圓滿	oeng2 muang3	800
+圖案	dou2 ang4	800
+團結	duang2 geh6	800
+土名	tou3 mia2	800
+土話	tou3 ua5	800
+土醫	tou3 i1	800
+在位	zai5 ui5	800
+圭璋	ge1 zyorng1	800
+地下	de5 a5	800
+地位	de5 ui5	800
+地動	de5 dang5	800
+地名	de5 mia2	800
+地圖	de5 lou2	800
+地域	de5 yh7	800
+地方	de5 orng1	800
+地牛	de5 u2	800
+地球	de5 giu2	800
+地理	de5 li3	800
+地生	de5 leng1	800
+地鐵	de5 ti6	800
+地霸	de5 ba4	800
+地龍	de5 loeng2	800
+坂頂	buang3 neng3	800
+坐桌	soe5 lo6	800
+坐車	soe5 lia1	800
+坩囝	kor1 yor3	800
+型號	hing2 ngo5	800
+埃及	ai1 gih7	800
+城區	sia2 ky1	800
+城南	sing2 nang2	800
+城廂	sing2 syorng1	800
+城裡	sia2 li3	800
+城關	sing2 guang1	800
+埭頭	doe5 lao2	800
+執政	zih6 zing4	800
+執法	zih6 hah6	800
+執照	zih6 zieo4	800
+執行	zih6 heng2	800
+培養	buei2 ieo3	800
+基因	gi1 ing1	800
+基本	gi1 bong3	800
+基督	gi1 dorh6	800
+報仇	bor4 siu2	800
+報到	bor4 dor4	800
+報名	bo4 mia2	800
+報告	bor4 gor4	800
+報喜	bor4 hi3	800
+報國	bor4 gorh6	800
+報導	bor4 dor5	800
+報復	bor4 horh7	800
+報恩	bor4 yng1	800
+報應	bor4 ing4	800
+報案	bor4 ang4	800
+報答	bor4 dah6	800
+報紙	bo4 lyor3	800
+報警	bor4 ging3	800
+報銷	bor4 lieo1	800
+塕塵	orng1 norng2	800
+塗埕	tou2 dia2	800
+塗嶺	tou2 nia3	800
+塗沙	dou2 lua1	800
+塗粉	tou2 ong3	800
+塘嶼	tung2 ny5	800
+增加	zeng1 ga1	800
+墨斗	bah7 dao3	800
+墨水	bah7 zui3	800
+墨粉	bah7 hong3	800
+墨膏	bah7 go1	800
+墿喙	dou5 cui4	800
+墿囝	dou5 yor3	800
+墿龍	dou5 loeng2	800
+壁堵	bia6 lou3	800
+壁角	bia6 ah6	800
+壁邊	bia6 ing1	800
+壓力	ah6 lih7	800
+夏娃	ha5 ua1	800
+夏至	ha5 li4	800
+外人	guei5 nang2	800
+外國	guei5 orh6	800
+外家	gua5 or1	800
+外語	guei5 gy3	800
+多馬	dor1 ma3	800
+夠額	gao4 eh7	800
+大伯	dua5 a6	800
+大公	dua5 orng1	800
+大同	dai5 lorng2	800
+大囝	dua5 yor3	800
+大字	dua5 li5	800
+大學	dai5 ah7	800
+大寫	dua5 lia3	800
+大巴	dua5 ba1	800
+大廈	dai5 ha5	800
+大廳	dua5 tia1	800
+大房	dua5 ang2	800
+大暑	dua5 ly3	800
+大會	dai5 uei5	800
+大某	dua5 ou3	800
+大概	dai5 kai4	800
+大樓	dua5 lao2	800
+大水	dua5 lui3	800
+大洋	dua5 ieo2	800
+大澳	dua5 or4	800
+大濟	dua5 long4	800
+大火	dua5 uei3	800
+大班	dua5 bang1	800
+大田	dai5 ceng2	800
+大米	dua5 i3	800
+大約	dai5 yorh6	800
+大腸	dua5 lung2	800
+大衛	dai5 e5	800
+大衣	dua5 i1	800
+大量	dai5 lyorng5	800
+大銃	dua5 loeng5	800
+大門	dua5 muei2	800
+大闢	dai5 bih7	800
+大陸	dai5 loeh7	800
+大隊	dai5 dui5	800
+大雨	dua5 ou5	800
+大雪	dua5 soe6	800
+天下	ting1 nor5	800
+天主	teng1 ny3	800
+天光	ting1 gung1	800
+天命	teng1 ming5	800
+天國	teng1 gorh6	800
+天堂	teng1 dorng2	800
+天氣	teng1 ki4	800
+天津	teng1 ning1	800
+天火	ting1 nguei3	800
+天然	teng1 neng2	800
+天父	teng1 hu5	800
+天窗	teng1 noeng1	800
+天罡	teng1 ngorng1	800
+天頂	ting1 neng3	800
+太原	tai4 ngoeng2	800
+夫人	hu1 ling2	800
+央求	yorng1 giu2	800
+失守	sih6 siu3	800
+失察	sih6 cah6	800
+失常	sih6 syorng2	800
+失志	sih6 zi4	800
+失意	sih6 i4	800
+失戀	sih6 loeng5	800
+失效	sih6 hao5	800
+失敗	sih6 bai5	800
+失敬	sih6 ging4	800
+失業	sih6 gieh7	800
+失神	sih6 sing2	800
+失約	sih6 yorh6	800
+失職	sih6 zih6	800
+失衡	sih6 heng2	800
+失誤	sih6 gou5	800
+失調	sih6 dieo2	800
+失蹤	sih6 zorng1	800
+失身	sih6 sing1	800
+失陷	sih6 hang5	800
+奇日	kyor1 lih7	800
+奉獻	horng5 hoeng5	800
+契弟	ke4 le5	800
+契約	ke4 yorh6	800
+套房	to4 bang2	800
+套現	tor4 heng5	800
+套用	to4 oeng5	800
+奧運	or4 ong5	800
+女爿	dy3 e2	800
+女裝	dy3 zorng1	800
+奴才	nou2 lai2	800
+奶喙	neng1 cui4	800
+奶母	neng1 mo3	800
+奶罩	neng1 dao4	800
+奸臣	gang1 sing2	800
+好命	ho3 mia5	800
+好天	ho3 ling1	800
+好日	ho3 lih7	800
+好死	ho3 si3	800
+好看	ho3 ua4	800
+好空	ho3 kang1	800
+好聽	ho3 lia1	800
+好處	ho3 cy4	800
+好話	ho3 ua5	800
+好食	ho3 liah7	800
+如何	zy2 hor2	800
+如斯	zy2 lo1	800
+如果	zy2 gor3	800
+妄言	morng5 ngoeng2	800
+姊夫	zi3 u1	800
+姑媽	gou1 ma3	800
+委員	ui3 oeng2	800
+姨丈	i2 nieo5	800
+姨囝	i2 yor3	800
+姨媽	i2 ma3	800
+威力	ui1 lih7	800
+威望	ui1 morng5	800
+威脅	ui1 hieh7	800
+娘媽	nieo2 ma3	800
+娘嬭	nieo2 le3	800
+娛樂	gy2 lorh7	800
+婉拒	uang3 gy5	800
+婚姻	hong1 nging1	800
+婚禮	hong1 le3	800
+婚紗	hong1 sa1	800
+婦女	hu5 ly3	800
+婦科	hu5 or1	800
+媽孫	ma3 long1	800
+媽祖	ma3 lou3	800
+嫁妝	gor4 lung1	800
+嬸娘	sing3 nieo2	800
+子孫	zo3 long1	800
+子弟	zo3 le5	800
+子民	zo3 ming2	800
+孔子	korng3 no3	800
+字典	zo5 leng3	800
+字爿	zi5 be2	800
+字紙	zi5 lyor3	800
+字號	zi5 o5	800
+字音	zi5 ing1	800
+孝衫	hao4 lor1	800
+孝順	hao4 long5	800
+季節	gi4 zeh6	800
+孤立	gou1 lih7	800
+孤老	gou1 lor3	800
+孫婿	song1 nai4	800
+學力	hah7 lih7	800
+學問	hah7 mong5	800
+學堂	hah7 dorng2	800
+學校	hah7 hao5	800
+學樣	o7 ieo5	800
+學歷	hah7 leh7	800
+學理	hah7 li3	800
+學生	hah7 seng1	800
+學籍	hah7 zih7	800
+學習	hah7 sih7	800
+學院	hah7 ing5	800
+守勢	siu3 se4	800
+守暝	ziu3 ma2	800
+守法	siu3 hah6	800
+守約	siu3 yorh6	800
+安全	ang1 noeng2	800
+安卓	ang1 dorh6	800
+安南	ang1 nang2	800
+安寧	ang1 neng2	800
+安徽	ang1 hui1	800
+安心	ang1 ning1	800
+宏路	hua2 lou5	800
+官人	gua1 nang2	800
+官員	gua1 oeng1	800
+官話	guang1 nua5	800
+定案	deng5 ang4	800
+定番	dia5 uang1	800
+定點	deng5 zieng1	800
+宜蘭	gi2 lang2	800
+客人	ka6 nang2	800
+客囝	ka6 yor3	800
+客家	keh6 ga1	800
+客店	ka6 le4	800
+客棧	ka6 lang5	800
+客氣	ka6 ki4	800
+客話	ka6 ua5	800
+客語	keh6 gy3	800
+客邊	ka6 beng1	800
+宣傳	soeng1 doeng2	800
+宣言	soeng1 ngoeng2	800
+家己	gai4	800
+家法	ga1 hah6	800
+家私	gor1 li1	800
+容易	oeng2 ngi5	800
+寂寞	zih7 borh7	800
+寄批	gyor4 pe1	800
+寄生	gyor4 leng1	800
+密碼	bih7 bor3	800
+富裕	hu4 zy5	800
+富貴	hu4 ui4	800
+寒假	hang2 nga3	800
+寒天	gua1 ling1	800
+寒著	gua2 dieo7	800
+寒露	gua2 lou4	800
+實在	sih7 zai5	800
+實情	sih7 zing2	800
+實現	sih7 heng5	800
+實用	sih7 oeng5	800
+實詞	sih7 so2	800
+實踐	sih7 zeng5	800
+實錄	sih7 loeh7	800
+實際	sih7 ze4	800
+實驗	sih7 ngieng5	800
+實體	sih7 te3	800
+寧夏	neng2 ha5	800
+寧德	neng2 deh6	800
+審判	sing3 puang4	800
+審案	sing3 ang4	800
+審議	sing3 gi3	800
+寫字	sia3 li5	800
+寫批	sia3 pe1	800
+寶島	bor3 dor3	800
+寶蓋	bor3 gai4	800
+寸棗	cong4 no3	800
+封喙	horng1 cui4	800
+將軍	zyorng1 ngong1	800
+專家	zoeng1 nga1	800
+尊嚴	zong1 ngieng2	800
+對半	dui4 mua4	800
+對同	dui4 lorng2	800
+對應	dui4 ing4	800
+對時	dui4 li2	800
+對面	dui4 ming4	800
+導論	dor5 long5	800
+小人	sieo3 ling2	800
+小學	sieo3 ah7	800
+小寫	sieo3 lia3	800
+小心	sieo3 sing1	800
+小暑	sieo3 ly3	800
+小氣	sieo3 ki4	800
+小滿	sieo3 muang3	800
+小禮	sieo3 le3	800
+小說	sieo3 soeh6	800
+小雪	sieo3 soe6	800
+小額	sieo3 geh7	800
+少少	zieo3 zieo3	800
+少年	sieo4 neng2	800
+就關	ziu5 uang1	800
+尻川	gor1 luei1	800
+尻脊	gor1 lia6	800
+尾叔	buei3 loeh6	800
+尾口	buei3 kao2	800
+尾名	buei3 mia2	800
+尾囝	buei3 yor3	800
+尾嬸	buei3 ling3	800
+尾梨	buei3 li2	800
+尾溜	buei3 liu1	800
+局勢	goeh7 se4	800
+局限	goeh7 hang5	800
+居士	gy1 so5	800
+居民	gy1 ming2	800
+屎儂	sai3 nang2	800
+層面	zeng2 meng4	800
+履歷	li3 leh7	800
+屬性	soeh7 sing4	800
+屬於	soeh7 y2	800
+山亭	sang1 deng2	800
+山勢	sua1 se4	800
+山喙	sua1 cui4	800
+山囝	sua1 yor3	800
+山東	sang1 norng1	800
+山西	sang1 ne1	800
+山豬	sua1 ly1	800
+山雞	sua1 e1	800
+山頂	sua1 leng3	800
+山頭	sua1 lao2	800
+峰尾	pang1 muei3	800
+峰頭	pang1 nao2	800
+嵩口	sing1 ngao3	800
+嶺底	nia3 le3	800
+嶺頂	nia3 leng3	800
+嶺骹	nia3 or1	800
+州長	ziu1 lyorng3	800
+巡更	song2 nga1	800
+工商	gorng1 syorng1	800
+工尺	gorng1 ce1	800
+差異	ca1 i5	800
+差遣	ce1 keng3	800
+巴士	ba1 so5	800
+巴豆	ma1 lao5	800
+市區	ci5 ky1	800
+市民	ci5 ming2	800
+市長	ci5 lyorng3	800
+布店	bou4 le4	800
+布拖	bou4 tua1	800
+布機	bou4 gui1	800
+布袋	bou4 loe5	800
+布鞋	bou4 e2	800
+布魚	bou4 y2	800
+希望	hi1 morng5	800
+帝位	de4 ui5	800
+帝王	de4 orng2	800
+師姑	sai1 ou1	800
+師父	so1 u5	800
+常太	syorng2 nai4	800
+干掛	gang1 nge4	800
+平安	bing2 ngang1	800
+平屋	bing2 orh6	800
+平平	ba2 ba2	800
+平民	bing2 ming2	800
+平洋	ba2 ieo2	800
+平海	bing2 ngai3	800
+平跤	ba2 or1	800
+年兜	ning2 nao1	800
+年尾	ning2 muei3	800
+年暝	ning2 ma2	800
+幹部	gang4 mou5	800
+幻燈	huang5 deng1	800
+幽靈	iu1 leng2	800
+幽默	iu1 beh7	800
+幾個	gui3 e2	800
+幾工	gui3 ang1	800
+幾歲	gui3 huei4	800
+床囝	cung2 ngyor3	800
+床布	cung2 mou4	800
+床椅	cung2 ngi3	800
+床面	cung2 ming4	800
+序文	sy5 mong2	800
+序言	sy5 ngoeng2	800
+店囝	de4 yor3	800
+店門	de4 muei2	800
+店面	de4 ming4	800
+店頭	de4 lao2	800
+庚帖	geng1 te5	800
+庠序	syorng2 sy5	800
+度尾	dou5 uei3	800
+庶民	sy4 ming2	800
+廁所	ceh6 soe3	800
+廈門	or5 muei2	800
+廚工	cy2 orng1	800
+廚師	cy2 lo1	800
+廝拍	so1 a6	800
+廟宇	bieo5 y3	800
+廠爿	cieo3 be2	800
+廣州	gung3 niu1	800
+廣播	gorng3 mor4	800
+廣東	gung3 norng1	800
+廣西	gung3 ne1	800
+廣電	gorng3 deng5	800
+廬鼠	lou2 ly3	800
+延安	eng2 ang1	800
+建設	goeng4 seh6	800
+建議	goeng4 gi3	800
+弄獅	lang5 sai1	800
+弄龍	lang5 loeng2	800
+弒君	si4 gong1	800
+弓箭	goeng1 nieng4	800
+引水	ing3 nui3	800
+引火	ing3 nguei3	800
+弱勢	zyorh7 se4	800
+強勢	gyorng2 se4	800
+彈琴	dua2 ging2	800
+彰化	zyorng1 hua4	800
+影響	ing3 hyorng3	800
+彼得	bi3 leh6	800
+往來	orng3 lai2	800
+往年	orng3 ning2	800
+往過	orng3 ngo4	800
+律師	loh7 so1	800
+律法	loh7 hah6	800
+律詩	loh7 si1	800
+後勢	ao5 li4	800
+後向	ao5 ieo4	800
+後壁	ao5 ia6	800
+後尾	ao5 uei3	800
+後工	ao5 ang1	800
+後悔	hieo5 huei3	800
+後手	ao5 liu3	800
+後日	ao5 lih7	800
+後生	hao5 la1	800
+後裔	hieo5 e4	800
+後角	ao5 gah6	800
+後過	ao5 o4	800
+後門	ao5 muei2	800
+後驗	hieo5 ngieng5	800
+徐州	sy2 liu1	800
+得失	deh6 sih6	800
+得志	deh6 zi4	800
+得意	deh6 i4	800
+復興	horh7 hing1	800
+微信	bi2 sing4	800
+德國	deh6 gorh6	800
+德語	deh6 gy3	800
+徹底	deh7 de3	800
+心火	sing1 mor3	800
+心煞	sing1 nah6	800
+心神	seng1 ning2	800
+心肝	sing1 ngua1	800
+必備	bih6 bi5	800
+必然	bih6 zeng2	800
+必要	bih6 ieo4	800
+必需	bih6 sy1	800
+必須	bih6 sy1	800
+忍耐	nong3 nai5	800
+忠門	doeng1 muei2	800
+快樂	kuei4 lorh7	800
+快活	kuei4 uah7	800
+念經	nieng5 ging1	800
+忽然	hoh6 zeng2	800
+思念	so1 nieng5	800
+思想	so1 lyorng3	800
+思慮	so1 ly5	800
+思維	so1 bi2	800
+思量	so1 nieo2	800
+急促	gih6 coeh6	800
+急救	gih6 giu4	800
+性感	sing4 gang3	800
+性氣	sing4 ki4	800
+性能	sing4 neng2	800
+性頭	sa4 lao2	800
+怪胎	guei4 tai1	800
+恩典	yng1 deng3	800
+恩惠	yng1 he5	800
+悔意	huei3 i4	800
+悔改	huei3 gai3	800
+惜命	sieo6 mia5	800
+惠安	he5 ua1	800
+惡人	orh6 nang2	800
+惡化	orh6 hua4	800
+惡意	orh6 i4	800
+惡物	orh6 muei7	800
+惡講	o6 gorng3	800
+想法	syorng3 hah6	800
+惶恐	horng2 koeng3	800
+意料	i4 lieo5	800
+意願	i4 ngoeng5	800
+愛情	ai4 zing2	800
+感冒	gang3 mor5	800
+感動	gang3 norng5	800
+感性	gang3 sing4	800
+慌忙	horng1 morng2	800
+慕容	bou5 oeng2	800
+憂慮	iu1 ly5	800
+憐憫	leng2 ming3	800
+憲法	hoeng4 hah6	800
+應聘	ing4 ping4	800
+應許	ing4 hy3	800
+應驗	ing4 ngieng5	800
+懷念	huei2 nieng5	800
+懷疑	huei2 gi2	800
+戀愛	loeng5 ngai4	800
+戇囝	ngorng5 ngyor3	800
+成功	sing2 ngorng1	800
+成名	sing2 ming2	800
+成就	sing2 ziu5	800
+成材	sing2 zai2	800
+成果	sing2 gor3	800
+成熟	sing2 noeh7	800
+成立	sia2 lih7	800
+成績	sing2 zih6	800
+成見	sing2 ngeng4	800
+成語	sia2 y3	800
+成都	sing2 dou1	800
+我儂	guah3 nang2	800
+我國	ngor3 gorh6	800
+我輩	guah7 muei4	800
+戒嚴	gai4 ngieng2	800
+戰士	zeng4 so5	800
+戰艦	zeng4 lang5	800
+戲棚	hi4 a2	800
+戲衫	hi4 lor1	800
+戶口	hou5 ao2	800
+房貸	bang2 dai4	800
+房間	bang2 nge1	800
+所以	soe3 i3	800
+所有	soe3 iu3	800
+所費	sou3 e4	800
+手下	ciu3 or5	800
+手印	ciu3 ing4	800
+手工	ciu3 ang1	800
+手巾	ciu3 yng1	800
+手指	ciu5 zai3	800
+手提	ciu3 de2	800
+手機	ciu3 gi1	800
+手液	ciu3 sieo7	800
+手筆	ciu3 ih6	800
+手節	ciu3 leh6	800
+手肚	ciu3 lou3	800
+手術	ciu3 loh7	800
+手賤	ciu3 zeng5	800
+手運	ciu3 ong5	800
+手銬	ciu3 kao4	800
+手錶	ciu3 ieo3	800
+手鐲	ciu3 lo7	800
+手電	ciu3 deng5	800
+手頭	ciu3 lao2	800
+手骨	ciu3 goh6	800
+才子	zai2 zo3	800
+才能	zai2 neng2	800
+打倒	da3 dor3	800
+扛轎	gung1 gieo5	800
+扶手	hu2 ciu3	800
+批紙	pe1 lyor3	800
+找尾	zao3 uei3	800
+承受	sing2 niu5	800
+技能	gi5 neng2	800
+把握	ba3 ah6	800
+投考	dao2 or3	800
+投資	dao2 zo1	800
+抗議	korng4 gi3	800
+抹藥	bua6 ieo7	800
+押金	ah6 ging1	800
+抽頭	tiu1 lao2	800
+拉薩	la1 sah6	800
+拍字	pa5 zi5	800
+拍戰	pa6 leng4	800
+拍折	pah6 zeh6	800
+拍氣	pa6 ki4	800
+拍獵	pa6 lah7	800
+拍球	pa6 giu2	800
+拍石	pa6 lieo7	800
+拍稿	pa6 gor3	800
+拍賒	pa6 lia1	800
+拍鐵	pa6 ti6	800
+拍面	pa6 ming5	800
+拍風	pa6 buei1	800
+拍麵	pa6 ming5	800
+拖布	tua1 ou4	800
+招租	zieo1 zou1	800
+拜一	bai4 ih6	800
+拜三	bai4 lor1	800
+拜二	bai4 li5	800
+拜五	bai4 ngou5	800
+拜六	bai4 lah7	800
+拜四	bai4 li4	800
+拜幾	bai4 gui3	800
+拜拜	bai4 bai4	800
+括弧	kuah6 hou2	800
+拱辰	gorng3 sing2	800
+拳擊	gong2 kih6	800
+拳頭	gong2 nao2	800
+拿瑪	na2 ma3	800
+挪亞	nor2 a4	800
+捋頭	lua7 lao2	800
+捌字	beh6 zi5	800
+掃帚	sao4 liu3	800
+掃碼	sao3 ma3	800
+掃羅	sor3 lor2	800
+掌權	zyorng3 goeng2	800
+排列	bai2 leh7	800
+排球	bai2 iu2	800
+掛號	gua4 o5	800
+探望	tang4 morng5	800
+探酒	tang4 niu3	800
+接受	zieh6 siu5	800
+接收	zieh6 siu1	800
+接觸	zieh6 coeh6	800
+接近	zieh6 gyng5	800
+接龍	zieh6 loeng2	800
+推動	tui1 dorng5	800
+推薦	tui1 zeng4	800
+提拔	de2 bah7	800
+提議	de2 gi3	800
+插手	cah6 ciu3	800
+插艾	cor6 hyor4	800
+插花	cor6 hua1	800
+揚名	yorng2 ming2	800
+換屆	yor5 gai4	800
+換臺	yor5 dai2	800
+搖櫓	ieo2 lou3	800
+搬簿	bua1 ou5	800
+搭印	dor6 ing4	800
+搭手	dor6 liu3	800
+搭船	dor6 long2	800
+搭車	dor6 lia1	800
+搭載	dah6 zai4	800
+搶劫	cyorng3 gieh6	800
+摩托	mor2 torh6	800
+摩西	mor2 le1	800
+摲棋	cang5 gi2	800
+撐傘	ta1 lua3	800
+撐船	ta1 long2	800
+撤兵	ceh6 bing1	800
+撤職	ceh6 zih6	800
+撲克	porh6 keh6	800
+操作	cor1 zorh6	800
+擴展	korh6 teng3	800
+擾民	zieo3 ming2	800
+攏總	lorng3 zorng3	800
+攑手	gyor7 liu3	800
+攑頭	gyor7 tao2	800
+攬權	lang3 goeng2	800
+支付	zi1 hu4	800
+支出	zi1 coh6	800
+支持	zi1 li2	800
+收入	siu1 dih7	800
+收埋	siu1 ai2	800
+收山	siu1 lua1	800
+收成	siu1 ling2	800
+收斂	siu1 lieng5	800
+收殮	siu1 lieng5	800
+收益	siu1 ih6	800
+收費	siu1 hi4	800
+收錄	siu1 loeh7	800
+收錢	siu1 zing2	800
+改途	goe3 dou2	800
+改運	goe3 ong5	800
+攻勢	gorng1 se4	800
+放假	bang4 ngor4	800
+放利	bang4 li5	800
+放心	horng4 sing1	800
+放手	bang4 niu3	800
+放晝	bang4 nao4	800
+放炮	bang4 mao4	800
+政務	zing4 mu5	800
+政府	zing4 ngu3	800
+政治	zing4 di5	800
+政策	zing4 ceh6	800
+故意	gou4 i4	800
+效力	hao5 lih7	800
+效應	hao5 ing4	800
+效法	hao5 hah6	800
+效率	hao5 loh7	800
+效用	hao5 oeng5	800
+救恩	giu4 yng1	800
+救援	giu4 oeng2	800
+救火	giu4 uei3	800
+教室	gao4 sih6	800
+教師	gao4 lo1	800
+教會	gao4 uei5	800
+教材	gao4 lai2	800
+教法	gor4 hah6	800
+教育	gao4 oeh7	800
+教諭	gao4 zy5	800
+敬仰	ging4 ngyorng3	800
+敬拜	ging4 bai4	800
+敬虔	ging4 geng2	800
+敬酒	ging4 ziu3	800
+數字	sou4 zo5	800
+數學	sou4 ah7	800
+數據	sou4 gy4	800
+數理	sou4 li3	800
+數目	sieo4 ah7	800
+數詞	sou4 so2	800
+數量	sou4 lyorng5	800
+文件	mong2 gyor5	800
+文具	mong2 gy5	800
+文化	mong2 hua4	800
+文字	mong2 zo5	800
+文學	mong2 ngah7	800
+文旦	mong2 dang4	800
+文昌	mong2 cyorng1	800
+文明	mong2 ming2	800
+文法	mong2 hah6	800
+料理	lieo5 li3	800
+斟酌	zing1 zyorh6	800
+斧頭	bou3 lao2	800
+新婦	sing1 mu5	800
+新年	sing1 neng2	800
+新度	sing1 nou5	800
+新疆	sing1 gyorng1	800
+新竹	sing1 doeh6	800
+新約	sing1 ngyorh6	800
+新縣	sing1 nge5	800
+新聞	sing1 mong2	800
+方位	horng1 ui5	800
+方儂	hng1 nang2	800
+方向	horng1 hyorng4	800
+方戥	horng1 neng3	800
+方案	horng1 ngang4	800
+方法	horng1 hah6	800
+方面	horng1 meng4	800
+旅社	ly3 lia5	800
+旅遊	ly3 iu2	800
+旋律	soeng2 loeh7	800
+族群	zorh7 gong2	800
+旗囝	gi2 yor3	800
+旗杆	gi2 ua1	800
+日報	zih7 bo4	800
+日晝	dih7 dao4	800
+日曆	zih7 leh7	800
+日期	zih7 gi2	800
+日本	zih7 bong3	800
+日頭	dih7 tao2	800
+日食	dih7 sih6	800
+早季	zor3 ui4	800
+早教	zor3 gao4	800
+早晏	zor3 ua4	800
+早晝	zor3 lao4	800
+早田	zor3 leng2	800
+早粟	zor3 lorh6	800
+昆明	kong1 ming2	800
+明文	ming2 mong2	800
+明白	ming2 beh7	800
+星光	ca1 ung1	800
+星宿	ca1 liu4	800
+春分	cong1 ngong1	800
+春動	cong1 nang5	800
+春尾	cong1 muei3	800
+春筍	cong1 nong3	800
+時節	si2 e5	800
+時間	si2 ang1	800
+普通	pou3 lorng1	800
+智識	di4 sih6	800
+暑假	sy3 a3	800
+暖瓶	nuang3 meng2	800
+暗路	ang4 nou5	800
+暝昏	ma2 uei1	800
+暝班	ma2 ang1	800
+暝頭	ma2 lao2	800
+曝衫	porh7 sor1	800
+曠野	korng4 ia3	800
+更新	geng1 sing1	800
+書峰	sy1 horng1	800
+書店	sy1 le4	800
+書法	sy1 hah6	800
+書記	sy1 gi4	800
+曾公	zeng1 ngorng1	800
+會意	huei5 i4	800
+會曉	e5 ieo3	800
+會議	huei5 gi3	800
+月份	guei7 ong5	800
+月光	guei7 orng1	800
+月半	guei7 mua4	800
+月塘	goeh7 dorng2	800
+月娘	guei7 nieo2	800
+月日	guei7 lih7	800
+月桂	goeh7 ge4	800
+月餅	goeh7 bia3	800
+有影	u5 ia3	800
+有意	iu3 i4	800
+有益	uh6 ia6	800
+有線	iu3 lyor4	800
+有閒	u5 e2	800
+有餘	iu3 y2	800
+朋友	beng2 iu3	800
+服務	horh7 bu5	800
+服從	horh7 zoeng2	800
+服氣	horh7 ki4	800
+服裝	horh7 zorng1	800
+朝鮮	dieo2 seng3	800
+期頤	gi2 i2	800
+木工	borh7 gorng1	800
+木材	borh7 zai2	800
+木爿	borh7 be2	800
+木瓜	borh7 gua1	800
+木耳	borh7 zi3	800
+未來	bi5 lai2	800
+末期	buah7 gi2	800
+本事	buang3 nu5	800
+本國	bong3 gorh6	800
+本底	bong3 ne3	800
+本成	bong3 nia2	800
+本然	bong3 neng2	800
+本能	bong3 neng2	800
+杉柴	sang1 nor2	800
+材料	zai2 lieo5	800
+村夫	coeng1 hu1	800
+村長	coeng1 nyorng3	800
+杭州	hang2 niu1	800
+東周	dorng1 ziu1	800
+東埔	dang1 mou1	800
+東嶠	dang1 ngieo5	800
+東張	dang1 nieo1	800
+東沃	dang1 ngor4	800
+東海	dang1 ngai3	800
+東漈	dang1 nyor4	800
+東漢	dorng1 hang4	800
+東莊	dang1 nung1	800
+松柏	soeng2 ma6	800
+枇杷	bi2 or2	800
+枉法	orng3 hah6	800
+枉然	orng3 neng2	800
+枕頭	zing3 nao2	800
+枵鬼	ieo1 gui3	800
+架勢	ga4 se4	800
+柏油	beh6 iu2	800
+某人	bou3 zing2	800
+查出	ca2 coh6	800
+查封	ca2 horng1	800
+查扣	ca2 kieo4	800
+查明	ca2 ming2	800
+查詢	ca2 song2	800
+查證	ca2 zing4	800
+查驗	ca2 ngieng5	800
+柴料	cor2 lieo5	800
+柴梳	cor2 loe1	800
+柴橋	cor2 ieo2	800
+柴氣	cor2 kui4	800
+柴盒	cor2 orh7	800
+柴草	cor2 lao3	800
+柴間	cor2 e1	800
+核心	heh7 sing1	800
+核武	heh7 bu3	800
+核能	heh7 neng2	800
+格式	geh6 sih6	800
+桂花	ge4 ua1	800
+案件	ang4 gyor5	800
+桌球	do6 iu2	800
+桑樹	sorng1 niu4	800
+梅囝	ng2 ngyor3	800
+梅花	buei2 ua1	800
+梔子	gi1 lo3	800
+條件	dieo2 gyor5	800
+條文	dieo2 mong2	800
+條約	dieo2 yorh6	800
+梧塘	gou2 lung2	800
+棉亭	ming2 nia2	800
+棉絮	ming2 ny4	800
+棉花	ming2 ngua1	800
+棚下	ba2 or5	800
+棚頂	ba2 leng3	800
+植物	sih7 boh7	800
+楊桃	ieo2 lo2	800
+楊梅	cieo2 ng2	800
+楓亭	horng1 neng2	800
+業務	gieh7 bu5	800
+極端	gih7 duang1	800
+概念	kai4 nieng5	800
+榕樹	soeng2 niu4	800
+榜頭	bua3 lao2	800
+榮華	yng2 hua2	800
+樂器	gah7 ki4	800
+樂意	lorh7 i4	800
+樓下	lao2 or5	800
+樓梯	lao2 lui1	800
+樓牽	lao2 keng1	800
+樓頂	lao2 leng3	800
+標準	bieo1 zong3	800
+標音	bieo1 ing1	800
+標頭	bieo1 lao2	800
+樟腦	zieo1 no3	800
+模擬	bou2 gi3	800
+樸素	porh6 sou4	800
+樹奶	ciu4 neng1	800
+樹影	ciu4 ng3	800
+樹林	ciu4 nor2	800
+樹栽	ciu4 lai1	800
+樹箬	ciu4 nieo7	800
+樹頭	ciu4 tao2	800
+機器	gi1 ki4	800
+機能	gi1 neng2	800
+機關	gi1 uang1	800
+檔案	dorng4 ang4	800
+檢查	gieng3 na1	800
+檢驗	gieng3 ngieng5	800
+檳榔	bing1 nung2	800
+櫃檯	gui5 dai2	800
+櫻花	ing1 ngua1	800
+權勢	goeng2 se4	800
+欠債	kieng4 nua4	800
+欠缺	kieng4 nguei6	800
+歇痠	hoe5 loe3	800
+歡喜	hua1 i3	800
+歡迎	huang1 nging2	800
+止枵	zi3 ieo1	800
+正名	zia4 mia2	800
+正好	zia4 o3	800
+正孫	zia4 long1	800
+正常	zing4 nyorng2	800
+正房	zia4 ang2	800
+正手	zia4 liu3	800
+正旦	zia4 lang4	800
+正爿	zia4 e2	800
+正珠	zia4 lou1	800
+正確	zing4 kah6	800
+正裝	zia4 lung1	800
+正面	zia4 meng4	800
+此生	co3 seng1	800
+步數	bou4 lieo4	800
+武旦	bu3 lang4	800
+武警	bu3 ging4	800
+歲壽	huei4 liu5	800
+歷史	leh7 so3	800
+死子	si3 li3	800
+殖民	sih7 ming2	800
+殘廢	zang2 he4	800
+殘疾	zang2 zih7	800
+殺害	sah6 hai5	800
+殺戮	sah6 loeh7	800
+毋甘	ng5 ngang1	800
+母語	bieo3 gy3	800
+毒品	dorh7 ping3	800
+毒藥	dorh7 ieo7	800
+毒蟲	tao4 tang2	800
+比例	bi3 le5	800
+比賽	bi3 soe4	800
+毛筆	mor2 ih6	800
+毫釐	hor2 li2	800
+民國	ming2 gorh6	800
+民學	ming2 ngo7	800
+民法	ming2 hah6	800
+氣勢	ki4 se4	800
+氣象	ki4 syorng5	800
+水井	zui3 la3	800
+水土	zui3 lou3	800
+水壺	zui3 ou2	800
+水平	zui3 a2	800
+水果	zui3 or3	800
+水桶	zui3 lang3	800
+水槽	zui3 lo2	800
+水氣	zui3 ki4	800
+水汽	zui3 ki4	800
+水流	zui3 lao2	800
+水珠	zui3 lou1	800
+水田	zui3 leng2	800
+水筆	zui3 ih6	800
+水管	zui3 guang3	800
+水花	zui3 ua1	800
+水蟻	zui3 yor5	800
+水路	zui3 lou5	800
+水車	zui3 lia1	800
+水鞋	zui3 e2	800
+水餃	zui3 gieo3	800
+水鬼	zui3 gui3	800
+永州	yng3 niu1	800
+永福	yng3 norh6	800
+求婚	giu2 hong1	800
+汗水	gua5 lui3	800
+汝輩	dyh7 muei4	800
+江口	gang1 ngao3	800
+江蘇	gang1 sou1	800
+江西	gang1 ne1	800
+江陰	gorng1 nging1	800
+污染	u4 zieng3	800
+決策	goeh6 ceh6	800
+決議	goeh6 gi3	800
+決賽	goeh6 soe4	800
+汽油	ki4 iu2	800
+汽車	ki4 lia1	800
+沃水	orh6 zui3	800
+沃肥	orh6 bui2	800
+沃花	orh6 hua1	800
+沖藥	coeng1 ieo7	800
+沙埔	sua1 ou1	800
+沙漠	sa1 bou2	800
+沙灘	sua1 tang1	800
+河北	hor2 bah6	800
+河南	hor2 nang2	800
+河溪	hor2 e1	800
+油煙	iu1 eng1	800
+治安	di5 ang1	800
+治理	di5 li3	800
+治療	di5 lieo2	800
+治癒	di5 zy3	800
+泅水	siu2 lui3	800
+泉州	soeng2 niu1	800
+泉水	syor2 lui3	800
+法人	hah6 zing2	800
+法令	hah6 ling5	800
+法則	hah6 zeh6	800
+法力	hah6 lih7	800
+法務	hah6 bu5	800
+法國	hah6 gorh6	800
+法場	hah6 dyorng2	800
+法官	hah6 gua1	800
+法定	hah6 deng5	800
+法寶	hah6 bor3	800
+法師	hah6 so1	800
+法度	hah6 dou5	800
+法庭	hah6 deng2	800
+法律	hah6 loh7	800
+法文	hah6 mong2	800
+法會	hah6 huei5	800
+法案	hah6 ang4	800
+法治	hah6 di5	800
+法網	hah6 morng5	800
+法老	hah6 lor3	800
+法術	hah6 soh7	800
+法規	hah6 gui1	800
+法語	hah6 gy3	800
+法警	hah6 ging4	800
+法輪	hah6 long2	800
+法辦	hah6 bang5	800
+法醫	hah6 i1	800
+法門	hah6 mong2	800
+法院	hah6 ing5	800
+注意	zy4 i4	800
+注明	zy4 ming2	800
+泰州	tai4 liu1	800
+洋灰	ieo2 uei1	800
+洋燭	ieo2 lorh6	800
+洋筆	ieo2 ih6	800
+洗湯	se3 lung1	800
+洗濯	se3 lorh7	800
+洗米	se3 bi3	800
+洗蕩	se3 lung5	800
+洗面	se3 ming4	800
+活動	uah7 dorng5	800
+活錢	uah7 zing2	800
+派水	pua4 lui3	800
+派頭	pai4 tao2	800
+流氓	liu2 morng2	800
+流水	lao2 lui3	800
+流汗	lao2 gua5	800
+流瀾	lao2 nua3	800
+流膿	lao2 nang2	800
+流血	lao2 he6	800
+流行	liu2 eng2	800
+流量	liu2 lyorng5	800
+流鼻	lao2 pi4	800
+浙江	zeh6 gang1	800
+海南	hai3 nang2	800
+海參	hai3 leng1	800
+海口	hai3 ao3	800
+海島	hai3 dor3	800
+海帶	hai3 lai4	800
+海拔	hai3 bah7	800
+海水	hai3 lui3	800
+海洋	hai3 ieo2	800
+海燕	hai3 eng4	800
+海盜	hai3 dor5	800
+海角	hai3 gah6	800
+海豬	hai3 ly1	800
+海軍	hai3 ong1	800
+海運	hai3 ong5	800
+海量	hai3 lyorng5	800
+海關	hai3 guang1	800
+海頭	hai3 lao2	800
+消亡	sieo1 morng2	800
+消費	sieo1 hi4	800
+液體	ih7 te3	800
+涵東	hang2 dorng1	800
+涵江	hang2 ngang1	800
+涵西	hang2 se1	800
+深淵	cing1 oeng1	800
+清明	cing1 ming2	800
+清查	cing1 ca2	800
+清華	cing1 ngua2	800
+清靠	cing1 kor4	800
+減法	gieng3 hah6	800
+渡喙	dou5 cui4	800
+測字	ceh6 zi5	800
+測量	ceh6 lyorng2	800
+測驗	ceh6 ngieng5	800
+游泳	iu2 yng5	800
+游洋	iu2 yorng2	800
+湄洲	bi2 liu1	800
+湖北	hou2 bah6	800
+湖南	hou2 nang2	800
+湖蜞	hou2 ki2	800
+溝通	gao1 torng1	800
+溪囝	ke1 yor3	800
+溪埔	ke1 ou1	800
+溪底	ke1 le3	800
+溪石	ke1 lieo7	800
+溪魚	ke1 y2	800
+溫州	ong1 niu1	800
+滅亡	beh7 morng2	800
+滅國	beh7 gorh6	800
+滴答	dih7 dah7	800
+滾水	gong3 nui3	800
+滾湯	gong3 nung1	800
+滿定	muang3 deng5	800
+漀酒	king2 ziu3	800
+漁船	hy2 long2	800
+漏風	lao5 uei1	800
+漢人	hang4 zing2	800
+漢奸	hang4 gang1	800
+漢字	hang4 zo5	800
+漢室	hang4 sih6	800
+漢族	hang4 zorh7	800
+漢語	hang4 gy3	800
+漢賦	hang4 hu4	800
+漱口	sui4 ao3	800
+漳州	zyorng1 niu1	800
+潑婦	puah6 hu5	800
+潔淨	geh6 zing5	800
+潛艇	zieng2 teng3	800
+澎湖	porng2 ngou2	800
+澳門	or4 muei2	800
+激動	kih6 dorng5	800
+激勵	kih6 le5	800
+激情	kih6 zing2	800
+濟南	ze3 nang2	800
+濟州	ze4 ziu1	800
+瀋陽	sing3 yorng2	800
+瀏覽	liu2 lang3	800
+火把	huei3 or3	800
+火挩	huei3 suah7	800
+火星	huei3 ca1	800
+火母	huei3 o3	800
+火油	huei3 iu2	800
+火烌	hor3 u1	800
+火爿	huei3 be2	800
+火石	huei3 lieo7	800
+火舌	huei3 si7	800
+火車	huei3 lia1	800
+火銃	huei3 loeng5	800
+灰卵	huei1 noe5	800
+炮兵	pao4 bing1	800
+烏仁	ou1 leng2	800
+烏坵	ou1 u1	800
+烏塗	ou1 lou2	800
+烏墨	ou1 ah7	800
+烏市	ou1 ci5	800
+烏暗	ou1 ang4	800
+烏煙	ou1 eng1	800
+烏白	ou1 a7	800
+烏豆	ou1 lao5	800
+烏賊	ou1 leh7	800
+烏雲	ou1 ong2	800
+烏龜	ou1 gu1	800
+無影	bo2 ia3	800
+無產	bu2 sang3	800
+無眠	bo2 ming2	800
+無線	bu2 lyor4	800
+無論	bu2 long5	800
+無量	bo2 lyorng5	800
+無閒	bo2 e2	800
+焦慮	zieo1 ly5	800
+煎藥	zyor1 ieo7	800
+煙塵	eng1 nong2	800
+煙筒	eng1 lang2	800
+煞尾	sua6 uei3	800
+煤炭	buei2 lua4	800
+照顧	zieo4 ou4	800
+煮食	zy3 liah7	800
+熟練	soeh7 loeng5	800
+熨枕	oh6 zing3	800
+熱天	zeh7 ting1	800
+熱火	zeh7 hor3	800
+熱狂	zeh7 gorng2	800
+燃火	nyor2 uei3	800
+燈火	deng1 nguei3	800
+燒銀	sieo1 ngyng2	800
+燒香	sieo1 ieo1	800
+燕鳥	eng4 nieo3	800
+營業	yng2 ngieh7	800
+營銷	yng2 sieo1	800
+營長	yor2 lyorng2	800
+營養	yng2 ngyorng3	800
+燥鯊	sor4 lua1	800
+爭取	zeng1 cy3	800
+爭議	zeng1 gi3	800
+爵位	zyorh6 ui5	800
+父老	hu5 lor3	800
+牆基	cieo2 i1	800
+片底	peng4 de3	800
+版面	bang3 ming4	800
+牙人	gor2 nang2	800
+牛哥	gu2 go1	800
+牛囝	gu2 yor3	800
+牛奶	gu2 neng1	800
+牛擔	gu2 dor1	800
+牛母	gu2 o3	800
+牛油	gu2 iu2	800
+牛犅	gu2 ang3	800
+牛腩	gu2 nang3	800
+牛螕	gu2 bi1	800
+牛軛	gu2 eh6	800
+牛鞭	gu2 beng1	800
+物理	boh7 li3	800
+物配	muei7 uei4	800
+特價	deh7 gor4	800
+特別	deh7 beh7	800
+特殊	deh7 sy2	800
+特色	deh7 seh6	800
+牽動	keng1 norng5	800
+牽經	keng1 ga1	800
+犁田	le2 leng2	800
+犧牲	hi1 seng1	800
+犬爿	koeng3 me2	800
+犯案	hang5 ang4	800
+犯法	hang5 hah6	800
+犯罪	hang5 zuei5	800
+狀元	zing5 nguei2	800
+狐狸	hou2 li2	800
+狐疑	hou2 gi2	800
+狗公	gao3 gang1	800
+狗哥	gao3 go1	800
+狗母	gao3 o3	800
+狡猾	gao3 oh7	800
+猴急	gao2 gih6	800
+猴猴	gao2 gao2	800
+猴蚓	gao2 ong3	800
+猶大	iu2 dai5	800
+猶豫	iu2 y5	800
+獎金	zyorng4 nging1	800
+獨一	dorh7 ih6	800
+獨孤	dorh7 gou1	800
+獨立	dorh7 lih7	800
+獨自	dorh7 zo5	800
+獨裁	dorh7 zai2	800
+玉帝	goeh7 de4	800
+玉林	goeh7 ling2	800
+玉皇	goeh7 orng2	800
+王梨	orng2 lai2	800
+王母	orng2 mieo3	800
+王爺	orng2 ngia2	800
+王爿	orng2 me2	800
+玻璃	bor1 li2	800
+班級	bang1 kih6	800
+班車	bang1 nia1	800
+現在	heng5 zai5	800
+現場	heng5 dyorng2	800
+現時	heng5 si2	800
+現食	heng5 zia7	800
+球賽	giu2 soe4	800
+理事	li3 so5	800
+理念	li3 nieng5	800
+理論	li3 long5	800
+璀璨	cui3 cang4	800
+環境	kuang2 ging3	800
+瓦杮	hyor5 puei4	800
+瓦窯	hyor5 ieo2	800
+瓶窒	beng2 teh6	800
+甘肅	gang1 soeh6	800
+甘草	gang1 cor3	800
+甘願	gang1 nguei5	800
+甚儂	sing1 nang2	800
+甚生	sing5 na1	800
+甜湯	ding1 nung1	800
+生人	ca1 nang2	800
+生份	sa1 ong5	800
+生分	sa1 ong5	800
+生卵	sa1 noe5	800
+生囝	sa1 gyor3	800
+生死	seng1 so3	800
+生活	seng1 uah7	800
+生物	seng1 moh7	800
+生理	seng1 ni3	800
+生產	seng1 sang3	800
+生磚	ca1 luei1	800
+生肉	ca1 noeh7	800
+生訝	ca1 ngia5	800
+生鉎	sa1 leng1	800
+生食	ca1 liah7	800
+產品	sang3 ping3	800
+用功	oeng5 ngang1	800
+用法	oeng5 hah6	800
+田塗	ceng2 nou2	800
+田墘	ceng2 nging2	800
+田尾	ceng2 muei3	800
+田水	ceng2 nui3	800
+田洋	ceng2 ngieo2	800
+田鱔	ceng2 cyor5	800
+由來	iu2 lai2	800
+由於	iu2 y2	800
+甲子	gor6 li3	800
+男人	nang2 ning2	800
+男科	nang2 ngor1	800
+男裝	nang2 norng1	800
+畏寒	ui4 gua2	800
+留意	liu2 i4	800
+畚斗	bong4 nao3	800
+畢業	bih6 gieh7	800
+番厄	huang1 ngae1	800
+番囝	huang1 ngyor3	800
+番客	huang1 ke3	800
+番教	horng1 ngao4	800
+番柿	huang1 ki5	800
+番茄	huang1 gieo2	800
+番薯	horng1 ny2	800
+番黍	huang1 soe3	800
+畫面	ua5 ming4	800
+異常	i5 syorng2	800
+異議	i5 gi3	800
+異象	i5 syorng5	800
+當心	dorng1 ning1	800
+當是	dorng4 si5	800
+當面	dorng1 ming4	800
+疊紙	de7 zyor3	800
+疑慮	gi2 ly5	800
+疑案	gi2 ang4	800
+疑義	gi2 gi5	800
+疫情	yh7 zing2	800
+疫苗	yh7 bieo2	800
+病囝	ba5 yor3	800
+病殼	bing5 kah6	800
+症頭	zing4 tao2	800
+痟婆	sieo3 o2	800
+痟狗	sieo3 ao3	800
+痟話	sieo3 ua5	800
+痱粉	bui4 ong3	800
+療法	lieo2 hah6	800
+療養	lieo2 yorng3	800
+發作	huah6 zorh6	800
+發動	huah6 dorng5	800
+發問	huah6 mong5	800
+發射	huah6 sia5	800
+發展	huah6 teng3	800
+發布	huah6 bou4	800
+發情	huah6 zing2	800
+發揮	huah6 hui1	800
+發文	huah6 mong2	800
+發明	huah6 ming2	800
+發條	huah6 dieo2	800
+發源	huah6 ngoeng2	800
+發狂	huah6 gorng2	800
+發現	huah6 heng5	800
+發球	huah6 giu2	800
+發生	huah6 seng1	800
+發福	huah6 horh6	800
+發育	huah6 oeh7	800
+發落	huah6 lorh7	800
+發表	huah6 bieo3	800
+發言	huah6 ngoeng2	800
+發財	huah6 zai2	800
+發起	huah6 ki3	800
+發車	huah6 cia1	800
+發達	huah6 dah7	800
+發配	huah6 puei4	800
+發電	huah6 deng5	800
+白仁	ba7 leng2	800
+白塘	beh7 dorng2	800
+白殕	ba7 pu3	800
+白沙	ba7 lua1	800
+白煠	ba7 sor7	800
+白紙	ba7 lyor3	800
+白膏	ba7 go1	800
+白蟻	ba7 yor5	800
+白話	ba7 ua5	800
+白酒	ba7 liu3	800
+白銀	ba7 ngyng2	800
+白露	ba7 lou4	800
+百姓	ba6 la4	800
+百日	ba6 lih7	800
+百歲	ba6 uei4	800
+百靈	beh6 leng2	800
+的士	deh6 so5	800
+皇帝	horng2 ne4	800
+皮帶	puei2 lua4	800
+皮毛	pi2 mor2	800
+皮肉	puei2 noeh7	800
+皮鞋	puei2 e2	800
+益州	ih6 ziu1	800
+益處	ih6 cy4	800
+盛名	sing5 ming2	800
+盟約	meng2 yorh6	800
+監獄	gang1 goeh7	800
+盤桶	bua2 lang3	800
+盤纏	buang2 ning2	800
+盤點	buang2 dieng3	800
+盪喙	dung5 cui4	800
+目尾	mah7 buei3	800
+目屎	mah7 sai3	800
+目標	borh7 bieo1	800
+目滓	mah7 zai3	800
+目的	borh7 deh6	800
+目眉	mah7 bai2	800
+目睭	mah7 ziu1	800
+目錄	borh7 loeh7	800
+目鏡	mah7 gia4	800
+直屬	dih7 soeh7	800
+直捷	dih7 zeh7	800
+直接	dih7 zieh6	800
+直播	dih7 bor1	800
+直是	dih7 si5	800
+直線	dih7 syor4	800
+相公	sieo4 ang1	800
+相底	syorng4 de3	800
+相片	syorng5 meng4	800
+省道	seng3 nor5	800
+省長	seng3 nyorng3	800
+看冊	kua4 ca6	800
+看命	kua4 mia5	800
+看戲	kua4 i4	800
+看法	kua4 hah6	800
+看見	kua4 ing4	800
+看重	kua4 doeng5	800
+看顧	kang4 ngou4	800
+真理	zing1 li3	800
+眠床	ming2 nung2	800
+眩船	hyng2 nong2	800
+眩車	hyng2 nia1	800
+眾牲	zoeng1 na1	800
+瞻望	zieng1 morng5	800
+矩形	gy3 hing2	800
+矩陣	gy3 ding5	800
+短䘼	doe3 uei3	800
+短信	doe3 sing4	800
+短命	doe3 mia5	800
+石卵	sieo7 noe5	800
+石子	sieo7 zi3	800
+石榴	sieo7 liu2	800
+石橋	sieo7 ieo2	800
+石灰	sieo7 uei1	800
+石牯	sieo7 ou3	800
+石獅	sieo7 lai1	800
+石窟	sieo7 koh6	800
+石級	sieo7 keh6	800
+石膏	sieo7 o1	800
+石蒼	sih7 corng1	800
+砂輪	sa1 long2	800
+砂鍋	sa1 o1	800
+砒霜	pi1 lung1	800
+研發	ngieng2 huah6	800
+研究	ngieng2 giu4	800
+破案	por4 ang4	800
+破病	pua4 ma5	800
+破缺	pua4 ki6	800
+破膽	pua4 lor3	800
+硬件	nge5 gyor5	800
+硬柴	nge5 la2	800
+硬死	nge5 si3	800
+硬盤	nge5 bua2	800
+碎使	cui4 lai3	800
+碎票	cui4 ieo4	800
+碎錢	cui4 ling2	800
+碗櫥	ua3 liu2	800
+碗缺	ua3 ki6	800
+碗頭	ua3 lao2	800
+碩士	sih7 so5	800
+確定	kah6 deng5	800
+確實	kah6 sih7	800
+確立	kah6 lih7	800
+確認	kah6 ning5	800
+碼頭	bor3 lao2	800
+磅秤	borng5 ning4	800
+磐石	bua2 sieo7	800
+磚厝	zuei1 lou4	800
+磚坯	zuei1 uei1	800
+磚牆	zuei1 cieo2	800
+礁石	dor1 lieo7	800
+礦產	korng4 sang3	800
+社保	sia5 bor3	800
+社員	sia5 oeng2	800
+社會	sia5 uei5	800
+社硎	sia5 hing2	800
+祖公	zou3 orng1	800
+祖厝	zou3 lou4	800
+祖國	zou3 gorh6	800
+祖媽	zou3 ma3	800
+祖家	zou3 a1	800
+祖業	zou3 ieh7	800
+祝福	zoeh6 horh6	800
+神位	sing2 ngui5	800
+神農	sing2 norng2	800
+神魂	sing2 hong2	800
+祠堂	so2 lung2	800
+祭墓	ze4 mou4	800
+祭灶	ze4 lao4	800
+禁止	ging4 zi3	800
+禁食	ging4 sia7	800
+福分	horh6 hong5	800
+福利	horh6 li5	800
+福州	horh6 ziu1	800
+福建	horh6 goeng4	800
+福德	horh6 deh6	800
+福氣	horh6 ki4	800
+福清	horh6 cia1	800
+福澤	horh6 zeh7	800
+福祉	horh6 zi3	800
+福音	horh6 ing1	800
+福鼎	horh6 dia3	800
+禮數	le3 lou4	800
+禮物	le3 boh7	800
+禮貌	le3 ao5	800
+禱告	dor3 gor4	800
+秀嶼	siu4 ly5	800
+私立	so1 lih7	800
+秋分	ciu1 ong1	800
+科學	ko1 ah7	800
+秤花	cing4 ngua1	800
+秤錘	cing4 nui2	800
+秧歌	yorng1 ngor1	800
+秧禾	ng1 hor2	800
+秩序	dih7 sy5	800
+移位	i2 ui5	800
+移動	i2 lorng5	800
+移民	i2 ming2	800
+稀有	hi1 iu3	800
+稅率	suei4 loh7	800
+種珠	zoeng4 zou1	800
+稱重	cing1 dang5	800
+稱頌	cing1 soeng5	800
+穀雨	gorh6 y3	800
+積極	zih6 gih6	800
+穩定	ong3 deng5	800
+空喙	kang1 nui4	800
+空手	kang1 niu3	800
+空腹	kang1 mah6	800
+空豸	korng4 nai4	800
+空軍	korng1 ngong1	800
+穿針	cuei1 zieng1	800
+窒車	teh6 cia1	800
+立冬	lih7 dang1	800
+立場	lih7 dyorng2	800
+立夏	lih7 ha5	800
+立春	lih7 cong1	800
+立案	lih7 ang4	800
+立法	lih7 hah6	800
+立秋	lih7 ciu1	800
+立體	lih7 te3	800
+站臺	zang5 dai2	800
+童裝	dorng2 zorng1	800
+競爭	ging5 zeng1	800
+競賽	ging5 soe4	800
+競速	ging5 sorh6	800
+竹北	doeh6 bah6	800
+竹南	doeh6 nang2	800
+竹東	doeh6 dang1	800
+竹笠	doeh6 lieh7	800
+竹筍	doeh6 song3	800
+竹箬	doeh6 nieo7	800
+竹篙	doeh6 go1	800
+竹蓆	doeh6 cieo7	800
+竹頭	doeh6 tao2	800
+竹鼠	doeh6 cy3	800
+笊籬	zia4 li2	800
+笏石	kyor4 lieo7	800
+笑杯	cieo4 uei1	800
+笑話	cieo4 ua5	800
+笑面	cieo4 ming4	800
+第一	de5 ih6	800
+筆勢	bih6 se4	800
+筆墨	bih6 bah7	800
+筆尾	bih6 buei3	800
+筆法	bih6 hah6	800
+筆直	bih6 dih7	800
+筆者	bih6 zia3	800
+筆記	bih6 gi4	800
+筆試	bih6 si4	800
+筆跡	bih6 zih6	800
+筆鋒	bih6 horng1	800
+答應	dah6 ing4	800
+答案	dah6 ang4	800
+答謝	dah6 sia5	800
+算學	song4 ngah7	800
+算數	suang4 sou4	800
+算法	suang4 hah6	800
+算盤	sua4 mua2	800
+算術	suang4 soh7	800
+算零	sua4 leng2	800
+管家	guang3 nga1	800
+箭支	zing4 ngi1	800
+箴言	zing1 ngoeng2	800
+節日	zeh6 zih7	800
+節氣	zeh6 ki4	800
+節約	zeh6 yorh6	800
+篡改	cuang4 gai3	800
+篾瓤	bi7 lung2	800
+篾蓆	bi7 lieo7	800
+簡單	gang3 dang1	800
+簡體	gang3 te3	800
+簽名	cieng1 mia2	800
+簽字	cieng1 zi5	800
+籃球	lang2 ngiu2	800
+籮球	lua2 iu2	800
+米店	bi3 le4	800
+米爿	bi3 e2	800
+米篩	bi3 lai1	800
+米粉	bi3 ong3	800
+粉筆	hong3 mih6	800
+粗人	cou1 nang2	800
+粗喙	cou1 lui4	800
+粗大	cou1 lua5	800
+粗工	cou1 ang1	800
+粗水	cou1 lui3	800
+粗粗	cou1 cou1	800
+粗糠	cou1 kung1	800
+粗紙	cou1 lyor3	800
+粗飽	cou1 or3	800
+粗魯	cou1 lou3	800
+粟埕	corh6 dia2	800
+粟核	corh6 hoh7	800
+粟殼	corh6 kah6	800
+粵語	oeh7 gy3	800
+粿箬	guei3 nieo7	800
+糖廍	tung2 mou2	800
+糜店	ma2 le4	800
+糞斗	bong4 nao3	800
+糞箕	bong4 ngi1	800
+糴米	dia7 bi3	800
+糶米	tieo4 bi3	800
+系列	he5 leh7	800
+系統	he5 lorng3	800
+紀念	gi4 nieng5	800
+紀錄	gi4 loeh7	800
+約定	yorh6 deng5	800
+約會	yorh6 huei5	800
+約束	yorh6 sorh6	800
+約櫃	yorh6 gui5	800
+約瑟	yorh6 seh6	800
+約翰	yorh6 hang5	800
+紅囝	ang2 ngyor3	800
+紅塗	ang2 nou2	800
+紅旗	ang2 ngi2	800
+紅木	ang2 morh7	800
+紅柿	ang2 ki5	800
+紅牛	ang2 ngu2	800
+紅猴	ang2 gao2	800
+紅膏	ang2 go1	800
+紅色	ang2 seh6	800
+紅菇	ang2 ngou1	800
+紅薰	ang2 hong1	800
+紅霞	ang2 ngor2	800
+紅龜	ang2 gu1	800
+紋理	mong2 ni3	800
+純真	song2 zing1	800
+紙人	zyor3 nang2	800
+紙傘	zyor3 lua3	800
+紙字	zyor3 li5	800
+素質	sou4 zih6	800
+素養	sou4 yorng3	800
+索麵	so6 ming5	800
+細婆	se4 o2	800
+細心	se4 ling1	800
+細某	se4 ou3	800
+終點	zoeng1 dieng3	800
+結合	geh6 hah7	800
+結婚	geh6 hong1	800
+結尾	geh6 buei3	800
+結局	geh6 goeh7	800
+結晶	geh6 zing1	800
+結束	geh6 sorh6	800
+結果	geh6 gor3	800
+結業	geh6 gieh7	800
+結構	geh6 gieo4	800
+結疕	geh6 pi3	800
+結盟	geh6 meng2	800
+結緣	geh6 oeng2	800
+結義	geh6 gi5	800
+結論	geh6 long5	800
+結黨	geh6 dorng3	800
+絕嗣	zoeh7 so5	800
+絕對	zoeh7 dui4	800
+絕戶	zoe2 ou5	800
+統一	torng3 ih6	800
+統戰	torng3 zeng4	800
+統計	torng3 nge4	800
+經冊	ging1 na6	800
+經理	ging1 li3	800
+經過	ging1 ngo4	800
+經驗	ging1 ngieng5	800
+綠洲	lorh7 ziu1	800
+綠色	lorh7 seh6	800
+綠茶	lorh7 dor2	800
+維基	bi2 gi1	800
+網球	mang5 giu2	800
+網線	mang5 nyor4	800
+綿菜	ming2 nai4	800
+線路	syor4 lou5	800
+編碼	beng1 ma3	800
+練字	loeng5 zi5	800
+縣長	ge5 lyorng3	800
+總共	zorng3 goeng5	800
+總數	zorng3 nieo4	800
+總無	zorng3 bo2	800
+總理	zorng3 li3	800
+繁體	huang2 te3	800
+織蛛	zih6 zy1	800
+繳仙	gieo3 seng1	800
+繳本	gieo3 buei3	800
+繳棍	gieo3 gong4	800
+繳稅	gieo3 suei4	800
+繳豬	gieo3 dy1	800
+繳跤	gieo3 kor1	800
+繳鬼	gieo3 gui3	800
+纏跤	ding2 ngor1	800
+缺喙	ki6 lui4	800
+缺角	ki6 ah6	800
+罪惡	zuei5 orh6	800
+罰錢	huah7 zing2	800
+罷免	ba5 meng3	800
+罷工	ba5 gorng1	800
+羅馬	lor2 ma3	800
+羊咩	ieo2 me1	800
+羊母	ieo2 o3	800
+羊眩	ieo2 yng2	800
+羊肉	ieo2 noeh7	800
+美人	bi3 ling2	800
+美名	bi3 ming2	800
+美國	bi3 orh6	800
+美術	bi3 loh6	800
+美譽	bi3 y5	800
+美麗	bi3 le5	800
+群眾	gong2 noeng4	800
+義理	gi5 li3	800
+羽毛	y3 mor2	800
+翁某	ang1 bou3	800
+習慣	sih7 guang4	800
+翻譯	huang1 ih7	800
+老公	lao5 orng1	800
+老婆	lao5 or2	800
+老媽	lao5 ma3	800
+老師	lor3 so1	800
+老爸	lor5 or5	800
+老爹	lor3 lia1	800
+老膣	lao5 zi1	800
+老虎	lao5 ou3	800
+老蛇	lao5 lyor2	800
+老衣	lao5 i1	800
+考卷	kor3 guei4	800
+考察	kor3 cah6	800
+考慮	kor3 ly5	800
+考試	kor3 li4	800
+考量	kor3 lyorng5	800
+考驗	kor3 ngieng5	800
+耳屎	hi5 lai3	800
+耳機	zi3 gi1	800
+耳空	hi2 ang1	800
+耶穌	e2 lou1	800
+聖杯	sing4 muei1	800
+聖殿	sing4 deng5	800
+聖潔	sing4 geh6	800
+聖經	sing4 nging1	800
+聖靈	sing4 leng2	800
+聖餐	sing4 cang1	800
+聘請	ping4 cing3	800
+聘金	ping4 nging1	800
+聚斂	zy5 lieng5	800
+聯合	leng2 hah7	800
+聯盟	leng2 meng2	800
+聲說	sia1 luei6	800
+聲音	sia1 ing1	800
+職務	zih6 bu5	800
+職員	zih6 oeng2	800
+職業	zih6 gieh7	800
+職權	zih6 goeng2	800
+聽寫	tia1 lia3	800
+聽無	tia1 bo2	800
+聽聞	tia1 muei2	800
+聽話	tia1 ua5	800
+肇慶	dieo5 king4	800
+肉丸	noeh7 uei2	800
+肉絨	noeh7 zoeng2	800
+肝炎	gang1 ngieng2	800
+肥卵	bui2 noe5	800
+肥白	bui2 a7	800
+肩頭	ge1 lao2	800
+肺癆	hi3 lor2	800
+胡椒	hou2 lieo1	800
+胡蠅	hou2 ling2	800
+胸坎	horng1 ngang3	800
+脰顱	dao5 ly1	800
+脹肚	dieo4 lou3	800
+腰方	ieo1 orng1	800
+腳踏	kor1 dor7	800
+腸肚	dung2 nou3	800
+腹內	bah6 li5	800
+腹肚	bah6 dou3	800
+膨脹	porng2 dyorng4	800
+臣民	sing2 ming2	800
+自學	zo5 ah7	800
+自己	zo5 gi3	800
+自我	zo5 ngor3	800
+自殺	zo5 sah6	800
+自然	zo5 leng2	800
+自由	zo5 iu2	800
+自衛	zo5 e5	800
+臭丸	cieo4 uei2	800
+臭味	cieo4 bi5	800
+臭氣	cieo4 kui4	800
+臭胰	cieo4 i2	800
+臭酸	cieo4 loe1	800
+臺北	dai2 bah6	800
+臺南	dai2 nang2	800
+臺灣	dai2 uang2	800
+臺盟	dai2 meng2	800
+興亡	hing1 morng2	800
+興化	hing1 ngua4	800
+興旺	hing1 ngorng5	800
+興陽	hing1 ngyorng2	800
+興頭	hing4 tao2	800
+舊年	gu5 ning2	800
+舊底	gu5 de3	800
+舊約	gu5 yorh6	800
+舞女	bu3 ly3	800
+船兄	song2 mia1	800
+船槳	song2 zieo3	800
+船篙	song2 ngo1	800
+船篷	song2 pang2	800
+芒種	morng2 noeng3	800
+芥菜	gua4 lai4	800
+芫荽	ieng2 sui1	800
+芬芳	hong1 horng1	800
+花園	hua1 oeng2	800
+花坩	hua1 kor1	800
+花盆	hua1 pong2	800
+花鏡	hua1 ia4	800
+芳水	pang1 nui3	800
+芳香	horng1 hyorng1	800
+芹菜	kyng2 nai4	800
+芽油	gor2 iu2	800
+若無	nah6 bo2	800
+苦楝	kou3 noe5	800
+苦難	kou3 nang5	800
+英名	ing1 ming2	800
+英國	ing1 ngorh6	800
+英文	ing1 mong2	800
+英語	ing1 ngy3	800
+茶心	dor2 ling1	800
+茶油	dor2 iu2	800
+茶湯	dor2 lung1	800
+茶甌	dor2 ao1	800
+茶盅	dor2 loeng1	800
+茶盤	dor2 ua2	800
+茶箬	dor2 nieo7	800
+茶粕	dor2 po6	800
+茶鈷	dor2 gou3	800
+茶鐺	ca2 lorng1	800
+草厝	cao3 lou4	800
+草埔	cao3 ou1	800
+草子	cao3 zi3	800
+草稿	cao3 o3	800
+草花	cao3 ua1	800
+草菇	cao3 gou1	800
+草頭	cor3 lao2	800
+荔城	le5 sia2	800
+荔枝	noe2 li1	800
+荷蘭	hor2 lang2	800
+莆仙	pou2 seng1	800
+莆田	pou2 leng2	800
+莊嚴	zorng1 ngieng2	800
+莊邊	zung1 ming1	800
+莧菜	he5 lai4	800
+菊花	goeh6 hua1	800
+菜刀	cai4 lo1	800
+菜溪	cai4 e1	800
+菜瓜	cai4 ua1	800
+菜種	cai4 loeng3	800
+菜箬	cai4 nieo7	800
+菜花	cai4 ua1	800
+菩薩	pou2 lua5	800
+華亭	hua2 leng2	800
+萩蘆	ciu1 lou2	800
+萬古	mang5 gou3	800
+萬寧	mang5 neng2	800
+萬榮	mang5 yng2	800
+落子	lo7 zi3	800
+落屎	lao4 sai3	800
+落山	lo7 lua1	800
+落手	lo7 liu3	800
+落本	lo7 uei3	800
+落海	lo7 ai3	800
+落臺	lo7 dai2	800
+落船	lo7 long2	800
+落課	lo7 kor4	800
+落車	lo7 lia1	800
+落雨	lo7 ou5	800
+落雪	lo7 soe5	800
+落風	lao4 uei1	800
+著時	dieo7 si2	800
+著災	dieo7 loe1	800
+著熱	dieo7 leh7	800
+葫蘆	hou2 lou2	800
+蒜嶺	soe4 nia3	800
+蒜頭	suang4 nao2	800
+蓋尾	gua4 uei3	800
+蓮子	noe2 li3	800
+蓮花	noe2 ua1	800
+蓼花	lao4 ua1	800
+蔗刀	zia4 lo1	800
+蔗廍	zia4 ou2	800
+蔗粕	zia2 po5	800
+蕹菜	orng4 nai4	800
+薅草	hao1 lao3	800
+薑母	gieo1 o3	800
+薰斗	hong1 dao3	800
+薰枝	hong1 ngi1	800
+薰盒	hong1 ah7	800
+薰筒	hong1 nang2	800
+薰鬼	hong1 gui3	800
+藥單	ieo7 lua1	800
+藥水	ieo7 lui3	800
+藥湯	ieo7 nung1	800
+藥粉	ieo7 ong3	800
+藥粕	ieo7 po6	800
+藥罐	ieo7 guang4	800
+藥針	ieo7 lieng1	800
+藥頭	ieo7 lao2	800
+蘇聯	sou1 leng2	800
+蘋果	bing2 gor3	800
+蘑菇	mor2 ou1	800
+蘭州	lang2 niu1	800
+蘭花	lang2 mua1	800
+蘭谿	lang2 nge1	800
+蘿蔔	lor2 orh7	800
+虎張	hou3 dung1	800
+虎母	hou3 o3	800
+虎油	hou3 iu2	800
+虐待	gyorh7 dai5	800
+虔誠	geng2 sing2	800
+處事	cy3 lo5	800
+處卷	cy3 guei3	800
+處暑	cy4 ly3	800
+處理	cy3 li3	800
+虛妄	hy1 morng5	800
+虛詞	hy1 so2	800
+號令	ho5 ling5	800
+號名	ho5 mia2	800
+號碼	ho5 bor3	800
+虼蚻	gorh7 suah7	800
+蚮餅	dyor5 mia3	800
+蛆蟲	cy1 lang2	800
+蛟龍	gao1 loeng2	800
+蜈蚣	gyor2 ang1	800
+蜉蝣	hieo2 iu2	800
+蜘蛛	di1 lu1	800
+蜜棗	bih7 zo3	800
+蝕本	si7 uei3	800
+蝦蛄	hor2 ou1	800
+蝨母	seh6 bo3	800
+蟲蟻	tang2 ngyor5	800
+蟶乾	teng1 gua1	800
+蟶埕	teng1 nia2	800
+蟻婆	hyor5 o2	800
+蠓帳	mang3 nieo4	800
+蠟燭	lorh7 zorh6	800
+蠟筆	lah7 bih6	800
+血壓	he6 ah6	800
+血漏	he6 lao5	800
+血路	he6 lou5	800
+行動	heng2 norng5	800
+行政	heng2 ning4	800
+行棋	gia2 gi2	800
+行業	hang2 ngieh7	800
+行街	gia2 ge1	800
+行車	gia2 lia1	800
+街中	ge1 lorng1	800
+街路	ge1 lou5	800
+街道	ge1 lor5	800
+衙門	gor2 muei2	800
+衛士	e5 so5	800
+衛星	e5 sing1	800
+衛生	e5 leng1	800
+衛視	e5 si5	800
+衝動	coeng1 norng5	800
+衝突	coeng1 doh7	800
+衣裳	i1 ieo2	800
+表揚	bieo3 yorng2	800
+表演	bieo3 eng3	800
+表面	bieo3 ming4	800
+衫爿	sor1 e2	800
+衫裾	sor1 y1	800
+衫褲	sor1 ou4	800
+衫領	sor1 nia3	800
+衰亡	suei1 morng2	800
+被動	pi5 dorng5	800
+被單	puei5 lua1	800
+裁員	zai2 oeng2	800
+補課	bou3 kor4	800
+製法	ze4 hah6	800
+複製	horh6 ze4	800
+複賽	horh6 soe4	800
+複雜	horh6 zah7	800
+褪殼	toe4 kah6	800
+褪鞋	toe4 e2	800
+褲襪	kou4 buei7	800
+褲跤	kou4 or1	800
+襟友	king1 ngiu3	800
+西北	sai1 ah6	800
+西周	se1 ziu1	800
+西域	se1 yh7	800
+西安	se1 ang1	800
+西寧	se1 neng2	800
+西服	se1 horh7	800
+西漢	se1 hang4	800
+西瓜	se1 ua1	800
+西苑	sai1 oeng3	800
+西莨	se1 lorng5	800
+西藏	se1 lorng5	800
+西門	se1 mong2	800
+要求	ieo1 giu2	800
+要領	ieo4 ling3	800
+見面	ging4 ming4	800
+規定	gi1 deng5	800
+規律	gui1 loh7	800
+規矩	gi1 gy3	800
+覕𢶀	bah6 cuei4	800
+視頻	si5 bing2	800
+親像	cing1 nieo5	800
+親喙	cing1 cui4	800
+親家	cing5 ngor1	800
+親情	cing1 nia2	800
+觀察	guang1 cah6	800
+觀念	guang1 nieng5	800
+觀音	gua1 ing1	800
+角色	gah6 seh6	800
+解決	gai3 oeh6	800
+解碼	gai3 ma3	800
+解約	gai3 yorh6	800
+觸發	coeh6 huah6	800
+計算	ge4 luang4	800
+討厭	tor3 ieng4	800
+討好	tor3 ho3	800
+討數	to3 lieo4	800
+討論	tor3 long5	800
+討錢	to3 zing2	800
+訓練	hong4 loeng5	800
+記數	gi4 lieo4	800
+記者	gi4 lia3	800
+記錄	gi4 loeh7	800
+訪問	horng3 mong5	800
+訪查	horng3 ca2	800
+設備	seh6 bi5	800
+設想	seh6 syorng3	800
+設施	seh6 si1	800
+設法	seh6 hah6	800
+設立	seh6 lih7	800
+設置	seh6 di4	800
+設計	seh6 ge4	800
+註冊	zy4 ceh6	800
+註音	zou4 ing1	800
+詈罵	le3 mor4	800
+詔安	zieo4 ang1	800
+詞典	so2 leng3	800
+試探	si4 tang4	800
+試驗	si4 ngieng5	800
+詩篇	si1 peng1	800
+話尾	ua5 uei3	800
+話縫	ua5 ang4	800
+話語	ua5 y3	800
+詳夢	sieo2 mang4	800
+語文	gy3 mong2	800
+語言	gy3 ngoeng2	800
+語音	gy3 ing1	800
+誡命	gai4 ming5	800
+誣賴	bu2 lai5	800
+說明	soeh6 ming2	800
+課堂	kor4 lorng2	800
+課文	kor4 mong2	800
+課本	kor4 uei3	800
+調查	dieo5 la1	800
+調皮	tieo2 pi2	800
+調羹	dieo2 eng1	800
+諍喙	za4 lui4	800
+論壇	long5 dua2	800
+論文	long5 mong2	800
+諸位	zy1 ui5	800
+諸侯	zy1 hieo2	800
+諸君	zy1 gong1	800
+謀反	bieo2 uang3	800
+謙虛	kieng1 ngy1	800
+講古	gorng3 gou3	800
+講定	gorng3 nia5	800
+講法	gorng3 hah6	800
+講臺	gorng3 dai2	800
+講話	gorng3 ngua5	800
+證件	zing4 gyor5	800
+證明	zing4 ming2	800
+證見	zing4 ngeng4	800
+警車	ging4 nia1	800
+警醒	ging4 ca3	800
+譬喻	pih6 zy5	800
+譯文	ih7 mong2	800
+議案	gi5 ang4	800
+議論	gi5 long5	800
+護法	hou5 hah6	800
+護理	hou5 li3	800
+讀冊	tah7 ca6	800
+讀書	tah7 zy1	800
+讀經	tah7 ging1	800
+讀者	torh7 zia3	800
+變動	beng4 dorng5	800
+變化	beng4 ngua4	800
+變形	beng4 hing2	800
+變面	bing4 ming4	800
+讚美	zang4 bi3	800
+豆滷	dao5 lou3	800
+豆漿	dao5 lieo1	800
+豆腐	dao4	800
+豆花	dao5 ua1	800
+豆豉	dao5 li5	800
+象形	syorng5 hing2	800
+象棋	cieo5 i2	800
+豬公	dy1 gang1	800
+豬哥	dy1 go1	800
+豬囝	dy1 yor3	800
+豬尺	dy1 cieo6	800
+豬料	dy1 lieo5	800
+豬母	dy1 o3	800
+豬肝	dy1 ua1	800
+豬血	dy1 he6	800
+豬角	dy1 gah6	800
+豬豚	dy1 long2	800
+豬跤	dy1 or1	800
+豬鞭	dy1 beng1	800
+貌相	bao5 syorng5	800
+貓子	mor2 li3	800
+貓狸	mor2 li3	800
+負擔	hu5 dang1	800
+負責	hu5 zeh6	800
+負面	hu5 ming4	800
+財主	zai2 lou3	800
+財氣	zai2 ki4	800
+財源	zai2 ngoeng2	800
+財產	zai2 lang3	800
+貧惰	beng2 nyor5	800
+貧血	bing2 he6	800
+貧農	bing2 norng2	800
+貨車	ho4 lia1	800
+貨輪	ho4 long2	800
+貨𨈘	ho4 lao3	800
+貪食	tang1 niah7	800
+責任	zeh6 zing5	800
+貴州	gui4 liu1	800
+貴陽	gui4 yorng2	800
+貸款	dai4 kuang3	800
+賀儀	ho5 i2	800
+賀禮	ho5 le3	800
+賄賂	huei3 lou5	800
+資料	zo1 lieo5	800
+資源	zo1 ngoeng2	800
+賊頭	ceh7 tao2	800
+質量	zih6 lyorng5	800
+賴店	lai5 le4	800
+賽程	soe4 ting2	800
+贖款	soeh7 kuang3	800
+贖金	soeh7 ging1	800
+贛語	gorng4 ngy3	800
+赤壁	cih6 bih6	800
+赤鼠	cia6 ly3	800
+赦免	sia4 meng3	800
+走味	zao3 i5	800
+走覕	zao3 ah7	800
+起價	ki3 or4	800
+起厝	ki3 lou3	800
+起早	ki3 or3	800
+起母	ki3 bo3	800
+起火	ki3 uei3	800
+起碼	ki3 ma3	800
+趁錢	teng4 ning2	800
+超越	tieo1 oeh7	800
+越南	oeh7 nang2	800
+趨勢	cy1 se4	800
+跋杯	bua7 buei1	800
+跋錢	bua7 ling2	800
+距離	gy5 li2	800
+跤球	kor1 iu2	800
+跤租	kor1 lou1	800
+跤跡	kor1 zia6	800
+跤車	kor2 lia1	800
+跪堂	kuei3 lung2	800
+路口	lou5 ao3	800
+路用	dou5 oeng5	800
+路由	lou5 iu2	800
+路線	lou5 syor4	800
+跳舞	tieo4 u3	800
+跳躍	tieo4 oeh7	800
+踏斗	dah7 dao3	800
+踩街	cai4 e1	800
+躍進	oeh7 zing4	800
+身價	sing1 ngor4	800
+身屍	sing1 ni1	800
+車燈	cia1 leng1	800
+車牌	cia1 e2	800
+車票	cia1 ieo4	800
+車窗	cia1 toeng1	800
+車站	cia1 zang5	800
+車路	cia1 lou5	800
+車輦	cia1 loeng3	800
+車門	cia1 mong2	800
+車頂	cia1 leng3	800
+車頭	cia1 lao2	800
+軍委	gong1 ui3	800
+軍帽	gong1 mo5	800
+軍權	gong1 goeng2	800
+軍法	gong1 hah6	800
+軍艦	gong1 lang5	800
+軟件	nuei3 gyor5	800
+輕軌	king1 gui3	800
+輕鬆	king1 sorng1	800
+輟學	doeh6 hah7	800
+輸贏	sou1 yor2	800
+輻射	horh6 sia5	800
+輿論	y2 long5	800
+辛苦	sing1 ngou3	800
+辣椒	luah7 zieo1	800
+辣頭	lua7 lao2	800
+辦案	bang5 ang4	800
+辦法	bang5 hah6	800
+辭書	so2 sy1	800
+農業	norng2 ngieh7	800
+農民	norng2 ming2	800
+迎春	ngia2 long1	800
+迦南	ga1 nang2	800
+迫近	peh6 gyng5	800
+迷亂	be2 luang5	800
+迷惑	be2 heh7	800
+迷戀	be2 loeng5	800
+追問	dui1 mong5	800
+追查	dui1 ca2	800
+退休	toe4 hiu1	800
+送節	sang4 ne6	800
+逆境	gih7 ging3	800
+逆天	gih7 teng1	800
+逆子	gih7 zo3	800
+逆風	gih7 horng1	800
+透年	tao4 ning2	800
+透日	tao4 lih7	800
+透明	tao4 ming2	800
+透暝	tao4 ma2	800
+透雨	tao4 ou5	800
+這久	zih6 gu3	800
+通瓜	torng1 ngua1	800
+通知	torng1 ni1	800
+通過	tang1 ngo4	800
+速度	sorh6 dou5	800
+速率	sorh6 loh7	800
+造勢	cor4 se4	800
+造反	cor4 uang3	800
+逢早	horng5 nor3	800
+進步	zing4 bou5	800
+遊樂	iu2 lorh7	800
+遊覽	iu2 lang3	800
+運動	ong5 norng5	800
+運勢	ong5 se4	800
+運河	ong5 ngor2	800
+過世	go4 se4	800
+過厝	go4 lou4	800
+過年	go4 ning2	800
+過後	go4 hieo5	800
+過房	go4 ang2	800
+過手	go4 liu3	800
+過晝	go4 lao4	800
+過暝	go4 ma2	800
+過氣	go4 ui4	800
+過水	go4 lui3	800
+過濾	go4 ly5	800
+過篩	go4 tai1	800
+過路	go4 lou5	800
+過頭	go4 lao2	800
+道德	dor5 deh6	800
+道理	dor5 li3	800
+達州	dah7 ziu1	800
+違法	ui2 hah6	800
+違約	ui2 yorh6	800
+遙控	ieo2 korng4	800
+遙遠	ieo2 oeng3	800
+適任	sih6 zing5	800
+適合	sih6 hah7	800
+適應	sih6 ing4	800
+適用	sih6 oeng5	800
+適當	sih6 dorng4	800
+遭遇	zor1 gy5	800
+遵命	zong1 ming5	800
+遼寧	lieo2 neng2	800
+避免	pih6 meng3	800
+避開	pia6 ui1	800
+還俗	huang2 soeh7	800
+還錢	he2 zing2	800
+邪念	sia2 nieng5	800
+郊尾	gao1 uei3	800
+部位	bou5 ui5	800
+部門	bou5 mong2	800
+郵票	iu2 ieo4	800
+鄉下	hieo1 or5	800
+鄉土	hyorng1 tou3	800
+鄉民	hyorng1 ming2	800
+鄉長	hieo1 lyorng3	800
+鄭州	da5 liu1	800
+鄰里	ling2 li3	800
+配音	puei4 ing1	800
+酒店	ziu3 le4	800
+酒量	ziu3 lyorng5	800
+酒鬼	ziu3 gui3	800
+酒麴	ziu3 korh6	800
+醉船	zui4 long2	800
+醉車	zui4 lia1	800
+醫保	i1 bor3	800
+醫生	i1 leng1	800
+醫療	i1 lieo2	800
+醫院	i1 ing5	800
+醬油	zieo4 iu2	800
+重慶	doeng2 king4	800
+重要	doeng5 ieo4	800
+重點	doeng5 dieng3	800
+野獸	ia3 siu4	800
+野花	ia3 hua1	800
+野貓	ia3 mor2	800
+量詞	lyorng5 so2	800
+金店	ging1 ne4	800
+金爿	ging1 me2	800
+金紙	ging1 nyor3	800
+金針	ging1 nieng1	800
+金門	ging1 muei2	800
+金黍	ging1 noe3	800
+針尾	zieng1 buei3	800
+針機	zieng1 ngui1	800
+針空	zieng1 kang1	800
+針跤	zieng1 kor1	800
+針車	zieng1 cia1	800
+針黹	zieng3 ni3	800
+針鼻	zieng1 pi4	800
+鉗囝	kieng2 ngyor3	800
+鉸刀	gor1 lo1	800
+銀川	ngyng2 coeng1	800
+銀紙	ngyng2 nyor3	800
+銀行	ngyng2 hang2	800
+銃子	coeng5 ni3	800
+銃斃	coeng5 me5	800
+銃空	coeng5 kang1	800
+銃箍	coeng5 kou1	800
+銃藥	coeng5 ngieo7	800
+銷量	sieo1 lyorng2	800
+鋤草	ty2 cao3	800
+鋼琴	gung4 ging2	800
+錄取	loeh7 cy3	800
+錄影	loeh7 ia3	800
+錄用	loeh7 oeng5	800
+錄音	loeh7 ing1	800
+錘囝	tui2 yor3	800
+錢包	zing2 mao1	800
+錢空	zing2 kang1	800
+錢聲	zing2 nia1	800
+錯誤	corh6 gou5	800
+鍵盤	goeng5 bua2	800
+鍾山	zoeng1 nang1	800
+鎮位	ding4 ui5	800
+鎮長	ding4 nyorng3	800
+鐵板	ti6 ang3	800
+鐵筆	ti6 ih6	800
+鐵耙	ti6 or5	800
+鐵路	ti6 lou5	800
+鐵軌	ti6 gui3	800
+鐵釘	ti6 leng1	800
+長䘼	dung2 uei3	800
+長城	dyorng2 sia2	800
+長子	dyorng3 no3	800
+長工	dung2 ngang1	800
+長年	dung2 ning2	800
+長春	dyorng2 cong1	800
+長樂	dieo2 lo7	800
+長沙	dyorng2 sa1	800
+門徒	mong2 dou2	800
+門路	muei2 lou5	800
+門輪	muei2 long2	800
+開價	kui1 or4	800
+開刀	kui1 do1	800
+開喙	kui1 lui4	800
+開國	kai1 gorh6	800
+開始	kai1 si3	800
+開學	kui1 ah7	800
+開市	kui1 ci5	800
+開店	kui1 le4	800
+開戰	kai1 leng4	800
+開拔	kai1 bah7	800
+開支	kai1 li1	800
+開桌	kui1 lo6	800
+開機	kui1 gi1	800
+開篇	kai1 peng1	800
+開臺	kui1 dai2	800
+開葩	kui1 por1	800
+開路	kui1 lou5	800
+開車	kui1 lia1	800
+開辦	kai1 bang5	800
+開頭	kai1 tieo2	800
+閒事	e2 lo5	800
+閒工	e2 gang1	800
+閘機	zah7 gi1	800
+閩中	mang2 doeng1	800
+閩侯	mang2 gao2	800
+閩北	mang2 bah6	800
+閩南	mang2 nang2	800
+閩東	mang2 dang1	800
+閩清	mang2 cia1	800
+閩西	mang2 sai1	800
+閩語	mang2 ngy3	800
+閩越	mang2 oeh7	800
+閱讀	oeh7 torh7	800
+閻君	ngieng2 gong1	800
+關帝	guang1 ne4	800
+關店	guei1 le4	800
+關心	guang1 ning1	800
+關懷	guang1 huei2	800
+關機	guei1 gi1	800
+關監	guei1 gang1	800
+阿兄	a1 ia1	800
+阿公	ah6 gorng1	800
+阿奶	ah6 ne1	800
+阿妗	a1 ing5	800
+阿姊	a1 li3	800
+阿姑	ah7 gou1	800
+阿姨	a1 i2	800
+阿姪	ah6 dih7	800
+阿娌	a1 li3	800
+阿媽	ah6 ma3	800
+阿弟	a1 li5	800
+阿爸	ah6 ba1	800
+阿舅	a1 u5	800
+阿舍	a1 lia4	800
+附屬	hu5 soeh7	800
+附錄	hu5 loeh7	800
+陝西	sieng3 ne1	800
+陣雨	ding5 ngy3	800
+除法	dy2 hah6	800
+陰陽	ing1 ngyorng2	800
+陸軍	loeh7 gong1	800
+隊旗	dui5 i2	800
+階級	gai1 kih6	800
+隔壁	ga6 ia6	800
+隔年	ga6 ning2	800
+隔離	geh6 li2	800
+障礙	zyorng4 ngai5	800
+隨緣	sui2 oeng2	800
+險險	hieng3 hieng3	800
+雀盲	zia6 ma2	800
+雁鳥	ngang5 nieo3	800
+雅各	nga3 gorh6	800
+雅歌	nga3 gor1	800
+集中	zih7 doeng1	800
+集合	zih7 hah7	800
+集團	zih7 duang2	800
+集權	zih7 goeng2	800
+集美	zih7 bi3	800
+雕琢	dieo1 dorh6	800
+雙生	sang1 na1	800
+雙面	sang1 ming4	800
+雙頭	sang1 nao2	800
+雜貨	zah7 ho4	800
+雞卵	ge1 noe5	800
+雞囝	ge1 yor3	800
+雞母	ge1 o3	800
+雞毛	ge1 mung2	800
+雞籠	ge1 lang2	800
+雞翼	ge1 sih7	800
+雞胘	ge1 ging5	800
+雞角	ge1 ah6	800
+雞跤	ge1 kor1	800
+雞鴨	ge1 or6	800
+離地	li2 de5	800
+離婚	li2 ong1	800
+離島	li2 dor3	800
+離校	li2 hao5	800
+難免	nang2 meng3	800
+難友	nang5 ngiu3	800
+難度	nang2 dou5	800
+難得	nang2 deh6	800
+難忘	nang2 morng5	800
+難民	nang5 ming2	800
+難為	nang2 ui2	800
+雨囝	hou5 yor3	800
+雨水	hou5 lui3	800
+雨濛	hou5 mung1	800
+雨衣	y3 i1	800
+雨霎	hou5 sah6	800
+雨露	y3 lou4	800
+雨𥪀	hou5 bu1	800
+雪茄	soe6 ga1	800
+雲南	ong2 nang2	800
+雲彩	ong3 cai3	800
+雲端	ong3 duang1	800
+零落	leng2 lorh7	800
+雷公	lui2 orng1	800
+雷擊	lui2 kih6	800
+雺霧	bou2 u5	800
+電信	deng5 sing4	800
+電光	deng5 gung1	800
+電力	deng5 lih7	800
+電動	deng5 dorng5	800
+電器	deng5 ki4	800
+電報	deng5 mo4	800
+電塗	deng5 tou2	800
+電子	deng5 no3	800
+電影	deng5 ing3	800
+電扇	deng5 sing4	800
+電機	deng5 gi1	800
+電流	deng5 liu2	800
+電線	deng5 nyor4	800
+電腦	deng5 nor3	800
+電視	deng5 si5	800
+電話	deng5 ngua5	800
+電量	deng5 lyorng5	800
+電鐘	deng5 noeng1	800
+需要	sy1 ieo4	800
+霆雷	teng2 lui2	800
+震感	zing4 gang3	800
+霍亂	horh6 luang5	800
+霜降	sung1 ngang4	800
+霞埔	or2 ou1	800
+霞林	or2 ling2	800
+露天	lou4 teng1	800
+露宿	lou4 loeh6	800
+露水	lou4 lui3	800
+露營	lou4 yng2	800
+霸佔	ba4 zieng4	800
+霸王	ba4 orng2	800
+霹靂	pih6 leh7	800
+靈位	leng2 ngui5	800
+靈川	leng2 coeng1	800
+靈敏	leng2 ming3	800
+靈驗	leng2 ngieng5	800
+青年	cing1 neng2	800
+青春	cing1 cong1	800
+青海	cing1 ngai3	800
+青盲	ca1 ma2	800
+青菜	ca1 lai4	800
+青藏	cing1 zorng5	800
+青龍	cing1 loeng2	800
+靖康	zing5 korng1	800
+靛青	de5 la1	800
+靜寂	zing5 zih7	800
+靜脈	zing5 beh7	800
+靜電	zing5 deng5	800
+非典	hi1 deng3	800
+非法	hi1 hah6	800
+非禮	hi1 le3	800
+面會	meng4 huei5	800
+面盆	ming5 mong2	800
+面相	ming4 syorng4	800
+面紅	ming4 ang2	800
+面試	meng4 si5	800
+革命	geh6 ming5	800
+革新	geh6 sing1	800
+鞋帶	e2 lua4	800
+鞋拖	e2 lua1	800
+鞋楦	e2 huei4	800
+韓國	hang2 gorh6	800
+韭菜	gu3 lai4	800
+音樂	ing1 ngah7	800
+音符	ing1 hu2	800
+音調	ing1 dieo5	800
+音量	ing1 lyorng5	800
+音響	ing1 hyorng3	800
+韻律	ong5 loh7	800
+韻調	ong5 dieo5	800
+響應	hyorng3 ing4	800
+頂尖	deng3 zieng1	800
+頂日	deng3 nih7	800
+頂過	deng3 ngo4	800
+頂點	deng3 dieng3	800
+順便	song5 beng5	800
+順序	song5 sy5	800
+順應	song5 ing4	800
+順風	song5 ngorng1	800
+頌讚	soeng5 zang4	800
+預支	y5 zi1	800
+預料	y5 lieo5	800
+預期	y5 gi2	800
+預演	y5 eng3	800
+預留	y5 liu2	800
+預算	y5 suang4	800
+預約	y5 yorh6	800
+預言	y5 ngoeng2	800
+預賽	y5 soe4	800
+預防	y5 orng2	800
+領地	ling3 de5	800
+領域	ling3 yh7	800
+領導	ling3 nor5	800
+領空	ling3 korng1	800
+頭一	tao2 loh7	800
+頭七	tao2 cih6	800
+頭先	tao2 le1	800
+頭前	tao2 le2	800
+頭家	tao2 or1	800
+頭尾	tao2 uei3	800
+頭毛	tao2 mung2	800
+頭油	tao2 iu2	800
+頭牲	tao2 la1	800
+頭腦	tao2 nor3	800
+頭髮	tao2 uei6	800
+題目	de2 ah7	800
+額份	geh7 hong5	800
+額頭	hia2 lao2	800
+顏料	ngang2 lieo5	800
+願意	ngoeng5 ngi4	800
+願望	ngoeng5 morng5	800
+顧慮	gou4 ly5	800
+顯示	hieng3 si5	800
+風光	horng1 gorng1	800
+風水	horng1 nui3	800
+風災	buei1 lai1	800
+風聲	buei1 lia1	800
+風車	horng1 nia1	800
+風雨	buei1 ou5	800
+風風	buei1 orng1	800
+風颱	buei1 lai1	800
+飛機	hi1 gi1	800
+飛蛇	buei1 lyor2	800
+食堂	sih7 dorng2	800
+食教	sia7 gao4	800
+食暝	sia7 ma2	800
+食爿	sih7 be2	800
+食用	sih7 oeng5	800
+食薰	sia7 ong1	800
+食藥	sia7 ieo7	800
+食酒	sia7 ziu3	800
+食食	sia7 sih7	800
+食飽	sia7 bor3	800
+食齋	sia7 lai1	800
+飭令	tih6 ling5	800
+飯匙	buei5 li2	800
+飯店	buei5 le4	800
+飯鼎	buei5 nia3	800
+飲糜	ang3 muei2	800
+飼奶	ci4 neng1	800
+飼蜂	ci4 pang1	800
+飼蠓	ci4 mang3	800
+饅頭	mang2 nao2	800
+首先	siu3 seng1	800
+首腦	siu3 nor3	800
+首都	siu3 dou1	800
+香港	hyorng1 gang3	800
+香爐	hieo1 lou2	800
+香菇	hieo1 ou1	800
+馬公	bor3 gang1	800
+馬桶	bor3 tang3	800
+駁回	borh6 huei2	800
+駛棋	sai3 i2	800
+駛田	sai3 leng2	800
+駛車	sai3 lia1	800
+駱駝	lorh7 dor2	800
+騙人	peng4 nang2	800
+騙子	peng4 zo3	800
+驅動	ky1 dorng5	800
+驕傲	gieo1 or5	800
+驚死	gia1 si3	800
+驚蟄	ging1 nih7	800
+骨力	goh6 lih7	800
+骨肉	goh6 zoeh7	800
+骨頭	goh6 tao2	800
+體力	te3 lih7	800
+體溫	te3 ong1	800
+體育	te3 oeh7	800
+體諒	te3 lyorng5	800
+體面	te3 meng4	800
+體驗	te3 ngieng5	800
+高中	gor1 doeng1	800
+高壓	gor1 ah6	800
+高鐵	gor1 ti6	800
+高麗	gor1 le5	800
+鬧區	nao5 ky1	800
+鬧熱	dao5 leh7	800
+鬼節	gui3 ze6	800
+魄力	peh6 lih7	800
+魔法	mor2 hah6	800
+魔王	mor2 orng2	800
+魔術	mor2 soh7	800
+魚油	hy2 iu2	800
+魚鰓	hy2 ci1	800
+魚鱗	hy2 leng2	800
+鮕鮘	gou1 lai1	800
+鯉南	li3 nang2	800
+鯉城	li3 lia2	800
+鯊魚	sua1 y2	800
+鱟桸	hao4 yor1	800
+鱸鰻	lou2 mua2	800
+鳥卵	zieo3 noe5	800
+鳥喙	zieo3 cui4	800
+鳥囝	zieo3 yor3	800
+鳥岫	zieo3 liu4	800
+鳥榕	zieo3 loeng2	800
+鳳跡	ng5 nia5	800
+鴉片	a1 eng4	800
+鴛鴦	eng1 ngieo1	800
+鴨公	or6 ang1	800
+鴨卵	or6 noe5	800
+鴨咪	or6 bi2	800
+鴨母	or6 o3	800
+鴨翼	or6 sih7	800
+鶞母	tong3 mo3	800
+鷓鴣	zia4 ou1	800
+鸚哥	eng1 ngo1	800
+鹽埕	ieng2 nia2	800
+鹽花	ieng2 hua1	800
+鹿港	lorh7 gang3	800
+麥草	ba7 lao3	800
+麵末	ming5 muei7	800
+麵粉	ming5 ngong3	800
+麻油	mua2 iu2	800
+麻醉	ma2 zui4	800
+麻雀	ma2 cyorh6	800
+黃梔	ng2 gi1	800
+黃石	ng2 ngieo7	800
+黎明	le2 ming2	800
+黎民	le2 ming2	800
+黑板	heh6 bang3	800
+默契	beh7 ke4	800
+默寫	beh7 sia3	800
+默許	beh7 hy3	800
+默認	beh7 ning5	800
+點心	deng3 ning1	800
+點火	dieng3 nguei3	800
+點鐘	dieng3 noeng1	800
+鼎巴	dia3 ba1	800
+鼎底	dia3 le3	800
+鼎灶	dia3 lao4	800
+鼎篋	dia3 e6	800
+鼎蓋	dia3 ua4	800
+鼎鑢	dia3 loe4	800
+鼓勵	gou3 le5	800
+鼓吹	gou3 cuei1	800
+鼠標	cy3 bieo1	800
+鼻巾	pi4 yng1	800
+鼻水	pi4 lui3	800
+鼻空	pi4 ang1	800
+鼻路	pi4 lou5	800
+齊頭	ze2 lao2	800
+齋果	zai1 or3	800
+齒壺	ki3 ou2	800
+齒屎	ki3 lai3	800
+齒杯	ki3 uei1	800
+齒科	ki3 or1	800
+齒管	ki3 gorng3	800
+齒膏	ki3 go1	800
+齒跤	ki3 or1	800
+齒頭	ki3 lao2	800
+龍巖	loeng2 ngang2	800
+龍橋	loeng2 ngieo2	800
+龍眼	loeng2 nge3	800
+龍船	loeng2 nong2	800
+龍華	loeng2 ngua2	800
+龜殼	gu1 kah6	800
+𡳞屎	leng5 nai3	800
+𡳞核	leng5 hoh7	800
+𡳞液	leng5 nieo2	800
+𡳞鳥	leng5 nieo3	800
+𣍐使	be5 lai3	800
+𣍐出	be5 coh6	800
+𣍐記	beh6 gi4	800
+𣍐赴	be5 hu4	800
+𤆬火	cyor4 uei3	800
+𥍉目	ni6 mah7	800
+一等一	ih6 deng3 ih6	600
+七十一	cih6 leh7 ih6	600
+七十七	cih6 leh7 cih6	600
+七十三	cih6 leh7 sor1	600
+七十九	cih6 leh7 gao3	600
+七十二	cih6 leh7 di5	600
+七十五	cih6 leh7 ngou5	600
+七十八	cih6 leh7 be6	600
+七十六	cih6 leh7 lah7	600
+七十四	cih6 leh7 si4	600
+七月半	cih6 guei7 mua4	600
+丈人公	dieo5 nang2 gorng1	600
+丈儂公	dieo5 nang2 gorng1	600
+三十一	sor1 leh7 ih6	600
+三十七	sor1 leh7 cih6	600
+三十三	sor1 leh7 sor1	600
+三十九	sor1 leh7 gao3	600
+三十二	sor1 leh7 di5	600
+三十五	sor1 leh7 ngou5	600
+三十八	sor1 leh7 be6	600
+三十六	sor1 leh7 lah7	600
+三十四	sor1 leh7 si4	600
+三十暝	sor1 leh7 ma2	600
+三叉路	sor1 cor1 lou5	600
+三江口	sang1 ngang1 ngao3	600
+三輦車	sor1 loeng3 nia1	600
+三點水	sor1 lieng3 nui3	600
+上黃疸	cieo5 horng2 dang3	600
+下丁輩	or5 leng1 muei4	600
+下南兄	or5 nang2 mia1	600
+下南婆	or5 nang2 mo2	600
+中午晝	doeng1 ngou3 lao4	600
+主禱文	zy3 dor3 mong2	600
+九十一	gao3 leh7 ih6	600
+九十七	gao3 leh7 cih6	600
+九十三	gao3 leh7 sor1	600
+九十九	gao3 leh7 gao3	600
+九十二	gao3 leh7 di5	600
+九十五	gao3 leh7 ngou5	600
+九十八	gao3 leh7 be6	600
+九十六	gao3 leh7 lah7	600
+九十四	gao3 leh7 si4	600
+九娘媽	gao3 nieo2 ma3	600
+九百六	gao3 a6 lah7	600
+九重陽	gao3 lung2 nieo2	600
+乞食指	koh6 lia7 lai3	600
+二九暝	di5 gao3 ma2	600
+二十一	di5 leh7 ih6	600
+二十七	di5 leh7 cih6	600
+二十三	di5 leh7 sor1	600
+二十九	di5 leh7 gao3	600
+二十二	di5 leh7 di5	600
+二十五	di5 leh7 ngou5	600
+二十八	di5 leh7 be6	600
+二十六	di5 leh7 lah7	600
+二十四	di5 leh7 si4	600
+二百五	zi5 a6 ngou5	600
+二維碼	zi5 bi2 ma3	600
+五保戶	gou3 bor3 hou5	600
+五十一	ngou5 leh7 ih6	600
+五十七	ngou5 leh7 cih6	600
+五十三	ngou5 leh7 sor1	600
+五十九	ngou5 leh7 gao3	600
+五十二	ngou5 leh7 di5	600
+五十五	ngou5 leh7 ngou5	600
+五十八	ngou5 leh7 be6	600
+五十六	ngou5 leh7 lah7	600
+五十四	ngou5 leh7 si4	600
+五四三	gou3 lo4 lang1	600
+五日節	ngou5 lih7 ze5	600
+亞伯蘭	a4 beh6 lang2	600
+亞鉛板	a4 oeng2 mang3	600
+交朋友	gao1 eng2 ngiu3	600
+今旦日	ging1 nua4 lih7	600
+仙遊話	sing1 niu2 ua5	600
+以色列	i3 seh6 leh7	600
+企顛溜	kyor4 leng1 niu1	600
+休息站	hiu1 sih6 zang5	600
+伯利恆	beh6 li5 heng2	600
+伯大尼	beh6 dai5 ni2	600
+佛祖生	hoh7 zou3 la1	600
+使手路	sai3 ciu3 lou5	600
+保證書	bor3 zing4 zy1	600
+倒手拐	do3 liu3 uei3	600
+倒爿手	do4 e2 liu3	600
+倒頭念	do4 lao2 nieng5	600
+倒頭行	do4 lao2 ia2	600
+做功德	zo4 gorng1 neh6	600
+做大水	zo4 dua5 lui3	600
+做風水	zo4 orng1 nui3	600
+健康碼	goeng5 korng1 ma3	600
+傳道書	doeng2 nor5 ly1	600
+儂囝頭	nang2 ngyor3 lao2	600
+元宵心	ngyng2 nieo1 sing1	600
+兄弟囝	hia1 li5 yor3	600
+充電器	coeng1 deng5 ki4	600
+入場券	dih7 dyorng2 goeng4	600
+內蒙古	duei5 morng2 ngou3	600
+八十一	beh6 leh7 ih6	600
+八十七	beh6 leh7 cih6	600
+八十三	beh6 leh7 sor1	600
+八十九	beh6 leh7 gao3	600
+八十二	beh6 leh7 di5	600
+八十五	beh6 leh7 ngou5	600
+八十八	beh6 leh7 be6	600
+八十六	beh6 leh7 lah7	600
+八十四	beh6 leh7 si4	600
+八股生	bah6 gou3 leng1	600
+八臘爺	bah6 lah7 ia2	600
+公交車	gorng1 gao1 cia1	600
+六十一	la7 leh7 ih6	600
+六十七	la7 leh7 cih6	600
+六十三	la7 leh7 sor1	600
+六十九	la7 leh7 gao3	600
+六十二	la7 leh7 di5	600
+六十五	la7 leh7 ngou5	600
+六十八	la7 leh7 be6	600
+六十六	la7 leh7 lah7	600
+六十四	la7 leh7 si4	600
+六月天	lah7 guei5 ling1	600
+六月早	lah7 guei5 lor3	600
+共和國	goeng5 hor2 gorh6	600
+共和黨	goeng5 hor2 dorng3	600
+冬瓜條	dang1 ngua1 lieo2	600
+出月酒	coh6 guei7 liu3	600
+出水珠	coh6 zui3 lou1	600
+別是巴	beh7 si5 ba1	600
+利未記	li5 bi5 gi4	600
+創世記	corng4 ne4 i4	600
+北冰洋	bah7 bing5 ngyorng2	600
+十字架	sih7 zi5 a4	600
+半中央	bua4 lor1 ng1	600
+半季考	pua4 i4 or3	600
+半寒熱	bua4 ua2 leh7	600
+半路死	bua4 lou5 li3	600
+半遂風	borng4 nui5 uei1	600
+半陰陽	bua4 ing1 ngyorng2	600
+南冰洋	nang2 bing1 ngyorng2	600
+南風天	nang2 muei1 ling1	600
+印度洋	ing4 dou5 yorng2	600
+厝邊司	cou4 ing1 ni1	600
+厝頂埕	cou4 leng3 nia2	600
+厝頂尾	cou4 leng3 muei3	600
+原水筆	ngoeng2 nui3 ih6	600
+可憐蟲	kor3 leng2 tang2	600
+可能性	kor3 neng2 sing4	600
+合作社	hah7 zorh6 sia5	600
+同義詞	dang2 ngi5 lo2	600
+吐瀉症	tou4 lia4 ling4	600
+吐瀉面	tou4 lia4 ming4	600
+和尚寺	hor2 lyorng5 ni5	600
+哈爾濱	hah7 zi3 ing1	600
+喙舌尾	cui4 li7 uei3	600
+單人爿	dang1 zing2 me2	600
+四十一	si4 leh7 ih6	600
+四十七	si4 leh7 cih6	600
+四十三	si4 leh7 sor1	600
+四十九	si4 leh7 gao3	600
+四十二	si4 leh7 di5	600
+四十五	si4 leh7 ngou5	600
+四十八	si4 leh7 be6	600
+四十六	si4 leh7 lah7	600
+四十四	si4 leh7 si4	600
+四色牌	so4 seh6 be2	600
+四跤蛇	si4 kor1 lyor2	600
+四點水	si4 lieng3 nui3	600
+囝孫孫	gyor3 long1 nong1	600
+囝孫飯	gyor3 long1 muei5	600
+國家法	gorh6 ga1 hah6	600
+國慶日	gorh6 king4 lih7	600
+國慶節	gorh6 king4 zeh6	600
+國民黨	gorh6 ming2 dorng3	600
+土地公	tou3 le5 orng1	600
+土醫生	tou3 i1 eng1	600
+地生油	de5 leng1 ngiu2	600
+坐監獄	soe5 gang1 goeh7	600
+坩囝尒	kor1 yor3 mai1	600
+城裡人	sia2 li3 nang2	600
+城隍爺	sing2 norng2 ngia2	600
+基路伯	gi1 lou5 beh6	600
+士師記	so5 lo1 gi4	600
+外地人	guei5 di5 nang2	600
+外邦人	guei5 bang1 nang2	600
+大力士	dai5 lih7 so5	600
+大腸癌	dua5 lung2 ngang2	600
+大西洋	dai5 se1 yorng2	600
+大躍進	dai5 oeh7 zing4	600
+大頭鰱	dua5 lao2 leng2	600
+天安門	teng1 ang1 muei2	600
+天罡神	teng1 ngorng1 ning2	600
+太平洋	tai4 bing2 ngyorng2	600
+女天罡	dy3 eng1 ngorng1	600
+女朋友	dy3 eng2 ngiu3	600
+姊妹囝	zi3 muei4 yor3	600
+娘嬭囝	nieo2 le3 yor3	600
+婦女人	hu5 ly3 nang2	600
+婦女囝	hu5 ly3 yor3	600
+媽祖生	ma3 lou3 la1	600
+媽祖麵	ma3 lou3 ming5	600
+嬸娘囝	sing3 nieo2 yor3	600
+嬸娘孫	sing3 nieo2 long1	600
+孔子殿	korng3 no3 deng5	600
+字紙亭	zi5 lyor3 leng2	600
+字紙籠	zi5 lyor3 lang3	600
+孫新婦	song1 ning1 mu5	600
+學堂生	hah7 dorng2 neng1	600
+安提阿	ang1 de2 or1	600
+客家話	keh6 ga1 ua5	600
+客家語	keh6 ga1 gy3	600
+客氣話	ka6 ki4 ua5	600
+家私頭	gor1 li1 lao2	600
+家靈牌	gor1 leng2 me2	600
+對面風	dui4 ming4 muei1	600
+小賣鬼	sieo3 mai5 gui3	600
+尻川空	gor1 luei1 kang1	600
+尻脊身	gor1 lia6 ling1	600
+尼尼微	ni2 ni2 bi2	600
+工農兵	gorng1 norng1 ming1	600
+差少少	ca1 zieo3 zieo3	600
+差滴涓	ca1 doe5 oeng1	600
+差點囝	ca1 deng3 ngyor3	600
+巴比倫	ba1 bi3 long2	600
+師姑寺	sai1 ou1 li5	600
+平當時	bing2 norng1 ni2	600
+平素時	bing2 nou4 li2	600
+年尾囝	ning2 muei3 yor3	600
+年暝兜	ning2 ma2 lao1	600
+年暝內	ning2 ma2 li5	600
+年透世	ning2 tao4 le4	600
+年頭囝	ning2 nao2 yor3	600
+彌賽亞	bi2 soe4 a4	600
+形容詞	hing2 oeng2 so2	600
+後日工	ao5 lih7 gang1	600
+後生囝	hao5 la1 yor3	600
+後老爸	ao5 lor5 or5	600
+徛丟丟	kyor5 diu1 diu1	600
+徛人爿	kyor5 nang2 me2	600
+徛刀爿	kyor5 lo1 me2	600
+徛在在	kyor5 zai5 zai5	600
+微波爐	bi2 bor1 lou2	600
+心頭疼	sing1 nao2 lia4	600
+所羅門	soe3 lor2 mong2	600
+手巾囝	ciu3 yng1 ngyor3	600
+手炸彈	ciu3 za4 lang2	600
+手雷彈	ciu3 lui2 dang5	600
+找錢尾	zao3 ling2 muei3	600
+拍尻川	pa6 or1 luei1	600
+拍廝告	pa6 lo1 go4	600
+拍石師	pa6 lieo7 lai1	600
+拍麻雀	pa6 ma2 cyorh6	600
+拭尻川	cih6 gor1 luei1	600
+拿撒勒	na2 sah6 leh6	600
+掃帚星	sao4 liu3 la1	600
+搬戲簿	bua1 hi4 ou5	600
+搭大船	dor6 dua5 long2	600
+摩托車	mor2 lorh6 cia1	600
+撥浪鼓	borh6 lorng5 gou3	600
+撲克牌	porh6 keh6 be2	600
+攑頭槍	gyor7 tao2 cieo1	600
+攙凊水	cang2 cing4 nui3	600
+救火車	giu4 uei3 lia1	600
+救護車	giu4 ou5 lia1	600
+新婦房	sing1 mu5 ang2	600
+新新婦	sing1 ning1 mu5	600
+旗杆厝	gi2 ua1 lou4	600
+日晝好	dih7 dao4 ho3	600
+日頭晝	dih7 tao2 lao4	600
+日頭能	dih7 tao2 neng2	600
+日頭花	dih7 tao2 ua1	600
+日頭食	dih7 tao2 sih6	600
+早季釉	zor3 ui4 liu5	600
+春不老	cong1 moh6 lor3	600
+普通話	pou3 lorng1 ngua5	600
+暗暝時	ang4 ma2 li2	600
+暝時好	ma2 li2 ho3	600
+月裡囝	guei5 li3 yor3	600
+有路用	uh6 lou5 oeng5	600
+未來佛	bi5 lai2 hoh7	600
+未曾未	buei5 leng2 muei5	600
+本地話	buei3 le5 ua5	600
+枕頭巾	zing3 nao2 yng1	600
+桌球床	do6 iu2 lung2	600
+桌球朳	do6 iu2 be1	600
+條形碼	dieo2 hing2 ma3	600
+梧桐尾	gu2 lang2 muei3	600
+植物學	sih7 boh7 hah7	600
+正月頭	zia1 uei7 lao2	600
+正爿手	zia4 e2 liu3	600
+民主黨	ming2 zy3 dorng3	600
+民數記	ming2 nou4 i4	600
+民眾黨	ming2 zoeng4 dorng3	600
+民進黨	ming2 zing4 dorng3	600
+沃粗水	orh6 cou1 lui3	600
+洋番薯	ieo2 horng1 ny2	600
+洋筆盒	ieo2 ih6 orh7	600
+海松柏	hai3 loeng2 mah6	600
+消防車	sieo1 horng2 cia1	600
+清明龜	ca1 mia2 gu1	600
+湄洲島	bi2 liu1 dor3	600
+湄洲灣	bi2 liu1 uang1	600
+漁船囝	hy2 long2 ngyor3	600
+潑水節	pua6 lui3 zeh6	600
+灑凊水	sua5 cing4 nui3	600
+火挩枝	huei3 suah7 gi1	600
+火挩殼	huei3 suah7 kah6	600
+火挩盒	huei3 suah7 orh7	600
+火挩藥	huei3 suah7 ieo7	600
+火燒山	huei3 lieo1 lua1	600
+火車站	huei3 lia1 zang5	600
+火車路	huei3 lia1 lou5	600
+炒米花	cor3 i3 ua1	600
+烏煞汗	ou1 lah6 gua5	600
+烏目鏡	ou1 mah7 gia4	600
+無定著	bo2 dia5 dieo7	600
+無路用	bo2 lou5 oeng5	600
+無量器	bo2 lyorng5 ngi4	600
+煙花院	eng1 ngua1 ing5	600
+煤氣灶	buei2 ki4 zao4	600
+熰凊糜	gao5 ling4 ma2	600
+牛犁擔	gu2 le2 lor1	600
+牽牛囝	keng1 ngu2 yor3	600
+牽絲雨	keng1 ni1 ou5	600
+狗囝尾	gao3 yor3 buei3	600
+狗箠鞭	gao3 luei2 beng1	600
+猴行者	gao2 eng2 nia3	600
+獨木橋	dorh7 borh7 gieo2	600
+玻璃紐	bor1 li2 diu2	600
+現世報	heng5 ne4 bor4	600
+現變驗	heng5 meng4 ngieng5	600
+理事會	li3 lo5 uei5	600
+甚生個	sing5 na1 e2	600
+生份人	sa1 ong5 nang2	600
+生份話	sa1 ong5 ngua5	600
+生份鋪	sa1 ong5 mou1	600
+生命力	seng1 ming5 lih7	600
+生囝面	seng1 ngyor3 ming4	600
+生日月	sa1 lih7 guei7	600
+申命記	sing1 ming5 ngi4	600
+男朋友	nang2 meng2 ngiu3	600
+畏小禮	ui4 lieo3 le3	600
+留學生	liu2 ah7 seng1	600
+番囝厝	huang1 ngyor3 lou4	600
+番囝油	huang1 ngyor3 iu2	600
+番囝燈	huang1 ngyor3 leng1	600
+番囝話	huang1 ngyor3 ua5	600
+番教徒	horng1 ngao4 lou2	600
+番薯簽	horng1 ny2 cieng1	600
+疊羅漢	dieh7 lor2 hang4	600
+痟狗母	sieo3 ao3 o3	600
+療養院	lieo2 yorng3 ing5	600
+白木耳	ba7 borh7 zi3	600
+白話字	ba7 ua5 li5	600
+百歲蘭	beh6 huei4 lang2	600
+皇帝豆	horng2 ne4 lao5	600
+目屎膏	mah7 sai3 go1	600
+目珠紅	mah7 ziu1 ang2	600
+目眉毛	mah7 bai2 mung2	600
+目睭毛	mah7 ziu1 mung2	600
+目藥水	mah7 ieo7 lui3	600
+目鏡生	mah7 gia4 leng1	600
+相片底	syorng4 meng4 de3	600
+相片簿	syorng5 meng4 mou5	600
+石家莊	sih7 gor1 zorng1	600
+石牯囝	sieo7 gou3 yor3	600
+石頭囝	sieo7 lao2 yor3	600
+石頭子	sieo7 lao2 zi3	600
+石頭牯	sieo7 lao2 gou3	600
+破傷風	por4 syorng1 horng1	600
+破病身	pua4 ma5 ling1	600
+破病雞	pua4 ma5 e1	600
+礦泉水	korng4 soeng2 nui3	600
+祖公媽	zou3 orng1 ma3	600
+祖公床	zou3 orng1 nung2	600
+祖公業	zou3 orng1 gieh7	600
+祖公牌	zou3 orng1 me2	600
+禮拜日	le3 ai4 lih7	600
+穿心爿	coeng1 ning1 me2	600
+笑面虎	cieo4 ming4 hou3	600
+算盤子	sua4 mua2 li3	600
+箭支尾	zing4 ngi1 uei3	600
+約伯記	yorh6 beh6 gi4	600
+約旦河	yorh6 dang4 ngor2	600
+紅毛字	ang2 mung2 ni5	600
+紅雞公	ang2 nge1 gorng1	600
+絞絲爿	gor3 li1 e2	600
+綠豆餅	lorh7 dao5 bia3	600
+總無講	zorng3 bo2 gorng3	600
+纏跤布	ding2 ngor1 ou4	600
+羅馬字	lor2 ma3 li5	600
+羊眩瘋	ieo2 yng2 norng1	600
+老公媽	lao5 orng1 ma3	600
+老實人	lor3 sih7 nang2	600
+老爸囝	lor5 or5 yor3	600
+老爹相	lor3 lia1 syorng4	600
+耳空垂	hi5 ang1 tui2	600
+耶和華	e1 or2 hua1	600
+聯合國	leng2 hah7 gorh6	600
+肩胛頭	ge1 a5 lao2	600
+肩頭骨	ge1 lao2 goh6	600
+肺花開	hi4 ua1 ui1	600
+胡床囝	hou2 lung2 ngyor3	600
+胡蠅屎	hou2 ling2 nai3	600
+胸坎骨	horng1 ngang3 goh6	600
+自動化	zo5 lang5 hua4	600
+自鳴鐘	zo5 ing2 noeng1	600
+臭頭爹	cieo4 lao2 dia1	600
+臺灣人	dai2 uang2 nang2	600
+臺灣檨	dai2 uang2 suang5	600
+興化戲	hing1 ngua4 i4	600
+興化腔	hing1 ngua4 kieo1	600
+興化話	hing1 ngua4 ua5	600
+興化語	hing1 ngua4 gy3	600
+舊年暝	gu5 ning2 ma2	600
+花柳毒	hua1 liu3 dorh7	600
+茶心粕	dor2 ling1 po5	600
+莆仙戲	pou2 leng1 ngi4	600
+莆仙語	pou2 seng1 gy3	600
+莆田話	pou2 leng2 ngua5	600
+菜瓜鑢	cai4 ua1 loe4	600
+菜籽油	cai4 li3 iu2	600
+落雨天	lo7 ou5 ling1	600
+薰枝喙	hong1 gi1 cui4	600
+薰枝殼	hong1 gi1 kah6	600
+薰枝煙	hong1 gi1 eng1	600
+薰枝盒	hong1 gi1 ah7	600
+薰枝箍	hong1 gi1 kou1	600
+蘇州碼	sou1 liu1 bor3	600
+蘭桂嫂	lang2 nge4 lo3	600
+蘭桂子	lang2 nge4 lo3	600
+虎頭鉗	hou3 lao2 kieng2	600
+處卷紙	cy3 guei3 lyor3	600
+行外家	gia2 gua5 or1	600
+衛生衣	e5 leng1 ngi1	600
+衫裾尾	sor1 y1 uei3	600
+褲跤尾	kou4 or1 uei3	600
+西乃山	se1 nai3 sua1	600
+西北雨	sai1 ah6 hou5	600
+西天尾	se1 leng1 muei3	600
+西班牙	se1 bang1 gor2	600
+見人惜	ging4 nang2 sieo6	600
+親家姆	cing5 ngor1 ng3	600
+觀音佛	gua1 ing1 moh7	600
+觀音媽	gua1 ing1 ma3	600
+計算機	ge4 luang4 gi1	600
+說明書	soeh6 ming2 ny1	600
+請人客	cia3 nang2 nga6	600
+講大話	gorng3 dua5 ua5	600
+讀字爿	tah7 zi5 be2	600
+讀書音	tah7 zy1 ing1	600
+讀死書	tah7 si3 ly1	600
+變壓器	beng4 ah6 ki4	600
+豆腐花	dao4 ua1	600
+豬豚囝	dy1 long2 ngyor3	600
+財主指	zai2 lou3 lai3	600
+貨𨈘囝	ho4 lao3 yor3	600
+貨𨈘痟	ho4 lao3 sieo3	600
+貨𨈘相	ho4 lao3 syorng4	600
+貨𨈘精	ho4 lao3 zing1	600
+貨𨈘腔	ho4 lao3 kang1	600
+貨𨈘貓	ho4 lao3 or2	600
+貨𨈘間	ho4 lao3 e1	600
+貪食鬼	tang1 nia7 ui3	600
+起早好	ki3 lor3 ho3	600
+起早時	ki3 or3 li2	600
+起早頭	ki3 or3 lao2	600
+跋繳生	bua7 gieo3 leng1	600
+跋錢生	bua7 ling2 neng1	600
+跋錢間	bua7 ling2 nge1	600
+跋錢鬼	bua7 ling2 ngui3	600
+跋麻雀	buah7 ma2 cyorh6	600
+跤肚頭	kor1 lou3 tao2	600
+路得記	lou5 leh6 gi4	600
+踏斗隥	dah7 dao3 zeng4	600
+車路囝	cia1 lou5 yor3	600
+辣椒醬	luah7 zieo1 lieo4	600
+辦事處	bang5 no5 cy4	600
+農村猴	norng2 coeng1 gao2	600
+農民猴	norng2 ming2 gao2	600
+農民箍	norng2 ming2 kou1	600
+運動會	ong5 norng5 nguei5	600
+過頭話	go4 lao2 ua5	600
+邊擦音	beng1 cah6 ing1	600
+郵政分	iu2 ling4 ngong1	600
+郵政花	iu2 ling4 ngua1	600
+醉車藥	zui4 lia1 ieo7	600
+野和尚	ia3 or2 lyorng5	600
+野蘆薈	ia3 lou2 uei5	600
+金手指	ging1 niu3 lai3	600
+金針菜	ging1 nieng1 nai4	600
+鎮位處	ding4 ui5 cy4	600
+鐵筆水	ti6 ih6 zui3	600
+長子得	dyorng3 no3 deh6	600
+長頭髮	dung2 nao2 uei5	600
+開天門	kui1 ting1 muei2	600
+開店門	kui1 le4 muei2	600
+閩南語	mang2 nang2 gy3	600
+關帝廟	guang1 ne4 ieo5	600
+關監獄	guei1 gang1 goeh7	600
+防空洞	horng2 korng1 dorng5	600
+阿姑寺	ah7 gou1 li5	600
+阿姨囝	a1 i2 yor3	600
+阿弟囝	a1 li5 yor3	600
+阿舍囝	a1 lia4 yor3	600
+隔壁厝	ga6 ia6 lou4	600
+雙人爿	sorng1 zing2 me2	600
+雙生囝	sang1 na1 yor3	600
+雙頭蛇	sang1 nao2 lyor2	600
+雞公車	ge1 gorng1 nia1	600
+雞卵膏	ge1 noe5 go1	600
+雞母皮	ge1 o3 puei2	600
+雞肉毹	ge1 noeh7 zou2	600
+雨漏滴	hou5 lao5 deh6	600
+雨𥪀囝	hou5 bu1 yor3	600
+雪花膏	soe6 ua1 go1	600
+電光影	deng5 gorng1 ing3	600
+電光杉	deng5 gung1 nang1	600
+電光泡	deng5 gung1 por5	600
+電報杉	deng5 mo4 lang1	600
+電磁爐	deng5 zo2 lou2	600
+電飯煲	deng5 huang5 bor3	600
+青春期	cing1 cong1 gi2	600
+青盲牛	ca1 ma2 u2	600
+青竹絲	ca1 loeh6 si1	600
+頂半日	deng3 mua4 lih7	600
+頭髮碎	tao2 uei5 cui4	600
+食早暝	sia7 zor3 ma2	600
+食番教	sia7 horng1 ngao4	600
+食𣍐消	sia7 be5 sieo1	600
+飯匙銃	buei5 li2 loeng5	600
+飯匙骨	buei5 li2 goh6	600
+香港跤	hyorng1 gang3 ngor1	600
+香爐烌	hieo1 lou2 u1	600
+馬利亞	ma3 li5 a4	600
+馬貽順	ma3 i2 long5	600
+高壓鍋	gor1 ah6 go1	600
+魯班尺	lou3 ang1 cieo6	600
+鳥囝目	zieo3 yor3 mah7	600
+鳥囝膽	zieo3 yor3 dor3	600
+鳳凰山	horng5 ngorng2 nang1	600
+鴉片生	a1 eng4 seng1	600
+鴉片膏	a1 eng4 go1	600
+鴉片花	a1 eng4 ngua1	600
+鴉片薰	a1 eng4 ngong1	600
+鴉片鬼	a1 eng4 gui3	600
+鴛鴦被	eng1 ngieo1 uei5	600
+鴨卵石	or6 noe5 lieo7	600
+鴨卵綠	or6 noe5 lorh7	600
+鴨卵門	or6 noe5 muei2	600
+鴨卵青	or6 noe5 ca1	600
+麻雀子	ma2 cyorh6 zi3	600
+黑板刷	heh6 bang3 suah6	600
+黑龍江	heh6 loeng2 gang1	600
+點心茶	dieng3 ning1 nor2	600
+鼻空空	pi4 ang1 ngang1	600
+鼻空風	pi4 ang1 muei1	600
+齋果店	zai1 or3 le4	600
+龍脊骨	loeng2 nih6 goh6	600
+𣍐得赴	beh6 deh6 hu4	600
+𤆬火厝	cyor4 uei3 lou4	600
+𤆬火山	cyor4 uei3 lua1	600
+一國兩制	ih6 gorh6 lyorng3 ze4	500
+七果八齋	cih6 gor3 be6 zai1	500
+三十暝昏	sor1 leh7 ma2 uei1	500
+三叉路口	sor1 cor1 lou5 ao3	500
+上雞肉毹	cieo5 ge1 noeh7 zou2	500
+下丁下輩	or5 leng1 or5 muei4	500
+中華民國	doeng1 hua2 ming2 gorh6	500
+中華民族	doeng1 hua2 ming2 zorh7	500
+主權國家	zy3 goeng2 gorh6 ga1	500
+五代十國	gou3 dai5 sih7 gorh6	500
+亞伯拉罕	a4 beh6 lah7 hang3	500
+以斯帖記	i3 so1 tieh6 gi4	500
+以斯拉記	i3 so1 la1 gi4	500
+共產主義	goeng5 nang3 ny3 i5	500
+出埃及記	coh6 ai1 gih7 gi4	500
+列王紀上	leh7 orng2 gi4 syorng5	500
+列王紀下	leh7 orng2 gi4 ha5	500
+加利利海	ga1 li5 li5 ai3	500
+勼跤勼手	giu1 or1 iu1 liu3	500
+厝邊隔壁	cou4 ing1 ga6 ia6	500
+合情合理	hah7 zing2 hah7 li3	500
+呼和浩特	hou1 hor2 hor5 deh7	500
+和尚禿驢	hor2 lyorng5 ty2	500
+單丁孤姓	dang1 deng1 gou1 sa4	500
+國際法院	gorh6 ze4 hah6 ing5	500
+土地公厝	tou3 le5 orng1 nou4	500
+土地公生	tou3 le5 orng1 na1	500
+大馬士革	dai5 ma3 so5 geh6	500
+好來好去	ho3 lai2 ho3 y4	500
+好頭好尾	ho3 lao2 ho3 buei3	500
+尼希米記	ni2 hi1 bi3 gi4	500
+尾第二指	buei3 de5 li5 lai3	500
+差小可囝	ca1 sieo3 kor3 yor3	500
+差滴涓囝	ca1 doe5 oeng1 ngyor3	500
+巴勒斯坦	ba1 leh7 so1 tang3	500
+心肝頭疼	sing1 ngua1 lao2 lia4	500
+忍氣求財	nong3 ki4 giu2 zai2	500
+搬簿先生	bua1 ou5 leng1 na1	500
+撒母耳上	sah6 bieo3 zi3 syorng5	500
+撒母耳下	sah6 bieo3 zi3 ha5	500
+撒瑪利亞	sah6 ma3 li5 a4	500
+施洗約翰	si1 le3 yorh6 hang5	500
+有年無月	uh6 ning2 bo2 guei7	500
+有暝無日	uh6 ma2 bo2 dih7	500
+正月正頭	zia1 uei7 zia1 lao2	500
+歷代志上	leh7 dai5 li4 syorng5	500
+歷代志下	leh7 dai5 li4 ha5	500
+法利賽人	hah6 li5 soe4 nang2	500
+漢語拼音	hang4 gy3 ping1 ing1	500
+灶焰添柴	zao4 ieng5 ting1 cor2	500
+烏魯木齊	ou1 lou3 borh7 ze2	500
+無大無細	bo2 dua5 bo2 se4	500
+牛頭馬面	gu2 lao2 bor3 ming4	500
+王不見王	orng2 boh6 geng4 orng2	500
+番囝松柏	huang1 ngyor3 loeng2 mah6	500
+白紙烏字	ba7 lyor3 ou1 li5	500
+看命先生	kua4 mia5 leng1 na1	500
+石頭牯囝	sieo7 lao2 gou3 yor3	500
+社會主義	sia5 uei5 ly3 i5	500
+粗言野語	cou1 ngoeng2 ia3 gy3	500
+約書亞記	yorh6 sy1 a4 gi4	500
+結義的囝	geh6 gi5 eh6 gyor3	500
+耶穌基督	e2 lou1 gi1 dorh6	500
+耶路撒冷	e2 lou5 sah6 leng3	500
+肩胛頭骨	ge1 a5 lao2 goh6	500
+萬古千年	mang5 gou3 ceng1 neng2	500
+講東講西	gorng3 dang1 gorng3 nai1	500
+起早暝晏	ki3 or3 ma2 ua4	500
+起雞母皮	ki3 e1 o3 puei2	500
+開門開戶	kui1 muei2 ui1 ou5	500
+阿彌陀佛	or1 bi2 tor2 hoh7	500
+隨時隨刻	sui2 si2 sui2 keh6	500
+青盲錢鼠	ca1 ma2 zing2 ny4	500
+順風順水	song5 ngorng1 song5 nui3	500
+馬來西亞	ma3 lai2 le1 a4	500
+中華人民共和國	doeng1 hua2 zing2 ming2 goeng5 hor2 gorh6	400
+二九三十暝	di5 gao3 sor1 leh7 ma2	400
+剃和尚禿驢	ti6 hor2 lyorng5 ty2	400
+南無阿彌陀佛	na2 mo2 or1 bi2 tor2 hoh7	400
+國家社會主義	gorh6 ga1 sia5 uei5 zy3 i5	400
+好心乞雷拍	ho3 sing1 koh6 lui2 pa6	400
+巴拿馬運河	ba1 na2 ma3 ong5 ngor2	400
+施洗禮約翰	si1 se3 le3 yorh6 hang5	400
+結義的娘嬭	geh6 gi5 eh6 nieo2 le3	400
+結義的老爸	geh6 gi5 eh6 lor5 or5	400
+老牛食幼筍	lao5 gu2 sia7 iu4 song3	400
+聯合國安全理事會	leng2 hah7 gorh6 ang1 zoeng2 li3 lo5 uei5	400
+鉸刀錘囝布	gor1 lo1 tui2 yor3 bou4	400

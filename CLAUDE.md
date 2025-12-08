@@ -17,21 +17,70 @@ The project auto-converts between these systems using linguistic rules and Wikti
 
 ## Core Commands
 
-### Dictionary Conversion Pipeline
+### One-Click Dictionary Update (推薦使用)
 
-**Primary conversion script** (莆仙話拼音 → 興化平話字):
+**Complete workflow - rebuild all dictionaries from all sources:**
+
+**Windows:**
+```bash
+build_dicts.bat
+```
+
+**macOS/Linux:**
+```bash
+python tools/build_all_dicts.py
+```
+
+This master script orchestrates the entire dictionary building pipeline:
+1. Extracts vocabulary from Wiktionary data (`docs/puxian_phrases_from_wikt.txt`)
+2. Extracts vocabulary from Hinghwa Bible (`docs/hinghua_bible.txt`)
+3. Merges all sources into `pouseng_pinging/borhlang_pouleng.dict.yaml`
+4. Converts to Báⁿ-uā-ci̍ dictionary (Hanzi version)
+5. Generates pure Báⁿ-uā-ci̍ dictionary (Lua format)
+
+**Use this script whenever you update any source data files.**
+
+### Individual Processing Scripts
+
+**Extract vocabulary from Wiktionary:**
+```bash
+python tools/extract_vocab_from_wikt.py
+```
+- Reads: `docs/puxian_phrases_from_wikt.txt` (4 TSV columns: 漢字, Báⁿ-uā-ci̍, PSP original, PSP actual)
+- Outputs: `data/vocab_from_wikt.yaml` (~4000 entries)
+- Handles duplicates, converts Báⁿ-uā-ci̍ to PSP if needed
+
+**Extract vocabulary from Bible:**
+```bash
+python tools/extract_vocab_from_bible.py
+```
+- Reads: `docs/hinghua_bible.txt` (aligned Báⁿ-uā-ci̍ and Hanzi lines)
+- Outputs: `data/vocab_from_bible.yaml` (extracted n-grams and words)
+- Handles 合音字 (e.g., 「家己」→ ga̍i), proper nouns → lowercase
+- Extracts 2-4 character phrases with frequency weighting
+
+**Manual conversion** (莆仙話拼音 → 興化平話字):
 ```bash
 python tools/convert_dict_v3.py
 ```
 
-This is the main tool for regenerating dictionaries. It:
-- Reads `pouseng_pinging/borhlang_pouleng.dict.yaml` (source Pouseng Ping'ing dictionary)
-  - Can also read from `hinghwa-ime/Pouleng/Pouleng.dict.yaml` (reference dictionary)
+This converts Pouseng Ping'ing to Báⁿ-uā-ci̍ (Hanzi version):
+- Reads `pouseng_pinging/borhlang_pouleng.dict.yaml`
 - Reads `data/cpx-pron-data.lua` (Wiktionary character pronunciation data)
-- Outputs to `bannuaci/borhlang_bannuaci.dict.yaml` (Báⁿ-uā-ci̍ dictionary with special format for Lua processing)
+- Outputs to `bannuaci/borhlang_bannuaci_han.dict.yaml`
 - Generates `bannuaci/conversion_log.txt` (warnings and conversion notes)
 
-**Note**: Always use `convert_dict_v3.py` (latest version). Earlier versions (v1, v2) are deprecated.
+**Generate pure Báⁿ-uā-ci̍ dictionary:**
+```bash
+python tools/generate_pure_bannuaci_dict.py
+```
+
+Converts Hanzi version to Lua-compatible format:
+- Reads `bannuaci/borhlang_bannuaci_han.dict.yaml`
+- Outputs `bannuaci/borhlang_bannuaci.dict.yaml` (format: `romanization@input@hanzi|`)
+- Merges homophones with `/` separator
+
+**Note**: Use `build_all_dicts.py` instead of running these individually.
 
 ### Windows Quick Deployment
 
@@ -76,32 +125,79 @@ These generate the `comment_format` rules used in Rime schema files to transform
 
 ## Architecture & Data Flow
 
-### Two-System Design
+### Complete Data Flow
 
 ```
-Pouseng Ping'ing (莆仙話拼音)
-    ↓ [Source Dictionary: 24,000+ entries]
-    ↓
-    ↓ [convert_dict_v3.py]
-    ↓ [Uses: psp_to_buc.py + cpx-pron-data.lua]
-    ↓
-Báⁿ-uā-ci̍ (興化平話字)
-    ↓ [Output Dictionary: 23,000+ entries]
+SOURCE DATA                          PROCESSING                       OUTPUT
+═══════════════════════════════════════════════════════════════════════════════
+
+1. Wiktionary Phrases                extract_vocab_from_wikt.py      vocab_from_wikt.yaml
+   (docs/puxian_phrases_from_wikt.txt)  ──────────────────────>        (~4000 entries)
+   - 漢字\tBUC\tPSP_orig\tPSP_actual                                             │
+                                                                                 │
+2. Hinghwa Bible                     extract_vocab_from_bible.py     vocab_from_bible.yaml  │
+   (docs/hinghua_bible.txt)             ──────────────────────>        (n-grams, freq-based) │
+   - Aligned BUC/Hanzi                                                           │
+   - 合音字 handling                                                              │
+                                                                                 │
+3. Base Dictionary                                                               │
+   (pouseng_pinging/                                                             │
+    borhlang_pouleng.dict.yaml)                                                  │
+   - Manually curated                                                            │
+                                                     ┌───────────────────────────┘
+                                                     │
+                                                     ▼
+                                            MERGED DICTIONARY
+                                    pouseng_pinging/borhlang_pouleng.dict.yaml
+                                             (莆仙話拼音)
+                                                     │
+                                                     │ convert_dict_v3.py
+                                                     │ (Uses: psp_to_buc.py
+                                                     │        cpx-pron-data.lua)
+                                                     ▼
+                                    bannuaci/borhlang_bannuaci_han.dict.yaml
+                                          (興化平話字 - 漢字版)
+                                                     │
+                                                     │ generate_pure_bannuaci_dict.py
+                                                     ▼
+                                    bannuaci/borhlang_bannuaci.dict.yaml
+                                       (興化平話字 - Lua格式)
+                                    format: romanization@input@hanzi|
 ```
 
-**Why this direction?**
+**Why merge multiple sources?**
+- **Base dictionary**: Manually curated, highest quality
+- **Wiktionary phrases**: Comprehensive multi-character words
+- **Bible text**: Natural language patterns, idiomatic expressions
+- **Conversion validation**: All entries validated against `cpx-pron-data.lua`
+
+**Why Pouseng Ping'ing → Báⁿ-uā-ci̍ direction?**
 - Pouseng Ping'ing is the modern standard with complete vocabulary
 - Báⁿ-uā-ci̍ is historically accurate but lacks comprehensive modern lexicon
-- Conversion validates against Wiktionary data to ensure accuracy
+- Easier to validate PSP→BUC than BUC→PSP
 
 ### Key Data Files
 
+**Source Data:**
 | File | Purpose | Format |
 |------|---------|--------|
 | `data/cpx-pron-data.lua` | Wiktionary pronunciation data | Lua table: `["字"] = {"pron1", "pron2"}` |
+| `docs/puxian_phrases_from_wikt.txt` | Wiktionary phrases | TSV: 漢字\tBUC\tPSP_orig\tPSP_actual |
+| `docs/hinghua_bible.txt` | Hinghwa Bible text | Aligned BUC/Hanzi lines, 合音字 in 「」 |
+| `hinghwa-ime/Pouleng/Pouleng.dict.yaml` | Reference dictionary | Rime dict format (~24k entries) |
+
+**Processing Modules:**
+| File | Purpose | Format |
+|------|---------|--------|
 | `data/psp_to_buc.py` | Core conversion algorithm | Python module with mapping dicts |
 | `data/puxian_initials.json` | Initial consonants by dialect | JSON phoneme inventory |
 | `data/puxian_rhymes.json` | Rhyme patterns by dialect | JSON phoneme inventory |
+
+**Generated Intermediate Files:**
+| File | Purpose | Generated By |
+|------|---------|--------------|
+| `data/vocab_from_wikt.yaml` | Extracted Wiktionary vocabulary | `extract_vocab_from_wikt.py` |
+| `data/vocab_from_bible.yaml` | Extracted Bible vocabulary | `extract_vocab_from_bible.py` |
 
 ### Dictionary Format
 
@@ -208,22 +304,58 @@ If both phases fail, use direct conversion result and log as warning for manual 
 
 ## Working with Dictionaries
 
-### Adding New Pouseng Ping'ing Entries
+### Recommended Workflow (推薦工作流程)
+
+**When you update any source data:**
+
+1. **Update source files:**
+   - Add/edit entries in `pouseng_pipping/borhlang_pouleng.dict.yaml` (manual curation)
+   - OR update `docs/puxian_phrases_from_wikt.txt` (Wiktionary data)
+   - OR update `docs/hinghua_bible.txt` (Bible text)
+
+2. **Run the master build script:**
+   ```bash
+   python tools/build_all_dicts.py
+   ```
+
+3. **Review outputs:**
+   - Check `bannuaci/conversion_log.txt` for warnings
+   - Verify generated dictionaries in `bannuaci/` and `pouseng_pinging/`
+
+4. **Deploy to Rime:**
+   - Windows: Run `deploy_to_rime.bat`
+   - macOS/Linux: Manually copy files to Rime user directory
+
+### Adding Individual Entries (Manual Method)
+
+**For manual dictionary updates without rebuilding from all sources:**
 
 1. Edit `pouseng_pinging/borhlang_pouleng.dict.yaml`
 2. Add entries in format: `漢字<TAB>拼音<TAB>權重`
-3. Run conversion: `python tools/convert_dict_v3.py`
-4. This will automatically generate:
-   - `bannuaci/borhlang_bannuaci.dict.yaml` with special Lua format (`romanization@input@hanzi|`)
-   - `bannuaci/conversion_log.txt` with warnings and conversion notes
-5. Review the conversion log for any warnings or manual review items
+3. Run individual conversion scripts:
+   ```bash
+   python tools/convert_dict_v3.py
+   python tools/generate_pure_bannuaci_dict.py
+   ```
+4. Review `bannuaci/conversion_log.txt` for warnings
 
-### Updating Wiktionary Data
+### Updating Source Data Files
 
+**Wiktionary character pronunciations:**
 1. Edit `data/cpx-pron-data.lua`
 2. Add/modify entries in format: `["字"] = {"pron1", "pron2"},`
-3. Run conversion: `python tools/convert_dict_v3.py`
-4. Verify updated pronunciations in output dictionary
+3. Run `python tools/build_all_dicts.py`
+
+**Wiktionary phrases:**
+1. Edit `docs/puxian_phrases_from_wikt.txt`
+2. Format: `漢字<TAB>Báⁿ-uā-ci̍<TAB>PSP_original<TAB>PSP_actual`
+3. Run `python tools/build_all_dicts.py`
+
+**Bible text:**
+1. Edit `docs/hinghua_bible.txt`
+2. Maintain format: BUC line, Hanzi line, blank line
+3. Mark 合音字 with 「」: e.g., 「家己」for ga̍i
+4. Run `python tools/build_all_dicts.py`
 
 ### Merging New Vocabulary
 
@@ -256,6 +388,20 @@ python tools/convert_dict_v3.py
 | 5 | 陽去 | 5 | ̄ (macron) | On vowel | `f` |
 | 6 | 陰入 | 6 | (none or ̄) | Ends in h | `6` or omit |
 | 7 | 陽入 | 7 | ̍ | Ends in h | `j` |
+
+**CRITICAL: Tone Mark Context Dependency**
+
+The same diacritic mark has different meanings depending on the syllable ending:
+
+- **Vertical line above (̍ U+030D)**:
+  - On non-h-ending syllable → Tone 4 (陰去) e.g., `sê̍ng` = `seng4`
+  - On h-ending syllable → Tone 7 (陽入) e.g., `do̤̍h` = `dooh7`, `le̍h` = `leh7`
+
+- **Macron (̄ U+0304)**:
+  - On non-h-ending syllable → Tone 5 (陽去) e.g., `kā` = `ka5`
+  - On h-ending syllable → Tone 6 (陰入) e.g., `sāh` = `sah6`
+
+This rule is implemented in `convert_dict_v3.py` (lines 210-218) and must be preserved when processing Báⁿ-uā-ci̍ text.
 
 **Tone Input Keys** (since number keys are used for candidate selection):
 - `q` = Tone 2 (陽平 ´)

@@ -92,8 +92,8 @@ class SyllableGenerator:
     # 韻母分類
     FINALS_NASAL_NN = ['ann', 'aann', 'eenn', 'oonn', 'iann', 'aaunn', 'oinn', 'ioonn', 'uann']
     FINALS_NASAL_NG = ['ng', 'ang', 'ioong', 'eeng', 'uang', 'eong', 'oong', 'eng', 'iang', 'ing', 'yng']
-    FINALS_CHECKED = ['ah', 'aah', 'ooh', 'eoh', 'ih', 'iah', 'aauh', 'oih', 'iooh', 'eh', 'eeh', 'yh', 'uah']
-    FINALS_OPEN = ['a', 'aa', 'ee', 'oo', 'eo', 'i', 'y', 'u', 'ia', 'aau', 'iu', 'ai', 'au', 'o', 'ua', 'uai', 'ui', 'ioo']
+    FINALS_CHECKED = ['ah', 'aah', 'aih', 'aauh', 'eh', 'eeh', 'eoh', 'ih', 'iah', 'iooh', 'oih', 'ooh', 'uah', 'uh', 'yh']
+    FINALS_OPEN = ['a', 'aa', 'e', 'ee', 'oo', 'eo', 'i', 'y', 'u', 'ia', 'aau', 'iu', 'ai', 'au', 'o', 'ua', 'uai', 'ui', 'ioo']
 
     # 聲調
     TONES_OPEN = ['1', '2', '3', '4', '5']  # 非h結尾韻母（不包含6，因為和5相同）

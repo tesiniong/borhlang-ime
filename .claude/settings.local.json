@@ -12,7 +12,10 @@
       "Bash(python -c:*)",
       "Bash(python test_lung.py:*)",
       "Bash(python:*)",
-      "Bash(ls:*)"
+      "Bash(ls:*)",
+      "Bash(cat:*)",
+      "Bash(findstr �����)",
+      "Bash(findstr:*)"
     ],
     "deny": [],
     "ask": []
