@@ -43,7 +43,7 @@ buc_finals = {
 	"iah": [["iah", 2]],
 	"ieh": [["iah", 2]],
 	"ieng": [["iang", 2]],
-	"ieo": [["a̤u", 2], ["a̤uⁿ", 2], ["a̤uh", 2]],
+	"ieo": [["a̤u", 2], ["a̤uⁿ", 2], ["a̤uh", 3]], # a̤uh 和 a̤u/a̤uⁿ 位置不同
 	"ih": [["ih", 1]],
 	"ing": [["ing", 1]],
 	"iu": [["iu", 2]],

@@ -21,11 +21,13 @@ switches:
     reset: 0
     states: [ 漢字, 字母 ]
   - name: full_shape
+    reset: 0
     states: [ 半角, 全角 ]
   - name: simplification
     states: [ 繁體, 简体 ]
   - name: ascii_punct
-    states: [ 。，, ．， ]
+    reset: 1
+    states: [ 中文標點, 西文標點 ]
 
 engine:
   processors:
@@ -53,9 +55,14 @@ engine:
     - uniquifier
 
 speller:
-  alphabet: zyxwvutsrqponmlkjihgfedcba
+  alphabet: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA
   delimiter: " '"
   algebra:
+  # --- 大小寫支援 (Case Support) ---
+    # 將大寫字母轉為小寫進行匹配，使輸入 Sing 可以匹配詞庫中的 sing
+    # Lua 過濾器會從 context.input 讀取原始大小寫並調整輸出
+    - xlit/ABCDEFGHIJKLMNOPQRSTUVWXYZ/abcdefghijklmnopqrstuvwxyz/
+
   # --- 聲調按鍵映射 (Tone Key Mapping) ---
     # 必須放在最前面，優先處理
     - derive/2$/q/
@@ -85,10 +92,6 @@ speller:
     # 入聲韻尾模糊
     - derive/^(.+)h([1-8])$/$1$2/
     - derive/^(.+)h([1-8])$/$1k$2/
-
-    # ch/c 模糊（某些使用者可能混淆）
-    - derive/^ch/c/
-    - derive/^c([^h])/ch$1/
 
 translator:
   dictionary: borhlang_bannuaci

@@ -15,7 +15,11 @@
       "Bash(ls:*)",
       "Bash(cat:*)",
       "Bash(findstr �����)",
-      "Bash(findstr:*)"
+      "Bash(findstr:*)",
+      "Bash(deploy_to_rime.bat)",
+      "Bash(cmd /c deploy_to_rime.bat)",
+      "Bash(copy /Y bannuaciborhlang_bannuaci.schema.yaml %APPDATA%Rime )",
+      "Bash(copy /Y bannuaciluabannuaci_filter.lua %APPDATA%Rimelua )"
     ],
     "deny": [],
     "ask": []

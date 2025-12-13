@@ -101,7 +101,7 @@ This batch script automatically:
 Test the phonetic conversion algorithm directly:
 ```bash
 python data/psp_to_buc.py
-# Interactive mode - type syllables with tones (e.g., "pou2 leng2")
+# Interactive mode - type syllables with tones (e.g., "pou2 deng2")
 ```
 
 **Additional test scripts** (in `tools/` directory):
@@ -123,6 +123,171 @@ python tools/generate_comment_format_v2.py   # Alternative version
 
 These generate the `comment_format` rules used in Rime schema files to transform ASCII romanization into proper tone marks.
 
+現在調符位置統一記錄在：
+ - D:\borhlang-ime\data\tone_positions.py ← 主要來源（新增）
+ - D:\borhlang-ime\data\psp_to_buc.py（使用 tone_index）
+ - D:\borhlang-ime\data\romanization_converter.py（使用 TONE_POSITIONS）
+ - D:\borhlang-ime\tools\generate_pure_bannuaci_dict.py（現已改用 tone_positions.py）
+
+## Complete Update & Deployment Workflow
+
+### Quick Update Process (Windows 推薦快速流程)
+
+**Step 1: Rebuild Dictionaries**
+```batch
+build_dicts.bat
+```
+
+This script automatically:
+1. Extracts vocabulary from Wiktionary (`docs/puxian_phrases_from_wikt.txt`)
+2. Extracts vocabulary from Bible (`docs/hinghua_bible.txt`)
+3. Merges all sources into `pouseng_pinging/borhlang_pouleng.dict.yaml`
+4. Converts to Báⁿ-uā-ci̍ (Hanzi version) → `bannuaci/borhlang_bannuaci_han.dict.yaml`
+5. Generates pure romanization (Lua format) → `bannuaci/borhlang_bannuaci.dict.yaml`
+
+**Output files:**
+- `pouseng_pinging/borhlang_pouleng.dict.yaml` (PSP dictionary)
+- `bannuaci/borhlang_bannuaci_han.dict.yaml` (BUC Hanzi mode)
+- `bannuaci/borhlang_bannuaci.dict.yaml` (BUC pure romanization mode)
+- `bannuaci/conversion_log_v3.txt` (conversion warnings and notes)
+
+**Step 2: Deploy to Rime**
+```batch
+deploy_to_rime.bat
+```
+
+This script automatically:
+1. Copies all `.schema.yaml` files to `%APPDATA%\Rime`
+2. Copies all `.dict.yaml` files to `%APPDATA%\Rime`
+3. Copies `lua/bannuaci_filter.lua` to `%APPDATA%\Rime\lua\`
+4. Copies `rime.lua` to `%APPDATA%\Rime`
+
+**Step 3: Redeploy Rime**
+1. Right-click Rime tray icon
+2. Select "重新部署" (Redeploy)
+3. Wait 10-30 seconds for completion
+4. Press **F4** or **Ctrl+`** to select input method
+5. Choose "興化平話字" (Báⁿ-uā-ci̍)
+
+### Manual Update Process (macOS/Linux)
+
+**Step 1: Rebuild Dictionaries**
+```bash
+python tools/build_all_dicts.py
+```
+
+**Step 2: Deploy to Rime**
+```bash
+# Copy schema files
+cp bannuaci/*.schema.yaml ~/Library/Rime/  # macOS
+# OR
+cp bannuaci/*.schema.yaml ~/.config/ibus/rime/  # Linux (ibus)
+cp bannuaci/*.schema.yaml ~/.config/fcitx/rime/  # Linux (fcitx)
+
+# Copy dictionary files
+cp bannuaci/*.dict.yaml ~/Library/Rime/  # macOS
+# OR
+cp bannuaci/*.dict.yaml ~/.config/ibus/rime/  # Linux (ibus)
+cp bannuaci/*.dict.yaml ~/.config/fcitx/rime/  # Linux (fcitx)
+
+# Copy Lua files
+mkdir -p ~/Library/Rime/lua  # macOS
+cp bannuaci/lua/bannuaci_filter.lua ~/Library/Rime/lua/
+cp bannuaci/rime.lua ~/Library/Rime/
+```
+
+**Step 3: Redeploy Rime**
+- Right-click Rime icon → Redeploy
+- Wait for completion
+
+### Partial Update (Converting Only)
+
+If you only edit `pouseng_pinging/borhlang_pouleng.dict.yaml` manually without rebuilding from sources:
+
+```bash
+# Convert PSP → BUC (Hanzi mode)
+python tools/convert_dict_v3.py
+
+# Generate pure BUC (romanization mode)
+python tools/generate_pure_bannuaci_dict.py
+
+# Deploy
+deploy_to_rime.bat  # Windows
+# OR manually copy on macOS/Linux
+```
+
+### What to Update When
+
+| You changed... | Run... |
+|---------------|--------|
+| `docs/puxian_phrases_from_wikt.txt` | `build_dicts.bat` (full rebuild) |
+| `docs/hinghua_bible.txt` | `build_dicts.bat` (full rebuild) |
+| `data/cpx-pron-data.lua` | `build_dicts.bat` (full rebuild) |
+| `pouseng_pipping/borhlang_pouleng.dict.yaml` | `build_dicts.bat` OR partial update |
+| `.schema.yaml` files | Just `deploy_to_rime.bat` (no rebuild needed) |
+| Lua filters | Just `deploy_to_rime.bat` (no rebuild needed) |
+
+### Verification
+
+After deployment, test:
+1. **Tone marks display correctly**: `ui2` → uí (not úi)
+2. **No c/ch confusion**: typing `cingli` shows only c-initial words
+3. **Punctuation defaults to half-width**: `,` `.` `?` (not `，` `。` `？`)
+4. **Lua filter works** (pure romanization mode): multi-syllable words show as `po-seng-u (鋪生有)`
+5. **Case handling works** (pure romanization mode): See case handling section below
+
+Check `bannuaci/conversion_log_v3.txt` for any conversion warnings.
+
+### Case Handling (Pure Romanization Mode)
+
+The pure romanization mode (`borhlang_bannuaci.schema.yaml`) supports intelligent case handling for proper nouns and sentence-initial words:
+
+**How it works:**
+- Dictionary entries are all lowercase (e.g., `sing-gā̤ⁿ`, `siō̤ng-da̤̍`)
+- User can type with any capitalization pattern
+- Lua filter analyzes input and adjusts output case accordingly
+
+**Capitalization Patterns:**
+
+| Input Pattern | Example Input | Output Pattern | Example Output | Use Case |
+|--------------|---------------|----------------|----------------|----------|
+| **Lowercase** | `inggio` | Lowercase | `i̍ng-giô̤ⁿ` | Normal text |
+| **Title Case** | `Inggio` | First letter capitalized | `I̍ng-giô̤ⁿ` | Sentence-initial word, proper noun (single syllable) |
+| **All Caps** | `SIONGDAA` | Each syllable capitalized | `Siō̤ng-Da̤̍` | Sacred names (God, Jesus), multi-syllable proper nouns |
+
+**Examples:**
+
+```
+# Sentence-initial word (普通句首)
+Input:  Inggio uai pouseng uhai
+Output: I̍ng-giô̤ⁿ uai pó-seng ū-hāi
+漢字:  印囝 會 莆生 有害
+
+# Proper noun - place name (專有名詞-地名)
+Input:  Singgann
+Output: Sing-gā̤ⁿ
+漢字:  新縣
+
+# Sacred name - all syllables capitalized (聖名-每個音節大寫)
+Input:  SIONGDAA
+Output: Siō̤ng-Da̤̍
+漢字:  上帝
+
+Input:  AASO
+Output: Á̤-So
+漢字:  耶穌
+```
+
+**Technical Implementation:**
+1. **Schema layer** (`speller/algebra`): `xlit` rule maps uppercase to lowercase for dictionary lookup
+2. **Lua layer** (`bannuaci_filter.lua`):
+   - Reads original user input from `context.input` (preserves case)
+   - Analyzes case pattern (lowercase/title/all_caps)
+   - Applies pattern to output romanization
+   - UTF-8 safe: correctly handles diacritics (e.g., `í̍ng` → `Í̍ng`)
+
+**Note:** This feature only works in pure romanization mode. The Hanzi output mode does not need case handling.
+
 ## Architecture & Data Flow
 
 ### Complete Data Flow
@@ -138,7 +303,7 @@ SOURCE DATA                          PROCESSING                       OUTPUT
 2. Hinghwa Bible                     extract_vocab_from_bible.py     vocab_from_bible.yaml  │
    (docs/hinghua_bible.txt)             ──────────────────────>        (n-grams, freq-based) │
    - Aligned BUC/Hanzi                                                           │
-   - 合音字 handling                                                              │
+   - 合音字 handling                                                             │
                                                                                  │
 3. Base Dictionary                                                               │
    (pouseng_pinging/                                                             │

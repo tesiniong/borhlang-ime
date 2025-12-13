@@ -258,7 +258,8 @@ class RomanizationConverter:
         "eh": 1, "eng": 1,
         "i": 1, "ih": 1, "ing": 1,
         "ia": 2, "iann": 2, "iah": 2, "iang": 2,
-        "aauh": 3, "aaunn": 3,  # a̤u 系列
+        "aau": 2, "aauh": 2, 
+        "aauh": 3,  # a̤uh 系列：u 上面
         "iu": 2,
         "ng": 1,
         "eo": 2, "eoh": 2, "eong": 2,

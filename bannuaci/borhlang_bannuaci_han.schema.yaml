@@ -77,10 +77,6 @@ speller:
     - derive/^(.+)h([1-8])$/$1$2/
     - derive/^(.+)h([1-8])$/$1k$2/
 
-    # ch/c 模糊（某些使用者可能混淆）
-    - derive/^ch/c/
-    - derive/^c([^h])/ch$1/
-
 translator:
   dictionary: borhlang_bannuaci_han
   spelling_hints: 8

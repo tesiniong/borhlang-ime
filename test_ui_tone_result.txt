@@ -1,0 +1,16 @@
+測試 ui 韻母聲調位置：
+
+ui1 -> ui
+  NFD: 'ui'
+
+ui2 -> uí
+  NFD: 'uí'
+
+ui3 -> uî
+  NFD: 'uî'
+
+ui4 -> ui̍
+  NFD: 'ui̍'
+
+ui5 -> uī
+  NFD: 'uī'
