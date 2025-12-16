@@ -151,6 +151,7 @@ class RomanizationConverter:
         "au": "ao",
         "oi": "uei",
         "ui": "ui",
+        "uai": "uei",      # uai -> uei (容錯)
 
         # i-介音複韻
         "ia": "ia",
@@ -169,6 +170,7 @@ class RomanizationConverter:
         "ang": "ang",
         "eng": "eng",
         "ing": "ing",
+        "yng": "yng",      # ṳng -> yng
         "eong": "ong",
         "eeng": "oeng",
         "oong": "orng",
@@ -179,9 +181,11 @@ class RomanizationConverter:
         "eh": "aeh",
         "aah": "eh",
         "ih": "ih",
+        "iah": "ia",       # iah -> ia
         "eoh": "oh",
         "eeh": "oeh",
         "ooh": "orh",
+        "oih": "uei",      # oih -> uei
         "uah": "uah",
         "uh": "uh",
         "yh": "yh",
@@ -197,6 +201,7 @@ class RomanizationConverter:
         # 鼻化韻 -> 莆拼（丟失鼻化）
         "ann": "a",        # aⁿ -> a
         "aann": "e",       # a̤ⁿ -> e
+        "ainn": "ai",      # aiⁿ -> ai
         "eenn": "oe",      # e̤ⁿ -> oe
         "iann": "ia",      # iaⁿ -> ia
         "oonn": "or",      # o̤ⁿ -> or
@@ -206,7 +211,8 @@ class RomanizationConverter:
         "ioonn": "yor",    # io̤ⁿ -> yor
 
         # 複合入聲韻
-        "aauh": "ieo",     # a̤uh -> ieo（注意：無h版本）
+        "aauh": "ieo",     # a̤uh -> ieo
+        "aau": "ieo",      # a̤u -> ieo（無h版本）
         "aih": "ai",       # 簡化處理
     }
 

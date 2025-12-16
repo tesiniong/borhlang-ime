@@ -1,0 +1,26 @@
+Traceback (most recent call last):
+  File "D:\borhlang-ime\tools\extract_vocab_from_bible.py", line 92, in generate_vocab_list
+    syl_psp = RomanizationConverter.input_to_psp(syl_input)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\borhlang-ime\data\romanization_converter.py", line 392, in input_to_psp
+    raise ValueError(f"未知的輸入式韻母：{final_input}")
+ValueError: 未知的輸入式韻母：ainn
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\borhlang-ime\tools\extract_vocab_from_bible.py", line 96, in generate_vocab_list
+    raise Exception(f"音節轉換失敗 '{syl_buc}' -> '{syl_input if 'syl_input' in locals() else '?'}': {e}")
+Exception: 音節轉換失敗 'gai\u207f' -> 'gainn1': 未知的輸入式韻母：ainn
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\borhlang-ime\tools\extract_vocab_from_bible.py", line 109, in generate_vocab_list
+    print(f"  警告：轉換失敗 {han} {rom_buc}: {e}")
+UnicodeEncodeError: 'cp950' codec can't encode character '\u207f' in position 15: illegal multibyte sequence
+============================================================
+從聖經 JSON 提取詞彙
+============================================================
+讀取檔案：D:\borhlang-ime\data\bible_data.json
+[ERROR] 發生錯誤: 'cp950' codec can't encode character '\u207f' in position 15: illegal multibyte sequence

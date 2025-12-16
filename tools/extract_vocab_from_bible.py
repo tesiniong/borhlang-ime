@@ -4,8 +4,9 @@
 從莆仙語聖經 JSON 提取詞表
 Extract vocabulary from Puxian Bible JSON data
 
-輸入：data/bible_data.json
-輸出：data/vocab_from_bible.yaml (輸入式平話字格式)
+輸入：data/bible_data.json (平話字格式)
+輸出：data/vocab_from_bible.yaml (莆仙話拼音 PSP 格式)
+轉換：平話字 (BUC) -> 輸入式 -> 莆拼 (PSP)
 """
 
 import json
@@ -44,6 +45,9 @@ def generate_vocab_list(input_file: Path, output_file: Path):
         'conversion_errors': 0,
         'unique_entries': 0
     }
+
+    # 錯誤日誌
+    error_log = []
 
     try:
         with open(input_file, 'r', encoding='utf-8') as f:
@@ -85,9 +89,14 @@ def generate_vocab_list(input_file: Path, output_file: Path):
                                 if syl_buc and syl_buc[0].isupper():
                                     syl_buc = syl_buc[0].lower() + syl_buc[1:]
 
-                                # 轉換單個音節
-                                syl_input = RomanizationConverter.buc_to_input(syl_buc)
-                                syllables_input.append(syl_input)
+                                # 轉換：平話字 -> 輸入式 -> 莆拼
+                                try:
+                                    syl_input = RomanizationConverter.buc_to_input(syl_buc)
+                                    syl_psp = RomanizationConverter.input_to_psp(syl_input)
+                                    syllables_input.append(syl_psp)
+                                except ValueError as e:
+                                    # 無法轉換的音節，記錄但跳過整個詞
+                                    raise Exception(f"音節轉換失敗 '{syl_buc}' -> '{syl_input if 'syl_input' in locals() else '?'}': {e}")
 
                             # 組合音節（用空格分隔）
                             rom_input = ' '.join(syllables_input)
@@ -97,10 +106,13 @@ def generate_vocab_list(input_file: Path, output_file: Path):
                             stats['valid_tokens'] += 1
 
                         except Exception as e:
-                            # 轉換失敗，記錄但跳過
+                            # 轉換失敗，記錄到日誌
                             stats['conversion_errors'] += 1
-                            if stats['conversion_errors'] <= 10:
-                                print(f"  警告：轉換失敗 {han} {rom_buc}: {e}")
+                            error_log.append({
+                                'han': han,
+                                'rom_buc': rom_buc,
+                                'error': str(e)
+                            })
 
         stats['unique_entries'] = len(vocab_counter)
 
@@ -113,7 +125,17 @@ def generate_vocab_list(input_file: Path, output_file: Path):
         print(f"\n寫入輸出檔案：{output_file}")
         write_yaml_dict(output_file, vocab_counter)
 
-        print(f"[OK] 完成！")
+        # 寫入錯誤日誌
+        if error_log:
+            error_log_file = output_file.parent / "bible_conversion_errors.log"
+            print(f"\n寫入錯誤日誌：{error_log_file}")
+            with open(error_log_file, 'w', encoding='utf-8') as f:
+                f.write("# 聖經詞彙轉換錯誤日誌\n")
+                f.write(f"# 總錯誤數：{len(error_log)}\n\n")
+                for i, err in enumerate(error_log[:50], 1):  # 只記錄前50個
+                    f.write(f"{i}. {err['han']} | {err['rom_buc']} | {err['error']}\n")
+
+        print(f"\n[OK] 完成！")
         return 0
 
     except FileNotFoundError:
@@ -149,8 +171,8 @@ def write_yaml_dict(output_file: Path, vocab_counter: Counter):
         f.write("# 從興化平話字聖經提取的詞彙\n")
         f.write("# Vocabulary extracted from Hinghwa Bible\n")
         f.write("#\n")
-        f.write("# 來源：data/bible_data.json\n")
-        f.write("# 格式：漢字 + 輸入式平話字\n")
+        f.write("# 來源：data/bible_data.json (平話字格式)\n")
+        f.write("# 格式：漢字 + 莆仙話拼音 (PSP)\n")
         f.write("# 權重上限：300（聖經術語相對少見）\n")
         f.write("#\n")
         f.write("---\n")
