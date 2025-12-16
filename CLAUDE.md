@@ -55,9 +55,10 @@ python tools/extract_vocab_from_wikt.py
 python tools/extract_vocab_from_bible.py
 ```
 - Reads: `data/bible_data.json` (structured JSON with tokenized Báⁿ-uā-ci̍ and Hanzi)
-- Outputs: `data/vocab_from_bible.yaml` (extracted vocabulary with input-form romanization)
-- Converts Báⁿ-uā-ci̍ to input-form using `romanization_converter.py`
+- Outputs: `data/vocab_from_bible.yaml` (Pouseng Ping'ing format)
+- Converts Báⁿ-uā-ci̍ → Input-form → PSP using `romanization_converter.py`
 - Frequency-based weighting with 300 upper limit (Bible terms are relatively uncommon)
+- Errors logged to `data/bible_conversion_errors.log`
 
 **Manual conversion** (莆仙話拼音 → 興化平話字):
 ```bash
@@ -140,10 +141,17 @@ build_dicts.bat
 
 This script automatically:
 1. Extracts vocabulary from Wiktionary (`docs/puxian_phrases_from_wikt.txt`)
-2. Extracts vocabulary from Bible (`data/bible_data.json`)
-3. Merges all sources into `pouseng_pinging/borhlang_pouleng.dict.yaml`
+2. Extracts vocabulary from Bible (`data/bible_data.json`) - **converts BUC→PSP**
+3. Merges **four sources** into `pouseng_pinging/borhlang_pouleng.dict.yaml`:
+   - `hinghwa-ime/Pouleng/Pouleng.dict.yaml` (reference dictionary, ~24k entries)
+   - `data/vocab_from_wikt.yaml` (Wiktionary phrases, ~4k entries)
+   - `data/vocab_from_bible.yaml` (Bible vocabulary, ~1k entries)
+   - `data/cpx-pron-data.lua` (Wiktionary single characters, used in step 4)
 4. Converts to Báⁿ-uā-ci̍ (Hanzi version) → `bannuaci/borhlang_bannuaci_han.dict.yaml`
 5. Generates pure romanization (Lua format) → `bannuaci/borhlang_bannuaci.dict.yaml`
+
+**⚠️  IMPORTANT:** The merged PSP dictionary is **completely regenerated** each time.
+Deleted words in source files will be removed from output (fixed 2024-12).
 
 **Output files:**
 - `pouseng_pinging/borhlang_pouleng.dict.yaml` (PSP dictionary)
@@ -301,20 +309,20 @@ SOURCE DATA                          PROCESSING                       OUTPUT
    - 漢字\tBUC\tPSP_orig\tPSP_actual                                             │
                                                                                  │
 2. Hinghwa Bible                     extract_vocab_from_bible.py     vocab_from_bible.yaml  │
-   (data/bible_data.json)               ──────────────────────>        (~920 entries)        │
-   - Structured JSON with tokens                                                │
-   - BUC → Input-form conversion                                                │
+   (data/bible_data.json)               ──────────────────────>        (~1000 entries, PSP)  │
+   - Structured JSON with BUC tokens    BUC→Input→PSP                           │
+   - Uses romanization_converter.py                                             │
                                                                                  │
-3. Base Dictionary                                                               │
-   (pouseng_pinging/                                                             │
-    borhlang_pouleng.dict.yaml)                                                  │
-   - Manually curated                                                            │
+3. Reference Dictionary                                                          │
+   (hinghwa-ime/Pouleng/                                                         │
+    Pouleng.dict.yaml)                                                           │
+   - Community-maintained (~24k entries)                                        │
                                                      ┌───────────────────────────┘
                                                      │
                                                      ▼
                                             MERGED DICTIONARY
                                     pouseng_pinging/borhlang_pouleng.dict.yaml
-                                             (莆仙話拼音)
+                                      (莆仙話拼音 PSP - ⚠️  自動生成，請勿手動編輯)
                                                      │
                                                      │ convert_dict_v3.py
                                                      │ (Uses: psp_to_buc.py
@@ -331,10 +339,16 @@ SOURCE DATA                          PROCESSING                       OUTPUT
 ```
 
 **Why merge multiple sources?**
-- **Base dictionary**: Manually curated, highest quality
-- **Wiktionary phrases**: Comprehensive multi-character words
-- **Bible text**: Natural language patterns, idiomatic expressions
-- **Conversion validation**: All entries validated against `cpx-pron-data.lua`
+- **Reference dictionary** (hinghwa-ime): Community-maintained, comprehensive coverage (~24k entries)
+- **Wiktionary phrases**: Multi-character words with verified pronunciations (~4k entries)
+- **Bible text**: Natural language patterns, idiomatic expressions (~1k unique entries)
+- **Wiktionary single characters** (cpx-pron-data.lua): Used during PSP→BUC conversion for validation
+
+**⚠️  IMPORTANT: Dictionary Build Process**
+- `pouseng_pinging/borhlang_pouleng.dict.yaml` is **auto-generated** - DO NOT manually edit
+- Always use `build_all_dicts.py` to rebuild from sources
+- The script reads from `hinghwa-ime/Pouleng/Pouleng.dict.yaml` (not itself) to avoid circular dependency
+- This ensures deleted entries in source data are actually removed from output
 
 **Why Pouseng Ping'ing → Báⁿ-uā-ci̍ direction?**
 - Pouseng Ping'ing is the modern standard with complete vocabulary
@@ -354,9 +368,16 @@ SOURCE DATA                          PROCESSING                       OUTPUT
 **Processing Modules:**
 | File | Purpose | Format |
 |------|---------|--------|
-| `data/psp_to_buc.py` | Core conversion algorithm | Python module with mapping dicts |
+| `data/psp_to_buc.py` | Core PSP→BUC conversion algorithm | Python module with mapping dicts |
+| `data/romanization_converter.py` | Three-way system converter (PSP↔Input↔BUC) | Python class with bidirectional methods |
 | `data/puxian_initials.json` | Initial consonants by dialect | JSON phoneme inventory |
 | `data/puxian_rhymes.json` | Rhyme patterns by dialect | JSON phoneme inventory |
+
+**Key converter methods:**
+- `RomanizationConverter.buc_to_input(syllable)` - BUC → Input-form (removes diacritics)
+- `RomanizationConverter.input_to_psp(syllable)` - Input → PSP (critical: c→z, ch→c)
+- `RomanizationConverter.input_to_buc(syllable)` - Input → BUC (adds diacritics)
+- `RomanizationConverter.psp_to_input(syllable)` - PSP → Input (critical: z→c, c→ch)
 
 **Generated Intermediate Files:**
 | File | Purpose | Generated By |
@@ -542,6 +563,36 @@ python tools/convert_dict_v3.py
 
 ## Phonetic System References
 
+### Three Romanization Systems
+
+The project uses **three distinct romanization systems** for different purposes:
+
+| System | Chinese Name | Purpose | Example | Used In |
+|--------|--------------|---------|---------|---------|
+| **PSP** | 莆仙話拼音 | Modern standard, dictionary format | `zing2 ai4` (情愛) | Dictionary storage, merging |
+| **Input** | 輸入式平話字 | Pure ASCII for typing | `cing2 ai4` | User input, intermediate conversion |
+| **BUC** | 興化平話字 | Historical romanization with diacritics | `cíng-a̍i` (情愛) | Final output, display |
+
+**Critical Initial Consonant Differences:**
+
+| Phoneme | PSP | Input | BUC | Example Word |
+|---------|-----|-------|-----|--------------|
+| [ts] unaspirated | **z** | **c** | **c** | 情 PSP:`zing2` Input:`cing2` BUC:`cíng` |
+| [tsʰ] aspirated | **c** | **ch** | **ch** | 清 PSP:`cing1` Input:`ching1` BUC:`ching` |
+
+**⚠️  CRITICAL: Do NOT confuse these systems!**
+- Wrong: Treating Input-form `cing2` as PSP → converts to BUC `chíng` ❌
+- Right: Convert Input→PSP first: `cing2` → PSP `zing2` → BUC `cíng` ✓
+
+**Conversion Chain (from `romanization_converter.py`):**
+```
+Bible JSON (BUC) → buc_to_input() → Input-form → input_to_psp() → PSP → (stored in dict)
+                                                                          ↓
+                                                                    convert_dict_v3.py
+                                                                          ↓
+PSP → psp_to_buc() → Input-form → input_to_buc() → BUC (for display)
+```
+
 ### Tone Mapping (PSP → Báⁿ-uā-ci̍)
 
 | Tone | Name | PSP | Báⁿ Mark | Position | Input Key |
@@ -722,6 +773,117 @@ Reference submodule from original project:
 - 程式 (not 程序) for "program"
 
 This matches the project's target audience and linguistic heritage.
+
+## Common Pitfalls and Troubleshooting
+
+### Dictionary Build Issues
+
+**Problem: Deleted words still appear in dictionaries**
+
+**Cause:** Before 2024-12 fixes, `build_all_dicts.py` had a circular dependency:
+```python
+# OLD (WRONG) - reads from same file it writes to
+sources['base'] = "pouseng_pinging/borhlang_pouleng.dict.yaml"
+output_file = "pouseng_pinging/borhlang_pouleng.dict.yaml"
+# Result: Only adds new words, never deletes old ones
+```
+
+**Solution:** Fixed in current version:
+```python
+# NEW (CORRECT) - reads from external source
+sources['base'] = "hinghwa-ime/Pouleng/Pouleng.dict.yaml"
+output_file = "pouseng_pinging/borhlang_pouleng.dict.yaml"  # completely regenerated
+```
+
+**How to verify:** Check file header for warning:
+```yaml
+# ⚠️  本詞庫為自動生成，請勿手動編輯！
+#     使用 tools/build_all_dicts.py 重新生成
+```
+
+### Romanization Conversion Errors
+
+**Problem: Words converting incorrectly (e.g., 情愛 → `chíng` instead of `cíng`)**
+
+**Cause:** Confusion between three romanization systems:
+- PSP `zing2` (z = [ts])
+- Input `cing2` (c = [ts])
+- BUC `cíng` (c = [ts])
+
+**Common mistake:**
+```python
+# WRONG: Treating Input-form as PSP
+buc_to_input("cíng")  # → "cing2" (Input-form)
+# Then treating "cing2" as PSP...
+psp_to_buc("cing2")   # → "chíng" ❌ (PSP c = [tsʰ])
+```
+
+**Correct flow:**
+```python
+# RIGHT: Convert through all three systems
+buc_to_input("cíng")   # → "cing2" (Input)
+input_to_psp("cing2")  # → "zing2" (PSP, z = [ts])
+psp_to_buc("zing2")    # → "cíng" ✓
+```
+
+**Where to check:** `extract_vocab_from_bible.py` line 88-92 should have:
+```python
+syl_input = RomanizationConverter.buc_to_input(syl_buc)
+syl_psp = RomanizationConverter.input_to_psp(syl_input)  # ← Must convert to PSP
+```
+
+### Missing Finals/Rhymes in romanization_converter.py
+
+**Problem: ValueError during Bible extraction: "未知的輸入式韻母：xxx"**
+
+**Cause:** `romanization_converter.py` missing finals in `FINALS_INPUT_TO_PSP` dict.
+
+**Solution:** Add missing final to the dictionary. Check `data/psp_to_buc.py` for reference:
+```python
+# In romanization_converter.py, FINALS_INPUT_TO_PSP:
+"aau": "ieo",      # a̤u -> ieo
+"oih": "uei",      # oih -> uei
+"iah": "ia",       # iah -> ia
+"yng": "yng",      # ṳng -> yng
+"ainn": "ai",      # aiⁿ -> ai
+```
+
+**How to diagnose:** Check `data/bible_conversion_errors.log` after running extract script:
+```
+1. 其朋 | ēbéng-iû | 音節轉換失敗 'ēbéng' -> 'ebeng5': 未知的輸入式韻母：ebeng
+```
+
+### Data Source Confusion
+
+**Where each romanization system is used:**
+
+| File | Format | Why |
+|------|--------|-----|
+| `bible_data.json` | BUC | Historical source text |
+| `puxian_phrases_from_wikt.txt` | BUC + PSP | Wiktionary data |
+| `vocab_from_bible.yaml` | **PSP** | ⚠️  Converted for dictionary merging |
+| `vocab_from_wikt.yaml` | **PSP** | Dictionary merge format |
+| `Pouleng.dict.yaml` | **PSP** | Dictionary merge format |
+| `borhlang_pouleng.dict.yaml` | **PSP** | Merged dictionary (auto-generated) |
+| `borhlang_bannuaci_han.dict.yaml` | Input + BUC | For user input and display |
+| `borhlang_bannuaci.dict.yaml` | Input + BUC | Lua filter format |
+
+**Key insight:** All dictionaries **merge in PSP format**, then convert to BUC for output.
+
+### Unicode and Encoding Issues
+
+**Problem:** UnicodeEncodeError when printing romanization
+
+**Cause:** Windows console uses cp950/cp936 encoding, cannot display combining diacritics.
+
+**Solution:** Use `repr()` for debugging or write to UTF-8 file:
+```python
+# Bad: print(f"Error: {buc_romanization}")  # UnicodeEncodeError on Windows
+# Good: print(f"Error: {repr(buc_romanization)}")
+# Or write to log file:
+with open('errors.log', 'w', encoding='utf-8') as f:
+    f.write(f"Error: {buc_romanization}\n")
+```
 
 ## Future Extensions
 

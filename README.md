@@ -93,15 +93,18 @@
    找到您的 Rime 使用者資料夾：
    - Windows (小狼毫)：`%APPDATA%\Rime`
    - macOS (鼠鬚管)：`~/Library/Rime`
-   - Linux (中州韻)：`~/.config/ibus/rime` 或 `~/.config/fcitx/rime`
+   - Linux (中州韻)：`~/.config/ibus/rime` 或 `~/.local/share/fcitx5/rime`
    - Android (同文)：`/sdcard/rime`
 
    複製以下檔案到使用者資料夾：
    ```bash
    # 興化平話字方案
-   cp bannuaci/borhlang_bannuaci.schema.yaml [Rime使用者資料夾]/
-   cp bannuaci/borhlang_bannuaci_han.schema.yaml [Rime使用者資料夾]/
    cp bannuaci/borhlang_bannuaci.dict.yaml [Rime使用者資料夾]/
+   cp bannuaci/borhlang_bannuaci.schema.yaml [Rime使用者資料夾]/
+   cp bannuaci/borhlang_bannuaci_han.dict.yaml [Rime使用者資料夾]/
+   cp bannuaci/borhlang_bannuaci_han.schema.yaml [Rime使用者資料夾]/
+   cp bannuaci/rime.lua [Rime使用者資料夾]/
+   cp bannuaci/lua/bannuaci_filter.lua [Rime使用者資料夾]/lua
 
    # 莆仙話拼音方案（莆田話）
    cp pouseng_pinging/borhlang_pouleng.schema.yaml [Rime使用者資料夾]/
@@ -125,9 +128,9 @@
 直接輸入興化平話字的拼音（可省略聲調）：
 
 ```
-輸入：banuaci          → 候選：Báⁿ-uā-ci̍ 平話字
-輸入：putian          → 候選：Pó-tiáⁿ 莆田
-輸入：hinghualang     → 候選：Hing-hua-láng 興化儂
+輸入：bannuaci          → 候選：báⁿ-uā-ci̍ 平話字
+輸入：pocheng          → 候選：pó-chéng 莆田
+輸入：hinghuanang     → 候選：hing-hua̍-náng 興化儂
 ```
 
 ### 莆仙話拼音基本輸入

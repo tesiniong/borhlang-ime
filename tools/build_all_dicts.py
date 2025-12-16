@@ -53,14 +53,23 @@ def run_script(script_path: Path, description: str):
 
 
 def merge_vocabularies(base_dir: Path):
-    """合併所有詞彙來源"""
+    """
+    合併所有詞彙來源
+
+    數據來源（按優先級）：
+    1. hinghwa-ime/Pouleng/Pouleng.dict.yaml - 參考詞庫（24k+ 詞條）
+    2. data/vocab_from_wikt.yaml - 維基詞典多字詞（從 puxian_phrases_from_wikt.txt 提取）
+    3. data/vocab_from_bible.yaml - 聖經詞彙（從 bible_data.json 提取）
+
+    注意：data/cpx-pron-data.lua 的單字會在後續的 convert_dict_v3.py 中使用
+    """
     print("\n" + "=" * 70)
     print(">>> 合併所有詞彙來源")
     print("=" * 70)
 
     # 數據源
     sources = {
-        'base': base_dir / "pouseng_pinging" / "borhlang_pouleng.dict.yaml",
+        'base': base_dir / "hinghwa-ime" / "Pouleng" / "Pouleng.dict.yaml",
         'wikt': base_dir / "data" / "vocab_from_wikt.yaml",
         'bible': base_dir / "data" / "vocab_from_bible.yaml",
     }
@@ -178,10 +187,14 @@ def write_dict_file(file_path: Path, entries: dict, name: str, description: str)
         f.write("#\n")
         f.write(f"# {description}\n")
         f.write("#\n")
-        f.write("# 本詞庫由多個來源合併而成：\n")
-        f.write("# - 基礎詞庫（人工整理）\n")
-        f.write("# - 維基詞典（自動提取）\n")
-        f.write("# - 聖經文本（自動提取）\n")
+        f.write("# ⚠️  本詞庫為自動生成，請勿手動編輯！\n")
+        f.write("#     使用 tools/build_all_dicts.py 重新生成\n")
+        f.write("#\n")
+        f.write("# 數據來源（按優先級）：\n")
+        f.write("# 1. hinghwa-ime/Pouleng/Pouleng.dict.yaml - 參考詞庫（24k+ 詞條）\n")
+        f.write("# 2. data/vocab_from_wikt.yaml - 維基詞典多字詞\n")
+        f.write("# 3. data/vocab_from_bible.yaml - 聖經詞彙\n")
+        f.write("# 4. data/cpx-pron-data.lua - 維基詞典單字（在後續轉換中使用）\n")
         f.write("#\n")
         f.write("---\n")
         f.write(f"name: {name}\n")
