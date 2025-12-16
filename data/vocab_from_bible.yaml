@@ -4,626 +4,934 @@
 # 從興化平話字聖經提取的詞彙
 # Vocabulary extracted from Hinghwa Bible
 #
-# 來源：docs/hinghua_bible.txt
-# 最小頻次：1
+# 來源：data/bible_data.json
+# 格式：漢字 + 輸入式平話字
+# 權重上限：300（聖經術語相對少見）
 #
 ---
 name: vocab_from_bible
-version: "0.1.0"
+version: "0.2.0"
 use_preset_vocabulary: false
 sort: by_weight
 ...
 
-其	e5	5000
-上帝	sioong5 daa4	5000
-伊	i1	5000
-生	sann1	4600
-汝	dy3	4000
-講	goong3	3700
-有	u5	3700
-地	daa5	3300
-是	si5	3300
-這	caa4	3300
-我	gua3	3300
-就	cuh6	3200
-落	leoh7	3000
-食	siah7	2900
-佮	gah6	2600
-耶和華	aa2 hoo2 hua1	2300
-禮	le5	2200
-做	ceo4	2100
-名	mia2	2000
-亞當	a4 doong1	2000
-兮	e5	2000
-歲	hoi4	1900
-日	dih7	1600
-摕	taah7	1600
-造	ceo4	1600
-人	nang2	1600
-該隱	gai1 yng3	1600
-叫	gaau4	1400
-會	aa5	1400
-所	see3	1400
-果子	goih7 ci3	1300
-都	deo1	1300
-遘	gau4	1300
-阿若	ah6 na1	1200
-憑	bing2	1200
-一	seoh7	1100
-嬸娘人	sing3 naau2 nang2	1100
-再	cai4	1100
-儂	nang2	1100
-著	daauh7	1000
-看	kuann4	1000
-使	sai3	1000
-樹	chiu4	1000
-種類	ceeng3 lui5	1000
-也	ia5	1000
-死	si3	1000
-主	cy3	1000
-拉麥	lah7 beh7	1000
-好	heo3	900
-日中	dih7 dng1	900
-冥頭	ma2 lau2	900
-連	leng2	900
-個	gaa2	900
-復	buh6	900
-正	ciann4	900
-光	gng1	800
-塗	to2	800
-物乇	moih7 noo5	800
-的的	dih6 dih6	800
-後	au5	800
-在	cai5	800
-世	saa4	800
-年	ning2	800
-男女囝	nang2 dy3 gioonn3	800
-歲壽	hoi4 siu5	800
-當央	doo1 ng1	700
-管	guang3	700
-飛	boi1	700
-鳥	caau3	700
-丈夫	dah6 bo1	700
-乞	keoh6	700
-因	ing1	700
-無	beo2	700
-由	iu2	700
-佇	deo2	700
-得得	dih6 dih6	700
-以諾	i3 dooh7	700
-塞特	seh6 deh7	700
-水	cui3	600
-空氣	koong1 ki4	600
-滿	mua3	600
-兩	nng5	600
-蛇	sioo2	600
-受	siu5	600
-即	cuh6	600
-老嬤	lau5 ma3	600
-以挪士	i3 noo3 seo5	600
-八百	baa5 ba5	600
-九百	gau3 ba5	600
-分	beong1	500
-去	ky4	500
-野獸	ia3 siu4	500
-園	hoinn2	500
-條	daau2	500
-稱	ching1	500
-亞伯	a4 beh6	500
-蜀	seoh7	500
-治	tai2	500
-囝	gioonn3	500
-蜀百	seoh7 ba5	500
-該南	gai1 nang2	500
-瑪土撒拉	ma3 to3 sah6 lah7	500
-頭	tau2	400
-出	cheoh6	400
-海	hai3	400
-到	gau4	400
-盡	cing5	400
-頭牲	tau2 sann1	400
-嬸娘	sing3 naau2	400
-地上	daa5 saaunn5	400
-既然	gi4 ceng2	400
-故此	go4 cheo3	400
-東邊	dang1 bing1	400
-河	eo2	400
-流	lau2	400
-許	hioo3	400
-翻譯	huang1 ih7	400
-卜	beoh6	400
-意義	i4 gi5	400
-露體	lo4 taa3	400
-園裏	hoinn2 li3	400
-應	ing4	400
-則	ciann4	400
-瑪勒列	ma3 leh6 leh7	400
-雅列	nga3 leh7	400
-挪亞	noo3 a4	400
-暗	ang4	300
-下	a5	300
-對	dui4	300
-天	ting1	300
-這価	cioo3 saa5	300
-結子	geh6 ci3	300
-菜	chai4	300
-天頂	ting1 deng3	300
-分別	heong1 beh6	300
-大	dua5	300
-活命	uah7 mia5	300
-各種	gooh6 ceeng3	300
-生育	seng1 eeh7	300
-蟲蟻	tang2 hioo5	300
-我各人	gua3 gooh6 nang2	300
-像	chaaunn5	300
-凡	hang2	300
-賜	seo4	300
-偌	noo5	300
-成	siann2	300
-已經	i3 ging1	300
-安歇	ang1 hee5	300
-未	boi5	300
-耕種	geng1 ceeng4	300
-埃田	ai1 deng2	300
-地方	daa5 hoong1	300
-出產	cheoh6 sang3	300
-帶	dua4	300
-埃田園	ai1 deng2 hoinn2	300
-伓通	ng5 tang1	300
-住	do4	300
-號	heo5	300
-肉	neeh7	300
-話	ua5	300
-離	li5	300
-乜	meh6	300
-見	ging4	300
-聲音	siann1 ing1	300
-傷	sioong1	300
-聽	tiann1	300
-伊弟	i1 di5	300
-獻	heeng4	300
-亦	ia5	300
-罰	huah7	300
-七	chih6	300
-倍	boi5	300
-亞大	a4 dai5	300
-洗拉	seng3 lah7	300
-祖宗	co3 coong1	300
-零	leng2	300
-六十五	lah7 seh7 ngo5	300
-奉事	hoong5 seo5	300
-創造	choong4 choo4	200
-天地	ting1 daa5	200
-上	saaunn5	200
-頂勢	deng3 ni4	200
-第二	daa5 di5	200
-位處	ui5 chy4	200
-草	chau3	200
-包	bau1	200
-核	heoh7	200
-第三	daa5 soonn1	200
-體	taa3	200
-記號	gi4 heo5	200
-定	diann5	200
-照	caau4	200
-許価	hioo3 saa5	200
-第四	daa5 si4	200
-動物	doong5 beoh7	200
-祝福	ceeh6 hooh6	200
-盡価	cing5 saa5	200
-充滿	cheeng1 mua3	200
-価	saa5	200
-活	uah7	200
-樣	sioong5	200
-魚	hy2	200
-轉動	doinn3 dang5	200
-菜蔬	chai4 see1	200
-走	cau3	200
-空中	koong1 deeng1	200
-萬物	mang5 beoh7	200
-第七	daa5 chih6	200
-工夫	gang1 hu1	200
-完竣	eeng2 ceong4	200
-用	eeng5	200
-設	seh6	200
-放	bang4	200
-善惡	seng5 ooh6	200
-環	kuang2	200
-四圍	si4 ui2	200
-比多拉	bi3 doo1 lah7	200
-什物	seoh7 moi1	200
-配偶	poi4 gaau3	200
-幫助	bang1 cee5	200
-面前	ming4 saann2	200
-六畜	leeh7 heeh6	200
-得	deh6	200
-取	chy3	200
-脅骨	hiah7 geoh6	200
-身	sing1	200
-骨	geoh6	200
-娘奶	naau2 laa3	200
-老媽	lau2 ma3	200
-赤身	chih6 sing1	200
-這個	cioo3 gaa2	200
-警戒	ging3 gai4	200
-驚	giann1	200
-一定	ih6 deng5	200
-目珠	mah7 ciu1	200
-真	cing1	200
-通	siah7	200
-摘	diang4	200
-行	giann2	200
-聽聞	tiann1 moi2	200
-面	ming4	200
-禁止	ging4 ci3	200
-伓	ng5	200
-勘	kang4	200
-罵	moo4	200
-拍	pa5	200
-想慕	sioong3 bo5	200
-勞苦	loo2 ko3	200
-歸	gui1	200
-夏娃	ha5 hua1	200
-替	taa4	200
-逐	deeh7	200
-看顧	kang4 go4	200
-變面	bing4 ming4	200
-受氣	siu5 ki4	200
-設使	seh6 seo3	200
-咯	loo5	200
-若	noo5	200
-當	dng1	200
-手	chiu3	200
-仱	da1	200
-以拉	i3 lah7	200
-米戶雅利	bi3 ho5 nga3 li5	200
-瑪土撒利	ma3 to3 sah6 li5	200
-土八該隱	to3 bah6 gai1 yng3	200
-慾	beoh6	200
-害	hai5	200
-七十七	chih6 seh7 chih6	200
-時節	si2 caa5	200
-起手	ki3 chiu3	200
-三十	soonn1 seh7	200
-五	ngo5	200
-九十五	gau3 seh7 ngo5	200
-六十二	lah7 seh7 di5	200
-者	cia3	200
-七百	chih6 ba5	200
-八十二	beh6 seh7 di5	200
-五百	ngo5 ba5	200
-起頭	ki3 tau2	100
-空虚	koong1 hy1	100
-烏漠漠	o1 bu5 bu5	100
-深淵	ching1 eeng1	100
-面頂	ming4 deng3	100
-暗暗	ang4 ang4	100
-神	sing2	100
-運行	eong5 heng2	100
-水面	cui3 ming4	100
-開	kui1	100
-下底	oo5 daa5	100
-天下	ting1 oo5	100
-聚	daauh7	100
-位	seoh7	100
-處使	ui5 chy4	100
-陸	sai3	100
-地現	leeh7 daa5	100
-阿	u5	100
-焦	doo1	100
-陸地	leeh7 daa5	100
-俱各	gy5 gooh6	100
-結	geh6	100
-發光	huah6 gng1	100
-留	lau2	100
-四時	seo4 si2	100
-日期	dih7 gi2	100
-年歲	ning2 soi4	100
-並且	bing4 chiann3	100
-發	huah6	100
-細	saa4	100
-星	chann1	100
-排列	baa2 leh7	100
-管理	guang3 li3	100
-冥	ma2	100
-摅	lee2	100
-大魚	dua5 hy2	100
-水裏	cui3 li3	100
-第五	daa5 ngo5	100
-仝全	goong1 ceenn2	100
-本身	beong3 sing1	100
-隻	cia3	100
-滿地	mua3 daa5	100
-包核	bau1 heoh7	100
-果子樹	goih7 ci3 chiu4	100
-各	gooh6	100
-種	ceeng3	100
-青草	chann1 chau3	100
-第六	daa5 lah7	100
-了	laau3	100
-只	ci3	100
-降福	gang4 hooh6	100
-聖日	sing4 dih7	100
-來歷	lai2 leh7	100
-草木	choo3 booh7	100
-便	beng2	100
-落雨	leoh7 ho5	100
-寞霧	bo2 bu5	100
-潤澤	ceong5 ceh7	100
-氣	ki4	100
-㖹	beong2	100
-入	dih7	100
-鼻空	pi4 kang1	100
-生神	seng1 sing2	100
-許裏	hng5 li3	100
-中	dng1	100
-生命	seng1 ming5	100
-從	ceeng2	100
-灌	guang4	100
-四	si4	100
-爿	poonn1	100
-比遜	bi3 seong4	100
-哈腓拉	hah7 hi1 lah7	100
-黄金	hoong2 ging1	100
-金	ging1	100
-寶珠	cy3 haaunn1	100
-人翻	sooh6 hang2	100
-譯做	beo3 saauh6	100
-乳香	sooh6 hang2	100
-連朔	beo3 saauh7	100
-杭	u5	100
-寶	nang2	100
-石朔	huang1 ih7	100
-寶石有	ang2 ma3 noo3	100
-翻	nang2	100
-紅	ceo4	100
-瑪瑙有	chann1 sui4 geeh7	100
-其訓	gi2 heong4	100
-古實	go3 sih7	100
-希底結	hi1 daa3 geh6	100
-亞述	a1 seoh7	100
-百辣	beh6 lah7	100
-栽種	cai1 ceeng4	100
-看守	kang4 siu3	100
-帝	i1	100
-命	goong3	100
-伊講	hoinn2 li3	100
-裏	chiu4	100
-樹其	goih7 ci3	100
-果	dy3	100
-子	aa5	100
-汝會	sui2 i4	100
-隨	meo3	100
-意	siah7	100
-善惡樹	seng5 ooh6 chiu4	100
-單個	duann1 gaa2	100
-田野	cheng2 ia3	100
-定著	diann5 daauh7	100
-好困	heo3 keong4	100
-補	bo3	100
-那	hioo3	100
-將	cioong1	100
-頭前	tau2 sann2	100
-丈夫人	dah6 bo1 nang2	100
-希伯來	hi1 beh6 lai2	100
-原文	ngoi2 meong2	100
-伊施	i1 si1	100
-伊沙	i1 sa1	100
-句	gu4	100
-音	ing1	100
-廝近	seo1 gyng5	100
-顯明	heng3 ming2	100
-老父	loo2 boo5	100
-連合	leng2 hah7	100
-夫婦	hu1 hu5	100
-羞禮	saau1 laa3	100
-生物	seng1 beoh7	100
-物	moih7	100
-古怪	gu1 guai4	100
-囉	loo5	100
-惟獨	bi2 dooh7	100
-株	dau1	100
-摸	mo1	100
-死亡	si3 moong2	100
-知	cai1	100
-像上	sioong5 daa4	100
-會辨	beng5 beh7	100
-別善	seng5 ooh6	100
-惡故	go4 cheo3	100
-此警	ging3 gai4	100
-戒	dy3	100
-汝伓	ng5 tang1	100
-益	ia5	100
-智慧	di4 haa5	100
-思慕	seo1 bo5	100
-見覺	ging4 gah6	100
-編	bing5	100
-無花果	bu2 hua1 goo3	100
-樹箬	chiu4 naauh7	100
-裙	geong2	100
-日頭	dih7 tau2	100
-斜	sia2	100
-涼	naau2	100
-風	boinn1	100
-起	ki3	100
-樹縫	chiu4 pang4	100
-避	pia5	100
-底那	deoh6 leo1	100
-緣故	eeng2 go4	100
-何人	hng4 dang2	100
-怎若	seh6 na1	100
-誘惑	iu3 heh7	100
-事	seo5	100
-必定	bih6 deng5	100
-併	piann5	100
-百獸	beh6 siu4	100
-更加	geng4 ga1	100
-腹肚	bah6 do3	100
-行路	giann2 do5	100
-一世	seoh7 saa4	100
-結仇	geh6 giu2	100
-後裔	haau5 aa4	100
-骹後踭	koo1 au5 dann1	100
-帶身	dua4 sing1	100
-盡苦	cing5 ko3	100
-生囝	sann1 gioonn3	100
-喫虧	keh6 kui1	100
-一世人	seoh7 saa4 nang2	100
-因爲	ing1 ui5	100
-莿草	chi4 chau3	100
-田	cheng2	100
-汗	guann5	100
-滿面	mua3 ming4	100
-的	dih6	100
-本來	beong3 lai2	100
-轉	doinn3	100
-攏總	loong2 coong3	100
-百姓	ba5 sann4	100
-皮	poi2	100
-衣裳	i1 naau2	100
-頌	seeng5	100
-辨別	beng5 beh7	100
-仿佛	hoong3 heoh6	100
-伸手	cheong1 chiu3	100
-禮生命	seng1 ming5 chiu4	100
-子食	goih7 ci3	100
-永	aa5	100
-伊价	i1 gai4	100
-基路冰	gi1 lo5 bing1	100
-价舞	gai4 bu3	100
-利劍	li5 giang4	100
-把守	boo3 siu3	100
-生命樹	seng1 ming5 chiu4	100
-路	do5	100
-做蜀	ha5 hua1	100
-房	ceo4	100
-間	seoh7	100
-即帶	bang2 gaann1	100
-生該	dua4 sing1	100
-隱	sann1	100
-即是	huang1 ih7	100
-義	e5	100
-講主	i4 gi5	100
-丈	gua3	100
-夫	deh6	100
-眏羊	ng4 aaunn2	100
-土產	to2 sang3	100
-胎	tai1	100
-羊	aaunn2	100
-羊油	aaunn2 iu2	100
-來	li2	100
-是甚	seoh7 moi1	100
-物緣	eeng2 go4	100
-故	le5	100
-行善	heng2 seng5	100
-𣍐	baa5	100
-受納	siu5 dah7	100
-行惡	heng2 ooh6	100
-罪孽	coi5 giah7	100
-伏	hooh7	100
-門前	moinn2 saann2	100
-以後	i3 haau5	100
- 	caa4	100
-á	nang2	100
-個儂	doo1 ng1	100
-佇塍	gai1 yng3	100
-央該	ba5 i3	100
-即爬	i1 di5	100
-起拍	a4 beh6	100
-弟	i1	100
-汝弟	dy3 di1	100
-底落	deoh6 leo1	100
-伓知	ng5 cai1	100
-看管	kang4 guang3	100
-我弟	gua3 di5	100
+其	e5	300
+生	sann1	300
+有	u5	300
+上帝	sioong5 daa4	300
+伊	i1	300
+我	gua3	300
+即	cuh6	300
+做	ceo4	300
+汝	dy3	250
+儂	nang2	250
+是	si5	250
+這	caa4	250
+講	goong3	250
+落	leoh7	250
+地	daa5	250
+佮	gah6	250
+食	siah7	250
+亦	ia5	250
+時節	si2 caa5	250
+咧	le5	250
+所	see3	250
+耶和華	aa2 hoo2 hua1	250
+蜀	seoh7	250
+名	mia2	250
+遘	gau4	250
+主	cy3	250
+亞當	a4 doong1	200
+該隱	gai1 yng3	200
+歲	hoi4	200
+都	deo1	200
+會	aa5	200
+憑	bing2	200
+安生	ah6 na1	200
+果子	goih7 ci3	200
+無	beo2	200
+日	dih7	200
+摕	taah7	200
+得々	dih6 dih6	200
+着	daauh7	200
+看	kuann4	200
+叫	gaau4	200
+使	sai3	200
+連	leng2	200
+由	iu2	200
+樹	chiu4	200
+正	ciann4	200
+再	cai4	200
+個	gaa2	200
+死	si3	200
+事	seo5	200
+老嬤	lau5 ma3	200
+復	hooh6	200
+年	ning2	200
+翻譯	huang1 ih7	150
+種類	ceeng3 lui5	150
+乞	keoh6	150
+著	deo2	150
+拉麥	lah7 beh7	150
+囝	gioonn3	150
+在	cai5	150
+世	saa4	150
+去	ky4	150
+好	heo3	150
+日當	dih7 dng1	150
+當央	doo1 ng1	150
+複	buh6	150
+鳥	caau3	150
+我各儂	gua3 gooh6 nang2	150
+凡	hang2	150
+因	ing1	150
+後	au5	150
+男女囝	nang2 dy3 gioonn3	150
+歲壽	hoi4 siu5	150
+光	gng1	150
+暝頭	ma2 lau2	150
+塗	to2	150
+物乇	moih7 noo5	150
+受	siu5	150
+挪亞	noo3 a4	150
+水	cui3	150
+滿	mua3	150
+兩	nng5	150
+管	guang3	150
+飛	boi1	150
+丈夫	dah6 bo1	150
+故此	go4 cheo3	150
+毋通	ng5 tang1	150
+慾	beoh6	150
+刣	tai2	150
+以諾	i3 dooh7	150
+塞特	seh6 deh7	150
+蜀百	seoh7 ba5	150
+八百	baa5 ba5	150
+真理	cing1 li3	150
+大	dua5	150
+空氣	koong1 ki4	150
+天	ting1	150
+啊	a5	150
+地上	daa5 saaunn5	150
+得	deh6	150
+嬸娘儂	sing3 naau2 nang2	150
+蛇	sioo2	150
+亞伯	a4 beh6	150
+以挪士	i3 noo3 seo5	150
+九百	gau3 ba5	150
+願	ngoi5	150
+像	chaaunn5	100
+分	beong1	100
+盡	cing5	100
+頭牲	tau2 sann1	100
+野獸	ia3 siu4	100
+者	cia3	100
+賜	seo4	100
+喏	noo5	100
+既然	gi4 ceng2	100
+園	hoinn2	100
+遐	hioo3	100
+條	daau2	100
 甚物	seoh7 moi1	100
-血	haa5	100
-底	le5	100
-喊	hua5	100
-救	giu2	100
-喙	chui4	100
-接	le5	100
-弟兮	dy3 di5	100
-得受	dih6 dih6	100
-利	daa5	100
-出力	cheoh6 lih7	100
-流動	liu2 doong5	100
-定罪	diann5 coi5	100
-重	dang5	100
-我實	sih7 sih7	100
-實	baa5	100
-𣍐當	dng1 dih6	100
-容	eeng2	100
-飄流	paau1 liu2	100
-遇著	gy5 daauh7	100
-免得	meng3 dih6	100
-遇	seoh7	100
-著即	gy5 daauh7	100
-且	cia3	100
-退	tee4	100
-挪得	noo3 deh6	100
-蜀房	dua4 sing1	100
-生以	gai1 yng3	100
-諾	ki3	100
-許蜀	seoh7 ceo5	100
-時	siann2	100
-該	cuh6	100
-座	e5	100
-城	mia2	100
-兮名	i3 dooh7	100
+意義	i4 gi5	100
+身兜儂	sing3 naau2 nang2	100
+見	ging4	100
+後裔	haau5 aa4	100
 討	teo3	100
-雅八	nga3 bah6	100
-帳篷	daaunn4 bang2	100
-眏	ng4	100
-猶八	iu2 bah6	100
-彈琴	duann2 ging2	100
-吹簫	choi1 saau1	100
-拍銅	pa5 dang2	100
-拍鐵	pa5 ti5	100
-師傅	sai1 hu5	100
-伊妹	i1 moi4	100
-拿瑪	na2 ma3	100
-壯士	coong4 seo5	100
-幼童	iu4 doong2	100
-設立	seh6 lih7	100
+造	choo4	100
+該南	gai1 nang2	100
+瑪勒列	ma3 leh6 leh7	100
+雅列	nga3 leh7	100
+瑪土撒拉	ma3 to3 sah6 lah7	100
+兄弟	hiann1 di5	100
+歡喜	huann1 hi3	100
+勞苦	loo2 ko3	100
+的	e5	100
+頭	tau2	100
+出	choi5	100
+海	hai3	100
+蟲蟻	tang2 hioo5	100
+相	sioong5	100
+嬸娘	sing3 naau2	100
+用	eeng5	100
+東邊	dang1 bing1	100
+河	eo2	100
+帶	dua4	100
+許	hy3	100
+面前	ming4 saann2	100
+稱	ching1	100
+露體	lo4 taa3	100
+園裡	hoinn2 li3	100
+咯	loo5	100
+應	ing4	100
+傷	sioong1	100
 因為	ing1 ui5	100
-立	lih7	100
-替該	gai1 yng3	100
-兮亞	a4 beh6	100
-禱告	doo3 goo4	100
+出	cheoh6	100
+伊弟	i1 di5	100
+獻	heeng4	100
+來	li2	100
+毋	ng5	100
+仱	da1	100
+奉事	hoong5 seo5	100
+世間	saa4 gang1	100
+天父	teng1 hu5	100
+毋是	ng5 si5	100
+本身	beong3 sing1	100
+神	sing2	100
+暗	ang4	100
+對	dui4	100
+位處	ui5 chy4	100
+結籽	geh6 ci3	100
+菜	chai4	100
+天頂	ting1 deng3	100
+分別	heong1 beh6	100
+活命	uah7 mia5	100
+各種	gooh6 ceeng3	100
+生育	seng1 eeh7	100
+照	chaaunn5	100
+成	siann2	100
+已經	i3 ging1	100
+安歇	ang1 hee5	100
+來歷	lai2 leh7	100
+耕種	geng1 ceeng4	100
+埃田	ai1 deng2	100
+放	bang4	100
+當	dng1	100
+善惡	seng5 ooh6	100
+流	lau2	100
+地方	daa5 hoong1	100
+出產	cheoh6 sang3	100
+埃田園	ai1 deng2 hoinn2	100
+住	do4	100
+號	heo5	100
+肉	neeh7	100
+話	ua5	100
+離	li5	100
+乜	meh6	100
+警戒	ging3 gai4	100
+聽聞	tiann1 moi2	100
+聲音	siann1 ing1	100
+拍	pa5	100
+聽	tiann1	100
+夏娃	ha5 hua1	100
+逐	deeh7	100
+以後	i3 haau5	100
+罰	huah7	100
+七	chih6	100
+倍	boi5	100
+且	cia3	100
+亞大	a4 dai5	100
+洗拉	seng3 lah7	100
+祖宗	co3 coong1	100
 或	heh7	100
 作	ceo4	100
-記	gi4	100
-相	sioong5	100
-男	nang2	100
-女	dy3	100
-福氣	hooh6 ki4	100
-允	yng3	100
-親像	ching1 chaaunn5	100
-家己	gai4	100
-塞	gaau4	100
-十二	seh7 di5	100
-九十	gau3 seh7	100
-十五	seh7 ngo5	100
-七十	chih6 seh7	100
-四十	si4 seh7	100
-一十	ih6 seh7	100
-勒列生	ma3 leh6 leh7	100
-雅	sann1	100
-列後	nga3 leh7	100
-八	saa4	100
-百三	baa5 ba5	100
-十年	soonn1 seh7	100
-齊	caa2	100
-三	soonn1	100
-百	ba5	100
-三百	soonn1 ba5	100
-世間	saa4 gang1	100
-八十七	beh6 seh7 chih6	100
-六十九	lah7 seh7 gau3	100
-詈罵	laa3 moo4	100
-安慰	ang1 hui4	100
-歲數	hoi4 siu5	100
-閃	siang3	100
-含	hang2	100
-雅弗	nga3 heoh7	100
+三十	soonn1 seh7	100
+零	leng2	100
+六十五	lah7 seh7 ngo5	100
+嬸娘囝	sing3 naau2 gioonn3	100
+世上	saa4 saaunn5	100
+大闢	dai5 bih7	100
+氏	si5	100
+情愛	cing2 ai4	100
+書	cy1	100
+我家己	gua3 gai4	50
+原文	ngeeng2 meong2	50
+也	ia5	50
+起頭	ki3 tau2	50
+創造	choong4 choo4	50
+天地	ting1 daa5	50
+頂勢	deng3 ni4	50
+第二	daa5 di5	50
+天下	ting1 oo5	50
+聚	cy5	50
+陸地	leeh7 daa5	50
+草	chau3	50
+包	bau1	50
+核	heoh7	50
+第三	daa5 soonn1	50
+體	taa3	50
+記號	gi4 heo5	50
+定	diann5	50
+日期	dih7 gi2	50
+並且	bing4 chiann3	50
+照	caau4	50
+遐穧	hioo3 saa5	50
+第四	daa5 si4	50
+動物	doong5 beoh7	50
+上	saaunn5	50
+祝福	ceeh6 hooh6	50
+盡穧	cing5 saa5	50
+充滿	cheeng1 mua3	50
+穧	saa5	50
+活	uah7	50
+魚	hy2	50
+動彈	doinn3 dang5	50
+菜蔬	chai4 see1	50
+走	cau3	50
+空中	koong1 deeng1	50
+各	gooh6	50
+萬物	mang5 beoh7	50
+第七	daa5 chih6	50
+功夫	gang1 hu1	50
+完竣	eeng2 ceong4	50
+未	boi5	50
+設	seh6	50
+從	ceeng2	50
+環	kuang2	50
+繞	lau2	50
+四圍	si4 ui2	50
+比多拉	bi3 doo1 lah7	50
+朔杭	sooh6 hang2	50
+寶石	beo3 saauh7	50
+栽種	cai1 ceeng4	50
+罔	meo3	50
+配偶	poi4 gaau3	50
+幫助	bang1 cee5	50
+者穧	cioo3 saa5	50
+六畜	leeh7 heeh6	50
+取	chy3	50
+肋骨	hiah7 geoh6	50
+補	bo3	50
+身	sing1	50
+骨	geoh6	50
+娘嬭	naau2 laa3	50
+老嬤	lau2 ma3	50
+赤身	chih6 sing1	50
+物	moih7	50
+燳個	cioo3 gaa2	50
+一定	ih6 deng5	50
+目珠	mah7 ciu1	50
+清	cing1	50
+辨別	beng5 beh7	50
+益	ia5	50
+捻	diang4	50
+起	ki3	50
+行	giann2	50
+面	ming4	50
+底落	deoh6 leo1	50
+緣故	eeng2 go4	50
+驚	giann1	50
+禁止	ging4 ci3	50
+勘	kang4	50
+誘惑	iu3 heh7	50
+罵	moo4	50
+結仇	geh6 giu2	50
+帶身	dua4 sing1	50
+想慕	sioong3 bo5	50
+歸	gui1	50
+百姓	ba5 sann4	50
+替	taa4	50
+生命樹	seng1 ming5 chiu4	50
+看顧	kang4 go4	50
+變面	bing4 ming4	50
+受氣	siu5 ki4	50
+設使	seh6 seo3	50
+𣍐	baa5	50
+若	noo5	50
+手	chiu3	50
+容	eeng2	50
+遇着	gy5 daauh7	50
+以拉	i3 lah7	50
+米戶雅利	bi3 ho5 nga3 li5	50
+瑪土撒利	ma3 to3 sah6 li5	50
+土八該隱	to3 bah6 gai1 yng3	50
+害	hai5	50
+七十七	chih6 seh7 chih6	50
+房	bang2	50
+起手	ki3 chiu3	50
+記	gi4	50
+下底	oo5 daa3	50
+伊	ching1	50
+五	ngo5	50
+九十五	gau3 seh7 ngo5	50
+六十二	lah7 seh7 di5	50
+齊	caa2	50
+三	soonn1	50
+七百	chih6 ba5	50
+八十二	beh6 seh7 di5	50
+五百	ngo5 ba5	50
+閃	siang3	50
+含	hang2	50
+雅弗	nga3 heoh7	50
+興旺	hing1 oong5	50
+永遠	yng3 eeng3	50
+二十	di5 seh7	50
+更大	gaann2 dua5	50
+獃	gai2	50
+心裡	sing1 li3	50
+污穢	u4 oi4	50
+拆	tia5	50
+石頭	saauh7 tau2	50
+抱	peo5	50
+惜	saau5	50
+亞伯拉罕	a4 beh6 lah7 hang3	50
+基督	gi1 dooh6	50
+以撒	i3 sah6	50
+雅各	nga3 gooh6	50
+猶大	iu2 dai5	50
+法勒斯	hah6 leh6 seo5	50
+以斯崙	i3 seo5 leong2	50
+亞蘭	a4 lang2	50
+亞米拿達	a4 bi3 na2 dah7	50
+拿順	na2 seong5	50
+撒門	sah6 meong2	50
+波斯	boo1 seo5	50
+阿伯	oo1 beh6	50
+耶西	a2 saa1	50
+王	oong2	50
+所羅門	see3 loo2 meong2	50
+羅波安	loo2 boo1 ang4	50
+亞比亞	a4 bi3 a4	50
+亞撒	a4 sah6	50
+約沙法	iooh6 sa1 hah6	50
+約蘭	iooh6 lang2	50
+烏西亞	o1 saa1 a4	50
+約坦	iooh6 dang4	50
+亞哈斯	a4 hah7 seo5	50
+希西家	hi1 saa1 ga1	50
+瑪拿西	ma3 na2 saa1	50
+亞們	a4 meong2	50
+約西亞	iooh6 saa1 a4	50
+耶哥尼亞	aa2 goo1 ni2 a4	50
+國	gooh6	50
+蜀樣	seoh7 aaunn5	50
+求	giu2	50
+免	meng3	50
+債	cua4	50
+實心	sih7 sing1	50
+慈悲	ceo2 bi1	50
+寄	gioo4	50
+存	ceong2	50
+愛挃	ai4 di2	50
+誡命	gai4 ming5	50
+ta̍i-go̤̍	tai4 goo4	50
+接待	ciah6 dai5	50
+本	boinn3	50
+羅馬字	loo2 ma2 ci5	50
+新舊約	sing1 gu5 iooh6	50
+聖經	sing4 ging1	50
+英文	ing1 meong2	50
+喏	cioo3	50
+工程	goong1 ding2	50
+不只	beoh6 ci3	50
+無擔當	beo2 dang1 dng1	50
+實在	sih7 cai5	50
+空空	kang1 kang1	50
+空虛	koong1 hy1	50
+烏瞀々	o1 bu5 bu5	50
+深淵	ching1 eeng1	50
+面頂	ming4 deng3	50
+暗々	ang4 ang4	50
+運行	eong5 heng2	50
+水面	cui3 ming4	50
+開	kui1	50
+上	sioong5	50
+下	ha5	50
+下底	oo5 daa5	50
+喏穧	cioo3 saa5	50
+現	heng5	50
+焦	doo1	50
+俱各	gy5 gooh6	50
+結	geh6	50
+發光	huah6 gng1	50
+留	lau2	50
+四時	seo4 si2	50
+年歲	ning2 soi4	50
+發	huah6	50
+細	saa4	50
+星	chann1	50
+排列	baa2 leh7	50
+管理	guang3 li3	50
+暝	ma2	50
+暝時	ma2 lau2	50
+都	lee2	50
+大魚	dua5 hy2	50
+水裡	cui3 li3	50
+第五	daa5 ngo5	50
+管	guang2	50
+共全	goong1 ceenn2	50
+上	gah6	50
+帝	i1	50
+滿地	mua3 daa5	50
+包核	bau1 heoh7	50
+果子樹	goih7 ci3 chiu4	50
+種	ceeng3	50
+青草	chann1 chau3	50
+第六	daa5 lah7	50
+了	laau3	50
+這	ci3	50
+降福	gang4 hooh6	50
+聖日	sing4 dih7	50
+草木	choo3 booh7	50
+未	beng2	50
+落雨	leoh7 ho5	50
+雺霧	bo2 bu5	50
+潤澤	ceong5 ceh7	50
+生	seng1	50
+氣	ki4	50
+㖹	beong2	50
+入	dih7	50
+鼻腔	pi4 kang1	50
+生神	seng1 sing2	50
+方裡	hng5 li3	50
+各種	gooh6 ceng3	50
+其	le5	50
+生命	seng1 ming5	50
+灌	guang4	50
+四	si4	50
+葩	poonn1	50
+比遜	bi3 seong4	50
+哈腓拉	hah7 hi1 lah7	50
+黃金	hoong2 ging1	50
+金	ging1	50
+第一	dai4	50
+寶珠	beo3 co1	50
+乳香	cy3 haaunn1	50
+紅瑪瑙	ang2 ma3 noo3	50
+青粹石	chann1 sui4 geeh7	50
+基訓	gi2 heong4	50
+古實	go3 sih7	50
+河	co2	50
+希底結	hi1 daa3 geh6	50
+亞述	a1 seoh7	50
+伯拉	beh6 lah7	50
+看守	kang4 siu3	50
+命	ming5	50
+園中	hoinn2 li3	50
+隨意	sui2 i4	50
+善惡樹	seng5 ooh6 chiu4	50
+單個	duann1 gaa2	50
+塍野	cheng2 ia3	50
+做	gaau4	50
+活命	nah7 mia5	50
+定着	diann5 daauh7	50
+未	beo2	50
+好睏	heo3 keong4	50
+將	cioong1	50
+頭前	tau2 sann2	50
+丈夫儂	dah6 bo1 nang2	50
+憑	bing1	50
+希伯來	hi1 beh6 lai2	50
+原文	ngoi2 meong2	50
+伊施	i1 si1	50
+叫	gaau2	50
+伊沙	i1 sa1	50
+句	gu4	50
+音	ing1	50
+廝近	seo1 gyng5	50
+顯明	heng3 ming2	50
+老爸	loo2 boo5	50
+連合	leng2 hah7	50
+夫婦	hu1 hu5	50
+羞恥	saau1 laa3	50
+者個	cioo3 gaa2	50
+生物	seng1 beoh7	50
+古怪	gu1 guai4	50
+唯獨	bi2 dooh7	50
+蔸	dau1	50
+摸	mo1	50
+驚	gainn1	50
+死亡	si3 moong2	50
+不	boi5	50
+知	cai1	50
+入	dy3	50
+智慧	di4 haa5	50
+通	tang1	50
+思慕	seo1 bo5	50
+且	ciann4	50
+見覺	ging4 gah6	50
+辮	bing5	50
+無花果	bu2 hua1 goo3	50
+樹箬	chiu4 naauh7	50
+裙	geong2	50
+日頭	dih7 tau2	50
+斜	sia2	50
+涼	naau2	50
+風	boinn1	50
+樹縫	chiu4 pang4	50
+避	pia5	50
+躲	deo2	50
+方儂	hng4 dang2	50
+怎生	seh6 na1	50
+必定	bih6 deng5	50
+比	piann5	50
+百獸	beh6 siu4	50
+更加	geng4 ga1	50
+腹肚	bah6 do3	50
+行墿	giann2 do5	50
+蜀世	seoh7 saa4	50
+和	gah6	50
+欲	beoh6	50
+骹後䟓	koo1 au5 dann1	50
+盡苦	cing5 ko3	50
+生囝	sann1 gioonn3	50
+喫虧	keh6 kui1	50
+蜀世儂	seoh7 saa4 nang2	50
+刺草	chi4 chau3	50
+地	cheng2	50
+汗	guann5	50
+滿面	mua3 ming4	50
+的	dih6	50
+得々	dih7 dih7	50
+你	dy3	50
+本來	beong3 lai2	50
+轉	doinn3	50
+攏總	loong2 coong3	50
+皮	ceo4	50
+其	poi2	50
+衣	e5	50
+裳乞	i1 naau2	50
+頌	keoh6	50
+仿佛	hoong3 heoh6	50
+伸手	cheong1 chiu3	50
+永生	yng3 seng1	50
+伊家己	i1 gai4	50
+基路兵	gi1 lo5 bing1	50
+家己舞	gai4 bu3	50
+利劍	li5 giang4	50
+把守	boo3 siu3	50
+墿	do5	50
+房間	bang2 gaann1	50
+丈夫囝	dah6 bo1 gioonn3	50
+眏羊	ng4 aaunn2	50
+做塍	ceo4 cheng2	50
+土產	to2 sang3	50
+胎	tai1	50
+羊	aaunn2	50
+羊油	aaunn2 iu2	50
+亞伯	a3 beh6	50
+行善	heng2 seng5	50
+受納	siu5 dah7	50
+汝	du3	50
+行惡	heng2 ooh6	50
+罪孽	coi5 giah7	50
+伏	hooh7	50
+門前	moinn2 saann2	50
+着	beoh6	50
+述	seoh7	50
+塍	cheng2	50
+爬起	ba5 i3	50
+汝弟	dy3 di1	50
+毋知	ng5 cai1	50
+看管	kang4 guang3	50
+我弟	gua3 di5	50
+耶和華	aa1 hoo2 hua1	50
+汝弟	dy3 di5	50
+血	haa5	50
+底	le5	50
+喊	hua5	50
+救	giu2	50
+開	koi1	50
+喙	chui4	50
+接	le5	50
+汝	ci5	50
+弟其	dy3 di5	50
+血	e5	50
+汝	haa5	50
+得	dy1	50
+々受	dih6 dih6	50
+罵	siu5	50
+𣍐	moo4	50
+得	baa5	50
+地	deh6	50
+其	caa4	50
+利	daa5	50
+益	e5	50
+出力	cheoh6 lih7	50
+流動	liu2 doong5	50
+定罪	diann5 coi5	50
+重	dang5	50
+我實	sih7 sih7	50
+々	baa5	50
+𣍐當	dng1 dih6	50
+得	ki3	50
+飄流	paau1 liu2	50
+免得	meng3 dih6	50
+遇	seoh7	50
+着即	gy5 daauh7	50
+刣	cuh6	50
+伊	tai2	50
+退	tee4	50
+挪得	noo3 deh6	50
+做	cuh6	50
+蜀房	dua4 sing1	50
+伊	sann1	50
+老嬤	i3 dooh7	50
+就	hy3	50
+帶	seoh7	50
+身	si2	50
+生以	gai1 yng3	50
+諾	ki3	50
+許蜀	seoh7 ceo5	50
+時	siann2	50
+該	cuh6	50
+隱	taah7	50
+起	i1	50
+蜀	gioonn3	50
+座	e5	50
+城	mia2	50
+即	heo5	50
+摕	caa4	50
+伊	siann2	50
+囝	gaau4	50
+其名	i3 dooh7	50
+雅八	nga3 bah6	50
+帳房	daaunn4 bang2	50
+眏	ng4	50
+猶八	iu2 bah6	50
+彈琴	duann2 ging2	50
+吹簫	choi1 saau1	50
+拍銅	pa5 dang2	50
+拍鐵	pa5 ti5	50
+師傅	sai1 hu5	50
+伊妹	i1 moi4	50
+拿瑪	na2 ma3	50
+聲音	siann1 ing2	50
+壯士	coong4 seo5	50
+幼童	iu4 doong2	50
+設立	seh6 lih7	50
+立	lih7	50
+我	seoh7	50
+蜀	gaa2	50
+個	gioonn3	50
+囝	taa4	50
+替該	gai1 yng3	50
+隱	see3	50
+所	tai2	50
+刣	e5	50
+其亞	a4 beh6	50
+禱告	doo3 goo4	50
+後裔	hau5 aa4	50
+約略	iooh6 liooh7	50
+着	deo2	50
+男	nang2	50
+女	dy3	50
+其	by3	50
+許	seoh7	50
+蜀	dih7	50
+日上	sioong5 daa4	50
+帝	taah7	50
+摕福	hooh6 ki4	50
+氣	yng3	50
+允	i1	50
+稱	i1	50
+伊	ceo4	50
+做	nang2	50
+親像	ching1 chaaunn5	50
+家己	gai4	50
+相	e5	50
+稱	sioong5	50
+其	i1	50
+名	e5	50
+叫	mia2	50
+塞	gaau4	50
+特	seh6 deh7	50
+十二	seh7 di5	50
+九十	gau3 seh7	50
+十五	seh7 ngo5	50
+七十	chih6 seh7	50
+四十	si4 seh7	50
+一十	ih6 seh7	50
+百	ba5	50
+三百	soonn1 ba5	50
+接	ci5	50
+八十七	beh6 seh7 chih6	50
+六十九	lah7 seh7 gau3	50
+詈罵	laa3 moo4	50
+安慰	ang1 hui4	50
+歲數	hoi4 siu5	50
+容貌	eeng2 bau5	50
+標緻	baau5 li4	50
+取意	chy3 i4	50
+肉體	neeh7 taa3	50
+居住	gy1 cy5	50
+裡勢	li5 li4	50
+廝爭	seo1 cann1	50
+命	mia5	50
+當時	doong1 si2	50
+上古	sioong5 go3	50
+英雄	ing1 heeng2	50
+出名	cheoh6 mia2	50
+罪惡	coi5 ooh6	50
+貫盈	guang4 ing2	50
+心	sing1	50
+拍算	pa5 suann4	50
+時常	si2 sioong2	50
+咧	leoh7	50
+退悔	tee3 hoi3	50
+苦	ko3	50
+滅	beh7	50
+退悔	tee4 hoi3	50
+蒙恩	moong2 yng1	50
+代	dai5	50
+義人	gi5 cing2	50
+完整	eeng2 cing2	50
+通	toong1	50
+強暴	gioong2 boo5	50
+血氣	haa5 ki4	50
+歪邪	oi1 sia2	50
+上	gau4	50
+帝佮	noo2 a4	50
+挪亞	lah7 ba5	50
+講	leng2	50
+凡	seoh7	50
+有	hoi4	50
+血氣	ciann1 goih7	50
+其都	chee1 ih6	50
+慾	daa5	50
+受	le5	50
+我	e5	50
+除	cui3	50
+滅	deo1	50
+因	doo1	50
+伊	ky4	50
+強暴	noo2 a4	50
+滿	kui1	50
+做我	seong2 gua4	50
+慾滅	kuann4 ging4	50
+伊落	daa5 ming4	50
+地	e5	50
+上	cui3	50
+汝仱	di1 goih7	50
+着用歌	di5 seh7 chih6	50
+斐	dih7	50
+樵	daa5	50
+歌	deo1	50
+斐	doo1	50
+樵	ky4	50
+汝做	sioong5 daa4	50
+這	gah6	50
+船樣	noo2 a4	50
+式	goong3	50
+船	dy3	50
+頂	gah6	50
+做	dy3	50
+啊	bo3	50
+窗	gioonn3	50
+懸蜀	sing1 mu5	50
+手	cheoh6	50
+䟓	caa4	50
+船邊	dua5 seong2	50
+一切	ih6 cheh6	50
+定著	diann5 daauh7	50
+萬	mang5	50
+ma̤̍h	maah7	50
+栽	cai1	50
+醫治	i1 di5	50
+吼	hau3	50
+笑	chaau4	50
+悲傷	bi1 sioong1	50
+跳舞	taau4 bu3	50
+擲	diann5	50
+拾	kah6	50
+蜀堆	seoh7 dui1	50
+𢶀	choi4	50
+失	sih6	50
+守	ciu3	50
+破	pua4	50
+䋎	ting4	50
+做聲	ceo4 siann1	50
+講話	goong3 ua5	50
+衝	cheeng1	50
+交戰	gau1 ceng4	50
+和好	hoo2 hoo3	50
+乞	geh6	50
+蜀下	seoh7 goo5	50
+工夫	gang1 hu1	50
+耶穌	aa2 so1	50
+族譜	cooh7 po3	50
+猶太	iu2 dai5	50
+代瑪	dai5 ma3	50
+撒拉	sah6 lah7	50
+喇合	lah7 hah7	50
+路得	lo5 deh6	50
+烏利亞	o1 li5 a4	50
+時	si2	50
+搬	buann1	50
+巴比倫	ba1 bi3 leong2	50
+祈禱	gi2 doo3	50
+成聖	siann2 sing4	50
+降臨	gang4 ling2	50
+旨意	ci3 i4	50
+成就	siann2 ciu5	50
+deō	deo5	50
+糧草	naau2 chau3	50
+今旦	ging1 nua4	50
+欠	kiang4	50
+救	giu4	50
+脫離	tuah6 li5	50
+凶惡	heeng1 ooh6	50
+權柄	geeng2 bann4	50
+榮耀	yng2 aau5	50
+屬	seeh7	50
+萬萬	mang5 mang5	50
+寬容	kuang1 eeng2	50
+妒忌	do4 gi5	50
+自誇	ceo5 kua1	50
+驕傲	gaau1 goo5	50
+行	heng2	50
+非禮	hi1 laa3	50
+益獃	ia5 gai4	50
+快	kaa4	50
+衝狂	cheeng1 goong2	50
+記念	gi4 niang5	50
+伓	ng5	50
+不義	beoh6 gi5	50
+偌	noo5	50
+包涵	bau1 hang2	50
+廝信	seo1 seng4	50
+ai望	ai1 moong5	50
+忍耐	neong3 nai5	50
+長老	dioong3 loo3	50
+蒙	moong2	50
+揀選	gaann3 toinn3	50
+夫人	hu1 cing2	50
+第一囝	dai4 gioonn3	50
+其	dy3	50
+不	hang2	50
+獨	beh6	50
+我惜	cing1 li3	50
+汝	e5	50
+凡	nang2	50
+捌	ia5	50
+真	saau5	50
+理	dy3	50
+惜汝	saau5 dy3	50
+汝各儂	dy3 gooh6 nang2	50
+耶穌	aa1 so1	50
+仁愛	cing2 ai4	50
+恩惠	yng1 haa5	50
+平安	bing2 ang1	50
+囝子	gioonn3 ci2	50
+命令	ming5 ling5	50
+夫人	hu5 cing2	50
+寫	sia3	50
+勸	koinn4	50
+廝惜	seo1 saau5	50
+新	sing1	50
+長老	dioong2 loo3	50
+親愛	ching1 ai4	50
+其朋	ebeng5 iu3	50
+友迦	gia1 iu2	50
+猶	cuh6	50
+即	si5	50
+是	gua3	50
+我實	sih7 sing1	50
+心	see3	50
+所	saau5	50
+惜	e5	50
+至愛	ci4 ai4	50
+健壯	geeng5 coong4	50
+證見	cing4 geng4	50
+信息	sing2 sih7	50
+小子	saau3 ceo3	50
+解大	aa5 dua5	50
+gi̍-gi̍-lē	gi4 gi4 le5	50
+事體	seo5 laa3	50
+獃話	gai2 ua5	50
+批論	paa1 leong5	50
+不	beoh6	50
+足意	ceeh6 i4	50
+攔阻	lang5 cee3	50
+出會	cheoh6 hoi5	50

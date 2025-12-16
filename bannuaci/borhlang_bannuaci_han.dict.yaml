@@ -1,14 +1,15 @@
 # Rime dictionary
 # encoding: utf-8
 #
-# 興化平話字詞庫（拼式版本）Báⁿ-uā-ci̍ Dictionary (Romanization)
+# 興化平話字詞庫（漢字輸出版本）Báⁿ-uā-ci̍ Dictionary (Chinese Character Output)
 # 基於莆田城區口音 Based on Putian downtown accent
 #
-# 本詞庫儲存純 ASCII 拼式（如 saa3, guann2）
-# 實際顯示的平話字由 comment_format 動態產生
+# 本詞庫用於漢字輸出模式
+# 格式：漢字 + 輸入式平話字 + 權重
+# 候選詞顯示漢字，註釋顯示平話字
 #
 ---
-name: borhlang_bannuaci
+name: borhlang_bannuaci_han
 version: "0.3.0"
 use_preset_vocabulary: false
 sort: by_weight
@@ -24173,6 +24174,7 @@ DNA	di4 eng1 aa1	500
 住	deo4	300
 乜	meh6	300
 六十五	lah7 seh7 ngeo5	300
+咧	laa5	250
 空	aa5	200
 著	u5	200
 帝名	mia2 caa4	200
@@ -24265,6 +24267,10 @@ DNA	di4 eng1 aa1	500
 九十五	gau3 seh7 ngeo5	200
 者	chia3	200
 五百	ngeo5 ba5	200
+安生	ah6 na1	200
+日當	dih7 dng1	150
+複	buh6	150
+真理	ching1 li3	150
 支	ci1	100
 兒	ci2	100
 跦	ci2	100
@@ -24673,6 +24679,11 @@ io	iooh6 liooh7	100
 替該	gai1 yng3	100
 兮亞	a4 beh6	100
 十五	seh7 ngeo5	100
+的	aa5	100
+毋是	ng5 si5	100
+結籽	geh6 chi3	100
+情愛	ching2 ai4	100
+書	chy1	100
 是	lih6	90
 擔	dang1	90
 藏	coong5	90
@@ -24720,6 +24731,143 @@ io	iooh6 liooh7	100
 擗	paa2	50
 佻	taau2	50
 怞	deeh6	50
+聚	chy5	50
+繞	lau2	50
+老嬤	lau2 ma3	50
+捻	diang4	50
+獃	gai2	50
+心裡	sing1 li3	50
+亞蘭	a4 lang2	50
+亞米拿達	a4 bi3 na2 dah7	50
+亞比亞	a4 bi3 a4	50
+亞撒	a4 sah6	50
+債	chua4	50
+實心	sih7 sing1	50
+接待	chiah6 dai5	50
+實在	sih7 chai5	50
+空空	kang1 kang1	50
+烏瞀々	eo1 bu5 bu5	50
+暗々	ang4 ang4	50
+暝時	ma2 lau2	50
+水裡	chui3 li3	50
+管	guang2	50
+上	gah6	50
+這	chi3	50
+未	beng2	50
+雺霧	beo2 bu5	50
+鼻腔	pi4 kang1	50
+方裡	hng5 li3	50
+其	laa5	50
+河	cheo2	50
+伯拉	beh6 lah7	50
+隨意	sui2 i4	50
+活命	nah7 mia5	50
+丈夫儂	dah6 beo1 nang2	50
+憑	bing1	50
+入	dy3	50
+方儂	hng4 dang2	50
+怎生	seh6 na1	50
+和	gah6	50
+得々	dih7 dih7	50
+你	dy3	50
+衣	aa5	50
+永生	yng3 seng1	50
+基路兵	gi1 leo5 bing1	50
+墿	deo5	50
+亞伯	a3 beh6	50
+汝	du3	50
+爬起	ba5 i3	50
+毋知	ng5 chai1	50
+汝弟	dy3 di5	50
+汝	chi5	50
+弟其	dy3 di5	50
+血	aa5	50
+得	dy1	50
+罵	siu5	50
+地	deh6	50
+益	aa5	50
+得	ki3	50
+刣	chuh6	50
+伊	tai2	50
+做	chuh6	50
+就	hy3	50
+身	si2	50
+起	i1	50
+所	tai2	50
+刣	aa5	50
+其亞	a4 beh6	50
+其	by3	50
+蜀	dih7	50
+氣	yng3	50
+允	i1	50
+稱	i1	50
+做	nang2	50
+其	i1	50
+名	aa5	50
+接	chi5	50
+居住	gy1 chy5	50
+裡勢	li5 li4	50
+貫盈	guang4 ing2	50
+苦	keo3	50
+義人	gi5 ching2	50
+上	gau4	50
+挪亞	lah7 ba5	50
+講	leng2	50
+受	laa5	50
+我	aa5	50
+除	chui3	50
+伊	ky4	50
+滿	kui1	50
+地	aa5	50
+上	chui3	50
+斐	dih7	50
+樵	ky4	50
+這	gah6	50
+船	dy3	50
+頂	gah6	50
+做	dy3	50
+啊	beo3	50
+懸蜀	sing1 mu5	50
+栽	chai1	50
+醫治	i1 di5	50
+守	chiu3	50
+交戰	gau1 cheng4	50
+乞	geh6	50
+猶太	iu2 dai5	50
+代瑪	dai5 ma3	50
+撒拉	sah6 lah7	50
+喇合	lah7 hah7	50
+路得	leo5 deh6	50
+烏利亞	eo1 li5 a4	50
+降臨	gang4 ling2	50
+旨意	chi3 i4	50
+脫離	tuah6 li5	50
+萬萬	mang5 mang5	50
+妒忌	deo4 gi5	50
+益獃	ia5 gai4	50
+記念	gi4 niang5	50
+包涵	bau1 hang2	50
+夫人	hu1 ching2	50
+其	dy3	50
+不	hang2	50
+獨	beh6	50
+我惜	ching1 li3	50
+汝	aa5	50
+凡	nang2	50
+捌	ia5	50
+理	dy3	50
+仁愛	ching2 ai4	50
+夫人	hu5 ching2	50
+友迦	gia1 iu2	50
+猶	chuh6	50
+即	si5	50
+是	gua3	50
+我實	sih7 sing1	50
+惜	aa5	50
+至愛	chi4 ai4	50
+證見	ching4 geng4	50
+信息	sing2 sih7	50
+獃話	gai2 ua5	50
 唦	sah7	40
 燭	cooh6	40
 渚	du5	40

@@ -20,7 +20,7 @@ a̤@aa1@挨/A/兮/耶|	aa1	4900
 á̤@aa2@鞋/耶/椰/捼|	aa2	4900
 â̤@aa3@矮/唩/躷|	aa3	4900
 a̤̍@aa4@縊/隘/瞖/裔/瞺/翳|	aa4	500
-ā̤@aa5@會/解/衛/其/兮/生/憑/空/水/子/連/種/個/管/活/所/牲/卜/聽/帝/百/永/座/相/立/義|	aa5	5000
+ā̤@aa5@會/解/衛/其/兮/生/憑/空/水/子/連/種/個/管/活/所/牲/卜/聽/帝/百/永/座/相/立/義/的/衣/血/益/刣/名/我/地/汝/惜|	aa5	5000
 a̤h@aah6@▣|	aah6	110
 a̤̍h@aah7@▣|	aah7	100
 a̤ⁿ@aann1@挨|	aann1	1060
@@ -139,16 +139,16 @@ bé̤ⁿ@beenn2@▣|	beenn2	150
 bê̤ⁿ@beenn3@▣|	beenn3	140
 be̤̍ⁿ@beenn4@▣|	beenn4	130
 bē̤ⁿ@beenn5@▣|	beenn5	120
-beh@beh6@伯/柏/粕/鉑/佰/八/別/捌/百|	beh6	500
+beh@beh6@伯/柏/粕/鉑/獨/佰/八/別/捌/百|	beh6	500
 be̍h@beh7@別/白/百/密/默/墨/脈/蔑/滅/陌/帛/麥/䥑/篾|	beh7	500
 beng@beng1@邊/鞭/編/崩/蝙|	beng1	5000
-béng@beng2@朋/瓶/便/硼/㬟/淜/鵬|	beng2	5000
+béng@beng2@朋/瓶/便/硼/未/㬟/淜/鵬|	beng2	5000
 bêng@beng3@扁/貶|	beng3	500
 be̍ng@beng4@變/遍|	beng4	500
 bēng@beng5@㬟/便/朆/辮/辨/辯/分/卞/汴|	beng5	5000
 beo@beo1@褒|	beo1	500
 beó@beo2@無/婆/薄/巫/毛|	beo2	5500
-beô@beo3@母/寶/保/拇/補|	beo3	5000
+beô@beo3@母/寶/保/拇/補/啊|	beo3	5000
 beo̍@beo4@報|	beo4	5000
 beō@beo5@帽/磨|	beo5	5000
 beoh@beoh6@不/卜/抔/拂/刜/鈈/慾/欲|	beoh6	500
@@ -182,7 +182,7 @@ bia̍ⁿ@biann4@拚/拼/摒|	biann4	500
 biāⁿ@biann5@▣|	biann5	120
 bih@bih6@筆/必/畢/壁/闢/璧/铋/碧|	bih6	500
 bi̍h@bih7@滗/碧/密/蜜/幕/覓/冪/汨/篾/糸/辟|	bih7	500
-bing@bing1@兵/冰/邊/賓/濱/檳/彬/斌/冫/嬪|	bing1	5000
+bing@bing1@兵/冰/邊/賓/濱/檳/彬/斌/憑/冫/嬪|	bing1	5000
 bíng@bing2@平/蘋/頻/憑/貧/屏/類/帡/洴/瓶/苹/萍/軿/顰/鮃|	bing2	5000
 bîng@bing3@丙/餅/柄/秉/稟/炳/屏|	bing3	5000
 bi̍ng@bing4@變/併/鬢/殯/柄/並|	bing4	5000
@@ -275,7 +275,7 @@ buáⁿ@buann2@盤/磐|	buann2	5000
 buâⁿ@buann3@坂|	buann3	500
 bua̍ⁿ@buann4@半|	buann4	5000
 buāⁿ@buann5@▣|	buann5	120
-buh@buh6@復|	buh6	300
+buh@buh6@復/複|	buh6	300
 bu̍h@buh7@▣|	buh7	100
 bui@bui1@㵟|	bui1	500
 búi@bui2@肥|	bui2	5000
@@ -284,7 +284,7 @@ bu̍i@bui4@痱/沸/疿|	bui4	5000
 būi@bui5@吠|	bui5	500
 bṳ@by1@▣|	by1	160
 bṳ́@by2@▣|	by2	150
-bṳ̂@by3@▣|	by3	140
+bṳ̂@by3@其|	by3	50
 bṳ̍@by4@▣|	by4	130
 bṳ̄@by5@▣|	by5	120
 bṳh@byh6@▣|	byh6	110
@@ -419,7 +419,7 @@ cha̤̍uⁿ@chaaunn4@唱|	chaaunn4	5000
 chā̤uⁿ@chaaunn5@像/象/上/緔/橡|	chaaunn5	5000
 chah@chah6@擦/插/汆/熗/察/歃|	chah6	500
 cha̍h@chah7@鑿|	chah7	500
-chai@chai1@差/釵/猜/知|	chai1	500
+chai@chai1@差/釵/猜/知/栽|	chai1	500
 chái@chai2@柴/豺|	chai2	500
 châi@chai3@彩/採/采/睬|	chai3	5000
 cha̍i@chai4@踩/菜/婿/再/蔡|	chai4	5000
@@ -471,7 +471,7 @@ chêng@cheng3@淺/闡|	cheng3	5000
 che̍ng@cheng4@襯/倩/甑/茜/讖/齔|	cheng4	500
 chēng@cheng5@▣|	cheng5	120
 cheo@cheo1@搓/臊/差/瑳/磋/蹉/雌|	cheo1	5000
-cheó@cheo2@雌/慒/貲|	cheo2	500
+cheó@cheo2@雌/慒/河/貲|	cheo2	500
 cheô@cheo3@㧗/此/疵|	cheo3	4500
 cheo̍@cheo4@刺/次/糙/矬/酇|	cheo4	5000
 cheō@cheo5@▣|	cheo5	120
@@ -484,9 +484,9 @@ cheo̍ng@cheong4@寸/忖/吋|	cheong4	5000
 cheōng@cheong5@捘/瀳|	cheong5	5000
 chi@chi1@鰓/嗤/偲/C/梔/痴|	chi1	5000
 chí@chi2@蠘/蠞/溡|	chi2	5000
-chî@chi3@侈/齒/只|	chi3	500
+chî@chi3@侈/齒/只/這|	chi3	500
 chi̍@chi4@刺/飼/幟/翅/熾/帜/啻/試|	chi4	5000
-chī@chi5@市/鈰/泀|	chi5	5000
+chī@chi5@市/鈰/泀/汝/接|	chi5	5000
 chia@chia1@車/捙/𣵐|	chia1	5000
 chiá@chia2@▣|	chia2	150
 chiâ@chia3@鍤/者/隻|	chia3	4500
@@ -530,7 +530,7 @@ chio̤̍ⁿ@chioonn4@▣|	chioonn4	130
 chiō̤ⁿ@chioonn5@鱔|	chioonn5	500
 chiu@chiu1@鬚/秋/鞦/揪/犨/鰌/鰍|	chiu1	5200
 chiú@chiu2@酋/愁|	chiu2	500
-chiû@chiu3@手/醜/首|	chiu3	5300
+chiû@chiu3@手/醜/首/守|	chiu3	5300
 chiu̍@chiu4@樹/裏/嗅/溴/臭|	chiu4	500
 chiū@chiu5@湫/揫|	chiu5	500
 chng@chng1@倉/瘡/滄/艙|	chng1	500
@@ -580,7 +580,7 @@ chū@chu5@▣|	chu5	120
 chua@chua1@▣|	chua1	160
 chuá@chua2@▣|	chua2	150
 chuâ@chua3@㑪|	chua3	500
-chua̍@chua4@蔡|	chua4	5000
+chua̍@chua4@蔡/債|	chua4	5000
 chuā@chua5@礤/銼/擦/鑔|	chua5	5000
 chuah@chuah6@▣|	chuah6	110
 chua̍h@chuah7@▣|	chuah7	100
@@ -599,18 +599,18 @@ chuáⁿ@chuann2@▣|	chuann2	150
 chuâⁿ@chuann3@▣|	chuann3	140
 chua̍ⁿ@chuann4@串/窜|	chuann4	4500
 chuāⁿ@chuann5@▣|	chuann5	120
-chuh@chuh6@就/即/該|	chuh6	300
+chuh@chuh6@就/即/該/刣/做/猶|	chuh6	300
 chu̍h@chuh7@▣|	chuh7	100
 chui@chui1@崔/催/摧/推|	chui1	500
 chúi@chui2@▣|	chui2	150
-chûi@chui3@水/揣/璀|	chui3	300
+chûi@chui3@水/除/上/揣/璀|	chui3	300
 chu̍i@chui4@喙/粹/碎/翠/脆|	chui4	5300
 chūi@chui5@▣|	chui5	120
-chṳ@chy1@舒/蛆/趨/姝/樞/雛|	chy1	5000
+chṳ@chy1@舒/蛆/趨/姝/書/樞/雛|	chy1	5000
 chṳ́@chy2@徐/廚/櫥/芻/蟵/躕/雛|	chy2	5000
 chṳ̂@chy3@鼠/取/娶/主/處|	chy3	5000
 chṳ̍@chy4@趣/處|	chy4	500
-chṳ̄@chy5@澍/洳|	chy5	4900
+chṳ̄@chy5@澍/洳/聚|	chy5	4900
 chṳh@chyh6@▣|	chyh6	110
 chṳ̍h@chyh7@▣|	chyh7	100
 chṳng@chyng1@▣|	chyng1	160
@@ -826,7 +826,7 @@ dé̤ⁿ@deenn2@▣|	deenn2	150
 dê̤ⁿ@deenn3@䧘|	deenn3	5000
 de̤̍ⁿ@deenn4@頓|	deenn4	5000
 dē̤ⁿ@deenn5@斷|	deenn5	5000
-deh@deh6@滴/的/德/哲/謫/得/徹/鍀/鏑/夫/嫡/摘|	deh6	500
+deh@deh6@滴/的/德/哲/謫/得/徹/鍀/鏑/夫/地/嫡/摘|	deh6	500
 de̍h@deh7@值/笛/迪/敵/狄/特/翟/轍/徹/撤/溺/滌/糴/跌|	deh7	500
 deng@deng1@燈/釘/顛/丁/登/廳/癲/疔/酊/僜/巔|	deng1	5000
 déng@deng2@纏/陳/停/霆/庭/田/婷/亭/廷/騰/滇/誊/佃/澄/甸/蜒/訂/鈿|	deng2	5000
@@ -837,7 +837,7 @@ deo@deo1@刀/都/托/樹/哆|	deo1	5000
 deó@deo2@佇/躲/馱/伯/逃|	deo2	5000
 deô@deo3@倒|	deo3	5000
 deo̍@deo4@倒/住|	deo4	500
-deō@deo5@桌/卓/路|	deo5	5000
+deō@deo5@桌/卓/路/墿|	deo5	5000
 deoh@deoh6@就/即/㷝/佗|	deoh6	5000
 deo̍h@deoh7@突|	deoh7	500
 deong@deong1@鈍/墩/敦/壋/暾/惇/撴/礅/蹲/蹾/驐|	deong1	500
@@ -860,7 +860,7 @@ dia̍h@diah7@蝶/碟/諜/迭/疊/牒/喋/拃/著/聚/”/拉/搦/糴|	diah7	500
 diang@diang1@砧/椹/阽|	diang1	5000
 diáng@diang2@沉|	diang2	5000
 diâng@diang3@點/典/碘|	diang3	5000
-dia̍ng@diang4@掂/摘/店/坫/玷|	diang4	4500
+dia̍ng@diang4@掂/摘/店/捻/坫/玷|	diang4	4500
 diāng@diang5@甸/墊/湛|	diang5	500
 diaⁿ@diann1@▣|	diann1	160
 diáⁿ@diann2@埕/庭/亭/程|	diann2	5000
@@ -868,7 +868,7 @@ diâⁿ@diann3@鼎|	diann3	5200
 dia̍ⁿ@diann4@訂|	diann4	500
 diāⁿ@diann5@定/擲|	diann5	5200
 dih@dih6@就/即/擲/的/得|	dih6	5000
-di̍h@dih7@日/入/侄/直/值/秩/佚/螫/赦/是/抶/挃/碟/舌|	dih7	500
+di̍h@dih7@日/入/侄/直/值/秩/佚/螫/赦/是/蜀/斐/抶/挃/碟/舌|	dih7	500
 ding@ding1@甜/徵/禎|	ding1	5000
 díng@ding2@藤/程/澄/沉/塵/呈/橙/懲/埕/纏/蔯/陳|	ding2	5000
 dîng@ding3@▣|	ding3	140
@@ -935,7 +935,7 @@ do̤̍ⁿ@doonn4@擔/頓|	doonn4	500
 dō̤ⁿ@doonn5@賺/𧸖/誕/斷|	doonn5	5000
 du@du1@嘟/蛛|	du1	500
 dú@du2@▣|	du2	150
-dû@du3@拄|	du3	500
+dû@du3@拄/汝|	du3	500
 du̍@du4@▣|	du4	130
 dū@du5@渚|	du5	40
 dua@dua1@▣|	dua1	160
@@ -967,9 +967,9 @@ dúi@dui2@捶/堤|	dui2	5000
 dûi@dui3@▣|	dui3	140
 du̍i@dui4@碓/對/兌/懟|	dui4	5000
 dūi@dui5@隊/埭/墜|	dui5	5000
-dṳ@dy1@豬/誅|	dy1	4900
+dṳ@dy1@豬/誅/得|	dy1	4900
 dṳ́@dy2@除/躇/茹|	dy2	500
-dṳ̂@dy3@汝/女/釹/的/講/裏/“/果/戒/詝|	dy3	5000
+dṳ̂@dy3@汝/女/釹/的/講/裏/“/果/戒/入/你/船/做/其/理/詝|	dy3	5000
 dṳ̍@dy4@著|	dy4	500
 dṳ̄@dy5@箸/苧|	dy5	5000
 dṳ̂h@dyh3@汝|	dyh3	500
@@ -1050,10 +1050,10 @@ gá̤uⁿ@gaaunn2@強|	gaaunn2	5000
 gâ̤uⁿ@gaaunn3@▣|	gaaunn3	140
 ga̤̍uⁿ@gaaunn4@▣|	gaaunn4	130
 gā̤uⁿ@gaaunn5@▣|	gaaunn5	120
-gah@gah6@甲/葛/鴿/蛤/角/各/軋/鉀/釓/覺/佮/文/割/合/胛|	gah6	500
+gah@gah6@甲/葛/鴿/蛤/角/各/軋/鉀/釓/覺/佮/文/上/和/這/頂/割/合/胛|	gah6	500
 ga̍h@gah7@岳/嶽/樂/合/戛/揢|	gah7	500
 gai@gai1@該/皆/階/偕|	gai1	500
-gái@gai2@呆/㾏/頦/崖/涯/厓/歹/皚|	gai2	5000
+gái@gai2@呆/㾏/頦/崖/涯/厓/獃/歹/皚|	gai2	5000
 gâi@gai3@改/解/崕/𡧣|	gai3	5000
 ga̍i@gai4@界/戒/蓋/鈣/丐/誡/介/屆/芥/械/[家己]/尬/疥/蚧|	gai4	5000
 gāi@gai5@艾/砹/扴|	gai5	500
@@ -1072,7 +1072,7 @@ gāⁿ@gann5@▣|	gann5	120
 gau@gau1@勾/鉤/交/郊/溝/茭/膠/痀/艽/蛟/鈎|	gau1	5000
 gáu@gau2@猴/𠢕/搞/爻/侯|	gau2	5000
 gâu@gau3@九/狗/咬/絞/狡/垢/〩/9|	gau3	5200
-ga̍u@gau4@遘/到/夠/教/較/校/斠/壽/酵|	gau4	5000
+ga̍u@gau4@遘/到/夠/教/較/校/斠/壽/上/酵|	gau4	5000
 gāu@gau5@厚/熰/漚|	gau5	5000
 ge@ge1@笄|	ge1	1060
 gé@ge2@[家己]|	ge2	500
@@ -1096,7 +1096,7 @@ gé̤ⁿ@geenn2@▣|	geenn2	150
 gê̤ⁿ@geenn3@▣|	geenn3	140
 ge̤̍ⁿ@geenn4@▣|	geenn4	130
 gē̤ⁿ@geenn5@▣|	geenn5	120
-geh@geh6@吉/結/潔/革/割/揭/格/隔/拮/葛/兮/的/其/鎘/給/骼|	geh6	500
+geh@geh6@吉/結/潔/革/割/揭/格/隔/拮/葛/兮/的/其/鎘/乞/給/骼|	geh6	500
 ge̍h@geh7@額/孽/偈/傑/孑/竭|	geh7	500
 geng@geng1@更/堅/跟/根/耕/肩/庚/甑|	geng1	5000
 géng@geng2@虔|	geng2	500
@@ -1212,7 +1212,7 @@ gu̍@gu4@句/灸|	gu4	5000
 gū@gu5@舊/舅/臼|	gu5	500
 gua@gua1@瓜/柯/過|	gua1	4900
 guá@gua2@樺|	gua2	500
-guâ@gua3@我/寡/杆/“/救/詈/丈|	gua3	500
+guâ@gua3@我/寡/杆/“/救/詈/丈/是|	gua3	500
 gua̍@gua4@蓋/芥/掛/卦/庎|	gua4	5000
 guā@gua5@外/割/刮|	gua5	5000
 guah@guah6@刮/擴/聒/蛞|	guah6	500
@@ -1223,7 +1223,7 @@ guâi@guai3@拐|	guai3	1040
 gua̍i@guai4@怪|	guai4	1030
 guāi@guai5@▣|	guai5	120
 guang@guang1@官/觀/冠/關/鰥/菅/棺/矜|	guang1	500
-guáng@guang2@▣|	guang2	150
+guáng@guang2@管|	guang2	50
 guâng@guang3@管/館|	guang3	5000
 gua̍ng@guang4@罐/慣/冠/灌/貫/觀/丱/摜/毌/涫/爟/瓘/祼/鸛|	guang4	5000
 guāng@guang5@▣|	guang5	120
@@ -1290,7 +1290,7 @@ hāi@hai5@害/亥/械/駭/懈/解/氦/嶰/廨/㤥/獬/薤/邂/駴|	hai5	5000
 haih@haih6@▣|	haih6	110
 ha̍ih@haih7@▣|	haih7	100
 hang@hang1@烘/酣/鼾/夯/魟/風|	hang1	5000
-háng@hang2@行/涵/杭/韓/含/函/凡/寒/航/閒/閑/咸/降/絎/釩/晗/邯|	hang2	5000
+háng@hang2@行/涵/杭/韓/含/函/凡/寒/航/閒/閑/咸/降/絎/釩/不/晗/邯|	hang2	5000
 hâng@hang3@罕/喊|	hang3	500
 ha̍ng@hang4@漢/泛/憾/巷/閈|	hang4	5000
 hāng@hang5@項/範/旱/撼/頜/汗/陷/焊/犯/限/翰/瀚/缿/范/行/餡|	hang5	5500
@@ -1471,7 +1471,7 @@ hu̍i@hui4@緯/諱/慰/尉/蔚|	hui4	500
 hūi@hui5@▣|	hui5	120
 hṳ@hy1@虛/噓/吁/墟/冔/呴/旴/盱/訏|	hy1	500
 hṳ́@hy2@魚/漁|	hy2	5000
-hṳ̂@hy3@許/詡/栩/滸|	hy3	500
+hṳ̂@hy3@許/詡/就/栩/滸|	hy3	500
 hṳ̍@hy4@噓|	hy4	500
 hṳ̄@hy5@▣|	hy5	120
 hṳh@hyh6@▣|	hyh6	110
@@ -1481,7 +1481,7 @@ hṳ́ng@hyng2@眩|	hyng2	5000
 hṳ̂ng@hyng3@狠|	hyng3	5000
 hṳ̍ng@hyng4@釁|	hyng4	500
 hṳ̄ng@hyng5@恨|	hyng5	500
-i@i1@伊/醫/衣/依/咿/銥/各/祝/）/帝/弟/漪|	i1	5000
+i@i1@伊/醫/衣/依/咿/銥/各/祝/）/帝/弟/起/允/稱/其/漪|	i1	5000
 í@i2@胰/移/夷/姨/怡/遺/彝/頤/飴/蛇/迤/E|	i2	5000
 î@i3@椅/以/倚/已/旖/起|	i3	5000
 i̍@i4@意/懿/臆/憶/鐿|	i4	500
@@ -1490,7 +1490,7 @@ ia@ia1@纓|	ia1	500
 iá@ia2@揲/爺|	ia2	5000
 iâ@ia3@爺/野/冶/也|	ia3	500
 ia̍@ia4@▣|	ia4	130
-iā@ia5@夜/易/益/也/亦/掖|	ia5	500
+iā@ia5@夜/易/益/也/亦/掖/捌|	ia5	500
 iah@iah6@▣|	iah6	110
 ia̍h@iah7@揲/葉/頁/蝶|	iah7	5000
 iang@iang1@醃/淹/閹/鵪|	iang1	5000
@@ -1617,7 +1617,7 @@ ke̍ng@keng4@罄/磬|	keng4	500
 kēng@keng5@▣|	keng5	120
 keo@keo1@窠/柯/科|	keo1	500
 keó@keo2@▣|	keo2	150
-keô@keo3@洘/涸|	keo3	5000
+keô@keo3@洘/涸/苦|	keo3	5000
 keo̍@keo4@魺/𣹇|	keo4	500
 keō@keo5@▣|	keo5	120
 keoh@keoh6@乞/窟/堀/屈|	keoh6	500
@@ -1629,7 +1629,7 @@ keo̍ng@keong4@睏/困|	keong4	5000
 keōng@keong5@▣|	keong5	120
 ki@ki1@欹/欺/窺/攲|	ki1	5000
 kí@ki2@粸/騎/畸/蜞/芪/杞/祁|	ki2	5000
-kî@ki3@起/齒/豈/々/諾/實/杞/綺|	ki3	5000
+kî@ki3@起/齒/豈/々/諾/實/得/杞/綺|	ki3	5000
 ki̍@ki4@氣/汽/器/棄/企|	ki4	5000
 kī@ki5@柿/缺/騎|	ki5	5000
 kia@kia1@輕|	kia1	500
@@ -1745,7 +1745,7 @@ kua̍ⁿ@kuann4@看|	kuann4	5000
 kuāⁿ@kuann5@▣|	kuann5	120
 kuh@kuh6@▣|	kuh6	110
 ku̍h@kuh7@▣|	kuh7	100
-kui@kui1@開/虧/窺|	kui1	5000
+kui@kui1@開/虧/窺/滿|	kui1	5000
 kúi@kui2@▣|	kui2	150
 kûi@kui3@傀/詭|	kui3	500
 ku̍i@kui4@氣/愧/潰/季|	kui4	5000
@@ -1753,7 +1753,7 @@ kūi@kui5@▣|	kui5	120
 kṳ@ky1@區/驅/拘/駒/軀/嶇/劬|	ky1	5000
 kṳ́@ky2@▣|	ky2	150
 kṳ̂@ky3@▣|	ky3	140
-kṳ̍@ky4@去|	ky4	5000
+kṳ̍@ky4@去/伊/樵|	ky4	5000
 kṳ̄@ky5@▣|	ky5	120
 kṳh@kyh6@▣|	kyh6	110
 kṳ̍h@kyh7@▣|	kyh7	100
@@ -1771,7 +1771,7 @@ la̤@laa1@▣|	laa1	160
 lá̤@laa2@犁/黎/嚨/䔣/裂/梨/籬/藜|	laa2	4900
 lâ̤@laa3@禮/詈/嬭/奶/體|	laa3	5000
 la̤̍@laa4@▣|	laa4	130
-lā̤@laa5@麗/例/荔/隸/厲/勵/唳/鱺/禮/落/緣/接/故/底/戾/礪/蠣|	laa5	5000
+lā̤@laa5@麗/例/荔/隸/厲/勵/唳/鱺/禮/咧/落/緣/接/故/底/其/受/戾/礪/蠣|	laa5	5000
 la̤h@laah6@▣|	laah6	110
 la̤̍h@laah7@裂|	laah7	1000
 la̤ⁿ@laann1@▣|	laann1	160
@@ -1811,7 +1811,7 @@ lâⁿ@lann3@▣|	lann3	140
 la̍ⁿ@lann4@▣|	lann4	130
 lāⁿ@lann5@▣|	lann5	120
 lau@lau1@嘮|	lau1	500
-láu@lau2@留/流/劉/樓/瀏/琉|	lau2	5000
+láu@lau2@留/流/劉/樓/瀏/琉/繞|	lau2	5000
 lâu@lau3@▣|	lau3	140
 la̍u@lau4@落|	lau4	5000
 lāu@lau5@老/漏|	lau5	5000
@@ -1840,7 +1840,7 @@ lē̤ⁿ@leenn5@▣|	leenn5	120
 leh@leh6@勒/劣/咧/礫/肋|	leh6	500
 le̍h@leh7@列/烈/歷/曆/洌/瀝/攊/壢/藶/裂/趔/靂|	leh7	500
 leng@leng1@摙|	leng1	5000
-léng@leng2@連/聯/零/靈/鈴/憐/凌/蓮/羚/鱗/玲/齡/珠/漣/聆|	leng2	5000
+léng@leng2@連/聯/零/靈/鈴/憐/凌/蓮/羚/鱗/玲/齡/珠/講/漣/聆|	leng2	5000
 lêng@leng3@冷|	leng3	5000
 le̍ng@leng4@蹥|	leng4	5000
 lēng@leng5@膦/𡳞|	leng5	5000
@@ -2205,7 +2205,7 @@ nāi@nai5@耐/奈/佴/柰/耏/萘/褦/鼐|	nai5	500
 naih@naih6@▣|	naih6	110
 na̍ih@naih7@▣|	naih7	100
 nang@nang1@[毋通]|	nang1	500
-náng@nang2@儂/男/南/膿/楠/囊/難/喃/人/朔/c/免/作/寶/翻/á/蝻|	nang2	5000
+náng@nang2@儂/男/南/膿/楠/囊/難/喃/人/朔/c/免/作/寶/翻/á/做/凡/蝻|	nang2	5000
 nâng@nang3@赧|	nang3	500
 na̍ng@nang4@▣|	nang4	130
 nāng@nang5@難|	nang5	500
@@ -2899,10 +2899,10 @@ seông@seong3@筍/隼/榫|	seong3	5000
 seo̍ng@seong4@舜/馴/遜/瞬/殉/巽|	seong4	500
 seōng@seong5@順/殉/舜|	seong5	500
 si@si1@詩/屍/施/撕/絲/司/私/尸/蓍|	si1	500
-sí@si2@時/舌/折/辭/莳/匙/蝕/餈/塒/蒔|	si2	5000
+sí@si2@時/舌/折/辭/莳/匙/蝕/餈/身/塒/蒔|	si2	5000
 sî@si3@死/始/矢/屎/豕/弛|	si3	5000
 si̍@si4@四/世/試/薛/勢/駟/〤/4/亖/卌/弒/肆|	si4	5000
-sī@si5@是/視/舐/寺/氏/嗜/巳/示/侍/蝕/中/原/譯/市/恃/薛/豉|	si5	5000
+sī@si5@是/視/舐/寺/氏/嗜/巳/示/侍/蝕/中/原/譯/即/市/恃/薛/豉|	si5	5000
 sia@sia1@賒/奢/些/畬/輋|	sia1	500
 siá@sia2@食/邪/斜/佘/畲/時|	sia2	5100
 siâ@sia3@寫/舍|	sia3	5000
@@ -2948,7 +2948,7 @@ siu@siu1@修/收/羞/滫/脩/䗛/饈|	siu1	5000
 siú@siu2@囚/泅/酬/售/仇/酋|	siu2	5200
 siû@siu3@守/帚/手/首/垨/艏|	siu3	500
 siu̍@siu4@秀/繡/銹/獸/宿/岫/狩/琇/鏽|	siu4	500
-siū@siu5@壽/受/授/袖/岫/綬|	siu5	500
+siū@siu5@壽/受/授/袖/罵/岫/綬|	siu5	500
 sng@sng1@霜/孀|	sng1	5000
 sńg@sng2@▣|	sng2	150
 sn̂g@sng3@嗓|	sng3	500
@@ -3066,7 +3066,7 @@ tā̤uⁿ@taaunn5@杖|	taaunn5	500
 tah@tah6@塔/塌/拓/搨/蹋/觸/獺/榻/搭/撻/靼/韃|	tah6	500
 ta̍h@tah7@讀/沓/垞/宅/踏|	tah7	500
 tai@tai1@胎/篩/𥭘/颱/台|	tai1	5000
-tái@tai2@治/刣/擡/抬|	tai2	5000
+tái@tai2@治/刣/擡/伊/所/抬|	tai2	5000
 tâi@tai3@㑀|	tai3	500
 ta̍i@tai4@太/肽/泰/態/鈦|	tai4	4500
 tāi@tai5@▣|	tai5	120
@@ -3305,7 +3305,7 @@ u̍i@ui4@畏|	ui4	5000
 ṳ̍h@yh7@役/疫/域/聿/掝/矞/鴥|	yh7	500
 ṳng@yng1@恩/殷/蒽|	yng1	5000
 ṳ́ng@yng2@榮/嶸/熒/營/瀅/瑩/螢|	yng2	5000
-ṳ̂ng@yng3@永/允/隱/尹/狁|	yng3	5000
+ṳ̂ng@yng3@永/允/隱/尹/氣/狁|	yng3	5000
 ṳ̍ng@yng4@瑩|	yng4	500
 ṳ̄ng@yng5@泳/詠|	yng5	5000
 bī-heông@bi5 heong3@米粉|	bi5 heong3	5000
@@ -4443,7 +4443,7 @@ gâu-geo̍h@gau3 geoh7@狡猾|	gau3 geoh7	800
 gáu-gih@gau2 gih6@猴急|	gau2 gih6	800
 gáu-gáu@gau2 gau2@猴猴|	gau2 gau2	800
 gáu-eông@gau2 eong3@猴蚓|	gau2 eong3	800
-iú-dāi@iu2 dai5@猶大|	iu2 dai5	800
+iú-dāi@iu2 dai5@猶大/猶太|	iu2 dai5	800
 iú-ṳ̄@iu2 y5@猶豫|	iu2 y5	800
 cio̤̍ng-ging@cioong4 ging1@獎金|	cioong4 ging1	800
 do̤̍h-go@dooh7 go1@獨孤|	dooh7 go1	800
@@ -6700,7 +6700,7 @@ nn̄g-bā-gâu@nng5 ba5 gau3@兩百九|	nng5 ba5 gau3	500
 so̤ⁿ-bā@soonn1 ba5@三百|	soonn1 ba5	500
 si̍-bā@si4 ba5@四百|	si4 ba5	500
 ngō-bā@ngo5 ba5@五百|	ngo5 ba5	500
-la̍h-bā@lah7 ba5@六百|	lah7 ba5	500
+la̍h-bā@lah7 ba5@六百/挪亞|	lah7 ba5	500
 chih-bā@chih6 ba5@七百|	chih6 ba5	500
 bā̤-bā@baa5 ba5@八百/百三|	baa5 ba5	500
 gâu-bā@gau3 ba5@九百|	gau3 ba5	500
@@ -8485,7 +8485,7 @@ bah-ha̤̍uⁿ@bah6 haaunn4@北向|	bah6 haaunn4	500
 bah-si̍@bah6 si4@北勢|	bah6 si4	500
 be̍h-ha̤̍uⁿ@beh7 haaunn4@別向|	beh7 haaunn4	500
 lī-ha̤̍uⁿ@li5 haaunn4@內向|	li5 haaunn4	500
-lī-li̍@li5 li4@內勢|	li5 li4	500
+lī-li̍@li5 li4@內勢/裡勢|	li5 li4	500
 guā-ha̤̍uⁿ@gua5 haaunn4@外向|	gua5 haaunn4	500
 guā-li̍@gua5 li4@外勢|	gua5 li4	500
 gah-si̍@gah6 si4@角勢|	gah6 si4	500
@@ -13636,7 +13636,7 @@ dé̤ng-gíng@deeng2 ging2@重墘|	deeng2 ging2	500
 dé̤ng-íng@deeng2 ing2@重墘|	deeng2 ing2	500
 ma̍h-ciu-ko̤ng@mah7 ciu1 koong1@目珠框/目睭框|	mah7 ciu1 koong1	500
 si̍-ma̍h-gâu@si4 mah7 gau3@四目狗|	si4 mah7 gau3	500
-pi̍-kang@pi4 kang1@鼻空|	pi4 kang1	500
+pi̍-kang@pi4 kang1@鼻空/鼻腔|	pi4 kang1	500
 pi̍-kang-mńg@pi4 kang1 mng2@鼻空毛|	pi4 kang1 mng2	500
 pi̍-kang-táu@pi4 kang1 tau2@鼻空頭|	pi4 kang1 tau2	500
 pi̍-kang-ciang@pi4 kang1 ciang1@鼻空尖|	pi4 kang1 ciang1	500
@@ -13961,7 +13961,7 @@ giô̤ⁿ-cí@gioonn3 ci2@囝兒|	gioonn3 ci2	500
 giô̤ⁿ-sing-mū@gioonn3 sing1 mu5@囝新婦|	gioonn3 sing1 mu5	500
 seong-sing-mū@seong1 sing1 mu5@孫新婦|	seong1 sing1 mu5	500
 giô̤ⁿ-seong@gioonn3 seong1@囝孫|	gioonn3 seong1	500
-sing-mū@sing1 mu5@新婦|	sing1 mu5	500
+sing-mū@sing1 mu5@新婦/懸蜀|	sing1 mu5	500
 sêng-ná̤u-giô̤ⁿ@seng3 naau2 gioonn3@嬸娘囝|	seng3 naau2 gioonn3	500
 sîng-ná̤u-giô̤ⁿ-náng@sing3 naau2 gioonn3 nang2@嬸娘囝儂|	sing3 naau2 gioonn3 nang2	500
 giô̤ⁿ-sa̍i@gioonn3 sai4@囝婿|	gioonn3 sai4	500
@@ -16153,7 +16153,7 @@ duā-gûi-gang@dua5 gui3 gang1@大幾工|	dua5 gui3 gang1	500
 gûi-gang@gui3 gang1@幾工|	gui3 gang1	500
 da̍h-gang@dah7 gang1@逐工|	dah7 gang1	500
 da̍h-di̍h@dah7 dih7@逐日|	dah7 dih7	500
-di̍h-di̍h@dih7 dih7@日日|	dih7 dih7	500
+di̍h-di̍h@dih7 dih7@日日/得々|	dih7 dih7	500
 neōng-ngói@neong5 ngoi2@閏月|	neong5 ngoi2	500
 neōng-ói@neong5 oi2@閏月|	neong5 oi2	500
 neōng-so̤ⁿ@neong5 soonn1@閏三|	neong5 soonn1	500
@@ -17840,7 +17840,7 @@ gé̤ng-lé̤ng-geong@geeng2 leeng2 geong1@乾隆君|	geeng2 leeng2 geong1	500
 dó̤ng-ceô@doong2 ceo3@童子|	doong2 ceo3	500
 dê̤ng-gi-ing@deeng3 gi1 ing1@轉基因|	deeng3 gi1 ing1	500
 gi-ing@gi1 ing1@基因|	gi1 ing1	500
-dāi-mâ@dai5 ma3@代碼|	dai5 ma3	500
+dāi-mâ@dai5 ma3@代碼/代瑪|	dai5 ma3	500
 gī-seo̍h@gi5 seoh7@技術|	gi5 seoh7	500
 co̤h-ē̤ng@cooh6 eeng5@作用|	cooh6 eeng5	500
 keh-lé̤ng@keh6 leeng2@克隆|	keh6 leeng2	500
@@ -19855,7 +19855,7 @@ chá-ceo-lā̤u@cha2 ceo1 laau5@查資料|	cha2 ceo1 laau5	500
 ha̍h-sih@hah7 sih6@合適|	hah7 sih6	500
 sih-i̍ng@sih6 ing4@適應|	sih6 ing4	500
 ga̍i-heong@gai4 heong1@戒薰|	gai4 heong1	500
-ching-lî@ching1 li3@清理|	ching1 li3	500
+ching-lî@ching1 li3@清理/真理/我惜|	ching1 li3	500
 cé̤ng-bō@ceeng2 bo5@全部|	ceeng2 bo5	500
 ngé̤ng-ing@ngeeng2 ing1@原因|	ngeeng2 ing1	500
 hio̤ng-dió̤ng@hioong1 dioong2@香腸|	hioong1 dioong2	500
@@ -19952,7 +19952,7 @@ cṳ̍-siā@cy4 sia5@注射|	cy4 sia5	500
 ho̤h-lī@hooh6 li5@福利|	hooh6 li5	500
 ceō-lái-cûi@ceo5 lai2 cui3@自來水|	ceo5 lai2 cui3	500
 ceō-lái-cûi-chiô̤ng@ceo5 lai2 cui3 chioong3@自來水廠|	ceo5 lai2 cui3 chioong3	500
-gi̍-niāng@gi4 niang5@紀念|	gi4 niang5	500
+gi̍-niāng@gi4 niang5@紀念/記念|	gi4 niang5	500
 sua̍ⁿ-niāng@suann4 niang5@算念|	suann4 niang5	500
 léng-siô̤ng@leng2 sioong3@聯想|	leng2 sioong3	500
 sua̍ⁿ-hah@suann4 hah6@算法|	suann4 hah6	500
@@ -20512,7 +20512,7 @@ sîng-ná̤u-náng@sing3 naau2 nang2@嬸娘人|	sing3 naau2 nang2	300
 gai-ṳ̂ng@gai1 yng3@該隱/（該/lá/落”/13/治該/賜乞/生以/立我/佇塍/蜀個/替該|	gai1 yng3	300
 cê̤ng-lūi@ceeng3 lui5@種類|	ceeng3 lui5	300
 la̍h-be̍h@lah7 beh7@拉麥|	lah7 beh7	300
-di̍h-dng@dih7 dng1@日中|	dih7 dng1	300
+di̍h-dng@dih7 dng1@日中/日當|	dih7 dng1	300
 mu̍h-nō̤@muh7 noo5@物乇|	muh7 noo5	300
 dih-dih@dih6 dih6@的的/得々/得得/々受/儂得/手做/得受|	dih6 dih6	300
 ho̍i-siū@hoi4 siu5@歲壽/歲數|	hoi4 siu5	300
@@ -20526,7 +20526,7 @@ gi̍-céng@gi4 ceng2@既然|	gi4 ceng2	300
 go̍-cheô@go4 cheo3@故此/惡故|	go4 cheo3	300
 dang-bing@dang1 bing1@東邊|	dang1 bing1	300
 hóiⁿ-lî@hoinn2 li3@園裏|	hoinn2 li3	300
-a̍-beh@a4 beh6@亞伯/兩個/弟亞/替該/起拍/隱所/兮亞|	a4 beh6	300
+a̍-beh@a4 beh6@亞伯/兩個/弟亞/替該/起拍/隱所/兮亞/其亞|	a4 beh6	300
 mâ-leh-le̍h@ma3 leh6 leh7@瑪勒列/勒列生|	ma3 leh6 leh7	300
 ngâ-le̍h@nga3 leh7@雅列/列後|	nga3 leh7	300
 ciô̤-sā̤@cioo3 saa5@這価|	cioo3 saa5	300
@@ -20540,7 +20540,7 @@ guâ-go̤h-náng@gua3 gooh6 nang2@我各人|	gua3 gooh6 nang2	300
 geng-ce̤̍ng@geng1 ceeng4@耕種|	geng1 ceeng4	300
 ai-déng@ai1 deng2@埃田|	ai1 deng2	300
 ai-déng-hóiⁿ@ai1 deng2 hoinn2@埃田園|	ai1 deng2 hoinn2	300
-i-dī@i1 di5@伊弟/̍h/即爬|	i1 di5	300
+i-dī@i1 di5@伊弟/̍h/即爬/醫治|	i1 di5	300
 cô-co̤ng@co3 coong1@祖宗|	co3 coong1	300
 la̍h-se̍h-ngō@lah7 seh7 ngo5@六十五|	lah7 seh7 ngo5	300
 nô̤-a̍@noo3 a4@挪亞/“挪|	noo3 a4	300
@@ -20549,7 +20549,7 @@ sêng-la̍h@seng3 lah7@洗拉/大洗|	seng3 lah7	300
 dah-beo@dah6 beo1@丈夫|	dah6 beo1	300
 mâ-teô-sah-la̍h@ma3 teo3 sah6 lah7@瑪土撒拉|	ma3 teo3 sah6 lah7	300
 gi̍-chéng@gi4 cheng2@既然|	gi4 cheng2	300
-geh-chî@geh6 chi3@結子|	geh6 chi3	300
+geh-chî@geh6 chi3@結子/結籽|	geh6 chi3	300
 la̍h-se̍h-ngeō@lah7 seh7 ngeo5@六十五|	lah7 seh7 ngeo5	300
 miá-ca̤̍@mia2 caa4@帝名|	mia2 caa4	200
 dia̍h-muâ@diah7 mua3@水著|	diah7 mua3	200
@@ -20572,7 +20572,7 @@ si̍-úi@si4 ui2@四圍|	si4 ui2	200
 po̍i-gâ̤u@poi4 gaau3@配偶|	poi4 gaau3	200
 le̤̍h-he̤h@leeh7 heeh6@六畜|	leeh7 heeh6	200
 hia̍h-geoh@hiah7 geoh6@脅骨|	hiah7 geoh6	200
-láu-mâ@lau2 ma3@老媽|	lau2 ma3	200
+láu-mâ@lau2 ma3@老媽/老嬤|	lau2 ma3	200
 chih-sing@chih6 sing1@赤身|	chih6 sing1	200
 ciô̤-gá̤@cioo3 gaa2@這個|	cioo3 gaa2	200
 gîng-ga̍i@ging3 gai4@警戒/此警|	ging3 gai4	200
@@ -20595,11 +20595,12 @@ mâ-teô-sah-lī@ma3 teo3 sah6 li5@瑪土撒利|	ma3 teo3 sah6 li5	200
 teô-bah-gai-ṳ̂ng@teo3 bah6 gai1 yng3@土八該隱|	teo3 bah6 gai1 yng3	200
 gâu-se̍h-ngeō@gau3 seh7 ngeo5@九十五|	gau3 seh7 ngeo5	200
 ngeō-bā@ngeo5 ba5@五百|	ngeo5 ba5	200
+ah-na@ah6 na1@安生|	ah6 na1	200
 ceo̍-lâ̤u@ceo4 laau3@做了|	ceo4 laau3	100
 seō-heông@seo5 heong3@索粉|	seo5 heong3	100
 dēng-nô̤@deng5 noo3@電腦|	deng5 noo3	100
 o-bū-bū@o1 bu5 bu5@烏漠漠|	o1 bu5 bu5	100
-a̍ng-a̍ng@ang4 ang4@暗暗|	ang4 ang4	100
+a̍ng-a̍ng@ang4 ang4@暗暗/暗々|	ang4 ang4	100
 cûi-mi̍ng@cui3 ming4@水面|	cui3 ming4	100
 ō̤-dā̤@oo5 daa5@下底|	oo5 daa5	100
 ting-ō̤@ting1 oo5@天下|	ting1 oo5	100
@@ -20625,7 +20626,7 @@ lái-le̍h@lai2 leh7@來歷/o̍|	lai2 leh7	100
 chô̤-bo̤̍h@choo3 booh7@草木|	choo3 booh7	100
 leo̍h-hō@leoh7 ho5@落雨|	leoh7 ho5	100
 ceōng-ce̍h@ceong5 ceh7@潤澤|	ceong5 ceh7	100
-hn̄g-lî@hng5 li3@許裏|	hng5 li3	100
+hn̄g-lî@hng5 li3@許裏/方裡|	hng5 li3	100
 seng-mīng@seng1 ming5@生命|	seng1 ming5	100
 bî-seo̍ng@bi3 seong4@比遜|	bi3 seong4	100
 ha̍h-hi-la̍h@hah7 hi1 lah7@哈腓拉|	hah7 hi1 lah7	100
@@ -20637,11 +20638,11 @@ gí-heo̍ng@gi2 heong4@其訓|	gi2 heong4	100
 gô-si̍h@go3 sih7@古實|	go3 sih7	100
 hi-dâ̤-geh@hi1 daa3 geh6@希底結|	hi1 daa3 geh6	100
 a-seo̍h@a1 seoh7@亞述|	a1 seoh7	100
-beh-la̍h@beh6 lah7@百辣|	beh6 lah7	100
+beh-la̍h@beh6 lah7@百辣/伯拉|	beh6 lah7	100
 cai-ce̤̍ng@cai1 ceeng4@栽種|	cai1 ceeng4	100
 ka̍ng-siû@kang4 siu3@看守|	kang4 siu3	100
 hói-lî@hoi2 li3@伊講|	hoi2 li3	100
-súi-i̍@sui2 i4@汝會|	sui2 i4	100
+súi-i̍@sui2 i4@汝會/隨意|	sui2 i4	100
 sēng-o̤h-chiu̍@seng5 ooh6 chiu4@善惡樹|	seng5 ooh6 chiu4	100
 chéng-iâ@cheng2 ia3@田野|	cheng2 ia3	100
 diāⁿ-dia̍h@diann5 diah7@定著|	diann5 diah7	100
@@ -20666,7 +20667,7 @@ chiu̍-nia̍h@chiu4 niah7@樹箬|	chiu4 niah7	100
 chiu̍-pa̍ng@chiu4 pang4@樹縫|	chiu4 pang4	100
 deoh-leo@deoh6 leo1@底那/佇底/底落|	deoh6 leo1	100
 é̤ng-go̍@eeng2 go4@緣故/甚物/物緣|	eeng2 go4	100
-hn̍g-dáng@hng4 dang2@何人|	hng4 dang2	100
+hn̍g-dáng@hng4 dang2@何人/方儂|	hng4 dang2	100
 seh-nah@seh6 nah6@怎若|	seh6 nah6	100
 iû-he̍h@iu3 heh7@誘惑|	iu3 heh7	100
 bih-dēng@bih6 deng5@必定|	bih6 deng5	100
@@ -20702,11 +20703,11 @@ héng-o̤h@heng2 ooh6@行惡|	heng2 ooh6	100
 cōi-gia̍h@coi5 giah7@罪孽|	coi5 giah7	100
 mói-sá̤ⁿ@moi2 saann2@門前|	moi2 saann2	100
 î-hā̤u@i3 haau5@以後|	i3 haau5	100
-bā-î@ba5 i3@-l/央該|	ba5 i3	100
+bā-î@ba5 i3@-l/央該/爬起|	ba5 i3	100
 dṳ̂-di@dy3 di1@“汝/汝弟|	dy3 di1	100
 ka̍ng-guâng@kang4 guang3@我乜/看管|	kang4 guang3	100
 guâ-dī@gua3 di5@是看/我弟|	gua3 di5	100
-dṳ̂-dī@dy3 di5@物汝/弟兮|	dy3 di5	100
+dṳ̂-dī@dy3 di5@物汝/弟兮/汝弟/弟其|	dy3 di5	100
 sia-ing@sia1 ing1@有聲|	sia1 ing1	100
 cheoh-li̍h@cheoh6 lih7@出力|	cheoh6 lih7	100
 liú-dō̤ng@liu2 doong5@流動|	liu2 doong5	100
@@ -20745,22 +20746,60 @@ gṳ̄-da̤u̍h@gy5 daauh7@遇著|	gy5 daauh7	100
 mêng-dih@meng3 dih6@免得|	meng3 dih6	100
 gṳ̄-da̤̍u@gy5 daau4@著即|	gy5 daau4	100
 hāu-a̤̍@hau5 aa4@後裔|	hau5 aa4	100
-eo-bū-bū@eo1 bu5 bu5@烏漠漠|	eo1 bu5 bu5	100
+eo-bū-bū@eo1 bu5 bu5@烏漠漠/烏瞀々|	eo1 bu5 bu5	100
 chûi-mi̍ng@chui3 ming4@水面|	chui3 ming4	100
-chûi-lî@chui3 li3@水裏|	chui3 li3	100
-beó-bū@beo2 bu5@寞霧|	beo2 bu5	100
+chûi-lî@chui3 li3@水裏/水裡|	chui3 li3	100
+beó-bū@beo2 bu5@寞霧/雺霧|	beo2 bu5	100
 geô-si̍h@geo3 sih7@古實|	geo3 sih7	100
-dah-beo-náng@dah6 beo1 nang2@丈夫人|	dah6 beo1 nang2	100
+dah-beo-náng@dah6 beo1 nang2@丈夫人/丈夫儂|	dah6 beo1 nang2	100
 bah-deô@bah6 deo3@腹肚|	bah6 deo3	100
 chīng-keô@ching5 keo3@盡苦|	ching5 keo3	100
-gi-leō-bing@gi1 leo5 bing1@基路冰|	gi1 leo5 bing1	100
+gi-leō-bing@gi1 leo5 bing1@基路冰/基路兵|	gi1 leo5 bing1	100
 teó-sâng@teo2 sang3@土產|	teo2 sang3	100
-n̄g-chai@ng5 chai1@伓知|	ng5 chai1	100
+n̄g-chai@ng5 chai1@伓知/毋知|	ng5 chai1	100
 se̍h-ngeō@seh7 ngeo5@十五|	seh7 ngeo5	100
+n̄g-sī@ng5 si5@毋是|	ng5 si5	100
+chíng-a̍i@ching2 ai4@情愛/仁愛|	ching2 ai4	100
 táu-bōi@tau2 boi5@頭髮|	tau2 boi5	50
 ah-go@ah6 go1@阿姑|	ah6 go1	50
 a-dī@a1 di5@阿弟|	a1 di5	50
 náng-ā@nang2 a5@儂客|	nang2 a5	50
+sing-lî@sing1 li3@心裡|	sing1 li3	50
+a̍-láng@a4 lang2@亞蘭|	a4 lang2	50
+a̍-bî-ná-da̍h@a4 bi3 na2 dah7@亞米拿達|	a4 bi3 na2 dah7	50
+a̍-bî-a̍@a4 bi3 a4@亞比亞|	a4 bi3 a4	50
+a̍-sah@a4 sah6@亞撒|	a4 sah6	50
+si̍h-sing@sih7 sing1@實心/我實|	sih7 sing1	50
+chiah-dāi@chiah6 dai5@接待|	chiah6 dai5	50
+si̍h-chāi@sih7 chai5@實在|	sih7 chai5	50
+kang-kang@kang1 kang1@空空|	kang1 kang1	50
+má-láu@ma2 lau2@暝時|	ma2 lau2	50
+na̍h-miā@nah7 mia5@活命|	nah7 mia5	50
+seh-na@seh6 na1@怎生|	seh6 na1	50
+ṳ̂ng-seng@yng3 seng1@永生|	yng3 seng1	50
+â-beh@a3 beh6@亞伯|	a3 beh6	50
+gṳ-chṳ̄@gy1 chy5@居住|	gy1 chy5	50
+gua̍ng-íng@guang4 ing2@貫盈|	guang4 ing2	50
+gī-chíng@gi5 ching2@義人|	gi5 ching2	50
+gau-che̍ng@gau1 cheng4@交戰|	gau1 cheng4	50
+sah-la̍h@sah6 lah7@撒拉|	sah6 lah7	50
+la̍h-ha̍h@lah7 hah7@喇合|	lah7 hah7	50
+leō-deh@leo5 deh6@路得|	leo5 deh6	50
+eo-lī-a̍@eo1 li5 a4@烏利亞|	eo1 li5 a4	50
+ga̍ng-líng@gang4 ling2@降臨|	gang4 ling2	50
+chî-i̍@chi3 i4@旨意|	chi3 i4	50
+tuah-lī@tuah6 li5@脫離|	tuah6 li5	50
+māng-māng@mang5 mang5@萬萬|	mang5 mang5	50
+deo̍-gī@deo4 gi5@妒忌|	deo4 gi5	50
+iā-ga̍i@ia5 gai4@益獃|	ia5 gai4	50
+bau-háng@bau1 hang2@包涵|	bau1 hang2	50
+hu-chíng@hu1 ching2@夫人|	hu1 ching2	50
+hū-chíng@hu5 ching2@夫人|	hu5 ching2	50
+gia-iú@gia1 iu2@友迦|	gia1 iu2	50
+chi̍-a̍i@chi4 ai4@至愛|	chi4 ai4	50
+chi̍ng-ge̍ng@ching4 geng4@證見|	ching4 geng4	50
+síng-si̍h@sing2 sih7@信息|	sing2 sih7	50
+gái-uā@gai2 ua5@獃話|	gai2 ua5	50
 hói-táu@hoi2 tau2@回頭|	hoi2 tau2	20
 sâ̤uⁿ-hō̤@saaunn3 hoo5@賞賀|	saaunn3 hoo5	10
 siá-á̤u@sia2 aau2@食藥|	sia2 aau2	10

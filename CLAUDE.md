@@ -33,7 +33,7 @@ python tools/build_all_dicts.py
 
 This master script orchestrates the entire dictionary building pipeline:
 1. Extracts vocabulary from Wiktionary data (`docs/puxian_phrases_from_wikt.txt`)
-2. Extracts vocabulary from Hinghwa Bible (`docs/hinghua_bible.txt`)
+2. Extracts vocabulary from Hinghwa Bible (`data/bible_data.json`)
 3. Merges all sources into `pouseng_pinging/borhlang_pouleng.dict.yaml`
 4. Converts to Báⁿ-uā-ci̍ dictionary (Hanzi version)
 5. Generates pure Báⁿ-uā-ci̍ dictionary (Lua format)
@@ -54,10 +54,10 @@ python tools/extract_vocab_from_wikt.py
 ```bash
 python tools/extract_vocab_from_bible.py
 ```
-- Reads: `docs/hinghua_bible.txt` (aligned Báⁿ-uā-ci̍ and Hanzi lines)
-- Outputs: `data/vocab_from_bible.yaml` (extracted n-grams and words)
-- Handles 合音字 (e.g., 「家己」→ ga̍i), proper nouns → lowercase
-- Extracts 2-4 character phrases with frequency weighting
+- Reads: `data/bible_data.json` (structured JSON with tokenized Báⁿ-uā-ci̍ and Hanzi)
+- Outputs: `data/vocab_from_bible.yaml` (extracted vocabulary with input-form romanization)
+- Converts Báⁿ-uā-ci̍ to input-form using `romanization_converter.py`
+- Frequency-based weighting with 300 upper limit (Bible terms are relatively uncommon)
 
 **Manual conversion** (莆仙話拼音 → 興化平話字):
 ```bash
@@ -140,7 +140,7 @@ build_dicts.bat
 
 This script automatically:
 1. Extracts vocabulary from Wiktionary (`docs/puxian_phrases_from_wikt.txt`)
-2. Extracts vocabulary from Bible (`docs/hinghua_bible.txt`)
+2. Extracts vocabulary from Bible (`data/bible_data.json`)
 3. Merges all sources into `pouseng_pinging/borhlang_pouleng.dict.yaml`
 4. Converts to Báⁿ-uā-ci̍ (Hanzi version) → `bannuaci/borhlang_bannuaci_han.dict.yaml`
 5. Generates pure romanization (Lua format) → `bannuaci/borhlang_bannuaci.dict.yaml`
@@ -221,7 +221,7 @@ deploy_to_rime.bat  # Windows
 | You changed... | Run... |
 |---------------|--------|
 | `docs/puxian_phrases_from_wikt.txt` | `build_dicts.bat` (full rebuild) |
-| `docs/hinghua_bible.txt` | `build_dicts.bat` (full rebuild) |
+| `data/bible_data.json` | `build_dicts.bat` (full rebuild) |
 | `data/cpx-pron-data.lua` | `build_dicts.bat` (full rebuild) |
 | `pouseng_pipping/borhlang_pouleng.dict.yaml` | `build_dicts.bat` OR partial update |
 | `.schema.yaml` files | Just `deploy_to_rime.bat` (no rebuild needed) |
@@ -301,9 +301,9 @@ SOURCE DATA                          PROCESSING                       OUTPUT
    - 漢字\tBUC\tPSP_orig\tPSP_actual                                             │
                                                                                  │
 2. Hinghwa Bible                     extract_vocab_from_bible.py     vocab_from_bible.yaml  │
-   (docs/hinghua_bible.txt)             ──────────────────────>        (n-grams, freq-based) │
-   - Aligned BUC/Hanzi                                                           │
-   - 合音字 handling                                                             │
+   (data/bible_data.json)               ──────────────────────>        (~920 entries)        │
+   - Structured JSON with tokens                                                │
+   - BUC → Input-form conversion                                                │
                                                                                  │
 3. Base Dictionary                                                               │
    (pouseng_pinging/                                                             │
@@ -348,7 +348,7 @@ SOURCE DATA                          PROCESSING                       OUTPUT
 |------|---------|--------|
 | `data/cpx-pron-data.lua` | Wiktionary pronunciation data | Lua table: `["字"] = {"pron1", "pron2"}` |
 | `docs/puxian_phrases_from_wikt.txt` | Wiktionary phrases | TSV: 漢字\tBUC\tPSP_orig\tPSP_actual |
-| `docs/hinghua_bible.txt` | Hinghwa Bible text | Aligned BUC/Hanzi lines, 合音字 in 「」 |
+| `data/bible_data.json` | Hinghwa Bible text | Structured JSON with BUC/Hanzi tokens |
 | `hinghwa-ime/Pouleng/Pouleng.dict.yaml` | Reference dictionary | Rime dict format (~24k entries) |
 
 **Processing Modules:**
@@ -516,10 +516,10 @@ If both phases fail, use direct conversion result and log as warning for manual 
 2. Format: `漢字<TAB>Báⁿ-uā-ci̍<TAB>PSP_original<TAB>PSP_actual`
 3. Run `python tools/build_all_dicts.py`
 
-**Bible text:**
-1. Edit `docs/hinghua_bible.txt`
-2. Maintain format: BUC line, Hanzi line, blank line
-3. Mark 合音字 with 「」: e.g., 「家己」for ga̍i
+**Bible vocabulary:**
+1. Edit `data/bible_data.json`
+2. Maintain JSON structure with `tokens` array containing `{han, rom, type}` objects
+3. Script auto-converts Báⁿ-uā-ci̍ to input-form romanization
 4. Run `python tools/build_all_dicts.py`
 
 ### Merging New Vocabulary

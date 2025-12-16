@@ -19,8 +19,8 @@
 基於莆田城區口音（19世紀末標準）
 - 純平話字輸出模式（平話字在上，漢字在下）
 - 漢字輸出模式（漢字在上，平話字註釋）
-- 基礎詞庫（23,000+ 詞條，自動從莆仙話拼音詞庫轉換）
-- 支援簡拼、模糊音、聲調省略等輸入便利功能
+- 基礎詞庫（23,000+ 詞條，自動從莆仙話拼音詞庫、聖經中提取和轉換）
+- 支援簡拼、模糊音、聲調省略等功能
 
 #### 莆仙話拼音（Pouseng Ping'ing）
 基於莆田城區口音（現代標準）
@@ -135,7 +135,7 @@
 直接輸入莆仙話拼音（不需要聲調）：
 
 ```
-輸入：puceng          → 候選：莆田 pou²ceng²
+輸入：pouceng          → 候選：莆田 pou²ceng²
 輸入：hinghua         → 候選：興化 hing¹hua⁴
 輸入：siabuei         → 候選：食飯 sia²buei⁵
 ```
@@ -216,27 +216,37 @@
 
 ### 興化平話字詞庫
 
-- **來源**：自動從 [hinghwa-ime](https://github.com/e-dialect/hinghwa-ime) 的莆仙話拼音詞庫轉換
+- **來源**：自動從莆仙話拼音詞庫轉換，並整合多個來源
 - **單字資料**：基於維基詞典的莆仙語讀音資料（11,000+ 漢字）
-- **詞條數量**：23,000+ 詞條
+- **詞條數量**：27,000+ 詞條（漢字輸出模式）、20,000+ 詞條（純羅馬字模式）
 - **音韻基礎**：莆田城區口音（19世紀末標準）
+- **詞庫來源**：
+  - 基礎詞庫（人工整理，~23,000 詞條）
+  - 維基詞典短語（自動提取，~4,000 詞條）
+  - 興化聖經（自動提取，~920 詞條，權重較低）
 - **轉換說明**：
   - 使用音韻對應規則自動轉換莆仙話拼音為興化平話字
   - 考慮聲母類化現象，智慧反推原始讀音
   - 對照維基詞典資料驗證轉換結果
-  - 部分詞條可能需要人工校對（詳見 `bannuaci/conversion_log.txt`）
+  - 部分詞條可能需要人工校對（詳見 `bannuaci/conversion_log_v3.txt`）
 
 ### 莆仙話拼音詞庫
 
-- **來源**：[hinghwa-ime](https://github.com/e-dialect/hinghwa-ime) 莆仙話拼音詞庫
+- **來源**：[hinghwa-ime](https://github.com/e-dialect/hinghwa-ime) 莆仙話拼音詞庫，整合多個來源
 - **編纂者**：芽油（字詞錄入整理）、子善（程式技術）
-- **詞條數量**：24,000+ 詞條
+- **詞條數量**：27,000+ 詞條（合併版）
 - **音韻基礎**：莆田城區口音（現代標準）
+- **詞庫來源**：
+  - 基礎詞庫（人工整理）
+  - 維基詞典短語（自動提取）
+  - 興化聖經（自動提取，權重上限 300）
 - **參考資料**：
   - 《莆田縣誌》同音字表
   - 《莆田市誌》同音字表
   - 《莆仙方言簡明詞彙》
   - 《莆田市誌》分類詞表
+  - 維基詞典莆仙語讀音資料
+  - 興化平話字聖經（1912 年版）
 
 ## 專案結構
 
@@ -261,13 +271,14 @@ borhlang-ime/
 ├── data/                     # 原始資料與中間檔案
 │   ├── cpx-pron-data.lua                   # 維基詞典字音資料
 │   ├── psp_to_buc.py                       # 拼音轉換核心模組
+│   ├── romanization_converter.py           # 羅馬字系統轉換器
 │   ├── puxian_initials.json                # 聲母表
 │   ├── puxian_rhymes.json                  # 韻母表
+│   ├── bible_data.json                     # 興化平話字聖經（結構化 JSON）
 │   ├── vocab_from_wikt.yaml                # 從維基詞典提取的詞彙
 │   └── vocab_from_bible.yaml               # 從聖經提取的詞彙
 ├── docs/                     # 文檔與數據源
-│   ├── puxian_phrases_from_wikt.txt        # 維基詞典短語資料
-│   └── hinghua_bible.txt                   # 興化平話字聖經文本
+│   └── puxian_phrases_from_wikt.txt        # 維基詞典短語資料
 ├── tools/                    # 開發工具
 │   ├── build_all_dicts.py                  # 一鍵更新詞表（主腳本）
 │   ├── extract_vocab_from_wikt.py          # 從維基詞典提取詞彙
@@ -291,12 +302,12 @@ borhlang-ime/
 本專案詞庫來自多個來源，自動合併：
 
 1. **基礎詞庫** (`pouseng_pinging/borhlang_pouleng.dict.yaml`) - 人工整理
-2. **維基詞典** (`docs/puxian_phrases_from_wikt.txt`) - 短語與詞彙
-3. **聖經文本** (`docs/hinghua_bible.txt`) - 自然語言模式
+2. **維基詞典** (`docs/puxian_phrases_from_wikt.txt`) - 短語與詞彙（~4,000 詞條）
+3. **聖經文本** (`data/bible_data.json`) - 興化聖經結構化資料，取自 [hinghua-singging](https://github.com/tesiniong/hinghua-singging)（~920 詞條）
 
 **更新詞庫流程：**
 
-1. 編輯任一數據源檔案
+1. 編輯任一資料源檔案
 2. 執行 `build_dicts.bat`（Windows）或 `python tools/build_all_dicts.py`
 3. 檢查 `bannuaci/conversion_log.txt` 查看轉換警告
 4. 執行 `deploy_to_rime.bat` 部署到 Rime
@@ -327,37 +338,37 @@ borhlang-ime/
 | 平話字 | IPA | 範例 |
 |-------|-----|------|
 | b | /p/ | ba 巴 |
-| p | /pʰ/ | pa 爬 |
-| m | /m/ | ma 麻 |
-| d | /t/ | da 茶 |
+| p | /pʰ/ | pa 怕 |
+| m | /m/ | ma 明 |
+| d | /t/ | da 打 |
 | t | /tʰ/ | ta 他 |
 | n | /n/ | na 拿 |
-| l | /l/ | la 羅 |
+| l | /l/ | la 拉 |
 | g | /k/ | ga 家 |
-| k | /kʰ/ | ka 卡 |
+| k | /kʰ/ | ka 客 |
 | ng | /ŋ/ | nga 雅 |
 | h | /h/ | ha 蝦 |
-| c | /ts/ | ca 遮 |
-| ch | /tsʰ/ | cha 車 |
+| c | /ts/ | ca 昨 |
+| ch | /tsʰ/ | cha 冊 |
 | s | /ɬ/ | sa 沙 |
 | (零聲母) | - | a 亞 |
 
 ### 聲調（7個）
 
-| 調類 | 調值 | 標記方式 | 範例 |
+| 調類 | 調值(今) | 標記方式 | 範例 |
 |-----|------|---------|------|
-| 陰平 | 44 | 無標記 | a |
-| 陽平 | 24 | acute (´) | á |
-| 上聲 | 53 | circumflex (ˆ) | â |
-| 陰去 | 21 | vertical line below (̍) | a̍ |
-| 陽去 | 22 | macron (¯) | ā |
-| 陰入 | 5 | 無標記或 macron | ah, āh |
-| 陽入 | 21 | vertical line below | a̍h |
+| 陰平 | 533 | 無標記 | a |
+| 陽平 | 13 | acute (´) | á |
+| 上聲 | 453 | circumflex (ˆ) | â |
+| 陰去 | 42 | vertical line below (̍) | a̍ |
+| 陽去 | 21 | macron (¯) | ā |
+| 陰入 | 1 | 無標記或 | ah |
+| 陽入 | 5 | vertical line below | a̍h |
 
 ### 特殊符號
 
 - **◌̤** (combining diaeresis below)：用於 a̤, e̤, o̤
-- **ṳ** (u with dot below)：特殊元音
+- **ṳ** (u with dot below)：特殊元音 (Unicode已預組)
 - **ⁿ** (superscript n)：鼻化標記
 
 ## 已知問題
