@@ -18,84 +18,87 @@ sort: by_weight
 其	ae5	300
 有	u5	300
 伊	i1	300
-生	sa1	300
 上帝	syorng5 de4	300
+生	sa1	300
 汝	dy3	300
 我	gua3	300
 做	zo4	300
 儂	nang2	300
-即	zuh6	300
 是	si5	300
+即	zuh6	300
 這	ze4	300
-佮	gah6	250
-落	loh7	250
+佮	gah6	300
 講	gorng3	250
+落	loh7	250
 地	de5	250
 亦	ia5	250
-食	sia7	250
 所	soe3	250
-時節	si2 ze5	250
-咧	lae5	250
+食	sia7	250
 蜀	soh7	250
+咧	lae5	250
+時節	si2 ze5	250
 都	do1	250
+遘	gao4	250
 主	zy3	250
 名	mia2	250
 憑	bing2	250
-遘	gao4	250
 無	bo2	250
 耶和華	e2 hor2 hua1	250
 會	e5	250
+摕	teh7	250
 該隱	gai1 yng3	250
-摕	teh7	200
-亞當	a4 dorng1	200
-歲	huei4	200
+歲	huei4	250
 着	dieo7	200
+亞當	a4 dorng1	200
 日	dih7	200
 安生	ah6 na1	200
 連	leng2	200
 得々	dih6 dih6	200
+去	ky4	200
 果子	guei7 zi3	200
 囝	gyor3	200
 挪亞	nor3 a4	200
 看	kua4	200
 叫	gieo4	200
 使	sai3	200
-去	ky4	200
 物乇	muei7 nor5	200
-好	ho3	200
-種類	zoeng3 lui5	200
 我各儂	gua3 gorh6 nang2	200
 凡	hang2	200
+好	ho3	200
+種類	zoeng3 lui5	200
 乞	koh6	200
 樹	ciu4	200
 個	ge2	200
 鳥	zieo3	200
+慾	boh6	200
 正	zia4	200
 事	so5	200
 老嬤	lao5 ma3	200
 再	zai4	200
 頭	tao2	200
 盡	zing5	200
+地上	de5 sieo5	200
+因	ing1	200
 著	do2	200
 死	si3	200
 復	horh6	200
 年	ning2	200
-地上	de5 sieo5	150
+啊	a5	150
 喏	nor5	150
-因	ing1	150
 由	iu2	150
+翻譯	huang1 ih7	150
 毋通	ng5 tang1	150
-慾	boh6	150
+受	siu5	150
 拉麥	lah7 baeh7	150
 後	ao5	150
 在	zai5	150
 世	se4	150
 日當	dih7 dung1	150
+水	zui3	150
 當央	dor1 ng1	150
 複	buh6	150
 飛	buei1	150
 得	daeh6	150
-受	siu5	150
 七	cih6	150
 以諾	i3 dorh7	150
 男女囝	nang2 dy3 gyor3	150
@@ -104,31 +107,31 @@ sort: by_weight
 光	gung1	150
 暝頭	ma2 lao2	150
 塗	tou2	150
+滿	mua3	150
 兩	nung5	150
 頭牲	tao2 sa1	150
-翻譯	huang1 ih7	150
+用	oeng5	150
 刣	tai2	150
 兄弟	hia1 di5	150
 真理	zing1 li3	150
-水	zui3	150
-滿	mua3	150
 管	guang3	150
-啊	a5	150
 丈夫	dah6 bou1	150
 者	zia3	150
 故此	gou4 co3	150
-用	oeng5	150
 遐	hyor3	150
+出	coh6	150
 亞伯	a4 baeh6	150
 塞特	saeh6 daeh7	150
 蜀百	soh7 ba5	150
 八百	be5 ba5	150
 願	nguei5	150
+分	bong1	150
 空氣	korng1 ki4	150
 天	ting1	150
 俱各	gy5 gorh6	150
 上	sieo5	150
 野獸	ia3 siu4	150
+條	dieo2	150
 帶	dua4	150
 甚物	soh7 muei1	150
 面前	ming4 se2	150
@@ -136,11 +139,11 @@ sort: by_weight
 蛇	syor2	150
 見	ging4	150
 因為	ing1 ui5	150
-出	coh6	150
+毋	ng5	150
+仱	da1	150
 以挪士	i3 nor3 so5	150
 九百	gao3 ba5	150
 證見	zing4 geng4	150
-分	bong1	100
 大	dua5	100
 各種	gorh6 zoeng3	100
 穧	se5	100
@@ -148,7 +151,6 @@ sort: by_weight
 賜	so4	100
 既然	gi4 zeng2	100
 園	huei2	100
-條	dieo2	100
 許	hy3	100
 話	ua5	100
 意義	i4 gi5	100
@@ -156,8 +158,6 @@ sort: by_weight
 像	cieo5	100
 後裔	hieo5 e4	100
 若	nor5	100
-毋	ng5	100
-仱	da1	100
 討	to3	100
 造	cor4	100
 該南	gai1 nang2	100
@@ -165,6 +165,7 @@ sort: by_weight
 雅列	nga3 laeh7	100
 瑪土撒拉	ma3 tou3 sah6 lah7	100
 世間	se4 gang1	100
+手䟓	ciu3 da1	100
 公	gang1	100
 母	bo3	100
 基督	gi1 dorh6	100
@@ -173,13 +174,16 @@ sort: by_weight
 請安	cing3 ang1	100
 的	ae5	100
 出	cuei5	100
+焦	dor1	100
 海	hai3	100
 活命	uah7 mia5	100
 活	uah7	100
 相	syorng5	100
 嬸娘	sing3 nieo2	100
 成	sia2	100
+已經	i3 ging1	100
 東邊	dang1 bing1	100
+放	bang4	100
 河	o2	100
 號	ho5	100
 稱	cing1	100
@@ -197,14 +201,20 @@ sort: by_weight
 獻	hoeng4	100
 來	li2	100
 就	zuh6	100
+三十	sor1 saeh7	100
+零	leng2	100
 奉事	horng5 so5	100
 齊	ze2	100
 獃	gai2	100
+挪亞	nor2 a4	100
+大船	dua5 song2	100
+船	song2	100
 大水	dua5 zui3	100
 攏總	lorng3 zorng3	100
 屬	soeh7	100
 愛挃	ai4 di2	100
 誡命	gai4 ming5	100
+接待	zia6 dai5	100
 神	sing2	100
 暗	ang4	100
 下底	or5 de3	100
@@ -220,13 +230,11 @@ sort: by_weight
 照	cieo5	100
 動彈	duei3 dang5	100
 走	zao3	100
-已經	i3 ging1	100
 安歇	ang1 hoe5	100
 來歷	lai2 laeh7	100
 未	buei5	100
 耕種	geng1 zoeng4	100
 埃田	ai1 deng2	100
-放	bang4	100
 當	dung1	100
 善惡	seng5 orh6	100
 從	zoeng2	100
@@ -264,17 +272,21 @@ sort: by_weight
 祖宗	zou3 zorng1	100
 或	haeh7	100
 作	zo4	100
-三十	sor1 saeh7	100
-零	leng2	100
 四十	si4 saeh7	100
 六十五	lah7 saeh7 ngou5	100
+三	sor1	100
 嬸娘囝	sing3 nieo2 gyor3	100
 世上	se4 sieo5	100
+滅	baeh7	100
+血氣	he5 ki4	100
 浸	zing4	100
+母	bou3	100
+新婦	sing1 mu5	100
 行	heng2	100
-大船	dua5 song2	100
+惜	sieo5	100
 大闢	dai5 bih7	100
 氏	si5	100
+實心	sih7 sing1	100
 雖然	sui1 zeng2	100
 挨望	ai1 morng5	100
 寄	gyor4	100
@@ -284,10 +296,14 @@ sort: by_weight
 道理	dor5 li3	100
 解	e5	100
 親愛	cing1 ai4	100
-接待	zia6 dai5	100
+朋友	beng2 iu3	100
+教會	gao4 huei5	100
 起頭	ki3 tao2	50
 創造	corng4 cor4	50
 天地	ting1 de5	50
+開	kui1	50
+上	syorng5	50
+下	ha5	50
 頂勢	deng3 ni4	50
 第二	de5 di5	50
 喏穧	zyor3 se5	50
@@ -316,6 +332,7 @@ sort: by_weight
 各	gorh6	50
 種	zoeng3	50
 萬物	mang5 boh7	50
+了	lieo3	50
 第七	de5 cih6	50
 功夫	gang1 hu1	50
 完竣	oeng2 zong4	50
@@ -362,6 +379,7 @@ sort: by_weight
 歸	gui1	50
 百姓	ba5 sa4	50
 生命樹	seng1 ming5 ciu4	50
+房間	bang2 ge1	50
 看顧	kang4 gou4	50
 變面	bing4 ming4	50
 受氣	siu5 ki4	50
@@ -380,13 +398,14 @@ sort: by_weight
 害	hai5	50
 七十七	cih6 saeh7 cih6	50
 起手	ki3 ciu3	50
+約略	yorh6 lyorh7	50
 記	gi4	50
 伊	cing1	50
 家己	gai4	50
 五	ngou5	50
 九十五	gao3 saeh7 ngou5	50
 六十二	lah7 saeh7 di5	50
-三	sor1	50
+三百	sor1 ba5	50
 七百	cih6 ba5	50
 八十二	baeh6 saeh7 di5	50
 五百	ngou5 ba5	50
@@ -395,28 +414,29 @@ sort: by_weight
 雅弗	nga3 hoh7	50
 興旺	hing1 orng5	50
 永遠	yng3 oeng3	50
+裡勢	li5 li4	50
 二十	di5 saeh7	50
 更大	ge2 dua5	50
 罪惡	zuei5 orh6	50
 心裡	sing1 li3	50
-滅	baeh7	50
 污穢	u4 uei4	50
-血氣	he5 ki4	50
+強暴	gyorng2 bor5	50
+除滅	dy2 baeh7	50
+歌斐樵	gor1 hi1 cor2	50
+懸	ge2	50
 汝	dy2	50
-母	bou3	50
-新婦	sing1 mu5	50
-船	song2	50
 地道	de5 lor5	50
 類	lui5	50
 糧草	nieo2 cao3	50
 命令	ming5 ling5	50
 厝	cou4	50
 皟潔	ta5 ge5	50
+六百	lah7 ba5	50
 清潔	cing1 gaeh6	50
+看見	kua4 ging4	50
 拆	tia5	50
 石頭	sieo7 tao2	50
 抱	po5	50
-惜	sieo5	50
 亞伯拉罕	a4 baeh6 lah7 hang3	50
 耶穌	e2 sou1	50
 以撒	i3 sah6	50
@@ -451,7 +471,6 @@ sort: by_weight
 求	giu2	50
 免	meng3	50
 債	zua4	50
-實心	sih7 sing1	50
 慈悲	zo2 bi1	50
 蒙	morng2	50
 揀選	ge3 tuei3	50
@@ -466,9 +485,7 @@ sort: by_weight
 墨	bah7	50
 對面	dui4 ming4	50
 ta̍i-go̤̍	tai4 gor4	50
-教會	gao4 huei5	50
 學	oh7	50
-朋友	beng2 iu3	50
 蜀	sy5	50
 空虛	korng1 hy1	50
 烏瞀々	ou1 bu5 bu5	50
@@ -477,11 +494,7 @@ ta̍i-go̤̍	tai4 gor4	50
 暗々	ang4 ang4	50
 運行	ong5 heng2	50
 水面	zui3 ming4	50
-開	kui1	50
-上	syorng5	50
-下	ha5	50
 現	heng5	50
-焦	dor1	50
 結	gaeh6	50
 發光	huah6 gung1	50
 四時	so4 si2	50
@@ -506,7 +519,6 @@ ta̍i-go̤̍	tai4 gor4	50
 果子樹	guei7 zi3 ciu4	50
 青草	ca1 cao3	50
 第六	de5 lah7	50
-了	lieo3	50
 這	zi3	50
 降福	gang4 horh6	50
 聖日	sing4 dih7	50
@@ -631,7 +643,6 @@ ta̍i-go̤̍	tai4 gor4	50
 利劍	li5 gieng4	50
 把守	bor3 siu3	50
 墿	dou5	50
-房間	bang2 ge1	50
 丈夫囝	dah6 bou1 gyor3	50
 眏羊	ng4 ieo2	50
 做塍	zo4 ceng2	50
@@ -697,7 +708,6 @@ ta̍i-go̤̍	tai4 gor4	50
 立	lih7	50
 禱告	dor3 gor4	50
 後裔	hao5 e4	50
-約略	yorh6 lyorh7	50
 着	do2	50
 男	nang2	50
 女	dy3	50
@@ -727,7 +737,6 @@ ta̍i-go̤̍	tai4 gor4	50
 一十	ih6 saeh7	50
 原文	ngoeng2 mong2	50
 百	ba5	50
-三百	sor1 ba5	50
 八十七	baeh6 saeh7 cih6	50
 六十九	lah7 saeh7 gao3	50
 詈罵	le3 mor4	50
@@ -738,7 +747,6 @@ ta̍i-go̤̍	tai4 gor4	50
 取意	cy3 i4	50
 肉體	noeh7 te3	50
 居住	gy1 zy5	50
-裡勢	li5 li4	50
 廝爭	so1 za1	50
 命	mia5	50
 當時	dorng1 si2	50
@@ -758,51 +766,24 @@ ta̍i-go̤̍	tai4 gor4	50
 義人	gi5 zing2	50
 完整	oeng2 zing2	50
 通	torng1	50
-強暴	gyorng2 bor5	50
 歪邪	uei1 sia2	50
-上	gao4	50
-帝佮	nor2 a4	50
-挪亞	lah7 ba5	50
-講	leng2	50
-凡	soh7	50
-有	huei4	50
-血氣	zia1 guei7	50
-其都	coe1 ih6	50
-慾	de5	50
-受	lae5	50
-我	ae5	50
-除	zui3	50
-滅	do1	50
-因	dor1	50
-伊	ky4	50
-強暴	nor2 a4	50
-滿	kui1	50
-做我	song2 gua4	50
-慾滅	kua4 ging4	50
-伊落	de5 ming4	50
-地	ae5	50
-上	zui3	50
-汝仱	di1 guei7	50
-着用歌	di5 saeh7 cih6	50
-斐	dih7	50
-樵	de5	50
-歌	do1	50
-斐	dor1	50
-樵	ky4	50
-汝做	syorng5 de4	50
-這	gah6	50
-船樣	nor2 a4	50
-式	gorng3	50
-船	dy3	50
-頂	gah6	50
-做	dy3	50
-啊	bou3	50
-窗	gyor3	50
-懸蜀	sing1 mu5	50
-手	coh6	50
-䟓	ze4	50
-船邊	dua5 song2	50
-除滅	dy2 baeh7	50
+香柏樵	soeng2 ba5 cor2	50
+浮樵	pu2 cor2	50
+做	zorh7	50
+bā-au	ba5 ao1	50
+涂	dou2	50
+裡外	li5 gua5	50
+樣式	ieo5 sih6	50
+長	dung2	50
+尺半	cieo5 bua4	50
+闊	kua5	50
+五十	ngou5 saeh7	50
+船頂	song2 deng3	50
+窗	toeng1	50
+船邊	song2 bing1	50
+門	muei2	50
+中	doeng2	50
+層	zeng1	50
 在	do2	50
 滅亡	baeh7 morng2	50
 立約	lih7 yorh6	50
@@ -832,13 +813,19 @@ ta̍i-go̤̍	tai4 gor4	50
 大雨	dua5 hou5	50
 造	zo4	50
 喏個	zyor3 ge2	50
-六百	lah7 ba5	50
 囉	lo5	50
 飛	buei3	50
 蟲蟻	tang1 hyor5	50
 廝配	so1 puei4	50
 綴	duei4	50
 直	dih7	50
+正月	zia1 guei7	50
+初一	coe1 ih6	50
+船蓋	song2 gua4	50
+地面	de5 ming4	50
+二月	di1 guei7	50
+二十七	di5 saeh7 cih6	50
+船	dua5 song2	50
 一切	ih6 caeh6	50
 定著	dia5 dieo7	50
 萬	mang5	50
@@ -962,14 +949,7 @@ ma̤̍h	meh7	50
 滿心	mua3 sing1	50
 姊妹	zi3 muei4	50
 長老	dyorng2 lor3	50
-友迦	gia1 iu2	50
-猶	zuh6	50
-即	si5	50
-是	gua3	50
-我實	sih7 sing1	50
-心	soe3	50
-所	sieo5	50
-惜	ae5	50
+迦猶	gia1 iu2	50
 至愛	zi4 ai4	50
 健壯	goeng5 zorng4	50
 誠	ae5	50
@@ -1001,13 +981,8 @@ buang-cíng	buang1 zing2	50
 前日	se2 dih7	50
 書	zy3	50
 丟特腓	diu1 daeh6 hi1	50
-頭儂	gao4 huei5	50
-伊	ae5	50
-毋接	tao2 nang2	50
-待	i1	50
-我	ng5	50
-各儂	zia6 dai5	50
-gi̍-gi̍-lē	gi4 gi4 lae5	50
+頭儂	tao2 nang2	50
+記記咧	gi4 gi4 lae5	50
 事體	so5 le3	50
 獃話	gai2 ua5	50
 批論	pe1 long5	50
@@ -1021,7 +996,6 @@ gi̍-gi̍-lē	gi4 gi4 lae5	50
 復有	horh6 u5	50
 筆	bih6	50
 緊々	ging3 ging3	50
-看見	kua4 ging4	50
 講論	gorng3 long5	50
 眾	zoeng4	50
 請	cia3	50
