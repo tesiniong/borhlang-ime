@@ -93,9 +93,19 @@ deploy_to_rime.bat
 This batch script automatically:
 - Copies all Báⁿ-uā-ci̍ schema files (`.schema.yaml`) to `%APPDATA%\Rime`
 - Copies all dictionary files (`.dict.yaml`) to `%APPDATA%\Rime`
-- Copies Lua filter scripts to `%APPDATA%\Rime\lua\`
+- Copies Lua filter scripts to `%APPDATA%\Rime\lua\`:
+  - `bannuaci_filter.lua` - Sentence composition filter with case handling
+  - `comment_formatter.lua` - Reverse lookup romanization converter
+  - `reverse_lookup_helper.lua` - Hanzi-to-romanization lookup table
 - Copies `rime.lua` entry file to `%APPDATA%\Rime`
 - Provides step-by-step instructions for Rime redeployment
+
+**Linux/macOS:**
+```bash
+./deploy_to_rime.sh
+```
+
+Auto-detects Rime installation (fcitx5-rime, ibus-rime, or fcitx-rime) and deploys all files.
 
 ### Testing Individual Conversions
 
@@ -167,7 +177,10 @@ deploy_to_rime.bat
 This script automatically:
 1. Copies all `.schema.yaml` files to `%APPDATA%\Rime`
 2. Copies all `.dict.yaml` files to `%APPDATA%\Rime`
-3. Copies `lua/bannuaci_filter.lua` to `%APPDATA%\Rime\lua\`
+3. Copies three Lua filters to `%APPDATA%\Rime\lua\`:
+   - `bannuaci_filter.lua` (sentence composition + case handling)
+   - `comment_formatter.lua` (reverse lookup converter)
+   - `reverse_lookup_helper.lua` (dictionary lookup helper)
 4. Copies `rime.lua` to `%APPDATA%\Rime`
 
 **Step 3: Redeploy Rime**
@@ -287,12 +300,19 @@ Output: Á̤-So
 ```
 
 **Technical Implementation:**
-1. **Schema layer** (`speller/algebra`): `xlit` rule maps uppercase to lowercase for dictionary lookup
+1. **Schema layer** (`speller/algebra`):
+   - `derive/^([a-z])/\U$1/` - Creates title case variants (e.g., `beoigi` → `Beoigi`)
+   - **Critical:** Uses `derive` to preserve original input case in `context.input`
+   - Allows Lua filter to detect user's capitalization pattern
+
 2. **Lua layer** (`bannuaci_filter.lua`):
-   - Reads original user input from `context.input` (preserves case)
-   - Analyzes case pattern (lowercase/title/all_caps)
-   - Applies pattern to output romanization
-   - UTF-8 safe: correctly handles diacritics (e.g., `í̍ng` → `Í̍ng`)
+   - Reads original input from `context.input`
+   - Analyzes case pattern: lowercase / title / all_caps
+   - **UTF-8 character handling** (critical for correct capitalization):
+     - Supports **precomposed characters**: â, ê, ā, á, ṳ, etc. (with mapping table)
+     - Supports **combining diacritics**: a̤ (a + U+0324), e̤, o̤, etc.
+     - Example fix: Input `Ac` now correctly outputs `Â-câ̤` (not `â-Câ̤`)
+   - Applies pattern to all output candidates consistently
 
 **Note:** This feature only works in pure romanization mode. The Hanzi output mode does not need case handling.
 
@@ -410,11 +430,14 @@ version: "0.1.0"
 Two directories contain complete Rime schemes:
 
 **bannuaci/** (興化平話字):
-- `borhlang_bannuaci.schema.yaml` - Pure romanization output (uses Lua filter)
-- `borhlang_bannuaci_han.schema.yaml` - Hanzi with romanization annotations (no Lua filter)
+- `borhlang_bannuaci.schema.yaml` - Pure romanization output (uses Lua filters)
+- `borhlang_bannuaci_han.schema.yaml` - Hanzi with romanization annotations
 - `borhlang_bannuaci.dict.yaml` - Dictionary (auto-generated with special format)
 - `lua/bannuaci_filter.lua` - Lua filter for intelligent sentence composition
-- `rime.lua` - Lua entry file that registers the filter
+- `lua/comment_formatter.lua` - Converts input-form romanization to true Báⁿ-uā-ci̍ (for reverse lookup)
+- `lua/comment_formatter_debug.lua` - Debug version with logging
+- `lua/reverse_lookup_helper.lua` - Hanzi-to-romanization mapping table builder
+- `rime.lua` - Lua entry file that registers all filters
 
 **pouseng_pinging/** (莆仙話拼音):
 - `borhlang_pouleng.schema.yaml` - Schema configuration
@@ -447,11 +470,214 @@ po@po1@鋪|seng@seng1@生|u@u2@有|
 - **Sentence composition**: Enables natural romanization text output while preserving character information
 
 **File Structure:**
-- `bannuaci/rime.lua` - Entry point that loads the filter
-- `bannuaci/lua/bannuaci_filter.lua` - Main filter implementation
-- Both files must be deployed to Rime user directory for the filter to work
+- `bannuaci/rime.lua` - Entry point that loads all filters
+- `bannuaci/lua/bannuaci_filter.lua` - Main filter for sentence composition
+- `bannuaci/lua/comment_formatter.lua` - Romanization converter for reverse lookup
+- `bannuaci/lua/reverse_lookup_helper.lua` - Dictionary lookup helper
+- All files must be deployed to Rime user directory for the filters to work
 
-**Note**: The Hanzi output mode (`borhlang_bannuaci_han.schema.yaml`) does NOT use this Lua filter.
+**Note**: The Hanzi output mode (`borhlang_bannuaci_han.schema.yaml`) uses `comment_formatter.lua` for reverse lookup but NOT `bannuaci_filter.lua`.
+
+### Reverse Lookup (反查功能)
+
+Both input methods support **Mandarin Pinyin reverse lookup** to find characters by their Mandarin pronunciation and display their Puxian romanization.
+
+#### Usage
+
+- Prefix input with `` ` `` (backtick) to enter reverse lookup mode
+- Type Mandarin pinyin (e.g., `` `wo` `` for "我")
+- Results show characters with Puxian romanization annotations
+
+#### Implementation Architecture
+
+The reverse lookup feature uses a combination of Rime's built-in `reverse_lookup_translator` and custom Lua filters:
+
+**File Structure:**
+```
+bannuaci/
+├── lua/
+│   ├── bannuaci_filter.lua          # Main filter for pure romanization mode
+│   ├── comment_formatter.lua        # Converts input-form to true Báⁿ-uā-ci̍
+│   ├── comment_formatter_debug.lua  # Debug version with logging
+│   └── reverse_lookup_helper.lua    # Hanzi-to-romanization lookup table
+└── rime.lua                          # Registers all Lua filters
+```
+
+**Schema Configuration:**
+
+Both schemas depend on `luna_pinyin` for Mandarin input:
+
+```yaml
+dependencies:
+  - luna_pinyin
+  - borhlang_bannuaci_han  # Pure romanization mode also needs this
+
+reverse_lookup:
+  dictionary: luna_pinyin
+  prefix: "`"
+  suffix: "'"
+  tips: 〔漢語拼音反查〕
+```
+
+**Pure romanization mode** (`borhlang_bannuaci.schema.yaml`) additionally uses:
+```yaml
+translators:
+  - script_translator@reverse_lookup_han  # Use Hanzi dict for reverse lookup
+
+reverse_lookup_han:
+  tag: reverse_lookup_han
+  dictionary: borhlang_bannuaci_han
+  enable_completion: true
+  prefix: "`"
+  suffix: "'"
+```
+
+#### How It Works
+
+**Hanzi Mode** (`borhlang_bannuaci_han`):
+1. User inputs `` `wo` ``
+2. `reverse_lookup_translator` returns Hanzi candidates from `luna_pinyin`
+3. Main dictionary (`borhlang_bannuaci_han.dict.yaml`) provides romanization as `comment`
+4. `comment_formatter.lua` converts input-form (e.g., `gua3 ngoo3`) to true Báⁿ-uā-ci̍ (e.g., `guâ ngô̤`)
+5. Display: **我** `guâ ngô̤`
+
+**Pure Romanization Mode** (`borhlang_bannuaci`):
+1. User inputs `` `wo` ``
+2. `reverse_lookup_translator` returns Hanzi from `luna_pinyin` (no romanization in comment)
+3. `reverse_lookup_helper.lua` loads `borhlang_bannuaci_han.dict.yaml` into memory at startup
+4. Filter looks up Hanzi (e.g., "我") in the mapping table
+5. Retrieves input-form romanization (e.g., `gua3 ngoo3`)
+6. `comment_formatter.lua` converts to true Báⁿ-uā-ci̍
+7. Swaps display and comment: **guâ ngô̤** `(我)`
+
+#### Romanization Conversion Process
+
+The `comment_formatter.lua` filter converts input-form romanization to true Báⁿ-uā-ci̍:
+
+**Algorithm:**
+1. **Parse syllable**: Split tone number from base (e.g., `gua3` → `gua` + `3`)
+2. **Separate initial and final**: Using `INITIALS` table (e.g., `gua` → `` + `gua`)
+3. **Apply replacements**:
+   - `aa` → `a̤` (U+0061 U+0324)
+   - `oo` → `o̤` (U+006F U+0324)
+   - `ee` → `e̤` (U+0065 U+0324)
+   - `y` → `ṳ` (U+1E73)
+   - `nn` → `ⁿ` (U+207F)
+4. **Determine tone mark**: Based on tone number and syllable ending
+   - Tone 2: `́` (U+0301 acute)
+   - Tone 3: `̂` (U+0302 circumflex)
+   - Tone 4/7: `̍` (U+030D vertical line above)
+   - Tone 5/6: `̄` (U+0304 macron)
+5. **Insert tone mark**: At position specified by `TONE_POSITIONS` table
+   - Uses `tone_positions.py` data (e.g., `gua` → position 2)
+   - Handles UTF-8 combining characters correctly
+6. **NFC normalization**: Implicit via UTF-8 string operations
+
+**Tone Position Reference:**
+```lua
+TONE_POSITIONS = {
+    -- Single vowels
+    a = 1, aa = 1, e = 1, ee = 1, oo = 1, i = 1, o = 1, u = 1, y = 1,
+    -- Diphthongs
+    ai = 1, au = 1, aau = 2, eo = 2, ia = 2, iu = 2, ua = 2, ui = 1,
+    -- Nasal finals
+    ang = 1, eng = 1, ing = 1, iang = 2, uang = 2, ng = 1,
+    -- Checked tones
+    ah = 1, aah = 1, aauh = 3, eoh = 2, iah = 2, uah = 2,
+    -- See full table in bannuaci/lua/comment_formatter.lua
+}
+```
+
+**Examples:**
+```
+Input:  gua3          →  guâ        (tone 3 on position 2 of 'ua')
+Input:  ngoo3         →  ngô̤       (tone 3 on position 1 of 'oo', then oo→o̤)
+Input:  baau3         →  bâ̤u       (aa→a̤, then tone 3 on position 2)
+Input:  cy3           →  cŷ        (y→ṳ, then tone 3 on position 1)
+```
+
+#### Reverse Lookup Helper Module
+
+**Purpose**: Creates an in-memory Hanzi → Romanization mapping table
+
+**Implementation** (`bannuaci/lua/reverse_lookup_helper.lua`):
+```lua
+-- Load dictionary at initialization
+function M.init()
+    local file = io.open("path/to/borhlang_bannuaci_han.dict.yaml", "r")
+    -- Parse YAML format: 漢字\t拼音\t權重
+    -- Build table: M.hanzi_to_readings["我"] = {"gua3", "ngoo3"}
+end
+
+-- Query function
+function M.lookup(hanzi)
+    return M.hanzi_to_readings[hanzi]  -- Returns array of readings
+end
+```
+
+**Why needed?**
+- `luna_pinyin` returns only Hanzi, no Puxian romanization
+- Pure romanization dict uses special format (`guâ@gua3@我|`), incompatible with reverse lookup
+- Solution: Load Hanzi dict into Lua table for fast lookup
+
+**Performance:**
+- Dictionary loaded once at startup (~24k entries)
+- Lookup is O(1) hash table access
+- Memory footprint: ~2-3MB
+
+#### Debugging
+
+**Enable debug logging** by using `comment_formatter_debug.lua`:
+
+1. Temporarily modify schema to use debug filter:
+   ```yaml
+   filters:
+     - lua_filter@comment_formatter_debug  # Instead of comment_formatter
+   ```
+
+2. Log file location:
+   ```
+   Windows: C:\Users\USERNAME\AppData\Roaming\Rime\comment_formatter_debug.log
+   Linux:   ~/.local/share/fcitx5/rime/comment_formatter_debug.log (or ibus path)
+   ```
+
+3. Log entries include:
+   - Schema ID and input mode detection
+   - Reverse lookup mode detection
+   - Each candidate's text and comment
+   - Dictionary lookup results
+   - Conversion steps and output
+
+**Example log output:**
+```
+2025-12-18 03:33:17 === Filter Called ===
+2025-12-18 03:33:17 Schema ID: borhlang_bannuaci
+2025-12-18 03:33:17 User Input: `wo
+2025-12-18 03:33:17 Is Reverse Lookup: true
+2025-12-18 03:33:17 Dict Loaded: true
+2025-12-18 03:33:17 Candidate #1:
+2025-12-18 03:33:17   Text: 我
+2025-12-18 03:33:17   Comment:
+2025-12-18 03:33:17   -> Looked up from dict: gua3 ngoo3
+2025-12-18 03:33:17   -> Converted: guâ ngô̤
+```
+
+**Common Issues:**
+
+1. **No romanization shown in reverse lookup:**
+   - Check if `reverse_lookup_helper.lua` loaded successfully
+   - Verify `borhlang_bannuaci_han.dict.yaml` exists in Rime directory
+   - Check log: "Dict Loaded: true" should appear
+
+2. **Wrong romanization format:**
+   - Ensure `TONE_POSITIONS` table is complete
+   - Verify conversion from input-form to display form
+   - Check for UTF-8 encoding issues
+
+3. **Pure romanization mode not working:**
+   - Ensure `dependencies` includes `borhlang_bannuaci_han`
+   - Verify `reverse_lookup_han` translator is configured
+   - Check that `comment_formatter` appears before `bannuaci_filter` in filters list
 
 ## Conversion Algorithm Details
 
@@ -778,112 +1004,29 @@ This matches the project's target audience and linguistic heritage.
 
 ### Dictionary Build Issues
 
-**Problem: Deleted words still appear in dictionaries**
-
-**Cause:** Before 2024-12 fixes, `build_all_dicts.py` had a circular dependency:
-```python
-# OLD (WRONG) - reads from same file it writes to
-sources['base'] = "pouseng_pinging/borhlang_pouleng.dict.yaml"
-output_file = "pouseng_pinging/borhlang_pouleng.dict.yaml"
-# Result: Only adds new words, never deletes old ones
-```
-
-**Solution:** Fixed in current version:
-```python
-# NEW (CORRECT) - reads from external source
-sources['base'] = "hinghwa-ime/Pouleng/Pouleng.dict.yaml"
-output_file = "pouseng_pinging/borhlang_pouleng.dict.yaml"  # completely regenerated
-```
-
-**How to verify:** Check file header for warning:
+**Important:** `pouseng_pinging/borhlang_pouleng.dict.yaml` is **auto-generated**. Always use `build_all_dicts.py` to rebuild from sources. Check file header for warning:
 ```yaml
 # ⚠️  本詞庫為自動生成，請勿手動編輯！
-#     使用 tools/build_all_dicts.py 重新生成
 ```
 
-### Romanization Conversion Errors
+### Romanization System Confusion
 
-**Problem: Words converting incorrectly (e.g., 情愛 → `chíng` instead of `cíng`)**
+**Critical:** The project uses **three distinct romanization systems** - do not confuse them:
+- **PSP** (莆仙話拼音): `zing2` where z = [ts] - used in dictionaries
+- **Input** (輸入式): `cing2` where c = [ts] - pure ASCII for typing
+- **BUC** (興化平話字): `cíng` where c = [ts] - final output with diacritics
 
-**Cause:** Confusion between three romanization systems:
-- PSP `zing2` (z = [ts])
-- Input `cing2` (c = [ts])
-- BUC `cíng` (c = [ts])
+**Conversion chain:** BUC → Input → PSP → (dictionary) → PSP → BUC (output)
 
-**Common mistake:**
-```python
-# WRONG: Treating Input-form as PSP
-buc_to_input("cíng")  # → "cing2" (Input-form)
-# Then treating "cing2" as PSP...
-psp_to_buc("cing2")   # → "chíng" ❌ (PSP c = [tsʰ])
-```
+When processing Bible data: use `input_to_psp()` after `buc_to_input()`, never treat Input-form as PSP directly.
 
-**Correct flow:**
-```python
-# RIGHT: Convert through all three systems
-buc_to_input("cíng")   # → "cing2" (Input)
-input_to_psp("cing2")  # → "zing2" (PSP, z = [ts])
-psp_to_buc("zing2")    # → "cíng" ✓
-```
+### Missing Finals Error
 
-**Where to check:** `extract_vocab_from_bible.py` line 88-92 should have:
-```python
-syl_input = RomanizationConverter.buc_to_input(syl_buc)
-syl_psp = RomanizationConverter.input_to_psp(syl_input)  # ← Must convert to PSP
-```
+If you see "未知的輸入式韻母" errors in `data/bible_conversion_errors.log`, add the missing final to `romanization_converter.py` FINALS_INPUT_TO_PSP dictionary. Check `data/psp_to_buc.py` for reference mappings.
 
-### Missing Finals/Rhymes in romanization_converter.py
+### Unicode Encoding Issues
 
-**Problem: ValueError during Bible extraction: "未知的輸入式韻母：xxx"**
-
-**Cause:** `romanization_converter.py` missing finals in `FINALS_INPUT_TO_PSP` dict.
-
-**Solution:** Add missing final to the dictionary. Check `data/psp_to_buc.py` for reference:
-```python
-# In romanization_converter.py, FINALS_INPUT_TO_PSP:
-"aau": "ieo",      # a̤u -> ieo
-"oih": "uei",      # oih -> uei
-"iah": "ia",       # iah -> ia
-"yng": "yng",      # ṳng -> yng
-"ainn": "ai",      # aiⁿ -> ai
-```
-
-**How to diagnose:** Check `data/bible_conversion_errors.log` after running extract script:
-```
-1. 其朋 | ēbéng-iû | 音節轉換失敗 'ēbéng' -> 'ebeng5': 未知的輸入式韻母：ebeng
-```
-
-### Data Source Confusion
-
-**Where each romanization system is used:**
-
-| File | Format | Why |
-|------|--------|-----|
-| `bible_data.json` | BUC | Historical source text |
-| `puxian_phrases_from_wikt.txt` | BUC + PSP | Wiktionary data |
-| `vocab_from_bible.yaml` | **PSP** | ⚠️  Converted for dictionary merging |
-| `vocab_from_wikt.yaml` | **PSP** | Dictionary merge format |
-| `Pouleng.dict.yaml` | **PSP** | Dictionary merge format |
-| `borhlang_pouleng.dict.yaml` | **PSP** | Merged dictionary (auto-generated) |
-| `borhlang_bannuaci_han.dict.yaml` | Input + BUC | For user input and display |
-| `borhlang_bannuaci.dict.yaml` | Input + BUC | Lua filter format |
-
-**Key insight:** All dictionaries **merge in PSP format**, then convert to BUC for output.
-
-### Unicode and Encoding Issues
-
-**Problem:** UnicodeEncodeError when printing romanization
-
-**Cause:** Windows console uses cp950/cp936 encoding, cannot display combining diacritics.
-
-**Solution:** Use `repr()` for debugging or write to UTF-8 file:
-```python
-# Bad: print(f"Error: {buc_romanization}")  # UnicodeEncodeError on Windows
-# Good: print(f"Error: {repr(buc_romanization)}")
-# Or write to log file:
-with open('errors.log', 'w', encoding='utf-8') as f:
-    f.write(f"Error: {buc_romanization}\n")
-```
+Windows console cannot display combining diacritics. Use `repr()` for debugging or write to UTF-8 file instead of printing directly.
 
 ## Future Extensions
 

@@ -1,6 +1,8 @@
 -- bannuaci_filter.lua (Sentence Composition Support with Case Handling)
 
--- 分析輸入的大小寫模式
+-- 不再需要 case_handler - derive 規則保留了 context.input 的原始大小寫
+
+-- 分析輸入的大小寫模式（簡化版本，確保一致性）
 local function analyze_case_pattern(input_text)
     if not input_text or input_text == "" then
         return "lower"
@@ -13,16 +15,14 @@ local function analyze_case_pattern(input_text)
         return "lower"
     end
 
-    -- 檢查是否全大寫
-    if letters_only == letters_only:upper() then
+    -- 檢查是否全大寫（至少2個字母都是大寫）
+    if #letters_only >= 2 and letters_only == letters_only:upper() then
         return "all_caps"  -- 每個音節首字母大寫
     end
 
-    -- 檢查是否首字母大寫
+    -- 檢查首字母是否大寫
     local first_letter = letters_only:sub(1, 1)
-    local rest = letters_only:sub(2)
-
-    if first_letter == first_letter:upper() and rest == rest:lower() then
+    if first_letter == first_letter:upper() then
         return "title"  -- 整個詞首字母大寫
     end
 
@@ -31,23 +31,92 @@ local function analyze_case_pattern(input_text)
 end
 
 -- UTF-8 安全的首字母大寫函數
+-- 支援預組合字符（如 â, ê）和組合變音符號（如 a̤, e̤）
 local function capitalize_first_letter(text)
     if not text or text == "" then
         return text
     end
 
-    -- 查找第一個 ASCII 字母
-    local pos = text:find("[a-z]")
-    if not pos then
-        return text  -- 沒有小寫字母，直接返回
+    -- 預組合拉丁字母的小寫到大寫映射（平話字中實際使用的字符）
+    local precomposed_map = {
+        -- 帶 circumflex (ˆ) 的字母
+        ["â"] = "Â",  -- U+00E2 → U+00C2
+        ["ê"] = "Ê",  -- U+00EA → U+00CA
+        ["î"] = "Î",  -- U+00EE → U+00CE
+        ["ô"] = "Ô",  -- U+00F4 → U+00D4
+        ["û"] = "Û",  -- U+00FB → U+00DB
+
+        -- 帶 macron (¯) 的字母
+        ["ā"] = "Ā",  -- U+0101 → U+0100
+        ["ē"] = "Ē",  -- U+0113 → U+0112
+        ["ī"] = "Ī",  -- U+012B → U+012A
+        ["ō"] = "Ō",  -- U+014D → U+014C
+        ["ū"] = "Ū",  -- U+016B → U+016A
+
+        -- 帶 acute (´) 的字母
+        ["á"] = "Á",  -- U+00E1 → U+00C1
+        ["é"] = "É",  -- U+00E9 → U+00C9
+        ["í"] = "Í",  -- U+00ED → U+00CD
+        ["ó"] = "Ó",  -- U+00F3 → U+00D3
+        ["ú"] = "Ú",  -- U+00FA → U+00DA
+
+        -- 特殊字符
+        ["ṳ"] = "Ṳ",  -- U+1E73 → U+1E72
+    }
+
+    -- 方法：逐字節遍歷，識別 UTF-8 字符邊界
+    local i = 1
+    while i <= #text do
+        local byte = text:byte(i)
+        local char_len = 1
+
+        -- 判斷 UTF-8 字符長度
+        if byte >= 0xF0 then
+            char_len = 4
+        elseif byte >= 0xE0 then
+            char_len = 3
+        elseif byte >= 0xC0 then
+            char_len = 2
+        end
+
+        -- 提取當前字符
+        local char = text:sub(i, i + char_len - 1)
+
+        -- 檢查是否為 ASCII 小寫字母
+        if char:match("^[a-z]$") then
+            local before = text:sub(1, i - 1)
+            local upper = char:upper()
+            local after = text:sub(i + 1)
+            return before .. upper .. after
+        end
+
+        -- 檢查是否為預組合小寫字符
+        if precomposed_map[char] then
+            local before = text:sub(1, i - 1)
+            local upper = precomposed_map[char]
+            local after = text:sub(i + char_len)
+            return before .. upper .. after
+        end
+
+        -- 檢查是否為帶組合變音符號的字母（如 a + U+0324 = a̤）
+        -- 組合變音符號範圍：U+0300-U+036F (字節序列: 0xCC-0xCD)
+        if char:match("^[a-z]$") and i + char_len <= #text then
+            local next_byte = text:byte(i + char_len)
+            -- 檢查下一個字節是否為組合變音符號的起始字節
+            if next_byte and (next_byte == 0xCC or next_byte == 0xCD) then
+                -- 只大寫基字母，保留組合變音符號
+                local before = text:sub(1, i - 1)
+                local upper = char:upper()
+                local after = text:sub(i + 1)
+                return before .. upper .. after
+            end
+        end
+
+        i = i + char_len
     end
 
-    -- 將找到的字母大寫
-    local before = text:sub(1, pos - 1)
-    local letter = text:sub(pos, pos):upper()
-    local after = text:sub(pos + 1)
-
-    return before .. letter .. after
+    -- 沒有找到任何字母，返回原文本
+    return text
 end
 
 -- 應用大小寫模式到輸出文本
@@ -77,6 +146,7 @@ end
 
 local function filter(input, env)
     -- 獲取用戶的原始輸入（保留大小寫）
+    -- derive 規則保留了 context.input 的原始大小寫
     local context = env.engine.context
     local original_input = context.input or ""
 

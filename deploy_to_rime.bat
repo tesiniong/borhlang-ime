@@ -82,6 +82,20 @@ if %errorlevel% equ 0 (
     echo   [✗] lua\bannuaci_filter.lua - 複製失敗
 )
 
+copy /Y "%SOURCE_DIR%\lua\comment_formatter.lua" "%RIME_DIR%\lua\" >nul
+if %errorlevel% equ 0 (
+    echo   [✓] lua\comment_formatter.lua
+) else (
+    echo   [✗] lua\comment_formatter.lua - 複製失敗
+)
+
+copy /Y "%SOURCE_DIR%\lua\reverse_lookup_helper.lua" "%RIME_DIR%\lua\" >nul
+if %errorlevel% equ 0 (
+    echo   [✓] lua\reverse_lookup_helper.lua
+) else (
+    echo   [✗] lua\reverse_lookup_helper.lua - 複製失敗
+)
+
 copy /Y "%SOURCE_DIR%\rime.lua" "%RIME_DIR%\" >nul
 if %errorlevel% equ 0 (
     echo   [✓] rime.lua

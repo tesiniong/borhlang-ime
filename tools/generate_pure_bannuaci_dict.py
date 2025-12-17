@@ -26,7 +26,7 @@ class RomanizationConverter:
     TONE_POSITIONS = {
         # 單字母
         "a": 1, "aa": 1, "e": 1, "ee": 1, "oo": 1, 
-        "i": 1, "o": 1, "u": 1, "y": 1, "m": 1, # 補上 m
+        "i": 1, "o": 1, "u": 1, "y": 1,
         
         # 多字母
         "ai": 1, "au": 1, "aau": 2, "eo": 2, 

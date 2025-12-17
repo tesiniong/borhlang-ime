@@ -1,5 +1,5 @@
 # Rime schema
-# encoding: UTF-8 w/o BOM
+# encoding: UTF-7 w/o BOM
 
 schema:
   schema_id: borhlang_bannuaci
@@ -15,6 +15,7 @@ schema:
     輸出純平話字文本，漢字作為輔助顯示
   dependencies:
     - luna_pinyin
+    - borhlang_bannuaci_han
 
 switches:
   - name: ascii_mode
@@ -49,20 +50,17 @@ engine:
     - punct_translator
     - script_translator
     - reverse_lookup_translator
+    - script_translator@reverse_lookup_han
   filters:
     - simplifier
-    - lua_filter@bannuaci_filter  # Lua 過濾器：轉換為平話字
+    - lua_filter@comment_formatter
+    - lua_filter@bannuaci_filter
     - uniquifier
 
 speller:
   alphabet: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA
   delimiter: " '"
   algebra:
-  # --- 大小寫支援 (Case Support) ---
-    # 將大寫字母轉為小寫進行匹配，使輸入 Sing 可以匹配詞庫中的 sing
-    # Lua 過濾器會從 context.input 讀取原始大小寫並調整輸出
-    - xlit/ABCDEFGHIJKLMNOPQRSTUVWXYZ/abcdefghijklmnopqrstuvwxyz/
-
   # --- 聲調按鍵映射 (Tone Key Mapping) ---
     # 必須放在最前面，優先處理
     - derive/2$/q/
@@ -72,10 +70,10 @@ speller:
     - derive/7$/j/
 
     # 步驟1：支援無聲調輸入（移除聲調數字）
-    - derive/[1-8]$//
+    - derive/[1-7]$//
 
     # 步驟2：簡拼支援（首字母縮寫，保留聲調）
-    - abbrev/^([bpmgkhdtnlcsz]|ng|ch).+([1-8])$/$1$2/
+    - abbrev/^([bpmgkhdtnlcsz]|ng|ch).+([1-7])$/$1$2/
     # 簡拼無聲調版本
     - abbrev/^([bpmgkhdtnlcsz]|ng|ch).+$/$1/
 
@@ -90,8 +88,9 @@ speller:
     - derive/uang/uan/
 
     # 入聲韻尾模糊
-    - derive/^(.+)h([1-8])$/$1$2/
-    - derive/^(.+)h([1-8])$/$1k$2/
+    - derive/^(.+)h([1-7])$/$1$2/
+    - derive/^(.+)h([1-7])$/$1k$2/
+    - derive/^([a-z])/\U$1/
 
 translator:
   dictionary: borhlang_bannuaci
@@ -121,6 +120,15 @@ reverse_lookup:
     - xform/([nl])v/$1ü/
     - xform/([nl])ue/$1üe/
     - xform/([jqxy])v/$1u/
+  extra_tags:
+    - reverse_lookup_han
+
+reverse_lookup_han:
+  tag: reverse_lookup_han
+  dictionary: borhlang_bannuaci_han
+  enable_completion: true
+  prefix: "`"
+  suffix: "'"
 
 punctuator:
   import_preset: default
