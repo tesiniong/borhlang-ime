@@ -261,7 +261,9 @@ Check `bannuaci/conversion_log_v3.txt` for any conversion warnings.
 
 ### Case Handling (Pure Romanization Mode)
 
-The pure romanization mode (`borhlang_bannuaci.schema.yaml`) supports intelligent case handling for proper nouns and sentence-initial words:
+The pure romanization mode (`borhlang_bannuaci.schema.yaml`) supports intelligent case handling for proper nouns and sentence-initial words.
+
+**✅ Current Status**: Fully functional with proper UTF-8 character handling.
 
 **How it works:**
 - Dictionary entries are all lowercase (e.g., `sing-gā̤ⁿ`, `siō̤ng-da̤̍`)
@@ -273,8 +275,7 @@ The pure romanization mode (`borhlang_bannuaci.schema.yaml`) supports intelligen
 | Input Pattern | Example Input | Output Pattern | Example Output | Use Case |
 |--------------|---------------|----------------|----------------|----------|
 | **Lowercase** | `inggio` | Lowercase | `i̍ng-giô̤ⁿ` | Normal text |
-| **Title Case** | `Inggio` | First letter capitalized | `I̍ng-giô̤ⁿ` | Sentence-initial word, proper noun (single syllable) |
-| **All Caps** | `SIONGDAA` | Each syllable capitalized | `Siō̤ng-Da̤̍` | Sacred names (God, Jesus), multi-syllable proper nouns |
+| **Title Case** | `Inggio` | First letter capitalized | `I̍ng-giô̤ⁿ` | Sentence-initial word, proper nouns |
 
 **Examples:**
 
@@ -288,15 +289,6 @@ Output: I̍ng-giô̤ⁿ uai pó-seng ū-hāi
 Input:  Singgann
 Output: Sing-gā̤ⁿ
 漢字:  新縣
-
-# Sacred name - all syllables capitalized (聖名-每個音節大寫)
-Input:  SIONGDAA
-Output: Siō̤ng-Da̤̍
-漢字:  上帝
-
-Input:  AASO
-Output: Á̤-So
-漢字:  耶穌
 ```
 
 **Technical Implementation:**
@@ -482,11 +474,17 @@ po@po1@鋪|seng@seng1@生|u@u2@有|
 
 Both input methods support **Mandarin Pinyin reverse lookup** to find characters by their Mandarin pronunciation and display their Puxian romanization.
 
+**✅ Current Status**: Fully functional in both pure romanization mode and Hanzi mode after recent fixes.
+
 #### Usage
 
 - Prefix input with `` ` `` (backtick) to enter reverse lookup mode
 - Type Mandarin pinyin (e.g., `` `wo` `` for "我")
 - Results show characters with Puxian romanization annotations
+
+**Output Format**:
+- **Hanzi mode**: 我 guâ ngô̤ (Hanzi as main text, romanization as comment)
+- **Pure romanization mode**: guâ ngô̤ (我) (romanization as main text, Hanzi as comment)
 
 #### Implementation Architecture
 

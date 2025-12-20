@@ -49,6 +49,7 @@ engine:
     - reverse_lookup_translator
   filters:
     - simplifier
+    - lua_filter@comment_formatter
     - uniquifier
 
 speller:

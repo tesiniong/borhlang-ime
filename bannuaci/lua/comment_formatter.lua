@@ -203,21 +203,40 @@ local function filter(input, env)
         -- 反查模式
         if is_reverse_lookup then
             -- 純羅馬字版的反查
-            if is_pure_romanization and comment and comment:match('%d') then
-                -- 反查時使用漢字版詞典，返回的候選詞是漢字
-                -- text: 漢字（如"我"）
-                -- comment: 輸入式平話字（如"gua3 ngoo3"）
+            if is_pure_romanization then
+                -- 反查時可能有兩種情況：
+                -- 1. comment 有內容（來自 reverse_lookup_han）：輸入式平話字
+                -- 2. comment 為空（來自 luna_pinyin）：需要從 reverse_lookup_helper 查詢
 
-                -- 轉換 comment 為真平話字
-                local converted = convert_text(comment)
+                local input_form_romanization = nil
 
-                -- 創建新的候選詞：羅馬字作為主顯示，漢字作為註釋
-                local new_cand = cand:to_shadow_candidate(
-                    cand.type,
-                    converted,  -- 羅馬字作為主顯示
-                    "(" .. text .. ")"  -- 漢字作為註釋
-                )
-                yield(new_cand)
+                if comment and comment:match('%d') then
+                    -- 情況 1：comment 中已有輸入式平話字
+                    input_form_romanization = comment
+                else
+                    -- 情況 2：comment 為空，使用 reverse_lookup_helper 查詢
+                    local readings = reverse_lookup_helper.lookup(text)
+                    if readings and #readings > 0 then
+                        -- 使用第一個讀音（可以考慮顯示所有讀音）
+                        input_form_romanization = readings[1]
+                    end
+                end
+
+                if input_form_romanization then
+                    -- 轉換輸入式平話字為真平話字
+                    local converted = convert_text(input_form_romanization)
+
+                    -- 創建新的候選詞：羅馬字作為主顯示，漢字作為註釋
+                    local new_cand = cand:to_shadow_candidate(
+                        cand.type,
+                        converted,  -- 羅馬字作為主顯示
+                        "(" .. text .. ")"  -- 漢字作為註釋
+                    )
+                    yield(new_cand)
+                else
+                    -- 無法找到讀音，直接輸出原候選詞
+                    yield(cand)
+                end
 
             -- 漢字版的反查
             elseif not is_pure_romanization and comment and comment:match('%d') then
