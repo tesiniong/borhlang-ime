@@ -184,8 +184,16 @@ class DictMerger:
     def __init__(self):
         self.syllable_groups = defaultdict(list)
         self.multi_syllable_entries = []
+        self.rom_only_candidates = []  # 儲存只有羅馬字的候選詞
 
-    def parse_dict(self, dict_file: Path):
+    def parse_dict(self, dict_file: Path, is_rom_only: bool = False):
+        """
+        解析詞典文件
+
+        Args:
+            dict_file: 詞典文件路徑
+            is_rom_only: 是否為只有羅馬字的詞典（來自聖經但無漢字的詞）
+        """
         print(f"讀取詞庫：{dict_file}")
         with open(dict_file, 'r', encoding='utf-8') as f:
             lines = f.readlines()
@@ -206,11 +214,47 @@ class DictMerger:
             syllables_str = parts[1].strip()
             weight = parts[2].strip() if len(parts) > 2 else None
             syllables = syllables_str.split()
-            if len(syllables) == 1:
-                self.syllable_groups[syllables[0]].append((hanzi, weight))
+
+            # 如果是只有羅馬字的詞（帶 ▣ 佔位符），單獨處理
+            if is_rom_only and '▣' in hanzi:
+                if len(syllables) > 1:  # 只處理多音節詞
+                    self.rom_only_candidates.append((hanzi, syllables, weight))
             else:
+                # 正常處理有漢字的詞
+                if len(syllables) == 1:
+                    self.syllable_groups[syllables[0]].append((hanzi, weight))
+                else:
+                    self.multi_syllable_entries.append((hanzi, syllables, weight))
+
+        if is_rom_only:
+            print(f"解析完成：{len(self.rom_only_candidates)} 個只有羅馬字的候選詞")
+        else:
+            print(f"解析完成：{len(self.syllable_groups)} 個不同音節，{len(self.multi_syllable_entries)} 個多音節詞")
+
+    def add_rom_only_if_missing(self):
+        """
+        添加只有羅馬字的候選詞（如果該讀音尚未存在）
+        """
+        print(f"\n處理只有羅馬字的候選詞...")
+
+        # 建立現有多音節詞的讀音集合
+        existing_pronunciations = set()
+        for hanzi, syllables, weight in self.multi_syllable_entries:
+            key = tuple(syllables)
+            existing_pronunciations.add(key)
+
+        # 檢查候選詞
+        added_count = 0
+        for hanzi, syllables, weight in self.rom_only_candidates:
+            key = tuple(syllables)
+
+            # 如果這個讀音還不存在，則添加
+            if key not in existing_pronunciations:
                 self.multi_syllable_entries.append((hanzi, syllables, weight))
-        print(f"解析完成：{len(self.syllable_groups)} 個不同音節，{len(self.multi_syllable_entries)} 個多音節詞")
+                existing_pronunciations.add(key)
+                added_count += 1
+
+        print(f"從只有羅馬字的候選詞中添加了 {added_count} 個新讀音")
 
     def merge_same_pronunciation(self):
         merged_multi = defaultdict(list)
@@ -219,7 +263,9 @@ class DictMerger:
             merged_multi[key].append((hanzi, weight))
         self.merged_multi_entries = []
         for syllables_tuple, hanzi_list in merged_multi.items():
-            merged_hanzi = '/'.join([h for h, w in hanzi_list])
+            # 去除重複的漢字（保持順序）
+            unique_hanzi = list(dict.fromkeys([h for h, w in hanzi_list]))
+            merged_hanzi = '/'.join(unique_hanzi)
             weight = hanzi_list[0][1] if hanzi_list[0][1] else None
             self.merged_multi_entries.append((merged_hanzi, list(syllables_tuple), weight))
         print(f"合併後：{len(self.merged_multi_entries)} 個不同讀音的多音節詞")
@@ -255,7 +301,9 @@ class DictMerger:
 
         for syllable in sorted(self.syllable_groups.keys()):
             hanzi_list = self.syllable_groups[syllable]
-            merged_hanzi = '/'.join([h for h, w in hanzi_list])
+            # 去除重複的漢字（保持順序）
+            unique_hanzi = list(dict.fromkeys([h for h, w in hanzi_list]))
+            merged_hanzi = '/'.join(unique_hanzi)
             weight = hanzi_list[0][1] if hanzi_list else None
             buc_form = converter.convert_text(syllable)
             text = f"{buc_form}@{syllable}@{merged_hanzi}|"
@@ -288,9 +336,22 @@ def main():
     """主函數"""
     base_dir = Path(__file__).parent.parent
     input_file = base_dir / "bannuaci" / "borhlang_bannuaci_han.dict.yaml"
+    rom_only_file = base_dir / "data" / "vocab_from_bible.yaml"
     output_file = base_dir / "bannuaci" / "borhlang_bannuaci.dict.yaml"
+
     merger = DictMerger()
-    merger.parse_dict(input_file)
+
+    # 讀取有漢字的詞庫
+    merger.parse_dict(input_file, is_rom_only=False)
+
+    # 讀取只有羅馬字的候選詞（來自聖經）
+    if rom_only_file.exists():
+        merger.parse_dict(rom_only_file, is_rom_only=True)
+        # 添加那些讀音尚未存在的詞
+        merger.add_rom_only_if_missing()
+    else:
+        print(f"\n警告：找不到只有羅馬字的詞庫 {rom_only_file}，跳過處理")
+
     merger.merge_same_pronunciation()
     merger.calculate_weights()
     merger.add_placeholder_syllables()

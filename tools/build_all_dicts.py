@@ -18,6 +18,10 @@ from pathlib import Path
 from collections import defaultdict
 import yaml
 
+# 導入羅馬字轉換器（用於聖經詞彙的格式轉換）
+sys.path.append(str(Path(__file__).parent.parent / "data"))
+from romanization_converter import RomanizationConverter
+
 
 def run_script(script_path: Path, description: str):
     """執行 Python 腳本"""
@@ -57,11 +61,13 @@ def merge_vocabularies(base_dir: Path):
     合併所有詞彙來源
 
     數據來源（按優先級）：
-    1. hinghwa-ime/Pouleng/Pouleng.dict.yaml - 參考詞庫（24k+ 詞條）
-    2. data/vocab_from_wikt.yaml - 維基詞典多字詞（從 puxian_phrases_from_wikt.txt 提取）
-    3. data/vocab_from_bible.yaml - 聖經詞彙（從 bible_data.json 提取）
+    1. hinghwa-ime/Pouleng/Pouleng.dict.yaml - 參考詞庫（24k+ 詞條，PSP 格式）
+    2. data/vocab_from_wikt.yaml - 維基詞典多字詞（從 puxian_phrases_from_wikt.txt 提取，PSP 格式）
+    3. data/vocab_from_bible.yaml - 聖經詞彙（從 bible_data.json 提取，輸入式格式）
 
-    注意：data/cpx-pron-data.lua 的單字會在後續的 convert_dict_v3.py 中使用
+    注意：
+    - data/cpx-pron-data.lua 的單字會在後續的 convert_dict_v3.py 中使用
+    - 聖經詞彙為輸入式格式（保留鼻化韻），合併時需轉換為 PSP 格式
     """
     print("\n" + "=" * 70)
     print(">>> 合併所有詞彙來源")
@@ -108,18 +114,43 @@ def merge_vocabularies(base_dir: Path):
     else:
         print(f"\n[WARNING] 找不到：{sources['wikt']}")
 
-    # 讀取聖經詞彙
+    # 讀取聖經詞彙（輸入式格式，需轉換為 PSP）
     if sources['bible'].exists():
         print(f"\n讀取聖經詞彙：{sources['bible'].name}")
-        bible_entries = read_dict_entries(sources['bible'])
+        bible_entries_input = read_dict_entries(sources['bible'])
         new_count = 0
-        for (hanzi, pinyin), weight in bible_entries.items():
-            if (hanzi, pinyin) not in all_entries:
-                # 聖經詞彙權重較低（避免覆蓋標準詞彙）
-                all_entries[(hanzi, pinyin)] = min(weight, 300)
-                new_count += 1
-        print(f"  詞條數：{len(bible_entries)}")
+        conversion_errors = 0
+
+        for (hanzi, pinyin_input), weight in bible_entries_input.items():
+            # 跳過帶 ▣ 佔位符的詞條（這些詞只用於純羅馬字輸入法）
+            if '▣' in hanzi:
+                continue
+
+            try:
+                # 轉換：輸入式 -> PSP
+                syllables_input = pinyin_input.split()
+                syllables_psp = []
+                for syl_input in syllables_input:
+                    syl_psp = RomanizationConverter.input_to_psp(syl_input)
+                    syllables_psp.append(syl_psp)
+                pinyin_psp = ' '.join(syllables_psp)
+
+                # 合併到詞表
+                if (hanzi, pinyin_psp) not in all_entries:
+                    # 聖經詞彙權重較低（避免覆蓋標準詞彙）
+                    all_entries[(hanzi, pinyin_psp)] = min(weight, 300)
+                    new_count += 1
+            except ValueError as e:
+                # 轉換失敗，記錄但繼續
+                conversion_errors += 1
+                if conversion_errors <= 10:  # 只顯示前 10 個錯誤
+                    # 使用 repr() 避免編碼錯誤
+                    print(f"  [WARNING] 轉換失敗：{repr(hanzi)} {pinyin_input} - {e}")
+
+        print(f"  詞條數：{len(bible_entries_input)}")
         print(f"  新增：{new_count}")
+        if conversion_errors > 0:
+            print(f"  轉換錯誤：{conversion_errors} 個")
     else:
         print(f"\n[WARNING] 找不到：{sources['bible']}")
 
@@ -193,7 +224,7 @@ def write_dict_file(file_path: Path, entries: dict, name: str, description: str)
         f.write("# 數據來源（按優先級）：\n")
         f.write("# 1. hinghwa-ime/Pouleng/Pouleng.dict.yaml - 參考詞庫（24k+ 詞條）\n")
         f.write("# 2. data/vocab_from_wikt.yaml - 維基詞典多字詞\n")
-        f.write("# 3. data/vocab_from_bible.yaml - 聖經詞彙\n")
+        f.write("# 3. data/vocab_from_bible.yaml - 聖經詞彙（輸入式 -> PSP 轉換後合併）\n")
         f.write("# 4. data/cpx-pron-data.lua - 維基詞典單字（在後續轉換中使用）\n")
         f.write("#\n")
         f.write("---\n")
