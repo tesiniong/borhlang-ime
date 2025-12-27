@@ -1275,7 +1275,8 @@
 註：厝=lou4 使用情況1-3反推 cho4
 註：火=uei3 使用情況1-3反推 hoi3
 註：山=lua1 使用情況1-3反推 suann1
-警告：寡 gua - 無法轉換音節 寡=gua
+警告：我 gua3 5000 - 漢字與音節數量不匹配
+警告：汝 dy3 5000 - 漢字與音節數量不匹配
 註：食=sia2 使用直接轉換 sia2
 註：飯=muei5 使用情況4-5反推 boinn5
 註：箬=nieo2 使用直接轉換 naau2
@@ -2815,8 +2816,6 @@
 註：圍=ngui2 使用情況1-3反推 ui2
 註：死=ni3 使用情況1-3反推 si3
 註：死=ni3 使用情況1-3反推 si3
-註：譬=pih7 使用直接轉換 pih7
-註：譬=pih7 使用直接轉換 pih7
 註：過=ngo4 使用情況1-3反推 geo4
 註：過=ngo4 使用情況1-3反推 geo4
 註：干=ga1 使用直接轉換 ga1
@@ -11692,7 +11691,6 @@
 註：隆=lang2 使用直接轉換 lang2
 註：州=liu1 使用情況1-3反推 ciu1
 註：兴=hing5 使用直接轉換 hing5
-註：峪=oeh7 使用直接轉換 eeh7
 註：德=deh7 使用直接轉換 deh7
 註：劍=goeng4 使用直接轉換 geeng4
 註：陽=ngyorng2 使用情況1-3反推 ioong2
@@ -13165,8 +13163,8 @@
 註：刀=lo1 使用情況1-3反推 deo1
 註：囝=yor3 使用情況1-3反推 gioonn3
 註：其=ae5 使用直接轉換 e5
-註：即=zuh6 使用直接轉換 cuh6
 註：這=ze4 使用直接轉換 caa4
+註：即=zuh6 使用直接轉換 cuh6
 註：佮=gah6 使用直接轉換 gah6
 註：亦=ia5 使用直接轉換 ia5
 註：咧=lae5 使用直接轉換 le5
@@ -13176,20 +13174,22 @@
 註：安=ah6 使用直接轉換 ah6
 註：生=na1 使用直接轉換 na1
 註：複=buh6 使用直接轉換 buh6
-註：喏=nor5 使用直接轉換 noo5
 註：著=do2 使用直接轉換 deo2
-註：慾=boh6 使用直接轉換 beoh6
-註：當=dor1 使用直接轉換 doo1
+註：喏=nor5 使用直接轉換 noo5
 警告：得 daeh6 - 無法轉換音節 得=daeh6
+註：當=dor1 使用直接轉換 doo1
+註：慾=boh6 使用直接轉換 beoh6
 警告：拉麥 lah7 baeh7 - 無法轉換音節 麥=baeh7
 註：壽=siu5 使用直接轉換 siu5
 註：遐=hyor3 使用直接轉換 hioo3
+警告：第一 dai4 - 漢字與音節數量不匹配
 警告：亞伯 a4 baeh6 - 無法轉換音節 伯=baeh6
 警告：塞特 saeh6 daeh7 - 無法轉換音節 塞=saeh6
 註：動=duei3 使用直接轉換 doi3
 註：彈=dang5 使用直接轉換 dang5
 註：挪=nor3 使用直接轉換 noo3
 註：粉=ong3 使用情況1-3反推 heong3
+警告：設使 saeh6 so3 - 無法轉換音節 設=saeh6
 註：身=sing3 使用直接轉換 sing3
 註：兜=nieo2 使用直接轉換 naau2
 註：作=zo4 使用直接轉換 ceo4
@@ -13205,6 +13205,7 @@
 警告：三十 sor1 saeh7 - 無法轉換音節 十=saeh7
 警告：四十 si4 saeh7 - 無法轉換音節 十=saeh7
 註：獃=gai2 使用直接轉換 gai2
+註：佇=dyor5 使用直接轉換 dioo5
 警告：結籽 gaeh6 zi3 - 無法轉換音節 結=gaeh6
 警告：分別 hong1 baeh6 - 無法轉換音節 別=baeh6
 註：遐=hyor3 使用直接轉換 hioo3
@@ -13212,11 +13213,10 @@
 警告：來歷 lai2 laeh7 - 無法轉換音節 歷=laeh7
 註：種=zeng3 使用直接轉換 ceng3
 警告：乜 maeh6 - 無法轉換音節 乜=maeh6
-警告：設使 saeh6 so3 - 無法轉換音節 設=saeh6
 註：且=zia3 使用直接轉換 cia3
 警告：六十五 lah7 saeh7 ngou5 - 無法轉換音節 十=saeh7
 註：々=zieng5 使用直接轉換 ciang5
-註：儂=ae5 使用直接轉換 e5
+註：猶=iu2 使用直接轉換 iu2
 註：垃=la5 使用直接轉換 la5
 註：是=lih6 使用直接轉換 lih6
 註：裂=le2 使用直接轉換 laa2
@@ -13239,6 +13239,10 @@
 註：擗=pe2 使用直接轉換 paa2
 註：佻=tieo2 使用直接轉換 taau2
 註：怞=doeh6 使用直接轉換 deeh6
+警告：我家己 gua3 gai4 - 漢字與音節數量不匹配
+註：也=ia5 使用直接轉換 ia5
+註：響=ha4 使用直接轉換 ha4
+註：上=syorng1 使用直接轉換 sioong1
 註：喏=zyor3 使用直接轉換 cioo3
 警告：設 saeh6 - 無法轉換音節 設=saeh6
 註：繞=lao2 使用直接轉換 lau2
@@ -13268,7 +13272,7 @@
 註：造=zo4 使用直接轉換 ceo4
 註：喏=zyor3 使用直接轉換 cioo3
 警告：清潔 cing1 gaeh6 - 無法轉換音節 潔=gaeh6
-註：佇=dyor5 使用直接轉換 dioo5
+警告：亞伯拉罕 a4 baeh6 lah7 hang3 - 無法轉換音節 伯=baeh6
 警告：法勒斯 hah6 laeh6 so5 - 無法轉換音節 勒=laeh6
 註：斯=so5 使用直接轉換 seo5
 註：斯=so5 使用直接轉換 seo5
@@ -13277,14 +13281,36 @@
 註：安=ang4 使用直接轉換 ang4
 註：坦=dang4 使用直接轉換 dang4
 註：斯=so5 使用直接轉換 seo5
-註：凡=nang2 使用直接轉換 nang2
+註：酒=ziu3 使用直接轉換 ciu3
 註：子=zi2 使用直接轉換 ci2
 註：々=dung2 使用直接轉換 dng2
 警告：ta̍i-go̤̍ tai4 gor4 - 漢字與音節數量不匹配
 註：獃=gai2 使用直接轉換 gai2
 註：燳=zyor3 使用直接轉換 cioo3
+註：儂=ae5 使用直接轉換 e5
 註：着=dy3 使用直接轉換 dy3
-註：蜀=sy5 使用直接轉換 sy5
+註：喏=zyor3 使用直接轉換 cioo3
+註：唯=bi4 使用直接轉換 bi4
+警告：責任 zaeh6 zing5 - 無法轉換音節 責=zaeh6
+警告：不得已 boh6 daeh6 i3 - 無法轉換音節 得=daeh6
+註：督=dorh7 使用直接轉換 dooh7
+警告：Hó̤ng-māng horng2 mang5 - 漢字與音節數量不匹配
+警告：Ging-sing ging1 sing1 - 漢字與音節數量不匹配
+警告：Sā̤u-heong sieo5 hong1 - 漢字與音節數量不匹配
+警告：Cô-i̍ng zou3 ing4 - 漢字與音節數量不匹配
+警告：別 baeh6 - 無法轉換音節 別=baeh6
+警告：ho̤h-ā̤ horh6 e5 - 漢字與音節數量不匹配
+警告：līng-sīng ling5 sing5 - 漢字與音節數量不匹配
+警告：chu̍i cui4 - 漢字與音節數量不匹配
+警告：beh-céng baeh6 zeng2 - 漢字與音節數量不匹配
+警告：go̤̍-be̍h gor4 baeh7 - 漢字與音節數量不匹配
+警告：cî-lî zi3 li3 - 漢字與音節數量不匹配
+註：督=dorh7 使用直接轉換 dooh7
+警告：默示 baeh7 si5 - 無法轉換音節 默=baeh7
+警告：別儂 baeh6 nang2 - 無法轉換音節 別=baeh6
+註：生=na1 使用直接轉換 na1
+註：蒲=bou4 使用直接轉換 bo4
+警告：十一 saeh7 ih6 - 無法轉換音節 十=saeh7
 註：々=bu5 使用直接轉換 bu5
 註：々=ang4 使用直接轉換 ang4
 警告：結 gaeh6 - 無法轉換音節 結=gaeh6
@@ -13298,7 +13324,6 @@
 註：樹=ciu4 使用直接轉換 chiu4
 註：未=beng2 使用直接轉換 beng2
 警告：潤澤 zong5 zaeh7 - 無法轉換音節 澤=zaeh7
-警告：第一 dai4 - 漢字與音節數量不匹配
 註：粹=sui4 使用直接轉換 sui4
 註：石=goeh7 使用直接轉換 geeh7
 註：基=gi2 使用直接轉換 gi2
@@ -13328,13 +13353,11 @@
 註：樹=ciu4 使用直接轉換 chiu4
 註：儂=dang2 使用直接轉換 dang2
 警告：怎生 saeh6 na1 - 無法轉換音節 怎=saeh6
-註：比=pia5 使用直接轉換 pia5
 警告：百獸 baeh6 siu4 - 無法轉換音節 百=baeh6
 註：和=gah6 使用直接轉換 gah6
 警告：喫虧 kaeh6 kui1 - 無法轉換音節 喫=kaeh6
 註：地=ceng2 使用直接轉換 cheng2
 註：的=dih6 使用直接轉換 dih6
-註：得=dih7 使用直接轉換 dih7
 註：々=dih7 使用直接轉換 dih7
 註：你=dy3 使用直接轉換 dy3
 註：手=ciu3 使用直接轉換 chiu3
@@ -13360,11 +13383,6 @@
 註：當=dih6 使用直接轉換 dih6
 註：得=ki3 使用直接轉換 ki3
 註：流=liu2 使用直接轉換 liu2
-註：遇=soh7 使用直接轉換 seoh7
-註：着=gy5 使用直接轉換 gy5
-註：即=dieo7 使用直接轉換 daau4
-註：刣=zuh6 使用直接轉換 cuh6
-註：伊=tai2 使用直接轉換 tai2
 註：挪=nor3 使用直接轉換 noo3
 警告：挪得 nor3 daeh6 - 無法轉換音節 得=daeh6
 註：猶=iu2 使用直接轉換 iu2
@@ -13460,30 +13478,36 @@
 警告：一切 ih6 caeh6 - 無法轉換音節 切=caeh6
 警告：ma̤̍h meh7 - 漢字與音節數量不匹配
 警告：乞 gaeh6 - 無法轉換音節 乞=gaeh6
-註：起=a4 使用直接轉換 a4
-警告：起頭有道 a4 baeh6 lah7 hang3 - 無法轉換音節 頭=baeh6
-註：道=hieo5 使用直接轉換 haau5
-註：佮=e4 使用直接轉換 aa4
-註：上=dai5 使用直接轉換 dai5
-註：帝=bih7 使用直接轉換 bih7
-註：齊=hieo5 使用直接轉換 haau5
-註：佇=e4 使用直接轉換 aa4
-註：道=e2 使用直接轉換 aa2
-註：即=sou1 使用直接轉換 so1
-註：是=gi1 使用直接轉換 gi1
-註：上=dorh6 使用直接轉換 dooh6
-註：帝=ae5 使用直接轉換 e5
-註：這=a4 使用直接轉換 a4
-警告：這道起頭 a4 baeh6 lah7 hang3 - 無法轉換音節 道=baeh6
-註：佮=sa1 使用直接轉換 sa1
-註：上=i3 使用直接轉換 i3
-註：帝=sah6 使用直接轉換 sah6
-註：齊=i3 使用直接轉換 i3
-註：佇=sah6 使用直接轉換 sah6
+註：猶=iu2 使用直接轉換 iu2
+註：太=dai5 使用直接轉換 dai5
 註：喇=lah7 使用直接轉換 lah7
 警告：路得 lou5 daeh6 - 無法轉換音節 得=daeh6
 註：就=ziu5 使用直接轉換 ciu5
 註：佇=do5 使用直接轉換 deo5
+註：道=dou5 使用直接轉換 do5
+警告：逾越節 zy2 oeh7 zaeh6 - 無法轉換音節 節=zaeh6
+警告：除酵節 dy2 gao4 zaeh6 - 無法轉換音節 節=zaeh6
+警告：dia̍h dia7 - 漢字與音節數量不匹配
+註：約=sai3 使用直接轉換 sai3
+註：翰=dy3 使用直接轉換 dy3
+註：著=cing1 使用直接轉換 ching1
+註：曠=zai1 使用直接轉換 cai1
+註：野=bing2 使用直接轉換 bing2
+註：施=sou4 使用直接轉換 so4
+註：洗=soe3 使用直接轉換 see3
+註：禮=tah7 使用直接轉換 tah7
+註：傳=ae5 使用直接轉換 e5
+註：命=dieo5 使用直接轉換 daau5
+註：人=ae5 使用直接轉換 e5
+註：登=nang2 使用直接轉換 nang2
+註：籍=bo4 使用直接轉換 beo4
+註：召=mia2 使用直接轉換 mia2
+註：天=sieo5 使用直接轉換 saau5
+註：下=ca5 使用直接轉換 cha5
+註：上=syorng1 使用直接轉換 sioong1
+註：越=de5 使用直接轉換 daa5
+註：加=gia1 使用直接轉換 gia1
+註：喔=or5 使用直接轉換 oo5
 註：嚮=hieo3 使用直接轉換 haau3
 註：鑔=ca5 使用直接轉換 cha5
 註：兮=ae5 使用直接轉換 e5
@@ -13491,6 +13515,8 @@
 註：捨=sia3 使用直接轉換 sia3
 註：獃=gai4 使用直接轉換 gai4
 註：偌=nor5 使用直接轉換 noo5
+註：囚=siu2 使用直接轉換 siu2
+註：毘=hi1 使用直接轉換 hi1
 警告：第一囝 dai4 gyor3 - 漢字與音節數量不匹配
 註：其=dy3 使用直接轉換 dy3
 註：不=hang2 使用直接轉換 hang2
@@ -13498,6 +13524,7 @@
 註：我=zing1 使用直接轉換 cing1
 註：惜=li3 使用直接轉換 li3
 註：汝=ae5 使用直接轉換 e5
+註：凡=nang2 使用直接轉換 nang2
 註：捌=ia5 使用直接轉換 ia5
 註：真=sieo5 使用直接轉換 saau5
 註：理=dy3 使用直接轉換 dy3
@@ -13507,59 +13534,15 @@
 註：基=syorng5 使用直接轉換 sioong5
 註：督=de4 使用直接轉換 daa4
 註：猶=iu2 使用直接轉換 iu2
-註：待=kang4 使用直接轉換 kang4
-註：兄=dai5 使用直接轉換 dai5
-註：弟=hia1 使用直接轉換 hia1
-註：佮=di5 使用直接轉換 di5
-註：做=gah6 使用直接轉換 gah6
-註：儂=zo4 使用直接轉換 ceo4
-註：客=nang2 使用直接轉換 nang2
-註：其=ka5 使用直接轉換 ka5
-註：汝=hang2 使用直接轉換 hang2
-註：所=dy3 使用直接轉換 dy3
-註：做=soe3 使用直接轉換 see3
-註：其=zo4 使用直接轉換 ceo4
-註：都=ae5 使用直接轉換 e5
-註：是=do1 使用直接轉換 deo1
-註：盡=si5 使用直接轉換 si5
-註：忠=zing5 使用直接轉換 cing5
-警告：心 doeng1 sing1 - 漢字與音節數量不匹配
 警告：buang-cíng buang1 zing2 - 漢字與音節數量不匹配
 警告：別各 baeh6 gorh6 - 無法轉換音節 別=baeh6
-警告：î-di̍ i3 di4 - 漢字與音節數量不匹配
 註：書=zy3 使用直接轉換 cy3
 警告：丟特腓 diu1 daeh6 hi1 - 無法轉換音節 特=daeh6
 註：咧=lae5 使用直接轉換 le5
 註：攔=lang5 使用直接轉換 lang5
 註：低=de3 使用直接轉換 daa3
 註：々=ging3 使用直接轉換 ging3
-註：得=ze2 使用直接轉換 caa2
-警告：其 daeh6 - 無法轉換音節 其=daeh6
-註：拯=ae5 使用直接轉換 e5
-註：救=zing3 使用直接轉換 cing3
-註：即=giu4 使用直接轉換 giu4
-註：着=zuh6 使用直接轉換 cuh6
-註：落=dieo7 使用直接轉換 daau4
-註：書=loh7 使用直接轉換 leoh7
-註：咧=zy1 使用直接轉換 cy1
-註：內=lae5 使用直接轉換 le5
-註：勢=li5 使用直接轉換 li5
-註：勸=li4 使用直接轉換 li4
-註：汝=kuei4 使用直接轉換 koi4
-註：盡=dy3 使用直接轉換 dy3
-註：心=zing5 使用直接轉換 cing5
-註：辯=sing1 使用直接轉換 sing1
-註：論=beng5 使用直接轉換 beng5
-註：從=long5 使用直接轉換 leong5
-註：前=zoeng2 使用直接轉換 ceeng2
-註：所=zeng2 使用直接轉換 ceng2
-註：傳=soe3 使用直接轉換 see3
-註：乞=duei2 使用直接轉換 doi2
-註：聖=koh6 使用直接轉換 keoh6
-註：徒=sing4 使用直接轉換 sing4
-註：其=dou2 使用直接轉換 do2
-註：道=ae5 使用直接轉換 e5
-警告：理 dor5 li3 - 漢字與音節數量不匹配
+註：救=giu4 使用直接轉換 giu4
 警告：seo-o̤ so1 or1 - 漢字與音節數量不匹配
 註：邪=sia3 使用直接轉換 sia3
 註：由=iu2 使用直接轉換 iu2
@@ -13571,7 +13554,6 @@
 警告：責備 zaeh6 bi5 - 無法轉換音節 責=zaeh6
 註：獸=siu4 使用直接轉換 siu4
 註：壞=huei5 使用直接轉換 hoi5
-註：酒=ziu3 使用直接轉換 ciu3
 警告：hāng hang5 - 漢字與音節數量不匹配
 註：心=sing4 使用直接轉換 sing4
 警告：責罰 zaeh6 huah7 - 無法轉換音節 責=zaeh6

@@ -52,13 +52,13 @@ engine:
     - reverse_lookup_translator
     - script_translator@reverse_lookup_han
   filters:
+    - lua_filter@bannuaci_filter
     - simplifier
     - lua_filter@comment_formatter
-    - lua_filter@bannuaci_filter
     - uniquifier
 
 speller:
-  alphabet: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA
+  alphabet: "zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA-'ⁿ̤̍āáàâēéèêīíìîōóòôūúùûṳĀÁÀÂĒÉÈÊĪÍÌÎŌÓÒÔŪÚÙÛṲ"
   delimiter: " '"
   algebra:
   # --- 聲調按鍵映射 (Tone Key Mapping) ---
@@ -87,9 +87,6 @@ speller:
     - derive/iong/ion/
     - derive/uang/uan/
 
-    # 入聲韻尾模糊
-    - derive/^(.+)h([1-7])$/$1$2/
-    - derive/^(.+)h([1-7])$/$1k$2/
     - derive/^([a-z])/\U$1/
 
 translator:
@@ -109,7 +106,7 @@ translator:
     # y → ṳ
     - xform/\by\b/ṳ/
     # nn → ⁿ
-    - xform/nn/ⁿ/
+    - xform/nn(?!g)/ⁿ/
 
 reverse_lookup:
   dictionary: luna_pinyin

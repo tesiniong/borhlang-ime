@@ -19,6 +19,8 @@ use_preset_vocabulary: false
 sort: by_weight
 ...
 
+是	si5	6000
+我	gua3	6000
 項	hang5	5500
 無	bo2	5500
 假	gor3	5500
@@ -71,7 +73,6 @@ sort: by_weight
 味	bi5	5100
 碗	ua3	5100
 晏	ua4	5100
-汝	dy3	5000
 伊	i1	5000
 飯	buei5	5000
 行	heng2	5000
@@ -846,7 +847,6 @@ sort: by_weight
 折	si2	5000
 死	si3	5000
 四	si4	5000
-是	si5	5000
 視	si5	5000
 枝	gi1	5000
 機	gi1	5000
@@ -1282,6 +1282,7 @@ sort: by_weight
 換	huang4	5000
 彎	uang1	5000
 灣	uang2	5000
+汝	dy3	5000
 箸	dy5	5000
 鋤	ty2	5000
 旅	ly3	5000
@@ -1539,6 +1540,7 @@ sort: by_weight
 操	cao1	3000
 郊	gao1	3000
 攪	gor3	3000
+蜀	soh7	2000
 一切	ih6 ceh6	800
 一國	ih6 gorh6	800
 一律	ih6 loh7	800
@@ -3671,8 +3673,8 @@ sort: by_weight
 𤆬火厝	cyor4 uei3 lou4	600
 𤆬火山	cyor4 uei3 lua1	600
 十	seh7	510
-我	gua3	500
-寡	gua	500
+我	gua3 5000	500
+汝	dy3 5000	500
 福州	horh6 ziu1	500
 食飯	sia2 muei5	500
 茶箬	dor2 nieo2	500
@@ -5081,7 +5083,6 @@ sort: by_weight
 戌	soh6	500
 率	soh6	500
 恤	soh6	500
-蜀	soh7	500
 一	soh7	500
 術	soh7	500
 述	soh7	500
@@ -9546,8 +9547,8 @@ sort: by_weight
 硬框	nge5 korng1	500
 硬空死	nge5 korng1 ni3	500
 硬框死	nge5 korng1 ni3	500
-譬並	pih7 pia5	500
-譬如	pih7 zy2	500
+譬並	pih6 pia5	500
+譬如	pih6 zy2	500
 無干過	bo2 gang1 ngo4	500
 無干過	bo2 gang1 o4	500
 干過	gang1 ngo4	500
@@ -15321,7 +15322,7 @@ Android	eng1 zorh6	500
 攑乩	gyor2 gi1	500
 喜舍	hi3 liah7	500
 有聖	uh6 sia4	500
-耶穌教	e1 lou1 ao4	500
+耶穌教	e2 lou1 ao4	500
 基督教	ki1 dorh6 kao4	500
 教堂	gao4 lorng2	500
 點香	dieng3 ngieo1	500
@@ -24925,38 +24926,39 @@ DNA	di4 eng1 e1	500
 鉸刀錘囝布	gor1 lo1 tui2 yor3 bou4	400
 其	ae5	300
 上帝	syorng5 de4	300
-即	zuh6	300
 這	ze4	300
+即	zuh6	300
 佮	gah6	300
 落	loh7	300
 亦	ia5	250
 咧	lae5	250
 食	sia7	250
 時節	si2 ze5	250
-挪亞	nor3 a4	250
 着	dieo7	250
+挪亞	nor3 a4	250
 摕	teh7	250
 耶和華	e2 hor2 hua1	250
 得々	dih6 dih6	250
-該隱	gai1 yng3	250
 安生	ah6 na1	250
+該隱	gai1 yng3	250
 亞當	a4 dorng1	250
 複	buh6	200
 物乇	muei7 nor5	200
 果子	guei7 zi3	200
 我各儂	gua3 gorh6 nang2	200
 地上	de5 sieo5	200
+著	do2	200
 種類	zoeng3 lui5	200
 喏	nor5	200
+耶穌	e2 sou1	200
+得	daeh6	200
 復	horh6	200
-著	do2	200
-慾	boh6	200
-老嬤	lao5 ma3	200
+兄弟	hia1 di5	200
 當央	dor1 ng1	200
 毋通	ng5 tang1	200
-得	daeh6	200
+慾	boh6	200
+老嬤	lao5 ma3	200
 因為	ing1 ui5	200
-兄弟	hia1 di5	200
 以諾	i3 dorh7	150
 拉麥	lah7 baeh7	150
 仁愛	zing2 ai4	150
@@ -24964,16 +24966,21 @@ DNA	di4 eng1 e1	500
 頭牲	tao2 sa1	150
 男女囝	nang2 dy3 gyor3	150
 歲壽	huei4 siu5	150
+親愛	cing1 ai4	150
+以後	i3 hieo5	150
+故此	gou4 co3	150
 各種	gorh6 zoeng3	150
 遐	hyor3	150
-故此	gou4 co3	150
+第一	dai4	150
 面前	ming4 se2	150
 亞伯	a4 baeh6	150
 塞特	saeh6 daeh7	150
 八百	be5 ba5	150
 歡喜	hua1 hi3	150
-耶穌	e2 sou1	150
-親愛	cing1 ai4	150
+毋是	ng5 si5	150
+本身	bong3 sing1	150
+勞苦	lor2 kou3	150
+地方	de5 horng1	150
 俱各	gy5 gorh6	150
 活命	uah7 mia5	150
 生育	seng1 oeh7	150
@@ -24982,7 +24989,6 @@ DNA	di4 eng1 e1	500
 甚物	soh7 muei1	150
 嬸娘儂	sing3 nieo2 nang2	150
 若	nor5	150
-以後	i3 hieo5	150
 以挪士	i3 nor3 so5	150
 九百	gao3 ba5	150
 愛挃	ai4 di2	150
@@ -24995,6 +25001,10 @@ DNA	di4 eng1 e1	500
 做了	zo4 lieo3	100
 索粉	so5 ong3	100
 電腦	deng5 nor3	100
+聖經	sing4 ging1	100
+功夫	gang1 hu1	100
+設使	saeh6 so3	100
+起頭	ki3 tao2	100
 已經	i3 ging1	100
 六畜	loeh7 hoeh6	100
 身兜儂	sing3 nieo2 nang2	100
@@ -25008,17 +25018,17 @@ DNA	di4 eng1 e1	500
 大船	dua5 song2	100
 手䟓	ciu3 da1	100
 請安	cing3 ang1	100
+並且	bing4 cia3	100
 的	ae5	100
+天下	ting1 or5	100
 天頂	ting1 deng3	100
 耕種	geng1 zoeng4	100
 東邊	dang1 bing1	100
-地方	de5 horng1	100
 離	li5	100
 園裡	huei2 li3	100
 警戒	ging3 gai4	100
 咯	lor5	100
 誘惑	iu3 haeh7	100
-勞苦	lor2 kou3	100
 伊弟	i1 di5	100
 就	zuh6	100
 或	haeh7	100
@@ -25028,16 +25038,19 @@ DNA	di4 eng1 e1	500
 獃	gai2	100
 大水	dua5 zui3	100
 皟潔	ta5 ge5	100
+佇	dyor5	100
 汝各儂	dy3 gorh6 nang2	100
 實心	sih7 sing1	100
 雖然	sui1 zeng2	100
 挨望	ai1 morng5	100
+教會	gao4 huei5	100
 接待	zia6 dai5	100
+原文	ngoeng2 mong2	100
+美國	bi3 gorh6	100
+出力	coh6 lih7	100
 下底	or5 de3	100
-天下	ting1 or5	100
 結籽	gaeh6 zi3	100
 分別	hong1 baeh6	100
-並且	bing4 cia3	100
 遐穧	hyor3 se5	100
 動物	dorng5 boh7	100
 照	cieo5	100
@@ -25051,7 +25064,7 @@ DNA	di4 eng1 e1	500
 緣故	oeng2 gou4	100
 夏娃	ha5 hua1	100
 看顧	kang4 gou4	100
-設使	saeh6 so3	100
+遇着	gy5 dieo7	100
 且	zia3	100
 亞大	a4 dai5	100
 洗拉	seng3 lah7	100
@@ -25069,13 +25082,11 @@ DNA	di4 eng1 e1	500
 看見	kua4 ging4	100
 權柄	goeng2 ba4	100
 榮耀	yng2 ieo5	100
+猶太	iu2 tai4	100
 天使	teng1 so4	100
 慈悲	zo2 bi1	100
 平安	bing2 ang1	100
-毋是	ng5 si5	100
 復有	horh6 u5	100
-儂	ae5	100
-教會	gao4 huei5	100
 前日	se2 dih7	100
 學	oh7	100
 刑罰	hing2 huah7	100
@@ -25129,7 +25140,15 @@ DNA	di4 eng1 e1	500
 擗	pe2	50
 佻	tieo2	50
 怞	doeh6	50
-起頭	ki3 tao2	50
+我家己	gua3 gai4	50
+也	ia5	50
+無擔當	bo2 dang1 dung1	50
+毋敢	ng5 gor3	50
+響謝	ha4 sia5	50
+細膩	se4 zi5	50
+聖經會	sing4 ging1 huei5	50
+本錢	buei3 zing2	50
+上帝	syorng1 de5	50
 天地	ting1 de5	50
 第二	de5 di5	50
 喏穧	zyor3 se5	50
@@ -25140,7 +25159,6 @@ DNA	di4 eng1 e1	500
 充滿	coeng1 mua3	50
 空中	korng1 doeng1	50
 萬物	mang5 boh7	50
-功夫	gang1 hu1	50
 完竣	oeng2 zong4	50
 設	saeh6	50
 繞	lao2	50
@@ -25171,7 +25189,6 @@ DNA	di4 eng1 e1	500
 永生	yng3 seng1	50
 房間	bang2 ge1	50
 汝弟	dy3 di5	50
-遇着	gy5 dieo7	50
 免得	meng3 dih6	50
 以拉	i3 lah7	50
 米戶雅利	bi3 hou5 nga3 li5	50
@@ -25183,7 +25200,6 @@ DNA	di4 eng1 e1	500
 伊	cing1	50
 九十五	gao3 saeh7 ngou5	50
 六十二	lah7 saeh7 di5	50
-原文	ngoeng2 mong2	50
 三百	sor1 ba5	50
 八十二	baeh6 saeh7 di5	50
 五百	ngou5 ba5	50
@@ -25207,8 +25223,10 @@ DNA	di4 eng1 e1	500
 飛鳥	hi1 nieo3	50
 祭臺	ze4 dai2	50
 災禍	zai1 hor5	50
-佇	dyor5	50
+以前	i3 zeng2	50
 石頭	sieo7 tao2	50
+交戰	gao1 zeng4	50
+亞伯拉罕	a4 baeh6 lah7 hang3	50
 法勒斯	hah6 laeh6 so5	50
 以斯崙	i3 so5 long2	50
 亞蘭	a4 lang2	50
@@ -25232,9 +25250,15 @@ DNA	di4 eng1 e1	500
 約西亞	yorh6 se1 a4	50
 耶哥尼亞	e2 gor1 ni2 a4	50
 祈禱	gi2 dor3	50
+記載	gi4 zai4	50
+眾	zoeng4	50
+迦利利	ga1 li5 li5	50
+酒席	ziu3 sih7	50
+以致	i3 di4	50
 自誇	zo5 kua1	50
+阿弟	a5 di5	50
+長老	dyorng3 lor3	50
 揀選	ge3 tuei3	50
-凡	nang2	50
 囝子	gyor3 zi2	50
 該當	gai1 dung1	50
 毋認	ng5 ning5	50
@@ -25246,9 +25270,60 @@ ta̍i-go̤̍	tai4 gor4	50
 燳穧	zyor3 se5	50
 毀謗	hui3 borng4	50
 海裡	hai3 li3	50
+儂	ae5	50
 聖神	sing4 sing2	50
 着	dy3	50
-蜀	sy5	50
+新舊約	sing1 gu5 yorh6	50
+喏	zyor3	50
+不只	boh6 zi3	50
+空空	kang1 kang1	50
+施布道	si1 bou4 dor5	50
+專專	zoeng1 zoeng1	50
+託事	torh6 so5	50
+隨時	sui2 si2	50
+中國	doeng1 gorh6	50
+漢文	hang4 mong2	50
+通用	torng1 oeng5	50
+安立甘會	ang1 lih7 gang1 huei5	50
+會督	huei5 dorh6	50
+唯獨	bi4 dorh7	50
+責任	zaeh6 zing5	50
+本地	buei3 de5	50
+廝對	so1 dui4	50
+不得已	boh6 daeh6 i3	50
+意思	i4 so4	50
+不獨	boh6 dorh7	50
+基督教	gi1 dorh7 gao4	50
+Hó̤ng-māng	horng2 mang5	50
+Ging-sing	ging1 sing1	50
+Sā̤u-heong	sieo5 hong1	50
+Cô-i̍ng	zou3 ing4	50
+先生	seng1 sa1	50
+缺點	koeh6 dieng3	50
+別	baeh6	50
+ho̤h-ā̤	horh6 e5	50
+līng-sīng	ling5 sing5	50
+chu̍i	cui4	50
+更更	geng4 geng4	50
+書局	zy1 goeh7	50
+總辦	zorng3 bang5	50
+長旺	dyorng2 orng5	50
+印書	ing4 zy1	50
+beh-céng	baeh6 zeng2	50
+go̤̍-be̍h	gor4 baeh7	50
+cî-lî	zi3 li3	50
+平話	ba2 ua5	50
+基督徒	gi1 dorh7 dou2	50
+遵憑	zong1 bing2	50
+默示	baeh7 si5	50
+勉勵	meng3 le5	50
+別儂	baeh6 nang2	50
+生	na1	50
+賞賜	syorng3 so4	50
+蒲	bou4	50
+魯士	lou3 so5	50
+十一	saeh7 ih6	50
+月	guei7	50
 烏瞀々	ou1 bu5 bu5	50
 面頂	ming4 deng3	50
 暗々	ang4 ang4	50
@@ -25264,7 +25339,6 @@ ta̍i-go̤̍	tai4 gor4	50
 水裡	zui3 li3	50
 管	guang2	50
 共全	gorng1 zoe2	50
-本身	bong3 sing1	50
 上	gah6	50
 帝	i1	50
 滿地	mua3 de5	50
@@ -25285,7 +25359,6 @@ ta̍i-go̤̍	tai4 gor4	50
 生命	seng1 ming5	50
 比遜	bi3 song4	50
 哈腓拉	hah7 hi1 lah7	50
-第一	dai4	50
 寶珠	bo3 zou1	50
 乳香	zy3 hieo1	50
 紅瑪瑙	ang2 ma3 nor3	50
@@ -25334,7 +25407,6 @@ ta̍i-go̤̍	tai4 gor4	50
 方儂	hng4 dang2	50
 怎生	saeh6 na1	50
 必定	bih6 deng5	50
-比	pia5	50
 百獸	baeh6 siu4	50
 更加	geng4 ga1	50
 蜀世	soh7 se4	50
@@ -25347,7 +25419,7 @@ ta̍i-go̤̍	tai4 gor4	50
 地	ceng2	50
 滿面	mua3 ming4	50
 的	dih6	50
-得々	dih7 dih7	50
+日々	dih7 dih7	50
 你	dy3	50
 仿佛	horng3 hoh6	50
 伸手	cong1 ciu3	50
@@ -25379,7 +25451,6 @@ ta̍i-go̤̍	tai4 gor4	50
 救	giu2	50
 開	kuei1	50
 汝	dy1	50
-出力	coh6 lih7	50
 流動	liu2 dorng5	50
 定罪	dia5 zuei5	50
 我實	sih7 sih7	50
@@ -25387,10 +25458,6 @@ ta̍i-go̤̍	tai4 gor4	50
 𣍐當	dung1 dih6	50
 得	ki3	50
 飄流	pieo1 liu2	50
-遇	soh7	50
-着即	gy5 dieo7	50
-刣	zuh6	50
-伊	tai2	50
 挪得	nor3 daeh6	50
 雅八	nga3 bah6	50
 帳房	dieo4 bang2	50
@@ -25539,21 +25606,10 @@ ma̤̍h	meh7	50
 跳舞	tieo4 bu3	50
 蜀堆	soh7 dui1	50
 做聲	zo4 sia1	50
-交戰	gao1 zeng4	50
 和好	hor2 hor3	50
 乞	gaeh6	50
 工夫	gang1 hu1	50
-起頭有道	a4 baeh6 lah7 hang3	50
-道佮	hieo5 e4	50
-上帝	dai5 bih7	50
-齊佇	hieo5 e4	50
-道即	e2 sou1	50
-是上	gi1 dorh6	50
-帝	ae5	50
-這道起頭	a4 baeh6 lah7 hang3	50
-佮	sa1	50
-上帝	i3 sah6	50
-齊佇	i3 sah6	50
+猶太	iu2 dai5	50
 代瑪	dai5 ma3	50
 撒拉	sah6 lah7	50
 喇合	lah7 hah7	50
@@ -25567,6 +25623,43 @@ ma̤̍h	meh7	50
 脫離	tuah6 li5	50
 凶惡	hoeng1 orh6	50
 萬萬	mang5 mang5	50
+上帝子	syorng5 de4 zo3	50
+使者	so4 zia3	50
+頭前	tao2 se2	50
+預備	y5 bi5	50
+道	dou5	50
+逾越節	zy2 oeh7 zaeh6	50
+除酵節	dy2 gao4 zaeh6	50
+祭司長	ze4 si1 dyorng3	50
+同謀	dorng2 bieo2	50
+詭計	kui3 ge4	50
+dia̍h	dia7	50
+節期	ze5 gi2	50
+擾亂	zieo3 luang5	50
+提阿非羅	de2 or1 hi1 lor2	50
+實據	sih7 gy4	50
+約	sai3	50
+翰	dy3	50
+著曠	cing1 zai1	50
+野施	bing2 sou4	50
+洗	soe3	50
+禮	tah7	50
+傳	ae5	50
+該撒	gai1 sah6	50
+亞古士督	a4 gou3 so5 dorh6	50
+降詔	gang4 zieo4	50
+命	dieo5	50
+人	ae5	50
+登	nang2	50
+籍	bo4	50
+召	mia2	50
+天	sieo5	50
+下	ca5	50
+上帝	syorng1 de4	50
+越三	de5 sor1	50
+加拿	gia1 na2	50
+四處	so4 cy4	50
+喔	or5	50
 各國	gorh6 gorh6	50
 大聲	dua5 sia1	50
 鑼	lo2	50
@@ -25576,7 +25669,6 @@ ma̤̍h	meh7	50
 深奧	cing1 or4	50
 知識	di1 sih6	50
 復	buh6	50
-以致	i3 di4	50
 兮	ae5	50
 周濟	ziu1 ze4	50
 或是	haeh7 si5	50
@@ -25589,7 +25681,13 @@ ma̤̍h	meh7	50
 偌	nor5	50
 包涵	bao1 hang2	50
 廝信	so1 seng4	50
-長老	dyorng3 lor3	50
+囚犯	siu2 hang5	50
+提摩太	de2 mor2 tai4	50
+勤勞	gyng2 lor2	50
+腓利們	hi1 li5 mong2	50
+阿妹	a5 muei4	50
+亞毘亞	a4 hi1 a4	50
+亞基布	a4 gi1 bou4	50
 夫人	hu1 zing2	50
 第一囝	dai4 gyor3	50
 其	dy3	50
@@ -25597,6 +25695,7 @@ ma̤̍h	meh7	50
 獨	baeh6	50
 我惜	zing1 li3	50
 汝	ae5	50
+凡	nang2	50
 捌	ia5	50
 真	sieo5	50
 理	dy3	50
@@ -25607,36 +25706,22 @@ ma̤̍h	meh7	50
 肉身	noeh7 sing1	50
 降世	gang4 se4	50
 仇敵	siu2 daeh7	50
-細膩	se4 zi5	50
 拍失	pa5 sih6	50
 基督	syorng5 de4	50
 毋使	ng5 sai3	50
 滿心	mua3 sing1	50
-長老	dyorng2 lor3	50
 迦猶	gia1 iu2	50
 至愛	zi4 ai4	50
 健壯	goeng5 zorng4	50
 誠實	sing2 sih7	50
 小子	sieo3 zo3	50
 解大	e5 dua5	50
-待兄	kang4 dai5	50
-弟佮	hia1 di5	50
-做	gah6	50
-儂	zo4	50
-客其	nang2 ka5	50
-汝	hang2	50
-所	dy3	50
-做	soe3	50
-其	zo4	50
-都	ae5	50
-是	do1	50
-盡	si5	50
-忠	zing5	50
-心	doeng1 sing1	50
+看待	kang4 dai5	50
+儂客	nang2 ka5	50
+忠心	doeng1 sing1	50
 墿頭	dou5 tao2	50
 buang-cíng	buang1 zing2	50
 別各	baeh6 gorh6	50
-î-di̍	i3 di4	50
 書	zy3	50
 丟特腓	diu1 daeh6 hi1	50
 頭儂	tao2 nang2	50
@@ -25647,34 +25732,15 @@ buang-cíng	buang1 zing2	50
 出會	coh6 huei5	50
 低米丟	de3 bi3 diu1	50
 緊々	ging3 ging3	50
-眾	zoeng4	50
 奴僕	nou2 borh7	50
-阿弟	a5 di5	50
 蒙召	morng2 dieo5	50
 保存	bor3 zong2	50
 加倍	ga1 buei5	50
 殷勤	yng1 gyng2	50
-得	ze2	50
-其	daeh6	50
-拯	ae5	50
-救即	zing3 giu4	50
-着	zuh6	50
-落	dieo7	50
-書	loh7	50
-咧	zy1	50
-內	lae5	50
-勢勸	li5 li4	50
-汝	kuei4	50
-盡	dy3	50
-心辯	zing5 sing1	50
-論從	beng5 long5	50
-前所	zoeng2 zeng2	50
-傳	soe3	50
-乞	duei2	50
-聖	koh6	50
-徒其	sing4 dou2	50
-道	ae5	50
-理	dor5 li3	50
+拯救	zing3 giu4	50
+盡心	zing5 sing1	50
+從前	zoeng2 zeng2	50
+聖徒	sing4 dou2	50
 seo-o̤	so1 or1	50
 入來	dih7 li2	50
 邪慾	sia3 oeh7	50
@@ -25697,7 +25763,6 @@ seo-o̤	so1 or1	50
 米迦勒	bi3 ga1 laeh6	50
 摩西	mor2 se1	50
 身屍	sing1 si1	50
-毋敢	ng5 gor3	50
 責備	zaeh6 bi5	50
 𣍐曉	be5 hieo3	50
 本性	bong3 sing4	50
@@ -25707,7 +25772,6 @@ seo-o̤	so1 or1	50
 巴蘭	ba1 lang2	50
 哥拉	gor1 lah7	50
 悖逆	buei5 gih7	50
-酒席	ziu3 sih7	50
 石	sieo7	50
 hāng	hang5	50
 爬起	ba5 ki3	50

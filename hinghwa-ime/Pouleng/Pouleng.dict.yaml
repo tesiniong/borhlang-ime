@@ -27,9 +27,8 @@ sort: by_weight
 ...
 
 # 測試區 ceh6 si4 ky1-------------------------------------
-我	gua3
-寡	gua
-汝	dy3
+我	gua3 5000
+汝	dy3 5000
 伊	i1
 飯	buei5
 福州	horh6 ziu1
@@ -2093,7 +2092,7 @@ sort: by_weight
 戌	soh6
 率	soh6
 恤	soh6
-蜀	soh7	500
+蜀	soh7	2000
 一	soh7	500
 術	soh7	500
 述	soh7
@@ -3381,7 +3380,7 @@ sort: by_weight
 勢	si4
 四	si4	5000
 駟	si4
-是	si5	5000	10%
+是	si5	6000
 氏	si5
 視	si5	5000
 舐	si5	4900
@@ -5250,7 +5249,7 @@ sort: by_weight
 菅	gua1
 寒	gua2	5000
 樺	gua2
-我	gua3
+我	gua3	6000
 館	gua3
 趕	gua3	5000
 秆	gua3
@@ -7685,8 +7684,8 @@ sort: by_weight
 硬框	nge5 korng1
 硬空死	nge5 korng1 ni3
 硬框死	nge5 korng1 ni3
-譬並	pih7 pia5
-譬如	pih7 zy2
+譬並	pih6 pia5
+譬如	pih6 zy2
 無干過	bo2 gang1 ngo4
 無干過	bo2 gang1 o4
 干過	gang1 ngo4
@@ -13876,7 +13875,7 @@ Android	eng1 zorh6
 攑乩	gyor2 gi1
 喜舍	hi3 liah7
 有聖	uh6 sia4
-耶穌教	e1 lou1 ao4
+耶穌教	e2 lou1 ao4
 基督教	ki1 dorh6 kao4
 教堂	gao4 lorng2
 點香	dieng3 ngieo1
