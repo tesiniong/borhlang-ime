@@ -32,8 +32,13 @@ def extract_multi_syllable_words_from_text(text: str) -> list:
         list: 多音節詞列表（BUC 格式）
     """
     # 正則表達式：匹配連字號分隔的詞
-    # 允許的字符：a-z、特殊字母（帶音調符號）、連字號
-    pattern = r'[a-zA-Zⁿṳ̤̍̄̂́]+(?:-[a-zA-Zⁿṳ̤̍̄̂́]+)+'
+    # 使用 \w 匹配所有 Unicode 字母（包括預組合字符如 â, í）
+    # 加上 Unicode 組合符號範圍以匹配組合式變音符號
+    # \u0300-\u036F: Combining Diacritical Marks
+    # \u1DC0-\u1DFF: Combining Diacritical Marks Supplement
+    # \u20D0-\u20FF: Combining Diacritical Marks for Symbols
+    # \uFE20-\uFE2F: Combining Half Marks
+    pattern = r'[\w\u0300-\u036F\u1DC0-\u1DFF\u20D0-\u20FF\uFE20-\uFE2F]+(?:-[\w\u0300-\u036F\u1DC0-\u1DFF\u20D0-\u20FF\uFE20-\uFE2F]+)+'
 
     words = re.findall(pattern, text)
 
@@ -49,11 +54,15 @@ def extract_multi_syllable_words_from_text(text: str) -> list:
         # 過濾掉包含無效音節的（例如只有音調符號的或太短的）
         valid = True
         for syl in syllables:
-            # 移除音調符號後，音節應該至少有1個拉丁字母
-            cleaned = re.sub(r'[̤̍̄̂́ⁿ]', '', syl)
+            # 使用 NFD 分解後移除組合式變音符號
+            syl_nfd = norm('NFD', syl)
+            # 移除組合式變音符號（U+0300-U+036F 等）
+            cleaned = re.sub(r'[\u0300-\u036F\u1DC0-\u1DFF\u20D0-\u20FF\uFE20-\uFE2F]', '', syl_nfd)
+            cleaned = norm('NFC', cleaned)  # 重新組合
 
-            # 音節必須非空且包含至少1個拉丁字母
-            if not cleaned or not re.search(r'[a-zA-Zṳ]', cleaned):
+            # 音節必須非空且包含至少1個字母
+            # 使用 \w 匹配 Unicode 字母（包括基礎拉丁字母和其他 Unicode 字母）
+            if not cleaned or not re.search(r'[a-zA-Zṳ\w]', cleaned):
                 valid = False
                 break
 
@@ -63,8 +72,9 @@ def extract_multi_syllable_words_from_text(text: str) -> list:
                 valid = False
                 break
 
-            # 音節必須以拉丁字母開頭（不能以音調符號開頭）
-            if not re.match(r'^[a-zA-Zṳ]', syl):
+            # 音節必須以字母開頭（不能以音調符號開頭）
+            # 使用 \w 匹配 Unicode 字母
+            if not re.match(r'^[\w]', syl):
                 valid = False
                 break
 
@@ -144,6 +154,9 @@ def generate_vocab_list(input_file: Path, output_file: Path):
                                 if not syl_buc:
                                     continue
 
+                                # 清理特殊字符（如變體選擇器 U+FE00-U+FE0F, U+E0100-U+E01EF）
+                                syl_buc = re.sub(r'[\uFE00-\uFE0F]|[\U000E0100-\U000E01EF]', '', syl_buc)
+
                                 # 處理專有名詞（首字母大寫）
                                 if syl_buc and syl_buc[0].isupper():
                                     syl_buc = syl_buc[0].lower() + syl_buc[1:]
@@ -191,6 +204,9 @@ def generate_vocab_list(input_file: Path, output_file: Path):
                                 for syl_buc in syllables_buc:
                                     if not syl_buc:
                                         continue
+
+                                    # 清理特殊字符（如變體選擇器）
+                                    syl_buc = re.sub(r'[\uFE00-\uFE0F]|[\U000E0100-\U000E01EF]', '', syl_buc)
 
                                     # 處理大寫（專有名詞）
                                     if syl_buc and syl_buc[0].isupper():
