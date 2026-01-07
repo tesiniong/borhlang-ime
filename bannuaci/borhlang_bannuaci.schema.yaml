@@ -4,7 +4,7 @@
 schema:
   schema_id: borhlang_bannuaci
   name: 興化平話字
-  version: "0.2.0"
+  version: "0.3.0"
   author:
     - Siniong
   description: |
@@ -78,14 +78,13 @@ speller:
     - abbrev/^([bpmgkhdtnlcsz]|ng|ch).+$/$1/
 
     # 步驟3：模糊音支援
-    # ng 韻尾簡化
-    - derive/ang/an/
-    - derive/eng/en/
-    - derive/ing/in/
-    - derive/ong/on/
-    - derive/iang/ian/
-    - derive/iong/ion/
-    - derive/uang/uan/
+    # 鼻化音 nn 簡化為 n
+    - derive/ann/an/
+    - derive/enn/en/
+    - derive/inn/in/
+    - derive/onn/on/
+    - derive/unn/un/
+    - derive/ynn/yn/
 
     - derive/^([a-z])/\U$1/
 
